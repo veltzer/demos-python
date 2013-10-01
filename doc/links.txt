@@ -1,0 +1,2 @@
+http://blip.tv/carlfk/asynchronous-vs-threaded-python-2243317
+http://blip.tv/carlfk/mindblowing-python-gil-2243379

@@ -1,0 +1,13 @@
+Phonebook application - kickstart
+
+1. Read a file of the following format:
+	name1,phone1
+	name2,phone2
+	name3,phone3
+	name4,phone4
+	name5,phone5
+2. While reading the file, store the file content into a dictionary indexed
+	by the name.
+	* It is guaranteed that no two names in the file are identical.
+3. After reading the file remember to close the file.
+4. After closing the file, print the dictionary.

@@ -1,0 +1,31 @@
+- do example of using the multithreading module.
+- do an example of how to exit from a python script
+	(quit(),exit(), os._exit() and all).
+- do an oo demo of 'isinstance' and 'issubclass'
+- show the problems of inheritance in python and why we need __
+- show using the iterator interface directly.
+- do an example that demonstrates the difference between inheriting
+	from 'object' and not. See the 'type' example for a starting point for this one.
+- do more realistic singleton examples. With multi-thread support,
+	safe from direct construction and real static methods.
+- do a singleton example by overloading the __new__ operator and always
+	returning the same object.
+- do a multi theading example that shows thread ids at the operating system level.
+- do example about finally.
+- do example about __future__ division and //.
+- do example about cyclic dependency between modules.
+- do example of iteritems in the dict example and more.
+- show a demo of a profiler.
+- show how to see garbage collector events.
+- show examples about data strcutures from third parties.
+- see that I have examples of the following:		
+	- classmethod
+	- property.
+	- decorators.
+	- locks.
+	- system(3) wrappers.
+	- fork and exec.
+- do demo of dis.dis for disassembly.
+- show examples of controlling recursion depth via sys.setrecusionlimit.
+- do examples along the lines of
+	http://www.python-course.eu/pipes.php
