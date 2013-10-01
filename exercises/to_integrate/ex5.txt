@@ -1,0 +1,4 @@
+Write a function called "mysum".
+It will receive a single argument of type list.
+It will return the sum of the elements in the list.
+Demonstrate the use of your newly created function.

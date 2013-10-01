@@ -1,0 +1,7 @@
+all: app
+app: a.o b.o
+	echo cc -o app a.o b.o
+a.o: a.c
+	echo cc -c a.c
+b.o: b.c
+	echo cc -c b.c

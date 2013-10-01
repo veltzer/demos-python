@@ -1,0 +1,4 @@
+all:app
+app:a.o b.o
+a.o:a.c
+b.o:b.c
