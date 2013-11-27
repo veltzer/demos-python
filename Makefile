@@ -27,8 +27,8 @@ check_eqq:
 	@-git grep -e " - " -- \*.py
 	@-git grep -e " <= " -- \*.py
 	@-git grep -e " => " -- \*.py
-.PHONY: check
-check:
+.PHONY: check_syn
+check_syn:
 	-git grep ";"
 	-git grep " = "
 	-git grep " \","
