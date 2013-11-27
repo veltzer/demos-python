@@ -1,5 +1,6 @@
 .PHONY: all
 all: check_doublespace check_endspace check_eq check_eqq
+	$(info please tell me what to make...)
 
 .PHONY: check_doublespace
 check_doublespace:
@@ -26,3 +27,20 @@ check_eqq:
 	@-git grep -e " - " -- \*.py
 	@-git grep -e " <= " -- \*.py
 	@-git grep -e " => " -- \*.py
+.PHONY: check
+check:
+	-git grep ";"
+	-git grep " = "
+	-git grep " \","
+	-git grep ", "
+	-git grep "print\ "
+	-git grep --files-without-match "mark@veltzer.net"
+.PHONY: clean_compiled
+clean_compiled:
+	-@rm -f `find . -type f -and \( -name "*.pyo" -or -name "*.pyc" \)`
+.PHONY: show_compiled
+show_compiled:
+	@find . -type f -and -name "*.pyp" -and -name "*.pyc"
+.PHONY: show_extra
+show_extra:
+	@find . -type f -and -not -name "*.py" -and -not -name "Makefile"
