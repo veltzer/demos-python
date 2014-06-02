@@ -6,8 +6,8 @@
 import subprocess
 
 packs=[
-	'python3.3',
-	'python3.3-doc',
+	'python3.4',
+	'python3.4-doc',
 	'pyqt4-dev-tools',
 	'python-qt4',
 	'python-qt4-sql',
@@ -17,6 +17,7 @@ packs=[
 	'python-newt',
 	'python3-newt',
 	'python-dialog',
+	'python-imdbpy',
 ]
 
 args=['sudo','apt-get','install']
