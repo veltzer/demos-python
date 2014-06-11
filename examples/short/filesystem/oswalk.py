@@ -12,7 +12,7 @@ import re # for .compile,.finditer
 import sys # for .argv
 
 if len(sys.argv)<2:
-	raise ValueError("plase pass regexp")
+	raise ValueError("please pass regexp")
 c=re.compile(sys.argv[1])
 
 for root,dirs,files in os.walk('.'):
