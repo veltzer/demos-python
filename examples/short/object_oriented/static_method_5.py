@@ -26,7 +26,7 @@ class Book():
 
     @classmethod
     def getNumBooks2(cls):
-        return Book.num
+        return cls.num
 
 
 b = Book(15)
