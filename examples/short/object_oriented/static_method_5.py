@@ -25,13 +25,16 @@ class Book():
 
     getNumBooks = staticmethod(getNumBooks)
 
-    def getNumBooks2():
+    def getNumBooks2(cls):
         return Book.num
 
     getNumBooks2 = classmethod(getNumBooks2)
 
 
 b = Book(15)
+print Book.getNumBooks()
+print Book.getNumBooks2()
+
 print(b.printit, type(b.printit))
 print(Book.printit, type(Book.printit))
 print(Book.getNumBooks, type(Book.getNumBooks))
