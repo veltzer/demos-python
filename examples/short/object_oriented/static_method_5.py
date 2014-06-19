@@ -20,15 +20,13 @@ class Book():
     def setPrice(self, newprice):
         self.__price = newprice
 
+    @staticmethod
     def getNumBooks():
         return Book.num
 
-    getNumBooks = staticmethod(getNumBooks)
-
+    @classmethod
     def getNumBooks2(cls):
         return Book.num
-
-    getNumBooks2 = classmethod(getNumBooks2)
 
 
 b = Book(15)
