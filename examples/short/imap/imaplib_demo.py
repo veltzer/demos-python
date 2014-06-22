@@ -16,12 +16,12 @@ import imaplib # for IMAP4_SSL
 import ConfigParser # for ConfigParser
 import os.path # for expanduser
 
-config = ConfigParser.ConfigParser()
+config=ConfigParser.ConfigParser()
 config.read(os.path.expanduser('~/.pyimap.ini'))
-opt_username = config.get('imap', 'username')
-opt_password = config.get('imap', 'password')
-opt_hostname = config.get('imap', 'hostname')
-opt_port = config.get('imap', 'port')
+opt_username=config.get('imap', 'username')
+opt_password=config.get('imap', 'password')
+opt_hostname=config.get('imap', 'hostname')
+opt_port=config.get('imap', 'port')
 
 def imap_have_mailbox(imap, name):
 	(res, l)=imap.list(name)
@@ -51,7 +51,7 @@ def imap_login(imap, username, password):
 	if res!='OK':
 		raise ValueError('could not login')
 
-imap = imaplib.IMAP4_SSL(opt_hostname, opt_port)
+imap=imaplib.IMAP4_SSL(opt_hostname, opt_port)
 imap_login(imap, opt_username, opt_password)
 print(imap.capability())
 print(imap.list())

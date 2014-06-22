@@ -9,7 +9,7 @@ import os.path # for isfile
 
 subprocess.check_output([
 	'pdfseparate',
-	'Secure Development - General - 5 days Course.pdf',
+	'file.pdf',
 	'page-%d.pdf',
 ])
 slide=1
@@ -21,7 +21,7 @@ for x in range(1,till):
 	filename='page-{x}.pdf'.format(x=x)
 	if not os.path.isfile(filename):
 		raise ValueError('no such file '+filename)
-	slide_name='slide-%03d.pdf' % (slide)
+	slide_name='slide-%03d.pdf'%(slide)
 	slide+=1
 	start_x=90
 	start_y=340
@@ -44,7 +44,7 @@ for x in range(1,till):
 	start_x+=width+margin_x
 	to_x=start_x+width
 	to_y=start_y+height
-	slide_name='slide-%03d.pdf' % (slide)
+	slide_name='slide-%03d.pdf'%(slide)
 	slide+=1
 	frmt='{start_x} {start_y} {to_x} {to_y}'.format(
 		start_x=start_x,
@@ -63,7 +63,7 @@ for x in range(1,till):
 	start_x+=width+margin_x
 	to_x=start_x+width
 	to_y=start_y+height
-	slide_name='slide-%03d.pdf' % (slide)
+	slide_name='slide-%03d.pdf'%(slide)
 	slide+=1
 	frmt='{start_x} {start_y} {to_x} {to_y}'.format(
 		start_x=start_x,

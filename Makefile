@@ -1,6 +1,9 @@
 .PHONY: all
-all: check_doublespace check_endspace check_eq check_eqq
+all:
 	$(info please tell me what to make...)
+
+.PHONY: check_all
+check_all: check_doublespace check_endspace check_eq check_eqq
 
 .PHONY: check_doublespace
 check_doublespace:
