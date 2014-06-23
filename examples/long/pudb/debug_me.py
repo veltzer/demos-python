@@ -1,3 +1,4 @@
+from __future__ import print_function
 
 def simple_func(x):
 	x += 1
@@ -32,9 +33,9 @@ def fermat(n):
 				if x**n+y**n==z**n:
 					yield x, y, z
 
-print "SF", simple_func(10)
+print("SF", simple_func(10))
 
 for i in fermat(2):
-	print i
+	print(i)
 
-print "FINISHED"
+print("FINISHED")

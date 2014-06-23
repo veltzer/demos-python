@@ -7,4 +7,4 @@ for x in xrange(num):
 	list.append(current)
 for x in xrange(0,num-1,2):
 	[list[x],list[x+1]]=[list[x+1],list[x]]
-print list
+print(list)

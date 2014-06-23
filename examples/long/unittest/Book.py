@@ -1,4 +1,6 @@
 #!/usr/bin/python
+
+from __future__ import print_function
 import unittest
 
 class Book(object):
@@ -14,4 +16,4 @@ class Book(object):
 		self.__price=newprice
 	# printing function
 	def printMe(self):
-		print 'price is',self.__price
+		print('price is',self.__price)

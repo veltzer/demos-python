@@ -10,5 +10,5 @@ for line in f.readlines():
 			else:
 				report[c]=1
 f=open("report.txt",'w')
-f.write(str(report));
+f.write(str(report))
 f.close()

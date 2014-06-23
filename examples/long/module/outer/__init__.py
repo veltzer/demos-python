@@ -1,2 +1,3 @@
 # this is the outer module package file
-print "hello from outer"
+from __future__ import print_function
+print("hello from outer")

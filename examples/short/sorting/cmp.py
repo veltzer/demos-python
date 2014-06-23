@@ -27,12 +27,12 @@ def by_y_x(t):
 
 mylist=[(1,7),(2,5),(0,0),(3,8),(1,8),(2,8)]
 # lets see how regular sort works...
-print sorted(mylist)
+print(sorted(mylist))
 # lets see how reverse works...
-print sorted(mylist, cmp=my_revese)
+print(sorted(mylist, cmp=my_revese))
 # lets see how second tuple co-ordinate sort works...
-print sorted(mylist, cmp=my_tup_revese)
+print(sorted(mylist, cmp=my_tup_revese))
 # lets see how use the key function
-print sorted(mylist, key=my_first_cor_key)
+print(sorted(mylist, key=my_first_cor_key))
 # lets see how use the key function
-print sorted(mylist, key=by_y_x)
+print(sorted(mylist, key=by_y_x))

@@ -16,6 +16,6 @@ def f():
 	g()
 
 def g():
-	print "hello"
+	print("hello")
 
 f()

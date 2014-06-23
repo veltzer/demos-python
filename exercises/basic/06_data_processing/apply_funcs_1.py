@@ -12,4 +12,4 @@ def apply_funcs(funcs,x):
 		ret.append(f(x))
 	return ret
 
-print apply_funcs([lambda x:x**2,lambda x:x+1],5);
+print apply_funcs([lambda x:x**2,lambda x:x+1],5)

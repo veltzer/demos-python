@@ -8,7 +8,7 @@ This is an example of information hiding in functions
 
 def make_print_something(s):
 	def inner():
-		print s
+		print(s)
 	return inner
 
 print_hello=make_print_something("hello")

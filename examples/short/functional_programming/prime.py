@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from __future__ import print_function
 import math
 
 def is_prime(n):
@@ -11,7 +12,7 @@ def is_prime(n):
 def is_prime_functional(n):
 	return not any(n%i==0 for i in range(2,int(math.sqrt(n))))
 
-print is_prime(17)
-print is_prime(12)
-print is_prime_functional(17)
-print is_prime_functional(12)
+print(is_prime(17))
+print(is_prime(12))
+print(is_prime_functional(17))
+print(is_prime_functional(12))

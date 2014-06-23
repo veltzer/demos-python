@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+from __future__ import print_function
+
 def add(x,y):
 	return x+y
 def sub(x,y):
@@ -11,4 +13,4 @@ l=[]
 for i in xrange(num):
 	a=raw_input("give me another argument ")
 	l.append(a)
-print (vars()[name])(*l)
+print((vars()[name])(*l))

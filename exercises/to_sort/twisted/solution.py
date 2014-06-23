@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from __future__ import print_function
 from twisted.internet.protocol import Factory,Protocol
 from twisted.internet import reactor
 from twisted.protocols.basic import LineReceiver
@@ -49,13 +50,13 @@ class MyProtocol(LineReceiver):
 		else:
 			self.end("did not get bye")
 	def connectionMade(self):
-		print "connection made"
-		self.transport.write("Welcome to MyServer\r\n");
+		print("connection made")
+		self.transport.write("Welcome to MyServer\r\n")
 	def lineReceived(self,line):
-		print "got line ",line
+		print("got line ",line)
 		self.curFunc(line)
 	def connectionLost(self,reason):
-		print "connection was lost"
+		print("connection was lost")
 		if self.loggedIn:
 			self.factory.num_users-=1
 

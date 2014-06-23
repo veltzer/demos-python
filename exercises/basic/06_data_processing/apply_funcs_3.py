@@ -5,4 +5,4 @@ def apply_funcs(funcs, x):
 	Return the result"""
 	return [f(x) for f in funcs]
 
-print apply_funcs([lambda x:x**2,lambda x:x+1],5);
+print apply_funcs([lambda x:x**2,lambda x:x+1],5)

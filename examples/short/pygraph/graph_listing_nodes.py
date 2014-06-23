@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from __future__ import print_function
 # Import the module and instantiate a graph object
 from pygraph.classes.graph import graph
 from pygraph.algorithms.searching import depth_first_search
@@ -14,4 +15,4 @@ gr.add_edge(('A','B'))
 gr.add_edge(('A','C'))
 gr.add_edge(('Y','B'))
 
-print gr.nodes()
+print(gr.nodes())

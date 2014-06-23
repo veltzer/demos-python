@@ -13,7 +13,6 @@ for line in open('word_report_1.py'):
 		if not report.has_key(word):
 			report[word]=0
 		report[word]+=1
-# lets print the report...
 # NOTE: the with statement takes care of closing the file for us...
 # this is an unsorted report
 """
@@ -22,7 +21,7 @@ with open('/tmp/report.txt','w') as f:
 		f.write("word {word} appeared {count} times\n".format(word=word,count=count))
 """
 
-# the cheapest way to print the report...
+# the cheapest way to printout the report...
 """
 with open('/tmp/report.txt','w') as f:
 	f.write(str(report))

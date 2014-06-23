@@ -22,7 +22,7 @@ def Person(name,age):
 
 p=Person("Bilbo",111)
 p["setAge"](112)
-print "age is",p["getAge"]()
+print("age is",p["getAge"]())
 p2=Person("Frodo",77)
 p2["setAge"](78)
-print "age is",p2["getAge"]()
+print("age is",p2["getAge"]())

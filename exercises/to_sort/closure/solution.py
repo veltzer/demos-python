@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+from __future__ import print_function
+
 def Person(name,age):
 	def data():
 		pass
@@ -14,8 +16,8 @@ def Person(name,age):
 	def getAge():
 		return data.age
 	def printMe():
-		print 'name is ',data.name
-		print 'age is ',data.age
+		print('name is ',data.name)
+		print('age is ',data.age)
 	data.setName=setName
 	data.getName=getName
 	data.setAge=setAge
@@ -28,7 +30,7 @@ def Person(name,age):
 # usage...
 p1=Person('mark',36)
 p2=Person('doron',32)
-print p1.name
+print(p1.name)
 p1.printMe()
 p2.printMe()
 p1.setName('foobar')

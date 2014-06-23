@@ -13,6 +13,6 @@ try:
 except:
 	print('yes, got error for it')
 p=subprocess.Popen(['sleep','10'])
-print('in here, async, isnt it?');
+print('in here, async, isnt it?')
 ret=p.wait()
 print('ret is',ret)

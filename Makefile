@@ -3,8 +3,16 @@ all:
 	$(info please tell me what to make...)
 
 .PHONY: check_all
-check_all: check_doublespace check_endspace check_eq check_eqq
+check_all: check_doublespace check_endspace check_ops check_print check_endsemi
 
+.PHONY: check_print
+check_print:
+	$(info doing $@)
+	@git grep "print " -- \*.py
+.PHONY: check_endsemi
+check_endsemi:
+	$(info doing $@)
+	@-git grep -e "\;$$" -- \*.py
 .PHONY: check_doublespace
 check_doublespace:
 	$(info doing $@)
@@ -13,13 +21,10 @@ check_doublespace:
 check_endspace:
 	$(info doing $@)
 	@-git grep -e "\s$$" -- \*.py
-.PHONY: check_eq
-check_eq:
+.PHONY: check_ops
+check_ops:
 	$(info doing $@)
 	@-git grep -e " = " -- \*.py
-.PHONY: check_eqq
-check_eqq:
-	$(info doing $@)
 	@-git grep -e " == " -- \*.py
 	@-git grep -e " != " -- \*.py
 	@-git grep -e " < " -- \*.py
@@ -32,12 +37,11 @@ check_eqq:
 	@-git grep -e " => " -- \*.py
 .PHONY: check_syn
 check_syn:
-	-git grep ";"
-	-git grep " = "
-	-git grep " \","
-	-git grep ", "
-	-git grep "print\ "
-	-git grep --files-without-match "mark@veltzer.net"
+	-git grep ";" -- \*.py
+	-git grep " \"," -- \*.py
+	-git grep ", " -- \*.py
+	-git grep "print\ " -- \*.py
+	-git grep --files-without-match "mark@veltzer.net" -- \*.py
 .PHONY: clean_compiled
 clean_compiled:
 	-@rm -f `find . -type f -and \( -name "*.pyo" -or -name "*.pyc" \)`

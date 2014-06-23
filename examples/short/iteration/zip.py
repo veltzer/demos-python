@@ -12,6 +12,8 @@ TODO:
 
 	Mark Veltzer <mark@veltzer.net>
 """
+from __future__ import print_function
+
 ll1=[1,2,3,4,5]
 ll2=[10,11,12,13,14]
 ll3=[20,21,22,23,24]
@@ -23,4 +25,4 @@ lll1=[1,2,3]
 lll2=[4,5]
 
 for (x,y) in zip(lll1,lll2):
-	print x,y
+	print(x,y)

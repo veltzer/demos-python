@@ -16,11 +16,11 @@ gr.add_edge(('Y','B'))
 # Depth first search rooted on node X
 st, pre, post=depth_first_search(gr, root='X')
 # Print the spanning tree
-print st
+print(st)
 
 def nodes(graph,node):
 	for y in graph[node]:
 		yield y
 
 for x in nodes(gr,'X'):
-	print x
+	print(x)

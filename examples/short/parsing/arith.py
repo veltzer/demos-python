@@ -22,7 +22,7 @@ expr=pyparsing.operatorPrecedence(operand,
 	(plusop,2,pyparsing.opAssoc.LEFT),
 ])
 def expr_act(s,loc,tok):
-	print "in here",s,loc,tok
+	print("in here",s,loc,tok)
 	if tok[0][1]=='*':
 		return tok[0][0]*tok[0][2]
 	if tok[0][1]=='/':
@@ -36,4 +36,4 @@ expr.setParseAction(expr_act)
 
 expr.setDebug()
 
-print expr.parseString(sys.argv[1])[0]
+print(expr.parseString(sys.argv[1])[0])

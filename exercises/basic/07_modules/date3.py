@@ -36,9 +36,9 @@ class Date:
 			print "Month must be between 1 and 12"
 			return
 		if (mydate.is_leap_year(year)):
-			days=mydate.days_in_months_leap_year[month-1];
+			days=mydate.days_in_months_leap_year[month-1]
 		else:
-			days=mydate.days_in_months[month-1];
+			days=mydate.days_in_months[month-1]
 		if ((day<1) or (day>days)):
 			print "Day must be between 1 and ", days
 			return

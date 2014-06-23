@@ -11,4 +11,4 @@ for x in xrange(num):
 			list[x+1]=current
 	else:
 		list[x-1]=current
-print list
+print(list)

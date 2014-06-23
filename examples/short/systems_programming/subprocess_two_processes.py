@@ -40,7 +40,7 @@ try:
 	print(system_pipe(
 		['ls','-l','foo'],
 		['wc','-l'],
-	));
+	))
 except ValueError,e:
 	print('ok, got error for first command',e)
 try:
@@ -48,11 +48,11 @@ try:
 	print(system_pipe(
 		['ls','-l'],
 		['wc','-l','--stam'],
-	));
+	))
 except ValueError,e:
 	print('ok, got error for second command',e)
 # test output
 print(system_pipe(
 	['ls','-l'],
 	['wc','-l'],
-));
+))

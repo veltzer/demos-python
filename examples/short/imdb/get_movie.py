@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 """
 get_movie.py
 
@@ -9,13 +10,14 @@ for "The Matrix", using 'http' or 'mobile').
 Notice that movieID, using 'sql', are not the same IDs used on the web.
 """
 
+from __future__ import print_function
 import sys
 import imdb
 import random
 
 if len(sys.argv)!=2:
-	print 'Only one argument is required:'
-	print ' %s "movieID"'%sys.argv[0]
+	print('Only one argument is required:')
+	print(' %s "movieID"'%sys.argv[0])
 	sys.exit(2)
 
 movieID=sys.argv[1]
@@ -29,43 +31,42 @@ try:
 	# the given movieID.
 	movie=i.get_movie(movieID)
 except imdb.IMDbError, e:
-	print "Probably you're not connected to Internet. Complete error report:"
-	print e
+	print("Probably you're not connected to Internet. Complete error report:")
+	print(e)
 	sys.exit(3)
 
-
-print movie.summary().encode(out_encoding, 'replace')
-print movie.summary()
+print(movie.summary().encode(out_encoding, 'replace'))
+print(movie.summary())
 
 for k in movie.keys():
-	print k, movie[k]
+	print(k, movie[k])
 
-print '==== "%s" movieID: %s ===='%(movie['title'], movieID)
+print('==== "%s" movieID: %s ===='%(movie['title'], movieID))
 imdbURL=i.get_imdbURL(movie)
 if imdbURL:
-	print 'IMDb URL: %s'%imdbURL
+	print('IMDb URL: %s'%imdbURL)
 genres=movie.get('genres')
 if genres:
-	print 'Genres: %s'%' '.join(genres)
+	print('Genres: %s'%' '.join(genres))
 cast=movie.get('cast')
 if cast:
-	print 'Cast: '
+	print('Cast: ')
 	cast=cast[:5]
 	for name in cast:
-		print '%s (%s)'%(name['name'], name.currentRole)
+		print('%s (%s)'%(name['name'], name.currentRole))
 rating=movie.get('rating')
 if rating:
-	print 'Rating: %s'%rating
+	print('Rating: %s'%rating)
 i.update(movie, info=['trivia'])
 trivia=movie.get('trivia')
 if trivia:
 	rand_trivia=trivia[random.randrange(len(trivia))]
-	print 'Random trivia: %s'%rand_trivia
+	print('Random trivia: %s'%rand_trivia)
 
 info_runtime=movie.get('runtime')
-print 'Runtime is: {info_runtime}'.format(info_runtime=info_runtime)
+print('Runtime is: {info_runtime}'.format(info_runtime=info_runtime))
 
 info_directors=movie.get('director')
 for n,d in enumerate(info_directors):
-	#print dir(d)
-	print '{n}, {d}'.format(n=n, d=d['name'])
+	#print(dir(d))
+	print('{n}, {d}'.format(n=n, d=d['name']))

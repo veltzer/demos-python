@@ -15,8 +15,8 @@ def rev_hash(o):
 
 #orig={"Israel":"Jerusalem","France":"Paris","Italy":"Rome","Egypt":"Cairo"}
 #rev=rev_hash(orig)
-#print rev
+#print(rev)
 
 import doctest
-#print dir(doctest)
+#print(dir(doctest))
 doctest.testmod()
