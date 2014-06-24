@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import textwrap
 
 def lines2paragraphs(lines):
@@ -25,4 +27,4 @@ def reformat(lines):
 		yield ''
 
 if __name__=='__main__':
-	print list(reformat(['foo', 'bar', 'baz', '', 'quux', 'quuux']))
+	print(list(reformat(['foo', 'bar', 'baz', '', 'quux', 'quuux'])))

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def right_align_to(lines, width):
 	"""Right-align all lines to given width."""
@@ -19,4 +19,4 @@ def right_align_to_longest(lines):
 	return right_align_to(lines, max_len(lines))
 
 for line in right_align_to_longest(['foo', 'x', '12345678']):
-	print line
+	print(line)

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys, functools
 
 def with_output_to_out_txt(f):
@@ -19,7 +21,7 @@ def with_output_to_out_txt(f):
 
 @with_output_to_out_txt
 def hello(name):
-	print "Hello, {0}!".format(name)
+	print("Hello, {0}!".format(name))
 
 # Running this will destroy 'out.txt' in the current dir!
 
@@ -28,10 +30,10 @@ if __name__=='__main__':
 	# make sure file is empty
 	open('out.txt', 'w').close()
 	# test
-	print "This should print nothing:"
+	print("This should output nothing:")
 	hello("Fred")
 	hello("Barney")
-	print "The file now contains this:"
-	print open('out.txt').read()
+	print("The file now contains this:")
+	print(open('out.txt').read())
 	# clean up
 	os.remove('out.txt')

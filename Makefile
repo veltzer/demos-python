@@ -8,7 +8,8 @@ check_all: check_doublespace check_endspace check_ops check_print check_endsemi
 .PHONY: check_print
 check_print:
 	$(info doing $@)
-	@git grep "print " -- \*.py
+	@-git grep "print " -- \*.py
+	@-git grep -e "print$$" -- \*.py | grep -v pprint
 .PHONY: check_endsemi
 check_endsemi:
 	$(info doing $@)

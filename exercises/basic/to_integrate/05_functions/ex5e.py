@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def my_min(x,y):
 	if x<y:
@@ -19,4 +19,4 @@ def min_max_avg(list):
 	rsum=reduce(my_sum,list)
 	return (rmin,rmax,rsum/len(list))
 
-print min_max_avg(range(0,100))
+print(min_max_avg(range(0,100)))

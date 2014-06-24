@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """
 Parse a simple Makefile and execute it.
@@ -62,9 +62,9 @@ def build(target, rules, commands):
 
 def build_one(target, rules, commands):
 	"""Execute commands for one target."""
-	print "== Building {0} -> {1} ==".format(", ".join(rules[target]), target)
+	print("== Building {0} -> {1} ==".format(", ".join(rules[target]), target))
 	for command in commands[target]:
-		print command
+		print(command)
 		os.system(command)
 
 import doctest

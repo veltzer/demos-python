@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """
 Simple implementation of a hangman game.
@@ -23,15 +23,15 @@ def print_known_parts():
 			res.append(c)
 		else:
 			res.append('?')
-	print ''.join(res)
+	print(''.join(res))
 
 def guess(letter):
 	"""Call this to play."""
 	open_letters.add(letter)
 	if letter in _word:
-		print "Yes! '%s' appears %s times:"%(letter,_word.count(letter))
+		print("Yes! '%s' appears %s times:"%(letter,_word.count(letter)))
 	else:
-		print "Bzzz! No '%s' there."%letter
+		print("Bzzz! No '%s' there."%letter)
 	print_known_parts()
 
 if __name__!='__main__':

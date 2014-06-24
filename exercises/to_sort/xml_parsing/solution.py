@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import xml.dom.minidom
 import re
@@ -10,7 +10,7 @@ for ticket in dom.getElementsByTagName("ImportTicket"):
 	esr=re.sub('^0+','',esr)
 	ticket.setAttribute("external_system_reference",esr)
 
-#print dir(dom)
-print dom.toprettyxml()
+#print(dir(dom))
+print(dom.toprettyxml())
 #outfile=open("/tmp/result.xml","wb")
 #dom.writexml(outfile)

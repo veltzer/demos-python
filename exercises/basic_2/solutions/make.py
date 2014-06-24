@@ -1,7 +1,7 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """
-Parse a simple Makefile (without commands) and print build plan.
+Parse a simple Makefile (without commands) and output a build plan.
 Doen't support comments, variables, patterns or anything complex...
 Doesn't check file system, all targets are always built.
 """
@@ -48,4 +48,4 @@ import doctest
 doctest.testmod()
 
 rules=parse_makefile("make.txt")
-print build_plan("all", rules)
+print(build_plan("all", rules))

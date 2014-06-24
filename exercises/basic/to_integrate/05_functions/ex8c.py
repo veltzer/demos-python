@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def odds_minus_evens(l):
 	sum=0
@@ -9,4 +9,4 @@ def odds_minus_evens(l):
 			sum+=x
 	return sum
 
-print odds_minus_evens(xrange(2,6))
+print(odds_minus_evens(xrange(2,6)))

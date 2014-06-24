@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # We represent directions by (dx, dy), so that updating (x, y) will be
 # a matter of simple addition.
@@ -24,7 +24,7 @@ def lasers(fname):
 		char=room[y][x]
 
 		# uncomment to display path:
-		##print x, y, char
+		##print(x, y, char)
 
 		passage={' ': (dx, dy), # continue straight
 			'\\': (dy, dx), # flip around dx=dy
@@ -37,6 +37,6 @@ def lasers(fname):
 			return char=='x'
 
 for fname in ['lasers_hit.txt', 'lasers_miss.txt']:
-	print open(fname).read()
-	print lasers(fname)
-	print
+	print(open(fname).read())
+	print(lasers(fname))
+	print()

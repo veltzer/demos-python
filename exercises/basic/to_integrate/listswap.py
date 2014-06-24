@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 size=raw_input("please enter a list size :")
 size=int(size)
@@ -13,4 +13,4 @@ for number in range(0,size) :
 		l[number]=l[number+1]
 		l[number+1]=temp
 	pass
-print l
+print(l)

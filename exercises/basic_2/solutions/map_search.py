@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 places={
 	'Shire': {'leave': 'Bree', 'stay': 'DEATH'},
@@ -24,7 +24,7 @@ for i in range(7):
 	for place in list(reachable):
 		reachable.update(places[place].values())
 
-print 'Mordor' in reachable
+print('Mordor' in reachable)
 
 # Finding the actual path:
 
@@ -37,4 +37,4 @@ for i in range(7):
 			if place2 not in way_to:
 				way_to[place2]=way_to[place]+[action]
 
-print way_to['Mordor']
+print(way_to['Mordor'])

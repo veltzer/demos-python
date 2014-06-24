@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 d={
 	"Israel":"Jerusalem",
@@ -12,4 +12,4 @@ d={
 
 # recall that zip(d.keys(), d.values())==d.items()
 rev_d=dict(zip(d.values(), d.keys()))
-print rev_d
+print(rev_d)

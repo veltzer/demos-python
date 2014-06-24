@@ -10,10 +10,10 @@ for d in s:
 	if ord(d)>=ord('0') and ord(d)<=ord('9'):
 		l[int(d)]+=1
 	else:
-		print "you gave me bad data, error"
+		print("you gave me bad data, error")
 		break
 else:
-	# print a 'simple' report (just showing the counters...)
-	#print l
+	# output a 'simple' report (just showing the counters...)
+	#print(l)
 	for n,counter in enumerate(l):
-		print "{n} appeared {counter} times in the text".format(n=n,counter=counter)
+		print("{n} appeared {counter} times in the text".format(n=n,counter=counter))

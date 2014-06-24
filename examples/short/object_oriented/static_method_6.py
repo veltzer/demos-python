@@ -36,7 +36,7 @@ class FictionBook(Book):
 
 print("Book.num:", Book.num)
 print("FictionBook.num:", FictionBook.num)
-print
+print()
 
 b3=FictionBook("Sherlock Holmes")
 b4=FictionBook("Danny Din")
@@ -45,6 +45,6 @@ b5=FictionBook("Kofiko")
 print()
 print("Book.num:", Book.num)
 print("FictionBook.num:", FictionBook.num)
-print
+print()
 
 b6=Book("Britannica")

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 mymin=1000000000000000000000
 mymax=-1000000000000000000000
@@ -8,4 +8,4 @@ for x in range(0,10):
 		mymin=num
 	if num>mymax:
 		mymax=num
-print mymin, mymax
+print(mymin, mymax)

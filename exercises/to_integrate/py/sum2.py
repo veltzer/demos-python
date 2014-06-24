@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 mylist=[]
 x=100
 while x>0:
@@ -7,4 +9,4 @@ while x>0:
 mysum=0
 for x in mylist:
 	mysum+=x
-print mysum
+print(mysum)

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # lambda and apply again...
 def my_apply(f,seq):
 	for x in seq:
@@ -10,4 +10,4 @@ def reverse_hash(d):
 	#my_apply(lambda k: target[d[k]]=k,orig)
 	return target
 orig={"Israel":"Jerusalem","France":"Paris","Italy":"Rome","Egypt":"Cairo"}
-print reverse_hash(orig)
+print(reverse_hash(orig))

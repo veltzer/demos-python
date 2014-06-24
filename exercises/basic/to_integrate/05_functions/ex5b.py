@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def my_min(list):
 	min=list[0]
@@ -23,4 +23,4 @@ def my_sum(list):
 def min_max_avg(list):
 	return (my_min(list),my_max(list),float(my_sum(list))/len(list))
 
-print min_max_avg(xrange(0,100000))
+print(min_max_avg(xrange(0,100000)))

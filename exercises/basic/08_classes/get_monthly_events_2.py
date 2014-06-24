@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys
 from date import *
@@ -18,6 +18,6 @@ for event in events:
 
 current_month=localtime()[1]
 monthly_events=c.get_all_events_in_month(current_month)
-print "Events of the month:"
+print("Events of the month:")
 for name in monthly_events.keys():
-	print name, " happened at: ", monthly_events[name]
+	print(name, " happened at: ", monthly_events[name])

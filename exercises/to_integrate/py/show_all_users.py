@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """
 This script shows all users on a UNIX system
@@ -9,5 +9,5 @@ all_users=[]
 for line in open(file_name):
 	all_users.append(line.split(":")[0])
 
-# now we are out of the loop, lets print all users...
-print all_users
+# now we are out of the loop, lets output all users...
+print(all_users)

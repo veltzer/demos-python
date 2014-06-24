@@ -1,9 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys
 from date import *
 from time import localtime
-
 
 filename="c:/tmp.txt"
 f=open(filename)
@@ -19,12 +18,12 @@ for event in events:
 			c.add_event(name,date)
 		except DateException, e:
 			sys.stderr.write(e)
-			print e
+			print(e)
 	else:
-		print "date must be initialized with numbers"
+		print("date must be initialized with numbers")
 
 current_month=localtime()[1]
 monthly_events=c.get_all_events_in_month(current_month)
-print "Events of the month:"
+print("Events of the month:")
 for name in monthly_events.keys():
-	print name, " happened at: ", monthly_events[name]
+	print(name, " happened at: ", monthly_events[name])

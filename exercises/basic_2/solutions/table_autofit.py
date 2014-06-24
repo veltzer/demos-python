@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 columns=[['H','He','Li','Be'],['Hidrogen','Helium','Litium','Berilium'],['1.008','4.003','6.941','9.012']]
 
@@ -20,9 +20,9 @@ separator_line='+'
 for w in widths:
 	separator_line+='-'*w+'+'
 
-# Now print separators alternating with text rows
+# Now output separators alternating with text rows
 
-print separator_line
+print(separator_line)
 
 # If you haven't seen this function(*args_list) syntax yet -
 # it's the same as zip(columns[0], columns[1], columns[2])
@@ -31,5 +31,5 @@ for row in zip(*columns)
 	line='|'
 	for text, width in zip(row, widths):
 		line+=text.ljust(width)+'|'
-	print line
-	print separator_line
+	print(line)
+	print(separator_line)

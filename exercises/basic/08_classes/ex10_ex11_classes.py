@@ -60,7 +60,7 @@ class SimpleHangman(object):
 		self._word=word
 		# Public
 		self.open_letters=set()
-		print self
+		print(self)
 
 	def known_parts(self):
 		"""Reveal guessed letters, ? for hidden letters."""
@@ -82,12 +82,12 @@ class SimpleHangman(object):
 		"""Call this to play."""
 		self.open_letters.add(letter)
 		if letter in self._word:
-			print "Yes! '%s' appears %s times:"%(
-				letter, self._word.count(letter))
-			print self
+			print("Yes! '%s' appears %s times:"%(
+				letter, self._word.count(letter)))
+			print(self)
 		else:
-			print "Bzzz! No '%s' there."%letter
-			print self
+			print("Bzzz! No '%s' there."%letter)
+			print(self)
 
 
 class Hangman(SimpleHangman):
@@ -133,14 +133,14 @@ class Hangman(SimpleHangman):
 		"""Call this to play."""
 		# bells and whistles
 		if set(self._word)<=self.open_letters:
-			print "You won. Why do you keep guessing?"
+			print("You won. Why do you keep guessing?")
 			return
 		if self.mistakes_allowed<0:
-			print "You lost. Stop trying."
+			print("You lost. Stop trying.")
 			return
 		if letter in self.open_letters:
-			print "You already tried '%s'."%letter
-			print self
+			print("You already tried '%s'."%letter)
+			print(self)
 			return
 
 		if letter not in self._word:

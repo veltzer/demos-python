@@ -26,23 +26,23 @@ b=Person("James","Bond")
 b.printMe()
 
 # lets define a function that looks like a method of person...
-def secret_agent_print(self):
+def secret_agent_output(self):
 	print(self.fname+",",self.name,self.fname)
 
 # lets add this method only to the 'b' instance...
 # this line does not work!
-#b.printMe=secret_agent_print
+#b.printMe=secret_agent_output
 # this works! turning a function into a method...
-b.printMe=instancemethod(secret_agent_print,b,Person)
+b.printMe=instancemethod(secret_agent_output,b,Person)
 print("Only James is a secret agent...")
 p.printMe()
 b.printMe()
 
 # now lets make everyone a secret agent...
 # both of these will work (2nd version is better...)
-#b.__class__.printMe=secret_agent_print
-#Person.printMe=secret_agent_print
-Person.printMe=instancemethod(secret_agent_print,None,Person)
+#b.__class__.printMe=secret_agent_output
+#Person.printMe=secret_agent_output
+Person.printMe=instancemethod(secret_agent_output,None,Person)
 print("Now we are both secret agents...")
 b.printMe()
 p.printMe()

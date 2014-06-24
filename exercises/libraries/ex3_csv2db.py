@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import csv
 import sqlite3
@@ -18,4 +18,4 @@ with db:
 # test results
 cursor.execute('SELECT * FROM pypi')
 for row in cursor:
-	print row
+	print(row)

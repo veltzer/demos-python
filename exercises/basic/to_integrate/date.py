@@ -2,13 +2,13 @@ class Date:
 	days_in_months=[31,29,31,30,31,30,31,31,30,31,30,31]
 	def __init__(self, day, month, year):
 		if ( (type(day)!=type(1)) or (type(month)!=type(1)) or (type(year)!=type(1))):
-			print "Date must be initialized with numbers"
+			print("Date must be initialized with numbers")
 			return
 		if ((month<1) or (month>12)):
-			print "Month must be between 1 and 12"
+			print("Month must be between 1 and 12")
 			return
 		if ( (day<0) or (day>self.days_in_months[month-1])):
-			print "Day must be between 1 and ", self.days_in_months[month-1]
+			print("Day must be between 1 and ", self.days_in_months[month-1])
 			return
 		self.day=day
 		self.month=month

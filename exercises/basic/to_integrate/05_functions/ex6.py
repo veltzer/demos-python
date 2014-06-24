@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def swap_lists(l1,l2):
 	for i in xrange(len(l1)):
@@ -7,4 +7,4 @@ def swap_lists(l1,l2):
 list1=["a","b","c"]
 list2=[7,8,9]
 swap_lists(list1,list2)
-print list1, list2
+print(list1, list2)

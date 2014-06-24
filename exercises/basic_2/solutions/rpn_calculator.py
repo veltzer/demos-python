@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # This magic line fixes 3/2 to return 1.5 and not 1.
 # You always want it in any Python program using division.
@@ -21,9 +21,9 @@ operators={'+': add, '-': sub, '*': mul, '/': div}
 
 def rpn_calc(expression):
 	stack=[]
-	print stack
+	print(stack)
 	for word in expression.split():
-		print word
+		print(word)
 		if word not in operators:
 			stack.append(float(word))
 		else:
@@ -32,6 +32,6 @@ def rpn_calc(expression):
 			# Instead of writing many if..elif... cases, just call
 			# whatever function the dict gave us.
 			stack.append(operators[word](a, b))
-		print stack
+		print(stack)
 
 rpn_calc(" ".join(["2","2","+","5","*"]))

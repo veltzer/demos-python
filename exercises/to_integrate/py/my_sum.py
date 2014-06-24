@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def mysum(lst):
 	"""A function receiving a list of integers and returning the sum
@@ -8,4 +8,4 @@ def mysum(lst):
 		s+=x
 	return s
 
-print "the sum is ",mysum([1,2,3,4,5])
+print("the sum is ",mysum([1,2,3,4,5]))

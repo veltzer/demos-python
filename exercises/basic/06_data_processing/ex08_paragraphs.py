@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def lines2paragraphs(lines):
 	"""Group lines into paragraphs as lists of lines."""
@@ -32,4 +32,4 @@ def reformat(lines2paragraphs,chars):
 
 mygen=reformat(lines2paragraphs(open('/usr/share/doc/python/copyright')),50)
 for l in mygen:
-	print l
+	print(l)

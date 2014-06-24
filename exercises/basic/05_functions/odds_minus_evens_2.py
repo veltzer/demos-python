@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def odds_minus_evens(l):
 	""" Returns the sum of odd numbers in the list minus the sum of evns """
@@ -10,4 +10,4 @@ def odds_minus_evens(l):
 			sum+=x
 	return sum
 
-print odds_minus_evens(range(10))
+print(odds_minus_evens(range(10)))

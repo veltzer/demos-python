@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # this is a function accepting a list of unary functions and an argument
 # the function returns a list where each element is the application of the
@@ -17,4 +17,4 @@ def mul(x,y,correction_factor=7):
 def sub(x,y,correction_factor=7):
 	return x-y
 
-print map_like([add,mul,sub],7,3,correction_factor=2)
+print(map_like([add,mul,sub],7,3,correction_factor=2))

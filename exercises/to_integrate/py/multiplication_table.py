@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 row=1
 while row<=10:
 	col=1
 	while col<=10:
-		print row*col,
+		print(row*col,end='')
 		col+=1
-	print
+	print()
 	row+=1

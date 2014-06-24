@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys, contextlib
 
 @contextlib.contextmanager
@@ -22,11 +24,11 @@ if __name__=='__main__':
 	# make sure file is empty
 	open('out3.txt', 'w').close()
 	# test
-	print "This should print nothing:"
+	print("This should output nothing:")
 	for name in ["Fred", "Barney"]:
 		with redirect_output_to('out3.txt'):
-			print "Hello, {0}!".format(name)
-	print "The file now contains this:"
-	print open('out3.txt').read()
+			print("Hello, {0}!".format(name))
+	print("The file now contains this:")
+	print(open('out3.txt').read())
 	# clean up
 	os.remove('out3.txt')

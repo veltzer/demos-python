@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """
 This is a solution using a dictionary
@@ -14,10 +14,10 @@ for c in s:
 	if c.isdigit():
 		d[int(c)]+=1
 	else:
-		print "you moron"
+		print("you moron")
 
 for i in xrange(10):
-	print "{i} appeared {count} times in the text".format(
+	print("{i} appeared {count} times in the text".format(
 		i=i,
 		count=d[i]
-	)
+	))

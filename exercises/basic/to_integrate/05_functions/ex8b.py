@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def my_func(x,y):
 	if y%2==0:
@@ -12,4 +12,4 @@ def odds_minus_evens(l):
 		result-=2*l[0]
 	return result
 
-print odds_minus_evens(xrange(2,6))
+print(odds_minus_evens(xrange(2,6)))

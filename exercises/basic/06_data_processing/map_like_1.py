@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # this is a function accepting a list of unary functions and an argument
 # the function returns a list where each element is the application of the
@@ -17,4 +17,4 @@ def triple(x):
 def plusone(x):
 	return x+1
 
-print map_like([square,triple,plusone],7)
+print(map_like([square,triple,plusone],7))
