@@ -7,8 +7,9 @@ This is used to implement find(1)+grep(1) in just a few lines of python.
 
 	Mark Veltzer <mark@veltzer.net>
 """
-import os # for .path.join, .walk
-import sys # for .argv
+import os.path # for join
+import os # for walk
+import sys # for argv
 
 if len(sys.argv)<2:
 	raise ValueError("plase pass root_folder")

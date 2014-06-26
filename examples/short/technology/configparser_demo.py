@@ -5,8 +5,8 @@ This is an example of how to use pythons built-in configparser.
 
 	Mark Veltzer <mark@veltzer.net>
 """
-import configparser
-import os.path
+import os.path # for isfile, expanduser
+import configparser # for ConfigParser
 
 inifile=os.path.expanduser('~/.demo.ini')
 if os.path.isfile(inifile):

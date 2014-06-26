@@ -5,9 +5,10 @@ This is an example of how to resolve a path in python
 
 	Mark Veltzer <mark@veltzer.net>
 """
-import os # for .path.join, .walk
-import re # for .compile,.finditer
-import sys # for .argv
+import os.path # for join
+import os # for walk
+import re # for compile, finditer
+import sys # for argv
 
 if len(sys.argv)<2:
 	raise ValueError("plase pass regexp")

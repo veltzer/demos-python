@@ -5,7 +5,7 @@ Implemting grep in python in less than 10 lines of code...
 
 	Mark Veltzer <mark@veltzer.net>
 """
-import re # for .compile,.finditer
+import re # for compile, finditer
 import sys # for argv
 
 # command line usage...

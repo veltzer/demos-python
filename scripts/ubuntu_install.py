@@ -18,6 +18,8 @@ packs=[
 	'python3-newt',
 	'python-dialog',
 	'python-imdbpy',
+	'python-mysql.connector',
+	'python3-mysql.connector',
 ]
 
 args=['sudo','apt-get','install']
