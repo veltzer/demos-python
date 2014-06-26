@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 """
 An example of an application sending an email.
@@ -14,7 +14,7 @@ import sys
 
 def send_email():
 	debug=False
-	config=ConfigParser.ConfigParser()
+	config=configparser.ConfigParser()
 	config.read(["myworld.cfg"])
 	p_subject=config.get("email","subject")
 	p_from=config.get("email","from")
