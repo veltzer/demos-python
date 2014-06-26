@@ -8,8 +8,7 @@ check_all: check_doublespace check_endspace check_ops check_print check_endsemi
 .PHONY: check_print
 check_print:
 	$(info doing $@)
-	@-git grep "print " -- \*.py
-	@-git grep -e "print$$" -- \*.py | grep -v pprint
+	@-git grep -e "print " --or -e "print$$" -- \*.py | grep -v pprint
 .PHONY: check_endsemi
 check_endsemi:
 	$(info doing $@)
@@ -17,7 +16,7 @@ check_endsemi:
 .PHONY: check_doublespace
 check_doublespace:
 	$(info doing $@)
-	@-git grep -e "  " -- \*.py
+	@-git grep -e "\ \ " -- \*.py
 .PHONY: check_endspace
 check_endspace:
 	$(info doing $@)
@@ -25,17 +24,7 @@ check_endspace:
 .PHONY: check_ops
 check_ops:
 	$(info doing $@)
-	@-git grep -e " = " -- \*.py
-	@-git grep -e " == " -- \*.py
-	@-git grep -e " != " -- \*.py
-	@-git grep -e " < " -- \*.py
-	@-git grep -e " > " -- \*.py
-	@-git grep -e " % " -- \*.py
-	@-git grep -e " / " -- \*.py
-	@-git grep -e " + " -- \*.py
-	@-git grep -e " - " -- \*.py
-	@-git grep -e " <= " -- \*.py
-	@-git grep -e " => " -- \*.py
+	@-git grep -e " = " --or -e " == " --or -e " != " --or -e " < " --or -e " > " --or -e " % " --or -e " / " --or -e " + " --or -e " - " --or -e " <= " --or -e " => " -- \*.py
 .PHONY: check_syn
 check_syn:
 	-git grep ";" -- \*.py
