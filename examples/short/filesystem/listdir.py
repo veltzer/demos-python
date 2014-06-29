@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 
 '''
-This is an example of the 'os.walk' API that allows one to traverse
-a directory of files recursivly.
-This is used to implement find(1)+grep(1) in just a few lines of python.
+This is an example of how to use the os.listdir API
+to get all the files in a specific folder.
+This is more efficient than the glob module since it
+does not support regular expressions of any kind and
+is the right thing to use if you need ALL the files
+in a folder
 
 	Mark Veltzer <mark@veltzer.net>
 '''

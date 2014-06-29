@@ -20,6 +20,7 @@ for root,dirs,files in os.walk('.'):
 	for file in files:
 		full=os.path.join(root,file)
 		for num,line in enumerate(open(full)):
+			# remove the new line
 			line=line[:-1]
 			for x in c.finditer(line):
 				print("{0},{1}: {2}".format(full,num,line))
