@@ -27,3 +27,5 @@ if os.path.islink(link):
 	print(real_link_target)
 else:
 	raise ValueError('this file you gave [{0}] is not a symbolic link...'.format(link))
+
+print(os.path.realpath(link))
