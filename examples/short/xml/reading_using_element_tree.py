@@ -7,7 +7,7 @@ xml.etree module
 	Mark Veltzer <mark@veltzer.net>
 '''
 
-import xml.etree.ElementTree
+import xml.etree.ElementTree # for ElementTree
 
 mydoc=xml.etree.ElementTree.ElementTree(file='tst.xml')
 for e in mydoc.findall('.//bar'):
