@@ -5,6 +5,8 @@ This is a simple doctest example.
 
 	Mark Veltzer <mark@veltzer.net>
 """
+import doctest # for testmod
+
 def triple(x):
 	""" return x*3
 
@@ -19,8 +21,7 @@ def square(x):
 	>>> square(7)
 	49
 	"""
+	# notice this bug...
 	return x*x+1
 
-import doctest
-#print(dir(doctest))
 doctest.testmod()
