@@ -3,6 +3,9 @@
 """
 A program that shows you how to get the size of the terminal.
 
+References:
+http://stackoverflow.com/questions/566746/how-to-get-console-window-width-in-python
+
 	Mark Veltzer <mark@veltzer.net>
 """
 
