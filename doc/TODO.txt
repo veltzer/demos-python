@@ -1,3 +1,4 @@
+- demo the 'asyncio' module.
 - do example of using the multithreading module.
 - do an example of how to exit from a python script
 	(quit(),exit(), os._exit() and all).
