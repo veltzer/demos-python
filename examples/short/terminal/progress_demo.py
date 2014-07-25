@@ -13,4 +13,4 @@ for i in range(10):
 	# do something
 	time.sleep(1)
 	pbar.update(i+1)
-#pbar.finish()
+pbar.finish()
