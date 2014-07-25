@@ -27,7 +27,7 @@ p_output=sys.argv[2]
 
 mylookup=mako.lookup.TemplateLookup(directories=['.'],input_encoding=input_encoding,output_encoding=output_encoding)
 template=mako.template.Template(filename=p_input,lookup=mylookup,output_encoding=output_encoding,input_encoding=input_encoding)
-file=open(p_output,'w')
-file.write(template.render_unicode(foo='bar', years=years))
+file=open(p_output,'wb')
+file.write(template.render(foo='bar', years=years))
 file.close()
 os.chmod(p_output,0o0444)
