@@ -43,4 +43,8 @@ cursor=db.cursor()
 cursor.execute('SHOW TABLES')
 for row in cursor:
 	print(row[0])
+# demo with place holders
+cursor.execute('SELECT * FROM TbWkWork WHERE id=%(id)s', { 'id': 1000 })
+for row in cursor:
+	print(row)
 db.close()
