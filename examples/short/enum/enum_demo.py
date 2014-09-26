@@ -2,8 +2,6 @@
 
 '''
 Example of an enum in python3
-
-	Mark Veltzer <mark@veltzer.net>
 '''
 
 import enum # for Enum
@@ -31,11 +29,11 @@ is_enum(Event.edgepredel)
 
 print(Event.edgepredel)
 print(dir(Event.edgepredel))
-print("name is [{name}] and type is [{type}]".format(
+print('name is [{name}] and type is [{type}]'.format(
 	name=Event.edgepredel.name,
 	type=type(Event.edgepredel.name),
 ))
-print("value is [{value}] and type is [{type}]".format(
+print('value is [{value}] and type is [{type}]'.format(
 	value=Event.edgepredel.value,
 	type=type(Event.edgepredel.value),
 ))

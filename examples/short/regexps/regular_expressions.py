@@ -6,9 +6,8 @@ This is an example that demonstrates using regular expressions in python
 NOTES:
 - .match matches the *entire* string.
 - .findall can return all matches as strings.
-
-	Mark Veltzer <mark@veltzer.net>
 '''
+
 import re # for compile, finditer
 
 c=re.compile('^\tfoobar (\d+)\n$')

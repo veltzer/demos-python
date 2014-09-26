@@ -7,9 +7,8 @@ This is more efficient than the glob module since it
 does not support regular expressions of any kind and
 is the right thing to use if you need ALL the files
 in a folder
-
-	Mark Veltzer <mark@veltzer.net>
 '''
+
 import os # for listdir
 import sys # for arv
 

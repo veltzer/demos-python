@@ -1,10 +1,11 @@
-from threading import *
-
-"""
+'''
 An example of a stack for multi threaded programming.
 
-	Mark Veltzer <mark@veltzer.net>
-"""
+TODO:
+- remove the import *
+'''
+
+from threading import *
 
 class Stack:
 	def __init__(self):
@@ -42,7 +43,6 @@ class Consumer(Thread):
 			number=self.stack.pop()
 			while (number==None):
 				number= self.stack.pop()
-
 
 stack=Stack()
 threads=[None]*6

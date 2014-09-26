@@ -1,17 +1,16 @@
 #!/usr/bin/python
 
-"""
+'''
 This example shows how to call popen and get the return text.
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
+import subprocess # for Popen
 
-"""
+'''
 A function that runs a command in a shell,checks that it succeeded and returns the output of that command
 in case of success. In case of error it will throw an exception
 This is similar to python>=2.7 subprocess.check_output
-"""
-import subprocess
+'''
 def system_check_output(arg):
 	pr=subprocess.Popen(arg,stdout=subprocess.PIPE)
 	(output,errout)=pr.communicate()

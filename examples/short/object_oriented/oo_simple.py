@@ -1,13 +1,12 @@
 #!/usr/bin/python
 
-"""
+'''
 This is a fairly simple basic OO example
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
 class Book(object):
 	NumberOfBooks=17
-	""" constructor """
+	''' constructor '''
 	def __init__(self,price):
 		self.__price=price
 	def getPrice(self):
@@ -17,7 +16,7 @@ class Book(object):
 	def printMe(self):
 		print('price is',self.__price)
 
-""" Lets show how we use our object... """
+''' Lets show how we use our object... '''
 b=Book(50)
 b.printMe()
 b.setPrice(60)

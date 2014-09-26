@@ -2,8 +2,6 @@
 
 '''
 This example shows how to find if a file is in a certain folder.
-
-	Mark Veltzer <mark@veltzer.net>
 '''
 
 import sys # for stdin

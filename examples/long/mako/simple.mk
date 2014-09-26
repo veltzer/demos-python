@@ -1,2 +1,2 @@
 This is ${foo}
-Copyright Mark Veltzer ${years(2007)}
+Copyright Linus Torvalds ${years(2007)}

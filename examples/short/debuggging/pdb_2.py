@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
-"""
+'''
 This is an example of debugging python with pdb.
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
-import pdb
+import pdb # for set_trace
+
 pdb.set_trace()
 
 def calc():
@@ -15,5 +15,5 @@ def calc():
 		sum=sum+i
 		i=i+1
 
-if __name__=="__main__":
+if __name__=='__main__':
 	calc()

@@ -1,13 +1,12 @@
 #!/usr/bin/python
 
-"""
+'''
 This is an example of how to debug a python application
 just run this application and you will enter debug mode
 as soon as you start the trace...
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
-import pdb
+import pdb # for set_trace
 
 # This will make you enter debug start right from the start...
 #pdb.set_trace()
@@ -21,5 +20,5 @@ def calc():
 			pdb.set_trace()
 		i=i+1
 
-if __name__=="__main__":
+if __name__=='__main__':
 	calc()

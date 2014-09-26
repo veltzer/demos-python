@@ -1,12 +1,9 @@
 #!/usr/bin/python
 
-"""
+'''
 This shows that 'staticmethod' can be used by inheriting
 classes as well. It works!
-
-	Mark Veltzer <mark@veltzer.net>
-"""
-
+'''
 
 class Book:
 	num=0

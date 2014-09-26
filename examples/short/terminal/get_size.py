@@ -1,15 +1,13 @@
 #!/usr/bin/python
 
-"""
+'''
 A program that shows you how to get the size of the terminal.
 
 A clear winner in terms of performance is the ioctl(2) one.
 
 References:
 http://stackoverflow.com/questions/566746/how-to-get-console-window-width-in-python
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 import os # for popen, environ
 import fcntl # for ioctl

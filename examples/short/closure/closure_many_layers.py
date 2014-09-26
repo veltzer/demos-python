@@ -1,12 +1,10 @@
 #!/usr/bin/python
 
-"""
+'''
 This is to show that cloures can be more than one layer deep.
 Here y is a local variable, x is in the closure and z is in
 the closure of the closure.
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 z=2
 def make_adder(x):

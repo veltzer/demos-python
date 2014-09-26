@@ -1,12 +1,10 @@
 #!/usr/bin/python
 
-"""
-this is an example of how the "map" function in python works
+'''
+this is an example of how the 'map' function in python works
 this is a naive implementation. the python implementation is coded
 in C and is a lot faster than this one...
-
-		Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 def my_map(func,val_list):
 	result=[]

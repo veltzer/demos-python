@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
-"""
+'''
 This is an example of how to use pythons built-in configparser.
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
 import os.path # for isfile, expanduser
 import configparser # for ConfigParser
 

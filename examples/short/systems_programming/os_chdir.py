@@ -1,13 +1,12 @@
 #!/usr/bin/python
 
-"""
+'''
 This example shows how to use the os chdir command.
 Note that an exception is thrown if a directory name which cannot be
 changed to is supplied (bad name, access problem and more).
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
-import os
+import os # for chdir, system
 
 # a wrong directory on purpose...
 try:

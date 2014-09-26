@@ -20,6 +20,7 @@ packs=[
 	'python-imdbpy',
 	'python-mysql.connector',
 	'python3-mysql.connector',
+	'python3-progressbar',
 ]
 
 args=['sudo','apt-get','install','--assume-yes']

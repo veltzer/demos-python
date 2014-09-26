@@ -3,8 +3,6 @@
 '''
 This example shows how to split a filename into its components.
 
-	Mark Veltzer <mark@veltzer.net>
-
 NOTES:
 - split is just like (dirname, basename)
 - splitext is for extensions.

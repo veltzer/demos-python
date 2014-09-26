@@ -1,14 +1,10 @@
 #!/usr/bin/python3
 
-"""
+'''
 This is an example of how to use the subprocess module for streaming
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
-from __future__ import print_function
-
-import subprocess
-import sys
+import subprocess # for Popen
 
 p=subprocess.Popen(['./demo_process.py'],shell=False,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 # do not use p.stdout.readlines() in the next line as it will block...

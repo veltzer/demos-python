@@ -1,10 +1,9 @@
 #!/usr/bin/python
 
-"""
+'''
 This example shows how to create a read only dictionary
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
 class RoDict():
 	def __init__(self):
 		self.d={}

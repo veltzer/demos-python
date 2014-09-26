@@ -2,17 +2,15 @@
 
 from __future__ import print_function
 
-"""
+'''
 Example for catching all exception types.
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 try:
-	raise ValueError("hello")
+	raise ValueError('hello')
 # this next line catches all exceptions, logs and throws them back...
 except Exception,e:
-	print("in except",e)
+	print('in except',e)
 	raise e
 finally:
-	print("finally is here")
+	print('finally is here')

@@ -1,18 +1,17 @@
 #!/usr/bin/python
 
-"""
-	This is an example showing how to create object hierarchies in python.
+'''
+This is an example showing how to create object hierarchies in python.
 
-	Things to note:
-	- inheriting from object is recommended (you get lots of methods)
-	- there are two ways to call parent methods.
-	- all methods are overloadable.
-	- parent attributes are directly accessible from the child
-		(no access control).
-	- the 'dir' function could be used for debugging.
+Things to note:
+- inheriting from object is recommended (you get lots of methods)
+- there are two ways to call parent methods.
+- all methods are overloadable.
+- parent attributes are directly accessible from the child
+	(no access control).
+- the 'dir' function could be used for debugging.
+'''
 
-		Mark Veltzer <mark@veltzer.net>
-"""
 class A(object):
 	def __init__(self,p_a):
 		print('A.__init__')
@@ -25,7 +24,7 @@ class A(object):
 		print('A.method_overloaded3')
 	def method_onlya(self):
 		print('A.method_onlya')
-		print("a is",self.a)
+		print('a is',self.a)
 
 class B(A):
 	def __init__(self,p_b,p_a):
@@ -50,17 +49,17 @@ class B(A):
 		A.method_overloaded3(self)
 	def method_onlyb(self):
 		print('B.method_onlyb')
-		print("a is",self.a)
-		print("b is",self.b)
+		print('a is',self.a)
+		print('b is',self.b)
 
 a=A(6)
-print("dir(a) is")
+print('dir(a) is')
 print(dir(a))
-print("=================================")
+print('=================================')
 b=B(5,8)
-print("dir(b) is")
+print('dir(b) is')
 print(dir(b))
-print("=================================")
+print('=================================')
 b.method_onlya()
 b.method_overloaded1()
 b.method_overloaded2()

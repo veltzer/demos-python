@@ -1,11 +1,8 @@
 #!/usr/bin/python
 
-"""
+'''
 A nicer version
-
-	Mark Veltzer <mark@veltzer.net>
-"""
-
+'''
 
 class Book:
 	num=0

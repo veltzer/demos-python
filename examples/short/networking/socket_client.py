@@ -1,11 +1,10 @@
 #!/usr/bin/python
 
-"""
+'''
 Echo client program
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
-import socket
+import socket # for socket
 
 HOST='localhost' # The remote host
 PORT=5000 # The same port as used by the server

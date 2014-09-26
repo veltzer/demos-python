@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-"""
+'''
 This example demonstrates the use of signal.pause().
 If you already know about UNIX signals then this is no great surprise.
 For those of you who do not know about UNIX signals,pause allows you
@@ -14,9 +14,8 @@ thread to react,just as in this example.
 Another thing to note is that when the signal handler is running it is running
 in the context of the main thead and the threading module reports it as such.
 This is typical UNIX behaviour.
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
 import os
 import signal
 import threading
@@ -32,23 +31,23 @@ def call_old(old_val,signum,frame):
 
 # this is my signal handler
 def myhandler(signum,frame):
-	debug("signalhandler: got signal {0}".format(signum))
+	debug('signalhandler: got signal {0}'.format(signum))
 	if signum==signal.SIGUSR1:
 		# lets call the old signal handler
 		global oldsigusr1
 		call_old(oldsigusr1,signum,frame)
-		debug("signalhandler: doing some work")
+		debug('signalhandler: doing some work')
 	if signum==signal.SIGUSR2:
 		# lets call the old signal handler
 		global oldsigusr2
 		call_old(oldsigusr2,signum,frame)
 		# lets signal the main thread to stop
-		debug("signalhandler: setting stop to True")
+		debug('signalhandler: setting stop to True')
 		global stop
 		stop=True
 	if signum==signal.SIGINT:
 		# here we do not call the old function
-		debug("signalhandler: don't press CTRL+C. Kill me using SIGUSR2")
+		debug('signalhandler: don't press CTRL+C. Kill me using SIGUSR2')
 
 oldsigusr1=signal.getsignal(signal.SIGUSR1)
 oldsigusr2=signal.getsignal(signal.SIGUSR2)
@@ -58,11 +57,11 @@ signal.signal(signal.SIGUSR1,myhandler)
 signal.signal(signal.SIGUSR2,myhandler)
 signal.signal(signal.SIGINT,myhandler)
 
-debug("mainthread: program starting,signal me using [kill -s SIGUSR1 {0}] or [kill -s SIGUSR2 {0}]".format(os.getpid()))
+debug('mainthread: program starting,signal me using [kill -s SIGUSR1 {0}] or [kill -s SIGUSR2 {0}]'.format(os.getpid()))
 while True:
-	debug("mainthread: going to pause()")
+	debug('mainthread: going to pause()')
 	signal.pause()
 	if stop==True:
-		debug("mainthread: I was asked to stop")
+		debug('mainthread: I was asked to stop')
 		break
-debug("mainthread: program ending")
+debug('mainthread: program ending')

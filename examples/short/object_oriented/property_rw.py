@@ -1,16 +1,14 @@
 #!/usr/bin/python
 
-"""
+'''
 This is an example of using a property in python.
 - We store the value in the 'real' attribute '__price'.
-- This attribute is "private" (well,mangled anyway...).
+- This attribute is 'private' (well,mangled anyway...).
 - This example also uncovers a bug in the python interpreter
 which cashes the value of __price but does not do this for
 the magical 'x.price' property.
 - This idea is similar to ideas in languages such as C#.
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 class Book:
 	def __init__(self,price):

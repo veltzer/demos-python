@@ -7,8 +7,6 @@ python using the shutil package.
 NOTES:
 the folder must exist. If you want a softer solution then look at
 the rmtree_if_exists function below...
-
-	Mark Veltzer <mark@veltzer.net>
 '''
 
 import shutil # for rmtree

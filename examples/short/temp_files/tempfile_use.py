@@ -2,8 +2,6 @@
 
 '''
 Demo how to create a temp file in python
-
-	Mark Veltzer <mark@veltzer.net>
 '''
 
 import tempfile # for NamedTemporaryFile

@@ -2,8 +2,6 @@
 
 '''
 Example of disassembling a python function
-
-	Mark Veltzer <mark@veltzer.net>
 '''
 
 import dis # for dis

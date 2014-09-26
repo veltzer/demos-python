@@ -1,10 +1,8 @@
 #!/usr/bin/python
 
-"""
+'''
 This is a basic closure example.
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 def make_adder(x):
 	def adder(y):

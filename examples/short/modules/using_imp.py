@@ -1,15 +1,13 @@
 #!/usr/bin/python
 
-"""
+'''
 Demo to show the usage of the imp module in python
 This clearly shows that you can reload any module into any name space using
 the imp module.
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 from __future__ import print_function
-import imp
+import imp # for load_source
 
 imp.load_source('__main__','using_imp_one.py')
 print('add(2,2) is',add(2,2))

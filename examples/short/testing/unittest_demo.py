@@ -1,12 +1,10 @@
 #!/usr/bin/python
 
-"""
+'''
 This example demonstrates the use of the 'unittest' module.
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
-
-import unittest
+import unittest # for TestCase, main
 
 class myunittest(unittest.TestCase):
 	def testThis(self):

@@ -1,13 +1,11 @@
 #!/usr/bin/python
 
-"""
+'''
 Show the size of a data structure in python
 
 We can see that the size of the first array is about 4Mb
 which makes sense if each int is 4 bytes.
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 import sys # for getsizeof
 

@@ -1,10 +1,8 @@
 #!/usr/bin/python
 
-"""
+'''
 An even better implementation of map as a generator.
-
-		Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 def my_map(func,val_list):
 	for value in val_list:

@@ -1,10 +1,8 @@
 #!/usr/bin/python
 
-"""
+'''
 Showing how to sort tuples in reverse
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 def my_tup_revese(t1,t2):
 	if (t1[1],t1[0])<(t2[1],t2[0]):

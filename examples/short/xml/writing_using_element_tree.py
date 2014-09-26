@@ -7,8 +7,6 @@ xml.etree module
 The only problem with this is that xml.etree.ElementTree does not know how
 to pretty output xml and so I do the corretion using xml.dom.minidom at
 the bottom.
-
-	Mark Veltzer <mark@veltzer.net>
 '''
 
 import xml.etree.ElementTree as ET

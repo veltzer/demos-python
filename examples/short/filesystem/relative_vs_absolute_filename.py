@@ -3,9 +3,8 @@
 '''
 This example shows how to know, in python, whether the file name
 that you get is realtive or absolute
-
-	Mark Veltzer <mark@veltzer.net>
 '''
+
 import os.path # for isabs
 import sys # for stdin
 

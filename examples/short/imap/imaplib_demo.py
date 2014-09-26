@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-"""
+'''
 This example shows how to use the imaplib module.
 In this case I use it to access my gmail account, upload messages, download messages
 and more.
@@ -8,9 +8,7 @@ and more.
 To see the documentation of the API use: pydoc imaplib
 This thing started from me wanting to import my old mail to gmail and seeing
 this blog post: http://scott.yang.id.au/2009/01/migrate-emails-maildir-gmail.html
-
-		Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 import imaplib # for IMAP4_SSL
 import ConfigParser # for ConfigParser

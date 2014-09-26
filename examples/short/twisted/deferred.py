@@ -1,10 +1,8 @@
 #!/usr/bin/python
 
-"""
+'''
 A more complex example involving deferreds.
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 from twisted.internet import defer
 import time
@@ -23,7 +21,7 @@ def largeFibonnaciNumber():
 		first=second
 		second=new
 		if i%1000==0:
-			print("Progress: calculating the {0}th Fibonnaci number".format(i))
+			print('Progress: calculating the {0}th Fibonnaci number'.format(i))
 	# give the Deferred the answer to pass to the callbacks:
 	d.callback(second)
 	# return the Deferred with the answer:
@@ -36,12 +34,12 @@ d=largeFibonnaciNumber()
 
 timeAfter=time.time()
 
-print("Total time taken for largeFibonnaciNumber call: {0:.3f} seconds".format(timeAfter-timeBefore))
+print('Total time taken for largeFibonnaciNumber call: {0:.3f} seconds'.format(timeAfter-timeBefore))
 
 # add a callback to it to output the number
 
 def printNumber(number):
-	print("The %dth Fibonacci number is %d"%(TARGET,number))
+	print('The %dth Fibonacci number is %d'%(TARGET,number))
 
-print("Adding the callback now.")
+print('Adding the callback now.')
 d.addCallback(printNumber)

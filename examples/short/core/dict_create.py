@@ -1,10 +1,9 @@
 #!/usr/bin/python
 
-"""
+'''
 An example showing the different ways to create dicts
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
 # simplest way, build in the language syntax
 d1={}
 # constructor

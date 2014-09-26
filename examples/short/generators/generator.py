@@ -1,10 +1,8 @@
 #!/usr/bin/python
 
-"""
+'''
 A simple example of a generator.
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 #input_list=range(100000)
 def input_list():

@@ -1,11 +1,9 @@
 #!/usr/bin/python
 
-"""
+'''
 This is an improvement on the previous singleton example.
 This time we protect against concurrent access.
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 import threading
 
@@ -32,7 +30,7 @@ class A:
 a1=A.getInstance()
 a2=A.getInstance()
 if a1 is a2:
-	print("yes,they are the same instance")
+	print('yes,they are the same instance')
 print(a1)
 print(a2)
 print(dir(a1))

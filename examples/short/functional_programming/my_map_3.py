@@ -1,15 +1,14 @@
 #!/usr/bin/python
 
-"""
+'''
 this is an example of implementing the python builtin 'map'
 function in python.
 
 Obviously you should not use this approach and it is presented
 for pedagogic purposes only. Python's own 'map' is written in C
 and performs much better.
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
 def my_map(f,seq):
 	l=[]
 	for x in seq:

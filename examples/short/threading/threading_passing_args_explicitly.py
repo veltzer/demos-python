@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-"""
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
+This is a classic thread creation example.
+'''
 
 import threading
 
@@ -10,6 +10,6 @@ import threading
 def func(data):
 	print(data)
 
-t=threading.Thread(target=func,args=("Hello",))
+t=threading.Thread(target=func,args=('Hello',))
 t.start()
 t.join()

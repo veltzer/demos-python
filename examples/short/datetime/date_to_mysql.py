@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
 '''
-A basic hello world program...
-
-	Mark Veltzer <mark@veltzer.net>
+example of how to convert the output of date(1) on the command line
+to mysql type dates.
 '''
 
 import subprocess # for check_output

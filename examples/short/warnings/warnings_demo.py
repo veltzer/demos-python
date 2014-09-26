@@ -2,8 +2,6 @@
 
 '''
 A demo of how warnings work in python.
-
-	Mark Veltzer <mark@veltzer.net>
 '''
 
 import warnings # for warn, simplefilter

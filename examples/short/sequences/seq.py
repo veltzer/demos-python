@@ -1,12 +1,10 @@
 #!/usr/bin/python
 
-"""
+'''
 	this example shows that you can pass any generator/sequence to a function
 	that only uses the generator/sequence API and get the right results.
 	What can't you do? Use slices on generators but that is obvious.
-
-	Mark Veltzer
-"""
+'''
 
 from __future__ import print_function
 
@@ -19,7 +17,7 @@ myfunc(xrange(10))
 myfunc(range(10))
 myfunc((1,2,3))
 myfunc([1,2,3])
-myfunc("hello")
+myfunc('hello')
 myfunc(range(10)[:5])
 # these will not work
 #print(xrange(10)[:5])

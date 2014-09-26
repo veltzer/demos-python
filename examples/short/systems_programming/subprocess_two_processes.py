@@ -1,14 +1,12 @@
 #!/usr/bin/python
 
-"""
+'''
 This example shows how to create two processes in python that communicate via a pipe.
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
-
-"""
+'''
 This function receives two lists to serve as the new processes
-"""
+'''
 import subprocess
 import sys
 def system_pipe(list1,list2,getOutput=False,getError=False):

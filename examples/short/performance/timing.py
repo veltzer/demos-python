@@ -2,8 +2,6 @@
 
 '''
 Example of timing python code
-
-	Mark Veltzer <mark@veltzer.net>
 '''
 
 import time # for time, sleep

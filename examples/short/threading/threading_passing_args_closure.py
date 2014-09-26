@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-"""
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
+This is an example of creating a thread and passing it data via it's closure
+'''
 
 import threading
 
@@ -17,7 +17,7 @@ def create_func(func_to_run,data):
 		func_to_run(data)
 	return wrapper
 
-myfunc=create_func(func,"Hello,World")
+myfunc=create_func(func,'Hello,World')
 t=threading.Thread(target=myfunc)
 t.start()
 t.join()

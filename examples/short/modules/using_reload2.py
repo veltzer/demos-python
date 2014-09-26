@@ -1,10 +1,8 @@
 #!/usr/bin/python
 
-"""
+'''
 Demo to show the usage of the global function 'reload'
-
-	Mark Veltzer <mark@veltzer.net>
-"""
+'''
 
 from __future__ import print_function
 import imp

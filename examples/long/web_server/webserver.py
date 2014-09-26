@@ -1,15 +1,16 @@
 #!/usr/bin/python
 
-# demo of simple web server in python using HTTPServer
-# originally grabbed from 'http://fragments.turtlemeat.com/pythonwebserver.php'.
-# Copyright Jon Berg , turtlemeat.com
-# Modified by Mark Veltzer <mark@veltzer.net>
+'''
+demo of simple web server in python using HTTPServer
+originally grabbed from 'http://fragments.turtlemeat.com/pythonwebserver.php'.
+Copyright Jon Berg , turtlemeat.com
+'''
 
 from __future__ import print_function
 import string,cgi,time,os,BaseHTTPServer,SocketServer,threading
 
 class ThreadedServer(SocketServer.ThreadingMixIn,BaseHTTPServer.HTTPServer):
-	"""Handle requests in a separate thread."""
+	'''Handle requests in a separate thread.'''
 	pass
 
 class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):

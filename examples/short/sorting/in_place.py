@@ -1,10 +1,10 @@
 #!/usr/bin/python
 
-"""
+'''
 This shows sorting arrays in place
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
+from __future__ import print_function
 
 mylist=[5,2,3,1,4]
 mylist.sort()

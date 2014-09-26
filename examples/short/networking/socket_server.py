@@ -1,10 +1,9 @@
 #!/usr/bin/python
 
-"""
+'''
 Echo server program
+'''
 
-	Mark Veltzer <mark@veltzer.net>
-"""
 import socket
 import sys
 
@@ -39,5 +38,5 @@ while True:
 				break
 			conn.send(data)
 		except:
-			print("exception happened...")
+			print('exception happened...')
 	conn.close()
