@@ -3,8 +3,12 @@ all:
 	$(info please tell me what to make...)
 
 .PHONY: check_all
-check_all: check_doublespace check_endspace check_ops check_print check_endsemi
+check_all: check_doublespace check_endspace check_ops check_print check_endsemi check_doublequote
 
+.PHONY: check_doublequote
+check_doublequote:
+	$(info doing $@)
+	@-git grep \" -- \*.py
 .PHONY: check_print
 check_print:
 	$(info doing $@)

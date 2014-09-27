@@ -1,7 +1,10 @@
 #!/usr/bin/python
 
-# this next section is needed since we didn't "properly" install the module
-# to /usr/share/python. If we had this would not have been neccessary.
+'''
+this sys.path.append in the next section is needed since we didn't
+'properly' install the module to /usr/share/python.
+If we had this would not have been neccessary.
+'''
 
 from __future__ import print_function
 import sys

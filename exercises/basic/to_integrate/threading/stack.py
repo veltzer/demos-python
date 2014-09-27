@@ -9,7 +9,7 @@ class Stack:
 	def push(self,number):
 		self.lock.acquire()
 		self.numbers.append(number)
-		print(number, " pushed to stack")
+		print(number, ' pushed to stack')
 		self.lock.release()
 	def pop(self):
 		self.lock.acquire()
@@ -17,7 +17,7 @@ class Stack:
 			self.lock.release()
 			return None
 		number=self.numbers.pop(len(self.numbers)-1)
-		print(number, " popped from stack")
+		print(number, ' popped from stack')
 		self.lock.release()
 		return number
 class Producer(Thread):

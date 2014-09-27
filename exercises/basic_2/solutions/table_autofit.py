@@ -5,7 +5,7 @@ columns=[['H','He','Li','Be'],['Hidrogen','Helium','Litium','Berilium'],['1.008'
 # Before printing, we must know the width for each column.
 
 def max_len(lines):
-	"""Return the length of the longest string."""
+	'''Return the length of the longest string.'''
 	lengths=[]
 	for line in lines:
 		lengths.append(len(line))

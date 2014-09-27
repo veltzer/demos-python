@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-s=raw_input("Please enter a line of digits: ")
+s=raw_input('Please enter a line of digits: ')
 l=[0]*10
 for d in s:
 	if '0'<=d<='9':

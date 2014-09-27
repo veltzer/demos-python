@@ -15,7 +15,7 @@ class Stack:
 	def push(self,number):
 		self.lock.acquire()
 		self.data.append(number)
-		print(number, " pushed to stack")
+		print(number, ' pushed to stack')
 		self.lock.release()
 	def pop(self):
 		if len(self.data)==0:
@@ -25,7 +25,7 @@ class Stack:
 			self.lock.release()
 			return None
 		number=self.data.pop(len(self.data)-1)
-		print(number, " popped from stack")
+		print(number, ' popped from stack')
 		self.lock.release()
 		return number
 

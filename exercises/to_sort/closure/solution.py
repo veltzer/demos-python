@@ -11,7 +11,7 @@ def Person(name,age):
 		return data.name
 	def setAge(age):
 		if age<=0:
-			raise "age error"
+			raise 'age error'
 		data.__dict__['age']=age
 	def getAge():
 		return data.age

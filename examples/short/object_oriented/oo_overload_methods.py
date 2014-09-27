@@ -13,9 +13,9 @@ class A:
 	def __init__(self):
 		self.__privar=5
 	def sayHello(self):
-		print(self.__privar,"hello")
+		print(self.__privar,'hello')
 	def sayHello(self,name):
-		print(self.__privar,"hello",name)
+		print(self.__privar,'hello',name)
 
 try:
 	a=A(5)
@@ -29,4 +29,4 @@ try:
 except TypeError:
 	print('oops,got an error')
 	print('the no argument version of the method \'sayHello\' does not exist...')
-a.sayHello("mark")
+a.sayHello('mark')

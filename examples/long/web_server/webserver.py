@@ -38,7 +38,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
 		self.wfile.write('<html><body>')
 		for x in os.listdir(self.realpath):
 			ref='http://localhost:8001'+self.path+x
-			self.wfile.write('<a href="'+ref+'">'+x+'</a><br/>')
+			self.wfile.write('<a href=\''+ref+'\'>'+x+'</a><br/>')
 		self.wfile.write('</body></html>')
 	def get(self):
 		#our dynamic content

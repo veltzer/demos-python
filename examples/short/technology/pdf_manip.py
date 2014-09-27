@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-"""
+'''
 A script to separate the john bryce pdf to separate slides...
-"""
+'''
 
 import subprocess # for check_output
 import os.path # for isfile

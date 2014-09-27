@@ -1,6 +1,7 @@
 from __future__ import print_function
 import sys
-print("hello from the module itself")
+
+print('hello from the module itself')
 def printit():
 	print(vars())
 	print(__name__)

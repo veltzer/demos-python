@@ -1,15 +1,15 @@
 #!/usr/bin/python
 
-import gobject
-import gtk
-
-"""
+'''
 References:
 The basic code I stole from and modified:
 	https://gist.github.com/evoL/1650115
 How to write a custom pygtk widget:
 	http://www.pygtk.org/articles/writing-a-custom-widget-using-pygtk/writing-a-custom-widget-using-pygtk.htm
-"""
+'''
+
+import gobject
+import gtk
 
 class EntryMultiCompletion(gtk.Entry):
 	def __init__(self):
@@ -20,7 +20,7 @@ class EntryMultiCompletion(gtk.Entry):
 		self.completion.set_match_func(self.match_func, None)
 		# handle the match-selected signal, raised when a completion
 		# is selected from the popup
-		self.completion.connect("match-selected", self.on_completion_match)
+		self.completion.connect('match-selected', self.on_completion_match)
 		self.set_completion(self.completion)
 
 	def match_func(self, completion, key_string, iter, data):
@@ -29,7 +29,7 @@ class EntryMultiCompletion(gtk.Entry):
 		modelstr=model[iter][0]
 		# check if the user has typed in a space char,
 		# get the last word and check if it matches something
-		if " " in key_string:
+		if ' ' in key_string:
 			last_word=key_string.split()[-1]
 			return modelstr.startswith(last_word)
 		# we have only one word typed
@@ -41,13 +41,13 @@ class EntryMultiCompletion(gtk.Entry):
 		# last one because we want to replace it with the matching word
 		# note: the user may have typed only a part of the entire word
 		# and so this step is necessary
-		if " " in current_text:
-			current_text=" ".join(current_text.split()[:-1])
-			#current_text="%s %s"%(current_text, model[iter][0])
+		if ' ' in current_text:
+			current_text=' '.join(current_text.split()[:-1])
+			#current_text='%s %s'%(current_text, model[iter][0])
 		else:
 			current_text=model[iter][0]
 		# add the matching word
-		#current_text="%s %s"%(current_text, model[iter][0])
+		#current_text='%s %s'%(current_text, model[iter][0])
 		# set back the whole text
 		self.set_text(current_text)
 		# move the cursor at the end
@@ -55,9 +55,9 @@ class EntryMultiCompletion(gtk.Entry):
 		# stop the event propagation
 		return True
 
-if __name__=="__main__": # register the class as a Gtk widget gobject.type_register(EntryMultiCompletion)
+if __name__=='__main__': # register the class as a Gtk widget gobject.type_register(EntryMultiCompletion)
 	win=gtk.Window()
-	win.connect("delete-event", gtk.main_quit)
+	win.connect('delete-event', gtk.main_quit)
 	entrycompl=EntryMultiCompletion()
 	liststore=gtk.ListStore(gobject.TYPE_STRING)
 	entrycompl.completion.set_model(liststore)

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-""" using a regular for loop with yield """
+''' using a regular for loop with yield '''
 def apply_funcs_gen1(funcs, x):
-	"""Generate results of functions applied to an argument.
+	'''Generate results of functions applied to an argument.
 	>>> def print_a(x):
 	...	 print('a')
 	...	 return x
@@ -15,13 +15,13 @@ def apply_funcs_gen1(funcs, x):
 	42
 	b
 	42
-	"""
+	'''
 	for f in funcs:
 		yield f(x)
 
-""" using generator comprehensions """
+''' using generator comprehensions '''
 def apply_funcs_gen2(funcs, x):
-	"""Generate results of functions applied to an argument.
+	'''Generate results of functions applied to an argument.
 	>>> def print_a(x):
 	...	 print('a')
 	...	 return x
@@ -34,7 +34,7 @@ def apply_funcs_gen2(funcs, x):
 	42
 	b
 	42
-	"""
+	'''
 	return (f(x) for f in funcs)
 
 import doctest

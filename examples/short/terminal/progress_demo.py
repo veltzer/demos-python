@@ -11,7 +11,7 @@ NOTES:
 import progressbar # for ProgressBar
 import time # for sleep
 
-pbar = progressbar.ProgressBar(maxval=10)
+pbar=progressbar.ProgressBar(maxval=10)
 pbar.start()
 for i in range(10):
 	# do something

@@ -4,7 +4,7 @@ import csv
 import sqlite3
 
 def read_csv(fname):
-	"""Generate dictionaries, drop the descriptions."""
+	'''Generate dictionaries, drop the descriptions.'''
 	for (date, package, version, description) in csv.reader(open(fname)):
 		yield dict(date=date, package=package, version=version)
 

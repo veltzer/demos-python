@@ -12,7 +12,7 @@ import operator
 # group of widgets, together with some functionality.
 
 class OperatorChoice(gtk.VBox):
-	"""An operator selection box."""
+	'''An operator selection box.'''
 
 	def __init__(self):
 		gtk.VBox.__init__(self)
@@ -31,10 +31,10 @@ class OperatorChoice(gtk.VBox):
 			if radio.get_active():
 				return func(arg1, arg2)
 		else:
-			raise ValueError("No operator chosen")
+			raise ValueError('No operator chosen')
 
 	# The app should react to change or operator, but shouldn't know
-	# the implementation details of this widget. The "elegant" way
+	# the implementation details of this widget. The 'elegant' way
 	# would be to define and emit our own 'changed' signal.
 	# Quick-and-dirty way:
 	def connect_changed(self, callback, *args, **kw):
@@ -44,7 +44,7 @@ class OperatorChoice(gtk.VBox):
 # Notice how the rest of the app is almost unchanged. Success!
 
 w=gtk.Window()
-w.connect("delete_event", lambda *ignored: gtk.main_quit())
+w.connect('delete_event', lambda *ignored: gtk.main_quit())
 
 hbox=gtk.HBox()
 w.add(hbox)
@@ -53,11 +53,11 @@ entry1=gtk.Entry()
 operator=OperatorChoice()
 entry2=gtk.Entry()
 result=gtk.Label()
-for widget in [entry1, operator, entry2, gtk.Label("="), result]:
+for widget in [entry1, operator, entry2, gtk.Label('='), result]:
 	hbox.pack_start(widget)
 
 def compute(*ignored):
-	"""Recompute result."""
+	'''Recompute result.'''
 	try:
 		arg1=float(entry1.get_text())
 		arg2=float(entry2.get_text())
@@ -70,8 +70,8 @@ entry2.connect('changed', compute)
 operator.connect_changed(compute)
 
 # Initialize so it's immediately useful
-entry1.set_text("3")
-entry2.set_text("2")
+entry1.set_text('3')
+entry2.set_text('2')
 
 w.show_all()
 gtk.main()

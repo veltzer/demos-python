@@ -1,8 +1,10 @@
 #!/usr/bin/python
 
-"""
-This is an example of debugging python with pdb.
-"""
+'''
+This is a small example which does not directly use the debugger
+so that you could debug it from the command line like so:
+pdb src/examples/short/debuggging/loop.py
+'''
 
 def calc():
 	i=0
@@ -11,5 +13,5 @@ def calc():
 		sum=sum+i
 		i=i+1
 
-if __name__=="__main__":
+if __name__=='__main__':
 	calc()

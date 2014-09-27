@@ -3,7 +3,7 @@
 import textwrap
 
 def lines2paragraphs(lines):
-	"""Group lines into paragraphs: as lists of lines."""
+	'''Group lines into paragraphs: as lists of lines.'''
 	paragraph=[]
 	for line in lines:
 		if not line.strip():
@@ -17,10 +17,10 @@ def lines2paragraphs(lines):
 		yield paragraph
 
 def reformat(lines):
-	"""Generate lines of reformatted paragraphs.
+	'''Generate lines of reformatted paragraphs.
 
 	Paragraph in input and output are separated by empty lines.
-	"""
+	'''
 	for p in lines2paragraphs(lines):
 		for line in textwrap.wrap('\n'.join(p)):
 			yield line

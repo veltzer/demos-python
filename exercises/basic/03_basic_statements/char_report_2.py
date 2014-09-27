@@ -1,19 +1,19 @@
 #!/usr/bin/python
 
-f=open("c:/tmp.txt")
+f=open('c:/tmp.txt')
 report={}
 lines=f.readlines()
 for line in lines:
 	for c in line:
-		if not(c in [" ","\n","\r","\t"]):
+		if not(c in [' ','\n','\r','\t']):
 			if (report.has_key(c)):
 				report[c]+=1
 			else:
 				report[c]=1
-f=open("c:/tmp2.txt",'wa')
+f=open('c:/tmp2.txt','wa')
 for c in report.keys():
 	f.write(c)
-	f.write(" : ")
+	f.write(' : ')
 	f.write(str(report[c]))
-	f.write("\n")
+	f.write('\n')
 f.close()

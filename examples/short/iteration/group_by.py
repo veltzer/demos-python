@@ -7,6 +7,6 @@ def indentation(line):
 	return len(line)-len(line.lstrip())
 
 for (indent, paragraph) in itertools.groupby(sys.stdin, key=indentation):
-	print("%d-spaced paragraph"%indent)
+	print('%d-spaced paragraph'%indent)
 	for line in paragraph:
 		print(line.strip())

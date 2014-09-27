@@ -12,7 +12,7 @@ class RoDict():
 		return self.d[key]
 	def __setitem__(self,key,val):
 		if self.ro:
-			raise Exception("dont touch this")
+			raise Exception('dont touch this')
 		else:
 			self.d[key]=val
 

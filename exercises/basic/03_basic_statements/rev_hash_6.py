@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
 d={
-	"Israel":"Jerusalem",
-	"France":"Paris",
-	"Italy":"Rome",
-	"Egypt":"Cairo",
+	'Israel': 'Jerusalem',
+	'France': 'Paris',
+	'Italy': 'Rome',
+	'Egypt': 'Cairo',
 }
 
 # Build from reverse items:

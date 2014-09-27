@@ -34,4 +34,4 @@ def rpn_calc(expression):
 			stack.append(operators[word](a, b))
 		print(stack)
 
-rpn_calc(" ".join(["2","2","+","5","*"]))
+rpn_calc(' '.join(['2','2','+','5','*']))

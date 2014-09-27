@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 '''
-	This example shows that a function in python can use a "forward"
+	This example shows that a function in python can use a 'forward'
 	defined function as long as the function in question is defined
 	by the time the original function is called.
 

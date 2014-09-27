@@ -16,7 +16,7 @@ import termios # for TIOCGWINSZ
 import time # for time
 
 def terminal_size1():
-	h, w, hp, wp = struct.unpack('HHHH',
+	h, w, hp, wp=struct.unpack('HHHH',
 		fcntl.ioctl(0, termios.TIOCGWINSZ,
 		struct.pack('HHHH', 0, 0, 0, 0)),
 	)

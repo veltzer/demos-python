@@ -7,7 +7,7 @@ Notice that if you read the target of the symlink you still have
 to fix it to find the *real* file that it is pointing to.
 '''
 
-import os # for readlink 
+import os # for readlink
 import os.path # for islink, split, abspath, join, isabs
 
 '''

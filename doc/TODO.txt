@@ -1,3 +1,6 @@
+- add a make check_code which runs the python compiler on all the scripts
+	(but does not run them, just checks the syntax).
+	how do I do that?!?
 - demo the 'asyncio' module.
 - do example of using the multithreading module.
 - do an example of how to exit from a python script

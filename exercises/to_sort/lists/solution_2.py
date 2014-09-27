@@ -1,9 +1,9 @@
 #!/usr/bin/python
 
-num=int(raw_input("Please enter number of elements: "))
+num=int(raw_input('Please enter number of elements: '))
 list=range(num)
 for x in xrange(num):
-	current=int(raw_input("Please enter element"+str(x)+": "))
+	current=int(raw_input('Please enter element'+str(x)+': '))
 	if x%2==0:
 		if x==num-1:
 			list[x]=current

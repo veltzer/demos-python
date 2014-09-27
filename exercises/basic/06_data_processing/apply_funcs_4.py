@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-"""
+'''
 Solution but with a variable argument list
-"""
+'''
 
 import operator
 

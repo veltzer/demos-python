@@ -7,7 +7,7 @@ standard python library
 
 import dbm.gnu # for open
 
-# c - open rw and create if it doesn't exist
+# the 'c' in the next row means open rw and create if it doesn't exist
 d=dbm.gnu.open('/tmp/foo.gdbm', 'c')
 
 d['one']='ehad'

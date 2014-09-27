@@ -6,7 +6,7 @@
 emiter2dxdy={'>': (1, 0), '<': (-1, 0), 'v': (0, 1), '^': (0, -1)}
 
 def find_emitter(room):
-	"""Return (x, y, dx, dy)"""
+	'''Return (x, y, dx, dy)'''
 	for y, line in enumerate(room):
 		for x, char in enumerate(line):
 			if char in emiter2dxdy:

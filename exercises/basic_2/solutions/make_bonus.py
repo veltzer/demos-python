@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
-"""
+'''
 Parse a simple Makefile and execute it.
 Doen't support comments, variables, patterns or anything complex...
 Doesn't check file system. all targets are always built.
-"""
+'''
 
 import os
 
 def parse_makefile(fname):
-	"""Parses a makefile.
+	'''Parses a makefile.
 
 	Input consists of only 2 kinds of lines::
 
@@ -25,7 +25,7 @@ def parse_makefile(fname):
 	Returns tuple (rules, commands) where:
 	- rules is a dict {'target': ['dependency1', ...], ...}
 	- commands is a dict {'target': ['command1', ...], ...}
-	"""
+	'''
 	rules={}
 	commands={}
 	for line in open(fname):
@@ -42,12 +42,12 @@ def parse_makefile(fname):
 	return rules, commands
 
 def build(target, rules, commands):
-	"""Compute order in which things should be built for target.
+	'''Compute order in which things should be built for target.
 
 	>>> build('a', {'a': ['b', 'c'], 'b': ['d']}, {'a': [], 'b': []})
 	== Building d -> b ==
 	== Building b, c -> a ==
-	"""
+	'''
 	if target not in rules:
 		# Nothing needs to be done.
 		# (A real make tool would verify that the file exists.)
@@ -61,8 +61,8 @@ def build(target, rules, commands):
 	build_one(target, rules, commands)
 
 def build_one(target, rules, commands):
-	"""Execute commands for one target."""
-	print("== Building {0} -> {1} ==".format(", ".join(rules[target]), target))
+	'''Execute commands for one target.'''
+	print('== Building {0} -> {1} =='.format(', '.join(rules[target]), target))
 	for command in commands[target]:
 		print(command)
 		os.system(command)
@@ -70,5 +70,5 @@ def build_one(target, rules, commands):
 import doctest
 doctest.testmod()
 
-rules, commands=parse_makefile("make_bonus.txt")
-build("all", rules, commands)
+rules, commands=parse_makefile('make_bonus.txt')
+build('all', rules, commands)

@@ -16,7 +16,7 @@ import os # for walk
 import sys # for argv
 
 if len(sys.argv)<2:
-	raise ValueError("plase pass root_folder")
+	raise ValueError('plase pass root_folder')
 root_folder=sys.argv[1]
 
 for root,dirs,files in os.walk(root_folder):
