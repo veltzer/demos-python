@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 '''
 Exapmles of various types of comprehensions.
@@ -21,5 +21,10 @@ print(map(lambda t: t[0]*t[1],tup_list))
 
 print({ x*2 for x in range(10) })
 print({ 2,3,4 })
+
+# dictionaries
 print({ 2:3,4:5 })
 print({ x:x**2 for x in range(10) })
+
+d={'mark':'veltzer', 'shay':'sarid'}
+print(dict((y,x) for x,y in d.items()))

@@ -28,7 +28,7 @@ try:
 	# the given movieID.
 	movie=i.get_movie(movieID)
 except imdb.IMDbError, e:
-	print('Probably you're not connected to Internet. Complete error report:')
+	print('Probably youre not connected to Internet. Complete error report:')
 	print(e)
 	sys.exit(3)
 
