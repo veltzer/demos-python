@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python2
 
 '''
 get_movie.py
@@ -8,6 +8,9 @@ Usage: get_movie 'movieID'
 Show some info about the movie with the given movieID (e.g. '0133093'
 for 'The Matrix', using 'http' or 'mobile').
 Notice that movieID, using 'sql', are not the same IDs used on the web.
+
+NOTES:
+- this script is python2 on purpose because the imdb module is currently only available for python2 in ubuntu.
 '''
 
 from __future__ import print_function
