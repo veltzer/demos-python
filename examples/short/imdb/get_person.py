@@ -8,18 +8,25 @@ NOTES:
 '''
 
 from __future__ import print_function
-import sys # for exit, argv
+import sys # for exit, argv, getdefaultencoding
 import imdb # for IMDb
 
 if len(sys.argv)!=2:
 	print('{0}: usage: {0} [personID]'.format(sys.argv[0]))
 	print('{0}: usage: {0} 0124930'.format(sys.argv[0]))
+	print('{0}: usage: {0} 0000264 (for unicode)'.format(sys.argv[0]))
 	sys.exit(1)
 
 personID=sys.argv[1]
 connection=imdb.IMDb()
+out_encoding=sys.stdout.encoding or sys.getdefaultencoding()
 
 person=connection.get_person(personID)
 
-for k in person.keys():
-	print('[{0}],[{1}]'.format(k, person[k]))
+i_canonical_name=person['canonical name']
+print('i_canonical_name is [{0}]'.format(i_canonical_name.encode(out_encoding)))
+
+for k,v in person.items():
+	if type(v)==unicode:
+		v=v.encode(out_encoding)
+	print('[{0}],[{1}]'.format(k, v))
