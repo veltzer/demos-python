@@ -14,12 +14,13 @@ NOTES:
 '''
 
 from __future__ import print_function
-import sys
-import imdb
-import random
+import sys # for exit, argv, stdout, getdefaultencoding
+import imdb # for IMDb
+import random # for randrange
 
 if len(sys.argv)!=2:
-	print('usage: {0} [moviedID]'.format(sys.argv[0]))
+	print('{0}: usage: {0} [moviedID]'.format(sys.argv[0]))
+	print('{0}: example: {0} 0120591'.format(sys.argv[0]))
 	sys.exit(1)
 
 movieID=sys.argv[1]
@@ -39,7 +40,8 @@ print(movie.summary().encode(out_encoding, 'replace'))
 print(movie.summary())
 
 for k in movie.keys():
-	print(k, movie[k])
+	print('=============== {0} ==============='.format(k))
+	print(movie[k])
 
 print('==== [{0}] movieID: [{1}] ===='.format(movie['title'], movieID))
 imdbURL=i.get_imdbURL(movie)
@@ -67,5 +69,10 @@ info_runtime=movie.get('runtime')
 print('Runtime is: {info_runtime}'.format(info_runtime=info_runtime))
 
 info_directors=movie.get('director')
+print(info_directors)
 for n,d in enumerate(info_directors):
+	print(dir(d))
+	for k,v in d.items():
+		print(k, v)
+	print(d.personID)
 	print('{n}, {d}'.format(n=n, d=d['name']))
