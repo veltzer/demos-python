@@ -8,7 +8,7 @@ from __future__ import print_function
 import os.path # for expanduser
 import ConfigParser # for ConfigParser
 
-inifile=os.path.expanduser('~/.githubrc')
+inifile=os.path.expanduser('~/.github.ini')
 config=ConfigParser.ConfigParser()
 config.read(inifile)
 opt_login=config.get('github','login')
