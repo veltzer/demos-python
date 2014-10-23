@@ -12,7 +12,7 @@ https://docs.python.org/3/howto/argparse.html
 https://docs.python.org/3/library/argparse.html#module-argparse
 '''
 
-import argparse
+import argparse # for ArgumentParser
 
 parser=argparse.ArgumentParser()
 subparsers=parser.add_subparsers(title='subcommands')
