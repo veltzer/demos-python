@@ -18,6 +18,8 @@ if os.path.isfile(inifile):
 	print('myint is {myint}'.format(**vars()))
 	print('mybool is {mybool}'.format(**vars()))
 	print('myfloat is {myfloat}'.format(**vars()))
+	for k,v in config.items('mysection'):
+		print('key [{0}], value [{1}]'.format(k,v))
 else:
 	print('inifile did not exist, writing it for the first time. find it in {inifile}'.format(**vars()))
 	config=configparser.ConfigParser()
