@@ -15,7 +15,7 @@ https://docs.python.org/3/library/argparse.html#module-argparse
 import argparse # for ArgumentParser
 
 parser=argparse.ArgumentParser()
-subparsers=parser.add_subparsers(title='subcommands')
+subparsers=parser.add_subparsers(title='subcommands', dest='subcommand')
 subparser_process=subparsers.add_parser('process')
 subparser_process.add_argument('--input', help='input file')
 subparser_process.add_argument('--output', help='output file')
