@@ -23,6 +23,9 @@ packs=[
 	'python-mysql.connector',
 	'python3-mysql.connector',
 	'python3-progressbar',
+
+	# from my own repo
+	'templar',
 ]
 
 args=['sudo','apt-get','install','--assume-yes']
