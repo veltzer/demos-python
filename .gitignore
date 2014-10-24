@@ -3,5 +3,9 @@
 *.pyc
 *.pyo
 __pycache__
+
 # output files
 *.out
+
+# template config file
+.attr.config

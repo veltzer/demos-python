@@ -11,7 +11,7 @@ import io # for StringIO
 data='''
 <root>
 	<foo>
-		<bar title="this is the text you are looking for">
+		<bar title='this is the text you are looking for'>
 			bar content
 		</bar>
 	</foo>

@@ -45,3 +45,5 @@ show_compiled:
 .PHONY: show_extra
 show_extra:
 	@find . -type f -and -not -name "*.py" -and -not -name "Makefile"
+
+include Makefile.prep
