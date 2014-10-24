@@ -19,7 +19,7 @@ TMPL_FILE_DEPS:=$(shell scripts/templar_cmd.py getdeps)
 
 ALL_MAKO_PREP_SRC:=$(shell find mako.prep -type f -and -name "*.mako")
 ALL_MAKO_PREP_TGT:=$(shell scripts/remove_first_dir_and_suffix.py $(ALL_MAKO_PREP_SRC))
-Q=
+Q=@
 
 ifeq ($(call is-var-defined,ALL_DEP),1)
 	ALL_DEP+=$(TMPL_FILE) Makefile.prep
