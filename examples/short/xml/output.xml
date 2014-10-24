@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<root>
-	<doc>
-		<field1 name="name of field1">field 1 free text</field1>
-		<field2 name="name of field2">field 2 free text</field2>
-	</doc>
-</root>

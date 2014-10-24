@@ -2,6 +2,9 @@
 
 '''
 An example of an application sending an email. This uses smtplib which is a standard python library.
+
+References:
+http://stackoverflow.com/questions/23616803/smtplib-smtp-starttls-fails-with-tlsv1-alert-decode-error
 '''
 
 import smtplib # for SMTP

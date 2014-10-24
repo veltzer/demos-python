@@ -1,3 +1,0 @@
-- documentation is at:
-	http://dl.dropbox.com/u/1823095/python-graph/docs/index.html
-	(yes - I know it's weird).

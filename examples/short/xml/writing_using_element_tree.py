@@ -9,11 +9,10 @@ to pretty output xml and so I do the corretion using xml.dom.minidom at
 the bottom.
 '''
 
-import xml.etree.ElementTree as ET
-import xml.dom.minidom
-import sys # for stdout
-
-output_file='output.xml'
+import xml.etree.ElementTree as ET # for Element, SubElement, ElementTree
+import xml.dom.minidom # for parse
+import xml # for toprettyxml
+import io # for BytesIO
 
 root=ET.Element('root')
 doc=ET.SubElement(root, 'doc')
@@ -27,12 +26,11 @@ field1.set('name', 'name of field2')
 field1.text='field 2 free text'
 
 tree=ET.ElementTree(root)
-#print(dir(tree))
-#print(help(tree.write))
-tree.write(output_file)
+f=io.BytesIO()
+tree.write(f)
+f.seek(0)
 
 # lets fixup the xml by overwriting the file with the pretty version
-xml=xml.dom.minidom.parse(output_file)
+xml=xml.dom.minidom.parse(f)
 pretty_xml=xml.toprettyxml()
-with open(output_file, 'w') as f:
-	f.write(pretty_xml)
+print(pretty_xml)
