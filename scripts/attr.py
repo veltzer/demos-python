@@ -15,6 +15,11 @@ class Attr(object):
 	def read_full_ini(cls, filename):
 		ini_file=os.path.expanduser(filename)
 		if os.path.isfile(ini_file):
+			ini_config=configparser.ConfigParser()
+			ini_config.read(ini_file)
+			for section in ini_config.sections():
+				for k,v in ini_config.items(section):
+					setattr(cls, '{0}_{1}'.format(section, k), v)
 
 	@classmethod
 	def read_ini(cls, filename, sections):
@@ -37,7 +42,7 @@ class Attr(object):
 		cls.general_domainname=subprocess.check_output(['hostname','--domain']).decode().rstrip()
 
 		# ini files
-		cls.read_ini('~/.details.ini',['personal', 'github'])
+		cls.read_full_ini('~/.details.ini')
 
 		# apt
 		cls.apt_protocol='https'
@@ -57,6 +62,7 @@ class Attr(object):
 	@classmethod
 	def getdeps(cls):
 		return ' '.join([
+			'scripts/attr.py',
 			os.path.expanduser('~/.details.ini'),
 			'/etc/hostname',
 		])
