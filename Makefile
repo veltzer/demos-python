@@ -46,4 +46,4 @@ show_compiled:
 show_extra:
 	@find . -type f -and -not -name "*.py" -and -not -name "Makefile"
 
-include Makefile.prep
+include /usr/share/templar/Makefile.prep
