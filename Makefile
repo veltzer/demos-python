@@ -1,10 +1,19 @@
+include /usr/share/templar/Makefile
+
+ALL:=$(TEMPLAR_ALL)
+ALL_DEP:=$(TEMPLAR_ALL_DEP)
+
+.DEFAULT_GOAL=all
 .PHONY: all
-all:
-	$(info please tell me what to make...)
+all: $(ALL)
+
+.PHONY: debug
+debug:
+	$(info ALL is $(ALL))
+	$(info ALL_DEP is $(ALL_DEP))
 
 .PHONY: check_all
 check_all: check_doublespace check_endspace check_ops check_print check_endsemi check_doublequote
-
 .PHONY: check_doublequote
 check_doublequote:
 	$(info doing $@)
@@ -36,14 +45,15 @@ check_syn:
 	-git grep ", " -- \*.py
 	-git grep "print\ " -- \*.py
 	-git grep --files-without-match "mark@veltzer.net" -- \*.py
+
 .PHONY: clean_compiled
 clean_compiled:
 	-@rm -f `find . -type f -and \( -name "*.pyo" -or -name "*.pyc" \)`
+
 .PHONY: show_compiled
 show_compiled:
 	@find . -type f -and -name "*.pyp" -and -name "*.pyc"
+
 .PHONY: show_extra
 show_extra:
 	@find . -type f -and -not -name "*.py" -and -not -name "Makefile"
-
-include /usr/share/templar/Makefile.prep
