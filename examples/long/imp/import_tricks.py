@@ -1,11 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 '''
 This example shows how to use the 'imp' module to do double importing of content
-into the same module
+into the same namespace
 '''
 
-from __future__ import print_function
 import imp
 
 imp.load_source('config','myfolder/mymod.py')
