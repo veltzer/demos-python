@@ -7,6 +7,11 @@ ALL_DEP:=$(TEMPLAR_ALL_DEP)
 .PHONY: all
 all: $(ALL)
 
+.PHONY: clean
+clean:
+	$(info doing [$@])
+	$(Q)git clean -xdf > /dev/null
+
 .PHONY: debug
 debug:
 	$(info ALL is $(ALL))
