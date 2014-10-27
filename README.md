@@ -1,6 +1,10 @@
 demos-python
 ============
 
-demos for the Python programming language
+version: no git tag yet
 
-	Mark Veltzer <mark.veltzer@gmail.com>, 2011-2014
+Demos for the Python programming language
+
+TBD
+
+	Mark Veltzer <mark.veltzer@gmail.com>, 2010-2014
