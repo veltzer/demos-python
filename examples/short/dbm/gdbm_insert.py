@@ -13,10 +13,4 @@ d=dbm.gnu.open('/tmp/foo.gdbm', 'c')
 d['one']='ehad'
 d['two']='shtaim'
 
-# show all key value pairs
-k=d.firstkey()
-while k is not None:
-	print(k.decode(), d[k].decode())
-	k=d.nextkey(k)
-
 d.close()
