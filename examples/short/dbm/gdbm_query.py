@@ -14,8 +14,7 @@ import dbm.gnu # for open
 # the 'c' in the next row means open rw and create if it doesn't exist
 d=dbm.gnu.open('/tmp/foo.gdbm', 'c')
 
-d['one']='ehad'
-d['two']='shtaim'
-d['three']=None
+print('ehad in db','ehad' in d)
+print('one in db','one' in d)
 
 d.close()
