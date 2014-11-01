@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 '''
-A demo for the argparse which is arguably the best python
+A demo for the argparse module which is arguably the best python
 command line parsing module.
 
 try this command to check it out:

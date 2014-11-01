@@ -20,7 +20,7 @@ for i in range(count):
 	except:
 		pass
 time_after=time.time()
-print('time taken for {count} os.unlinks + exception handling : {time:.3f} seconds'.format(
+print('time taken for {count} os.unlinks+exception handling : {time:.3f} seconds'.format(
 	time=time_after-time_before,
 	count=count,
 ))
@@ -31,7 +31,7 @@ for i in range(count):
 	if os.path.isfile(filename):
 		os.unlink(filename)
 time_after=time.time()
-print('time taken for {count} isfile + unlink : {time:.3f} seconds'.format(
+print('time taken for {count} isfile+unlink : {time:.3f} seconds'.format(
 	time=time_after-time_before,
 	count=count,
 ))
