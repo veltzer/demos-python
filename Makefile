@@ -30,6 +30,7 @@ endif # DO_MKDBG
 .DEFAULT_GOAL=all
 .PHONY: all
 all: $(ALL)
+	$(info doing [$@])
 
 .PHONY: clean
 clean:
@@ -38,6 +39,7 @@ clean:
 
 .PHONY: debug
 debug:
+	$(info doing [$@])
 	$(info ALL is $(ALL))
 	$(info ALL_DEP is $(ALL_DEP))
 
@@ -45,31 +47,31 @@ debug:
 check_all: check_doublespace check_endspace check_ops check_print check_endsemi check_doublequote
 .PHONY: check_doublequote
 check_doublequote:
-	$(info doing $@)
+	$(info doing [$@])
 	$(Q)wrapper_noerr git grep \" -- \*.py
 .PHONY: check_print
 check_print:
-	$(info doing $@)
+	$(info doing [$@])
 	$(Q)wrapper_noerr git grep -e "print " --or -e "print$$" --and --not -e "pprint" -- \*.py
 .PHONY: check_endsemi
 check_endsemi:
-	$(info doing $@)
+	$(info doing [$@])
 	$(Q)wrapper_noerr git grep -e "\;$$" -- \*.py
 .PHONY: check_doublespace
 check_doublespace:
-	$(info doing $@)
+	$(info doing [$@])
 	$(Q)wrapper_noerr git grep -e "\ \ " -- \*.py
 .PHONY: check_endspace
 check_endspace:
-	$(info doing $@)
+	$(info doing [$@])
 	$(Q)wrapper_noerr git grep -e "\s$$" -- \*.py
 .PHONY: check_ops
 check_ops:
-	$(info doing $@)
+	$(info doing [$@])
 	$(Q)wrapper_noerr git grep -e " = " --or -e " == " --or -e " != " --or -e " < " --or -e " > " --or -e " % " --or -e " / " --or -e " + " --or -e " - " --or -e " <= " --or -e " => " -- \*.py
 .PHONY: check_syn
 check_syn:
-	$(info doing $@)
+	$(info doing [$@])
 	$(Q)wrapper_noerr git grep ";" -- \*.py
 	$(Q)wrapper_noerr git grep " \"," -- \*.py
 	$(Q)wrapper_noerr git grep ", " -- \*.py
@@ -78,13 +80,15 @@ check_syn:
 
 .PHONY: clean_compiled
 clean_compiled:
-	$(info doing $@)
+	$(info doing [$@])
 	$(Q)-rm -f `find . -type f -and \( -name "*.pyo" -or -name "*.pyc" \)`
 
 .PHONY: show_compiled
 show_compiled:
-	@find . -type f -and -name "*.pyp" -and -name "*.pyc"
+	$(info doing [$@])
+	$(Q)find . -type f -and -name "*.pyp" -and -name "*.pyc"
 
 .PHONY: show_extra
 show_extra:
-	@find . -type f -and -not -name "*.py" -and -not -name "Makefile"
+	$(info doing [$@])
+	$(Q)find . -type f -and -not -name "*.py" -and -not -name "Makefile"
