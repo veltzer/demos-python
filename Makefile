@@ -46,39 +46,40 @@ check_all: check_doublespace check_endspace check_ops check_print check_endsemi 
 .PHONY: check_doublequote
 check_doublequote:
 	$(info doing $@)
-	$(Q)scripts/wrapper_noerr.py git grep \" -- \*.py
+	$(Q)wrapper_noerr git grep \" -- \*.py
 .PHONY: check_print
 check_print:
 	$(info doing $@)
-	$(Q)scripts/wrapper_noerr.py git grep -e "print " --or -e "print$$" --and --not -e "pprint" -- \*.py
+	$(Q)wrapper_noerr git grep -e "print " --or -e "print$$" --and --not -e "pprint" -- \*.py
 .PHONY: check_endsemi
 check_endsemi:
 	$(info doing $@)
-	$(Q)scripts/wrapper_noerr.py git grep -e "\;$$" -- \*.py
+	$(Q)wrapper_noerr git grep -e "\;$$" -- \*.py
 .PHONY: check_doublespace
 check_doublespace:
 	$(info doing $@)
-	$(Q)scripts/wrapper_noerr.py git grep -e "\ \ " -- \*.py
+	$(Q)wrapper_noerr git grep -e "\ \ " -- \*.py
 .PHONY: check_endspace
 check_endspace:
 	$(info doing $@)
-	$(Q)scripts/wrapper_noerr.py git grep -e "\s$$" -- \*.py
+	$(Q)wrapper_noerr git grep -e "\s$$" -- \*.py
 .PHONY: check_ops
 check_ops:
 	$(info doing $@)
-	$(Q)scripts/wrapper_noerr.py git grep -e " = " --or -e " == " --or -e " != " --or -e " < " --or -e " > " --or -e " % " --or -e " / " --or -e " + " --or -e " - " --or -e " <= " --or -e " => " -- \*.py
+	$(Q)wrapper_noerr git grep -e " = " --or -e " == " --or -e " != " --or -e " < " --or -e " > " --or -e " % " --or -e " / " --or -e " + " --or -e " - " --or -e " <= " --or -e " => " -- \*.py
 .PHONY: check_syn
 check_syn:
 	$(info doing $@)
-	$(Q)scripts/wrapper_noerr.py git grep ";" -- \*.py
-	$(Q)scripts/wrapper_noerr.py git grep " \"," -- \*.py
-	$(Q)scripts/wrapper_noerr.py git grep ", " -- \*.py
-	$(Q)scripts/wrapper_noerr.py git grep "print\ " -- \*.py
-	$(Q)scripts/wrapper_noerr.py git grep --files-without-match "mark@veltzer.net" -- \*.py
+	$(Q)wrapper_noerr git grep ";" -- \*.py
+	$(Q)wrapper_noerr git grep " \"," -- \*.py
+	$(Q)wrapper_noerr git grep ", " -- \*.py
+	$(Q)wrapper_noerr git grep "print\ " -- \*.py
+	$(Q)wrapper_noerr git grep --files-without-match "mark@veltzer.net" -- \*.py
 
 .PHONY: clean_compiled
 clean_compiled:
-	-@rm -f `find . -type f -and \( -name "*.pyo" -or -name "*.pyc" \)`
+	$(info doing $@)
+	$(Q)-rm -f `find . -type f -and \( -name "*.pyo" -or -name "*.pyc" \)`
 
 .PHONY: show_compiled
 show_compiled:
