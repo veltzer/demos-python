@@ -23,6 +23,9 @@ packs=[
 	'python-mysql.connector',
 	'python3-mysql.connector',
 	'python3-progressbar',
+	'python-networkx-doc', # tool to create, manipulate and study complex networks - documentation
+	'python3-networkx', # tool to create, manipulate and study complex networks (Python3)
+	'python3-pygraph', # library for working with graphs in Python (Python3)
 
 	# from my own repo
 	'templar',
