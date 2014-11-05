@@ -1,20 +1,19 @@
+#!/usr/bin/python3
+
 '''
 An example of a stack for multi threaded programming.
-
-TODO:
-- remove the import *
 '''
 
-from threading import *
+import threading # for RLock, Thread
 
 class Stack:
 	def __init__(self):
-		self.lock=RLock()
+		self.lock=threading.RLock()
 		self.numbers=[]
 	def push(self,number):
 		self.lock.acquire()
 		self.numbers.append(number)
-		print(number,' pushed to stack')
+		print(number, 'pushed to stack')
 		self.lock.release()
 	def pop(self):
 		self.lock.acquire()
@@ -22,21 +21,21 @@ class Stack:
 			self.lock.release()
 			return None
 		number=self.numbers.pop(len(self.numbers)-1)
-		print(number,' popped from stack')
+		print(number, 'popped from stack')
 		self.lock.release()
 		return number
 
-class Producer(Thread):
+class Producer(threading.Thread):
 	def __init__(self,stack):
-		Thread.__init__(self)
+		threading.Thread.__init__(self)
 		self.stack=stack
 	def run(self):
 		for i in range(20):
 			self.stack.push(i)
 
-class Consumer(Thread):
+class Consumer(threading.Thread):
 	def __init__(self,stack):
-		Thread.__init__(self)
+		threading.Thread.__init__(self)
 		self.stack=stack
 	def run(self):
 		for i in range(20):
@@ -45,10 +44,13 @@ class Consumer(Thread):
 				number= self.stack.pop()
 
 stack=Stack()
-threads=[None]*6
+threads=[]
+print('starting')
 for i in range(3):
-	threads[i]=Producer(stack)
-for i in range(3,6):
-	threads[i]=Consumer(stack)
+	threads.append(Producer(stack))
+	threads.append(Consumer(stack))
 for thread in threads:
 	thread.start()
+for thread in threads:
+	thread.join()
+print('ending')

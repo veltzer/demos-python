@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 '''
 This is an example of creating a thread and passing it data via it's closure
 '''
 
-import threading
+import threading # for Thread
 
 # this function was written with NO consideratiion of threading...
 def func(data):
