@@ -1,6 +1,8 @@
-http://pyvideo.org/video/589/asynchronous-vs--threaded-python
-http://pyvideo.org/video/588/mindblowing-python-gil
-http://doughellmann.com/pages/python-standard-library-by-example.html
+explore the standard library:
+	http://doughellmann.com/pages/python-standard-library-by-example.html
+
+tons of videos about python:
+	http://pyvideo.org
 
 python graph:
 - documentation is at:
