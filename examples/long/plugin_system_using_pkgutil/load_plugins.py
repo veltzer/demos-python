@@ -2,9 +2,6 @@
 
 '''
 This is an example of using pkgutil to create a lightweight plugin based system.
-
-TODO:
-- list all properties of the new package
 '''
 
 import pkgutil
@@ -21,6 +18,7 @@ for (module_loader, name, ispkg) in pkgutil.iter_modules(path=['plugins']):
 			print(type(r))
 			print(dir(r))
 		print('var in that module is [{0}]'.format(m.var))
+		m.run()
 		print('members of [{0}]'.format(name))
 		for p,v in m.__dict__.items():
 			if not p.startswith('__'):
