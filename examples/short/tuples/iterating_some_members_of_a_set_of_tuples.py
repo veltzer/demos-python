@@ -7,7 +7,7 @@ Here is how you do it
 Notes:
 - the underscore is actually a variable name so its use has no bearing on performance.
 - the underscore is a convention only in python, not core language feature.
-- you can even print the value of the underscore since it is a regular variable.
+- you can even use the value of the underscore since it is a regular variable.
 - it is however non-descriptive and on code review it will be evident that you are not interested
 in that position within the tuple.
 

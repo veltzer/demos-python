@@ -1,3 +1,5 @@
+- pass check_all and make it part of the build.
+
 - add a make check_code which runs the python compiler on all the scripts
 	(but does not run them, just checks the syntax).
 	how do I do that?!?
