@@ -1,3 +1,3 @@
-from __future__ import print_function
+print('this is {0} loading'.format(__file__))
 
-print('hello from', __file__)
+plugin2_var='plugin2_value'

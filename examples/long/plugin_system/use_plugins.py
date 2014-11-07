@@ -1,8 +1,13 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import plugin_mgr # for importPlugins, importPlugin
 
-plugin_mgr.importPlugins('plugins', 'plugins')
+# the easiest way to use
+plugins=plugin_mgr.importPlugins(folder='plugins')
 
-plugin_mgr.importPlugin('commulative_plugins', [ 'plugins1' , 'plugins2' ], 'plugin1')
-plugin_mgr.importPlugin('commulative_plugins', [ 'plugins1' , 'plugins2' ], 'plugin2')
+print(plugins.plugin1)
+
+#plugin_mgr.importPlugins(folder='plugins', ns='plugins')
+
+#plugin_mgr.importPlugin('commulative_plugins', [ 'plugins1' , 'plugins2' ], 'plugin1')
+#plugin_mgr.importPlugin('commulative_plugins', [ 'plugins1' , 'plugins2' ], 'plugin2')

@@ -4,14 +4,17 @@ import os.path # for join, isfile
 
 def load_module(ns, name, folder):
 	info=imp.find_module(name, [folder])
-	imp.load_module(ns, *info)
+	return imp.load_module(ns, *info)
 
-def importPlugins(ns, folder):
-	possibleplugins=os.listdir(folder)
-	for f in possibleplugins:
-		location=os.path.join(folder, f)
-		if location.endswith('.py'):
-			load_module(ns, f[:-3], folder)
+def importPlugins(folder=None, ns=None):
+	if ns is None:
+		ns=folder
+	files=os.listdir(folder)
+	d={}
+	for file in files:
+		if file.endswith('.py'):
+			d[file]=load_module(ns, file[:-3], folder)
+	return d
 
 '''
 This one imports a single plugin by name from a path giving path precedence
