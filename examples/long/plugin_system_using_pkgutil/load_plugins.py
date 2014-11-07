@@ -15,13 +15,13 @@ for (module_loader, name, ispkg) in pkgutil.iter_modules(path=['plugins']):
 	if do_debug:
 		print(module_loader, name, ispkg)
 	if not ispkg:
-		m=module_loader.find_module(name)
-		r=m.load_module()
+		ml=module_loader.find_module(name)
+		m=ml.load_module()
 		if do_debug:
 			print(type(r))
 			print(dir(r))
-		print('var in that module is [{0}]'.format(r.var))
+		print('var in that module is [{0}]'.format(m.var))
 		print('members of [{0}]'.format(name))
-		for p,v in r.__dict__.items():
+		for p,v in m.__dict__.items():
 			if not p.startswith('__'):
 				print('\t{0} -> {1}'.format(p, v))

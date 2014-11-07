@@ -5,7 +5,12 @@ import plugin_mgr # for importPlugins, importPlugin
 # the easiest way to use
 plugins=plugin_mgr.importPlugins(folder='plugins')
 
-print(plugins.plugin1)
+for (name, ns, plugin) in plugins:
+	print('var in the module is [{0}]'.format(plugin.var))
+	print('members of [{0}]'.format(name))
+	for p,v in plugin.__dict__.items():
+		if not p.startswith('__'):
+			print('\t{0} -> {1}'.format(p, v))
 
 #plugin_mgr.importPlugins(folder='plugins', ns='plugins')
 

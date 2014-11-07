@@ -26,6 +26,9 @@ packs=[
 	'python-networkx-doc', # tool to create, manipulate and study complex networks - documentation
 	'python3-networkx', # tool to create, manipulate and study complex networks (Python3)
 	'python3-pygraph', # library for working with graphs in Python (Python3)
+	'python-yapsy', # simple plugin system for Python applications
+	'python-yapsy-doc', # simple plugin system for Python applications - doc
+	'python3-yapsy', # simple plugin system for Python3 applications
 
 	# from my own repo
 	'templar',
