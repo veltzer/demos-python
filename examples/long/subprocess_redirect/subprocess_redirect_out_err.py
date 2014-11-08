@@ -9,8 +9,13 @@ http://stackoverflow.com/questions/11495783/redirect-subprocess-stderr-to-stdout
 '''
 
 import subprocess # for Popen, PIPE, STDOUT
+import sys # for argv, stderr, exit
 
-pr=subprocess.Popen('./myprocess.py', stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=False)
+if len(sys.argv)<2:
+	print('must supply process to run and arguments for it', file=sys.stderr)
+	sys.exit(1)
+
+pr=subprocess.Popen(sys.argv[1:], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=False)
 for line in pr.stdout:
 	line=line.decode()
-	print(line, end='')
+	print('got line [{0}]'.format(line.rstrip()))
