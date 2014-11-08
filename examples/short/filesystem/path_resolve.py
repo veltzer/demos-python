@@ -2,21 +2,38 @@
 
 '''
 This is an example of how to resolve a path in python
+
+References:
+http://stackoverflow.com/questions/377017/test-if-executable-exists-in-python/
 '''
 
-import os.path # for join
-import os # for walk
-import re # for compile, finditer
 import sys # for argv
+import os.path # for isfile, isabs
+import os # for access, X_OK, pathsep, environ
 
-if len(sys.argv)<2:
-	raise ValueError('plase pass regexp')
-c=re.compile(sys.argv[1])
+'''
+returns the absolute path of a program
 
-for root,dirs,files in os.walk('.'):
-	for file in files:
-		full=os.path.join(root,file)
-		for num,line in enumerate(open(full)):
-			line=line[:-1]
-			for x in c.finditer(line):
-				print('{0},{1}: {2}'.format(full,num,line))
+if you pass an absolute path then it will check that the program is executable
+and return it.
+
+if you pass a relative path it will resolve it via the PATH environment variable
+will check that it is executable and return it.
+
+if the program cannot be found or is not executable an exception will be raised.
+'''
+
+def is_exe(path):
+	return os.path.isfile(path) and os.access(path, os.X_OK)
+
+def which(program):
+	if os.path.isabs(program):
+		assert is_exe(program)
+		return program
+	for path in os.environ['PATH'].split(os.pathsep):
+		curr=os.path.join(path, program)
+		if is_exe(curr):
+			return curr
+	raise ValueError('cannot find the program [{0}] in PATH'.format(program))
+
+print(which(sys.argv[1]))
