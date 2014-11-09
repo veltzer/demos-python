@@ -16,7 +16,7 @@ css_filename='out.css'
 html_filename='out.html'
 html_header='''<html>
 <head>
-<link rel="stylesheet" href="{0}"/>
+<link rel='stylesheet' href='{0}'/>
 </head>
 <body>
 '''.format(css_filename)

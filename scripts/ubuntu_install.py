@@ -23,11 +23,11 @@ packs=[
 	'python-mysql.connector',
 	'python3-mysql.connector',
 	'python3-progressbar',
-	'python-networkx-doc', # tool to create, manipulate and study complex networks - documentation
+	'python-networkx-doc', # tool to create, manipulate and study complex networks documentation
 	'python3-networkx', # tool to create, manipulate and study complex networks (Python3)
 	'python3-pygraph', # library for working with graphs in Python (Python3)
 	'python-yapsy', # simple plugin system for Python applications
-	'python-yapsy-doc', # simple plugin system for Python applications - doc
+	'python-yapsy-doc', # simple plugin system for Python applications doc
 	'python3-yapsy', # simple plugin system for Python3 applications
 	'python3-pygments', # for syntaxh highlighting
 
@@ -35,8 +35,8 @@ packs=[
 	'python3-sphinx', # documentation generator for Python projects (implemented in Python 3)
 	'python3-sphinx-paramlinks', # allows param links in Sphinx function/method descriptions to be linkable
 	'python3-sphinxcontrib.programoutput', # insert the output of arbitrary commands into documents Python 3.x
-	'python3-sphinxcontrib.spelling', # Sphinx "spelling" extension (Python 3)
-	'python3-sphinxcontrib.youtube', # Sphinx "YouTube" extension
+	'python3-sphinxcontrib.spelling', # Sphinx spelling extension (Python 3)
+	'python3-sphinxcontrib.youtube', # Sphinx YouTube extension
 
 	# from my own repo
 	'templar',

@@ -1,4 +1,6 @@
 - pass check_all and make it part of the build.
+- print the number of examples and lines of code on the README.md
+	file using templar.
 
 - add a make check_code which runs the python compiler on all the scripts
 	(but does not run them, just checks the syntax).
