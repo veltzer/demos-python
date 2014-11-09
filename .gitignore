@@ -6,6 +6,3 @@ __pycache__
 
 # output files
 *.out
-
-# template config file
-.tdefs.config
