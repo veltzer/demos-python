@@ -2,6 +2,9 @@
 
 '''
 This example shows the various ways to get the host name in python.
+
+References:
+http://stackoverflow.com/questions/4271740/how-can-i-use-python-to-get-the-system-hostname
 '''
 
 import socket # for gethostname
