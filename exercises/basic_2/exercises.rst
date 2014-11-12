@@ -7,8 +7,8 @@
  Python Exercises: Types, Loops, Functions
 ===========================================
 
-Hi.  Here are some exercise that you should be able to do at the current 
-point in the course.  If you have any questions, please don't hesitate 
+Hi.  Here are some exercise that you should be able to do at the current
+point in the course.  If you have any questions, please don't hesitate
 to contact me at <beni.cherniavsky@gmail.com>.  I'll try to answer same day.
 
 I tried to build them in steps, so you can at least solve them
@@ -134,7 +134,7 @@ parallel.
       at the solution - it's an useful function to know!
 
 Solution: ``table_fixed.py``
-    
+
 Exercise 2B: Auto-fit
 ---------------------
 
@@ -212,7 +212,7 @@ If it simplifies matters for you, you don't have to find the sequence
 of actions, just check *whether* it's possible (in no more than 7
 steps).
 
-**Hints**: 
+**Hints**:
 
 - If you have no idea how to solve this, here is a simple approach
   that works.  You'll maintain a dictionary of places to which you
@@ -300,9 +300,9 @@ Write a function that can parse a file like ``make.txt``::
 and return a dictionary giving for each target a list of files on
 which it depends::
 
-    {'all': ['app'], 
-     'a.o': ['a.c'], 
-     'b.o': ['b.c'], 
+    {'all': ['app'],
+     'a.o': ['a.c'],
+     'b.o': ['b.c'],
      'app': ['a.o', 'b.o']}
 
 **Hints**:
@@ -376,7 +376,7 @@ which describes a rectangular room.
 
 - The ``x`` is the target, ``#`` are walls.
 
-Your goal is to determine whether the beam ends up hitting the target, 
+Your goal is to determine whether the beam ends up hitting the target,
 or anything else (wall, or in rare cases the emitter).  Cute, ha?
 
 For starters, assume the beam emitter is at (1, 1) and points to the

@@ -2,7 +2,7 @@
 
 Chapter 4: Basic Statements
 
-1. Read in a login, a full name, and a password on three different prompts. If the login is blank, print an error message . Print the values back to STDOUT. 
+1. Read in a login, a full name, and a password on three different prompts. If the login is blank, print an error message . Print the values back to STDOUT.
 
 2. Read from standard input a line containing digits. Count the number of times each digit appears in the file and produce a report (write it to standard output).
 

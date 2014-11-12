@@ -6,8 +6,8 @@ Ex 1
 Fetch the feed of fresh Python packages from http://pypi.python.org/pypi?:action=rss
 [Hint: urlib2.urlopen()]
 Parse the <item> elements [for the exercise, use ElementTree or DOM, not dedicated RSS parsers].
-Dump them into a CSV file with the following columns:  
-Date, Package, Version, Description  
+Dump them into a CSV file with the following columns:
+Date, Package, Version, Description
 [Note: This feed has package and version together in the title field – you’ll have to separate them.]
 
 Observe how the csv module used quotes around descriptions that contain commas.
@@ -29,7 +29,7 @@ That's a bug of geonames.org – they should proper use Unicode in their JSON…
 Chapter 3: Databases
 ====================
 Ex 3
-Parse the CSV file you produced in Ex 1 populate an SQLite database with 
+Parse the CSV file you produced in Ex 1 populate an SQLite database with
 Date, Package, Version columns.
 To check that it worked, also do a SELECT and print the content of the database.
 
