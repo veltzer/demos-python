@@ -1,4 +1,4 @@
-include /usr/share/templar/Makefile
+include /usr/share/templar/make/Makefile
 
 ALL:=$(TEMPLAR_ALL)
 ALL_DEP:=$(TEMPLAR_ALL_DEP)
@@ -48,35 +48,35 @@ check_all: check_doublespace check_endspace check_ops check_print check_endsemi 
 .PHONY: check_doublequote
 check_doublequote:
 	$(info doing [$@])
-	$(Q)wrapper_noerr git grep \" -- \*.py
+	$(Q)make_helper wrapper-noerr git grep \" -- \*.py
 .PHONY: check_print
 check_print:
 	$(info doing [$@])
-	$(Q)wrapper_noerr git grep -e "print " --or -e "print$$" --and --not -e "pprint" -- \*.py
+	$(Q)make_helper wrapper-noerr git grep -e "print " --or -e "print$$" --and --not -e "pprint" -- \*.py
 .PHONY: check_endsemi
 check_endsemi:
 	$(info doing [$@])
-	$(Q)wrapper_noerr git grep -e "\;$$" -- \*.py
+	$(Q)make_helper wrapper-noerr git grep -e "\;$$" -- \*.py
 .PHONY: check_doublespace
 check_doublespace:
 	$(info doing [$@])
-	$(Q)wrapper_noerr git grep -e "\ \ " -- \*.py
+	$(Q)make_helper wrapper-noerr git grep -e "\ \ " -- \*.py
 .PHONY: check_endspace
 check_endspace:
 	$(info doing [$@])
-	$(Q)wrapper_noerr git grep -e "\s$$" -- \*.py
+	$(Q)make_helper wrapper-noerr git grep -e "\s$$" -- \*.py
 .PHONY: check_ops
 check_ops:
 	$(info doing [$@])
-	$(Q)wrapper_noerr git grep -e " = " --or -e " == " --or -e " != " --or -e " < " --or -e " > " --or -e " % " --or -e " / " --or -e " + " --or -e " - " --or -e " <= " --or -e " => " -- \*.py
+	$(Q)make_helper wrapper-noerr git grep -e " = " --or -e " == " --or -e " != " --or -e " < " --or -e " > " --or -e " % " --or -e " / " --or -e " + " --or -e " - " --or -e " <= " --or -e " => " -- \*.py
 .PHONY: check_syn
 check_syn:
 	$(info doing [$@])
-	$(Q)wrapper_noerr git grep ";" -- \*.py
-	$(Q)wrapper_noerr git grep " \"," -- \*.py
-	$(Q)wrapper_noerr git grep ", " -- \*.py
-	$(Q)wrapper_noerr git grep "print\ " -- \*.py
-	$(Q)wrapper_noerr git grep --files-without-match "mark@veltzer.net" -- \*.py
+	$(Q)make_helper wrapper-noerr git grep ";" -- \*.py
+	$(Q)make_helper wrapper-noerr git grep " \"," -- \*.py
+	$(Q)make_helper wrapper-noerr git grep ", " -- \*.py
+	$(Q)make_helper wrapper-noerr git grep "print\ " -- \*.py
+	$(Q)make_helper wrapper-noerr git grep --files-without-match "mark@veltzer.net" -- \*.py
 
 .PHONY: clean_compiled
 clean_compiled:
