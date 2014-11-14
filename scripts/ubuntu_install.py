@@ -40,6 +40,7 @@ packs=[
 
 	# from my own repo
 	'templar',
+	'pdmt',
 ]
 
 args=['sudo','apt-get','install','--assume-yes']
