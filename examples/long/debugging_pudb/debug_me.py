@@ -1,4 +1,4 @@
-from __future__ import print_function
+#!/usr/bin/python3
 
 def simple_func(x):
 	x += 1

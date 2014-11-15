@@ -31,6 +31,12 @@ packs=[
 	'python3-yapsy', # simple plugin system for Python3 applications
 	'python3-pygments', # for syntaxh highlighting
 
+	# debuggers
+	'winpdb',
+	'pydb',
+	'python-pudb',
+	'python3-pudb',
+
 	# sphinx
 	'python3-sphinx', # documentation generator for Python projects (implemented in Python 3)
 	'python3-sphinx-paramlinks', # allows param links in Sphinx function/method descriptions to be linkable

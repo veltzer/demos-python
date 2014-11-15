@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 def simple_func(x):
 	x += 1
