@@ -1,0 +1,9 @@
+1. A few notes about pyc files.
+	find /usr/share/pygtk/2.0 -name "*.pyc"
+2. A few notes about python versions.
+	rpm -q -i python
+3. A few notes about python packaging.
+	rpm -q -a | fgrep python
+4. A few notes about python dependency in production systems.
+	Use the default python!!! Do NOT roll your own unless
+	you reach guru status!!!
