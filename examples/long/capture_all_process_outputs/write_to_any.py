@@ -12,7 +12,7 @@ will log to tty
 and you can combine...
 '''
 
-import sys # for stderr, argv
+import sys # for stderr, argv, exit
 
 args=sys.argv[1:]
 if 'stdout' in args:
@@ -25,3 +25,5 @@ if 'tty' in args:
 	f=open('/dev/tty', 'w')
 	f.write('this is /dev/tty\n')
 	f.close()
+
+sys.exit(7)

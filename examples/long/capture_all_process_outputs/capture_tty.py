@@ -7,7 +7,7 @@ References:
 http://stackoverflow.com/questions/11495783/redirect-subprocess-stderr-to-stdout
 '''
 
-import sys # for argv, stderr, exit
+import sys # for argv, stderr, exit, wait, WIFEXISTED, WEXITSTATUS, WIFSTOPPED, WSTOPSIG, WIFSIGNALED, WTERMSIG
 import pty # for fork
 import os # for execv, fdopen, read
 
@@ -44,4 +44,12 @@ else:
 		for line in os.fdopen(fd):
 			print('got line [{0}]'.format(line.rstrip()))
 	except OSError as e:
+		#print(e)
 		pass
+	(pid,ret)=os.wait()
+	if os.WIFEXITED(ret):
+		print('process was signaled and signal was [{0}]'.format(os.WEXITSTATUS(ret)))
+	if os.WIFSTOPPED(ret):
+		print('process was signaled and signal was [{0}]'.format(os.WSTOPSIG(ret)))
+	if os.WIFSIGNALED(ret):
+		print('process was signaled and signal was [{0}]'.format(os.WTERMSIG(ret)))
