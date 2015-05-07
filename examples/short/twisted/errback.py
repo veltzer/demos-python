@@ -14,7 +14,7 @@ def my_other_callback(content):
 	reactor.stop()
 def my_callback(content):
 	print('in callback',content)
-	defr=getPage('http://localhost/~veltzer/')
+	defr=getPage('http://localhost/~user/')
 	defr.addCallback(my_other_callback)
 	#raise Exception('this is an exception')
 	#reactor.stop()

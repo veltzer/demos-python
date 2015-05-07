@@ -13,11 +13,11 @@ class D(dict):
 		self[name]=val
 
 a=D()
-a['mark']='veltzer'
-a.shay='sarid'
+a['one']='onev'
+a.two='twov'
 
-print(a['mark'])
-print(a.mark)
+print(a['one'])
+print(a.one)
 
 print('listing all entries in the object')
 for k, v in a.items():

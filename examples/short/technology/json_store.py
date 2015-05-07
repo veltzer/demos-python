@@ -3,8 +3,8 @@
 import json # for dump, load
 
 my_dict={
-	'mark': 'veltzer',
-	'shay': 'sarid',
+	'one': 'onev',
+	'two': 'twov',
 }
 
 filename='/tmp/json_store.json'

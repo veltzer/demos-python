@@ -42,9 +42,9 @@ def send_email(
 if __name__=='__main__':
 	send_email(
 		smtp_host='smtp.gmail.com',
-		user='mark.veltzer@gmail.com',
-		to='mark.veltzer@gmail.com',
-		fr='mark.veltzer@gmail.com',
+		user='myname@gmail.com',
+		to='myname@gmail.com',
+		fr='myname@gmail.com',
 		password='XXXXXXXX',
 		debug=True,
 	)

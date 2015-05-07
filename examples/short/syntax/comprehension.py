@@ -26,5 +26,5 @@ print({ 2,3,4 })
 print({ 2:3,4:5 })
 print({ x:x**2 for x in range(10) })
 
-d={'mark':'veltzer', 'shay':'sarid'}
+d={'one':'onev', 'two':'twov'}
 print(dict((y,x) for x,y in d.items()))
