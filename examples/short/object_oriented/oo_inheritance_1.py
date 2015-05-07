@@ -44,8 +44,7 @@ class B(A):
 		super(self.__class__,self).method_overloaded2()
 	def method_overloaded3(self):
 		print('B.method_overloaded3')
-		# this is the best way to call the parent method
-		# (no hardcoding of the class name as above)
+		# This is going back to the first way
 		A.method_overloaded3(self)
 	def method_onlyb(self):
 		print('B.method_onlyb')

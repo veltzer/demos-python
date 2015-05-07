@@ -28,7 +28,7 @@ my_class='highlighter'
 ########
 # code #
 ########
-formatter = HtmlFormatter(linenos=True, cssclass=my_class)
+formatter=HtmlFormatter(linenos=True, cssclass=my_class)
 f_css=open(css_filename, 'w')
 f_css.write(formatter.get_style_defs('.'+my_class))
 f_css.close()

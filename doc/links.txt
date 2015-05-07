@@ -11,3 +11,7 @@ python graph:
 
 tutorials about interesting python modules:
 	http://www.python-course.eu/index.php
+
+problems with python's super():
+	https://fuhm.net/super-harmful/
+	http://blog.codekills.net/2014/04/02/the-sadness-of-pythons-super/

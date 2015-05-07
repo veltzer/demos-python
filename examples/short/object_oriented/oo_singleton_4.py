@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 '''
-This is a "fast" singleton in that you pay for only in the first
+This is a *fast* singleton in that you pay for only in the first
 call. All subsequent calls don't even have an 'if' statement in them...
 
 We also compare the difference in speed between the variation with

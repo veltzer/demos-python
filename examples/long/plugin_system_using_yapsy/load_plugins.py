@@ -9,7 +9,7 @@ http://yapsy.sourceforge.net
 
 import yapsy.PluginManager
 
-simplePluginManager = yapsy.PluginManager.PluginManager()
+simplePluginManager=yapsy.PluginManager.PluginManager()
 # Tell it the default place(s) where to find plugins
 simplePluginManager.setPluginPlaces(['plugins'])
 
@@ -21,7 +21,7 @@ for pluginInfo in simplePluginManager.getAllPlugins():
 	print('name is [{0}]'.format(pluginInfo.name))
 	print('description is [{0}]'.format(pluginInfo.description))
 
-print('activate all the plugins - I really dont know what this means')
+print('activate all the plugins. I really dont know what this means')
 for pluginInfo in simplePluginManager.getAllPlugins():
 	simplePluginManager.activatePluginByName(pluginInfo.name)
 
