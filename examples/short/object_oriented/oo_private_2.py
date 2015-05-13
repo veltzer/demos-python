@@ -2,12 +2,17 @@
 
 '''
 This example shows that private values (values stored in attributes
-held in __values or _values are not really private.
+whose names is prefixed by one or two underscores) are not really private.
 - _values can be changed as is.
 - __values are just hidden in funny names. The reason for this is ofcourse inheritance.
+
+NOTE: new style (deriving from 'object') type object or old style object make no
+difference as to this point.
 '''
 
-class Book:
+from __future__ import print_function
+
+class Book(object):
 	def __init__(self,price,name):
 		self.__price=price
 		self._name=name
@@ -31,6 +36,7 @@ b.printMe()
 try:
 	print('price is',b.__price)
 except AttributeError as e:
+	print(e)
 	print('You see,you cannot directly change the attribute because THERE IS no such attribute')
 # We CAN change the name since attributes that have just one _ in front of them appear AS IS
 # in the object
