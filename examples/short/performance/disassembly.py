@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 '''
-Example of disassembling a python function
+Example of disassembling a python function using the 'dis' and 'inspect' modules.
 '''
 
 import dis # for dis

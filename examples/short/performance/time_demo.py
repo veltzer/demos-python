@@ -1,7 +1,7 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 '''
-Example of timing python code
+Example of timing python code using the 'time' module
 '''
 
 import time # for time, sleep
