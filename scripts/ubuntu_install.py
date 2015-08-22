@@ -8,17 +8,30 @@ ubuntu to compile and work with this package.
 import subprocess # for check_call
 
 packs=[
+	'python3',
+	'python3-doc',
+	'python3-examples',
 	'python3.4',
 	'python3.4-doc',
+	'python3.4-examples',
+	'python3.4-dev',
+	'python3.4-venv',
+
+	# qt
 	'pyqt4-dev-tools',
 	'python-qt4',
 	'python-qt4-sql',
 	'python-qt4-dbus',
 	'python3-pyqt4',
 	'python3-dbus.mainloop.qt',
+
+	# curses
 	'python-newt',
 	'python3-newt',
-	'python-dialog',
+	#'python-dialog',
+	'python3-dialog',
+
+	# misc modules
 	'python-imdbpy',
 	'python-mysql.connector',
 	'python3-mysql.connector',
@@ -47,6 +60,15 @@ packs=[
 	# from my own repo
 	'templar',
 	'pdmt',
+
+	# notify related packages
+	'python-inotifyx',
+	'python-notify',
+	'python-notify2',
+	'python-pyinotify',
+	'python-pyinotify-doc',
+	'python3-notify2',
+	'python3-pyinotify',
 ]
 
 args=['sudo','apt-get','install','--assume-yes']
