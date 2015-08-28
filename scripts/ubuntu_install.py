@@ -71,6 +71,16 @@ packs=[
 	'python3-pyinotify',
 ]
 
+pips=[
+	'signalfd',
+]
+
 args=['sudo','apt-get','install','--assume-yes']
 args.extend(packs)
 subprocess.check_call(args)
+
+for pip in pips:
+	args=['sudo', 'pip', 'install', pip]
+	subprocess.check_call(args)
+	args=['sudo', 'pip3', 'install', pip]
+	subprocess.check_call(args)
