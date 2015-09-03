@@ -7,6 +7,8 @@ ubuntu to compile and work with this package.
 
 import subprocess # for check_call
 
+do_pips=False
+
 packs=[
 	'python3',
 	'python3-doc',
@@ -16,6 +18,9 @@ packs=[
 	'python3.4-examples',
 	'python3.4-dev',
 	'python3.4-venv',
+
+	# tools for python packaging and upload
+	'twine',
 
 	# qt
 	'pyqt4-dev-tools',
@@ -79,8 +84,9 @@ args=['sudo','apt-get','install','--assume-yes']
 args.extend(packs)
 subprocess.check_call(args)
 
-for pip in pips:
-	args=['sudo', 'pip', 'install', pip]
-	subprocess.check_call(args)
-	args=['sudo', 'pip3', 'install', pip]
-	subprocess.check_call(args)
+if do_pips:
+	for pip in pips:
+		args=['sudo', 'pip', 'install', pip]
+		subprocess.check_call(args)
+		args=['sudo', 'pip3', 'install', pip]
+		subprocess.check_call(args)
