@@ -2,7 +2,7 @@
 
 '''
 Example of how to receive signals synchronously via select and signal.set_wakeup_fd
-This is copy of the referenced example + heavy massaging.
+This is copy of the referenced example which underwent heavy massaging.
 
 Notes:
 - this example works both in python 2 and 3.
@@ -21,10 +21,10 @@ import os # for pipe, O_NONBLOCK, read, getpid
 import errno # for EINTR
 
 # create a non blocking pipe
-pipe_r, pipe_w = os.pipe()
-flags = fcntl.fcntl(pipe_w, fcntl.F_GETFL, 0)
-flags = flags | os.O_NONBLOCK
-flags = fcntl.fcntl(pipe_w, fcntl.F_SETFL, flags)
+pipe_r, pipe_w=os.pipe()
+flags=fcntl.fcntl(pipe_w, fcntl.F_GETFL, 0)
+flags=flags | os.O_NONBLOCK
+flags=fcntl.fcntl(pipe_w, fcntl.F_SETFL, flags)
 
 # set the write end of the pipe as the target of signals
 signal.set_wakeup_fd(pipe_w)
@@ -48,17 +48,17 @@ def dopoll(poller):
 		try:
 			return poller.poll()
 		except IOError as e:
-			if e.errno != errno.EINTR:
+			if e.errno!=errno.EINTR:
 				raise
 
-poller = select.epoll()
+poller=select.epoll()
 poller.register(pipe_r, select.EPOLLIN)
 
 print('mail loop staring...')
 #print('press CTRL+C to see how I catch the signal...')
 print('signal me with [kill -s SIGUSR1 {0}]...'.format(os.getpid()))
 while True:
-	events = dopoll(poller)
+	events=dopoll(poller)
 	for fd, flags in events:
 		print('we got signal')
 		os.read(pipe_r, 1)

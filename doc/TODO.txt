@@ -1,7 +1,17 @@
+- write a python example which does many things simulteneously using 'asynccore' or 'asyncio':
+	- having console UI (like cmd) receiving events on every click.
+	- receiving file system events with fnotify.
+	- receiving signals from processes that it runs in the background.
+	- receiving signals from ssh sessions (paramiko).
+	- signals (like SIGINT).
+	- printing stuff on the screen.
+
 - add example about making a manual page out of pydoc comments.
 	http://stackoverflow.com/questions/7176560/generating-python-cli-man-page
 	This is using sphinx which is already a dependency of this package.
+
 - pass check_all and make it part of the build.
+
 - print the number of examples and lines of code on the README.md
 	file using templar.
 
