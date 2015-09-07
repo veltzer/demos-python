@@ -1,3 +1,5 @@
+- add some ipython demos
+
 - write a python example which does many things simulteneously using 'asynccore' or 'asyncio':
 	- having console UI (like cmd) receiving events on every click.
 	- receiving file system events with fnotify.
