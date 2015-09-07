@@ -10,6 +10,7 @@ import subprocess # for check_call
 do_pips=False
 
 packs=[
+	# python core
 	'python3',
 	'python3-doc',
 	'python3-examples',
@@ -18,6 +19,9 @@ packs=[
 	'python3.4-examples',
 	'python3.4-dev',
 	'python3.4-venv',
+
+	# iteractive, parallel python
+	'ipython',
 
 	# tools for python packaging and upload
 	'twine',
