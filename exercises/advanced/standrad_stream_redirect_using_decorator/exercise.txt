@@ -1,0 +1,17 @@
+Write a decorator that redirects sys.stdout to the file “out.txt” and for the duration of the function, and restores the original value when it returns:
+
+@with_output_to_out_txt
+def f():
+ ...
+
+For simplicity, you can assume the decorated function takes no parameters.
+
+Bonus:
+Same as previous question but you want the decorator to receive the file name as a parameter:
+
+@with_output_to("out.txt")
+def f():
+ ...
+
+Hint: it’s a function that returns a decorator!
+So you’ll probably have 3 functions nested inside each other…

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TASEStatusInterface status_date="20091030" series="1">
-	<TASEStatus external_system_reference="19497285" status="SETTLED"/>
-	<TASEStatus external_system_reference="19497286" status="FAILED"/>
-</TASEStatusInterface>
