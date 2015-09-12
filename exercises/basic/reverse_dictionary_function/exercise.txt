@@ -1,0 +1,2 @@
+Write a function that receives a dictionary and returns a new dictionary with “switched sides”. 
+Write a documentation string, including a doctest. 
