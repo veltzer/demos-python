@@ -11,9 +11,9 @@ Edit your date module:
 1. Write a class that represents a Date.
 It will be initialized from 3 numbers: day, month, year. The __init__ method will check the validity of the arguments.
 Overload the operators: >, < , ==, !=, <=, >=.
-	      Write an __str__() method.
+	Write an __str__() method.
 
-The data defined previously in the module will be used for validity checking of  the dates.
+The data defined previously in the module will be used for validity checking of the dates.
 
 Write a class Callender.
 It will have the attribute events – a mapping from event name to date object.
