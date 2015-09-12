@@ -4,9 +4,16 @@
 This example is taken from the following talk:
 http://pyvideo.org/video/588/mindblowing-python-gil
 
+Results:
+$ python --version
+Python 2.7.9
+$ ./gil_python2.py 
+time taken for single thread: 6.288 seconds
+time taken for two threads: 9.156 seconds
+
 Conclusions:
-- well the gil is not that bad. It doesn't really make matters worse. Its just that
-the two threads don't work and you get the performance of a single threaded app.
+In python 2 the gil is pretty awful. It takes 150% of the time of a single thread. Write single threaded code
+and avoid the non-efficient locking of the gil.
 '''
 
 ###########
