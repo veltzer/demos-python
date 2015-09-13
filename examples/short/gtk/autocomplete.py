@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 References:
@@ -8,6 +8,7 @@ How to write a custom pygtk widget:
 	http://www.pygtk.org/articles/writing-a-custom-widget-using-pygtk/writing-a-custom-widget-using-pygtk.htm
 '''
 
+from __future__ import print_function
 import gobject
 import gtk
 
@@ -55,15 +56,21 @@ class EntryMultiCompletion(gtk.Entry):
 		# stop the event propagation
 		return True
 
-if __name__=='__main__': # register the class as a Gtk widget gobject.type_register(EntryMultiCompletion)
-	win=gtk.Window()
-	win.connect('delete-event', gtk.main_quit)
-	entrycompl=EntryMultiCompletion()
-	liststore=gtk.ListStore(gobject.TYPE_STRING)
-	entrycompl.completion.set_model(liststore)
-	entrycompl.completion.set_text_column(0)
-	for word in ['python', 'perl', 'scala', 'c++', 'ruby', 'c#', 'java', 'assembly', 'PHP']:
-		liststore.append([word])
-	win.add(entrycompl)
-	win.show_all()
+win=gtk.Window()
+win.connect('delete-event', gtk.main_quit)
+entrycompl=EntryMultiCompletion()
+liststore=gtk.ListStore(gobject.TYPE_STRING)
+entrycompl.completion.set_model(liststore)
+entrycompl.completion.set_text_column(0)
+for word in ['python', 'perl', 'scala', 'c++', 'ruby', 'c#', 'java', 'assembly', 'PHP']:
+	liststore.append([word])
+win.add(entrycompl)
+win.show_all()
+'''
+The try/except is needed so that if you CTRL+C the application you will not get an exception
+with stack trace
+'''
+try:
 	gtk.main()
+except:
+	pass

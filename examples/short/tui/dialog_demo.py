@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/python
 
 '''
 Demonstration program for pythondialog.
@@ -13,7 +13,12 @@ function in order to understand the somewhat relaxed error checking
 policy for pythondialog calls in this demo.
 '''
 
-import sys, os, os.path, time, string, dialog
+import sys
+import os
+import os.path
+import time
+import string
+import dialog
 
 FAST_DEMO=0
 
@@ -197,4 +202,4 @@ def main():
 		sys.exit(1)
 	sys.exit(0)
 
-if __name__=='__main__': main()
+main()

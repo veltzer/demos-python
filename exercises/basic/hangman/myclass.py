@@ -150,5 +150,5 @@ class Hangman(SimpleHangman):
 
 # test if run directly, do nothing if imported
 if __name__=='__main__':
-	import doctest
+	import doctest # for testmod
 	doctest.testmod()

@@ -13,5 +13,4 @@ def calc():
 		sum=sum+i
 		i=i+1
 
-if __name__=='__main__':
-	calc()
+calc()

@@ -39,12 +39,11 @@ def send_email(
 	server.sendmail(fr, to, msg.as_string())
 	server.quit()
 
-if __name__=='__main__':
-	send_email(
-		smtp_host='smtp.gmail.com',
-		user='myname@gmail.com',
-		to='myname@gmail.com',
-		fr='myname@gmail.com',
-		password='XXXXXXXX',
-		debug=True,
-	)
+send_email(
+	smtp_host='smtp.gmail.com',
+	user='myname@gmail.com',
+	to='myname@gmail.com',
+	fr='myname@gmail.com',
+	password='XXXXXXXX',
+	debug=True,
+)

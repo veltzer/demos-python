@@ -25,5 +25,4 @@ class BookTest(unittest.TestCase):
 		p._Book__price=60
 		self.assertTrue(60==p.getPrice())
 
-if __name__=='__main__':
-	unittest.main()
+unittest.main()

@@ -78,6 +78,9 @@ packs=[
 	'python-pyinotify-doc',
 	'python3-notify2',
 	'python3-pyinotify',
+
+	# python and gtk stuff
+	'glade',
 ]
 
 pips=[

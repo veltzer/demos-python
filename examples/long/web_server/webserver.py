@@ -107,5 +107,4 @@ def main():
 		print('CTRL+C received, shutting down server')
 		server.socket.close()
 
-if __name__=='__main__':
-	main()
+main()

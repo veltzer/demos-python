@@ -1,15 +1,16 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 A notebook pygtk application
 '''
 
-import pygtk
-#pygtk.require('2.0')
+from __future__ import print_function
 import gtk
 
 class NotebookExample:
-	# This method rotates the position of the tabs
+	'''
+	This method rotates the position of the tabs
+	'''
 	def rotate_book(self,button,notebook):
 		notebook.set_tab_pos((notebook.get_tab_pos()+1)%4)
 
@@ -134,10 +135,12 @@ class NotebookExample:
 		table.show()
 		window.show()
 
-def main():
+NotebookExample()
+'''
+The try/except is needed so that if you CTRL+C the application you will not get an exception
+with stack trace
+'''
+try:
 	gtk.main()
-	return 0
-
-if __name__=='__main__':
-	NotebookExample()
-	main()
+except:
+	pass

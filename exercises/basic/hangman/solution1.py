@@ -34,10 +34,9 @@ def guess(letter):
 		print('Bzzz! No \'%s\' there.'%letter)
 	print_known_parts()
 
-if __name__!='__main__':
-	print_known_parts()
-
-# test if run directly, do nothing if imported
+# test if run directly, print if imported
 if __name__=='__main__':
-	import doctest
+	import doctest # for testmod
 	doctest.testmod()
+else:
+	print_known_parts()

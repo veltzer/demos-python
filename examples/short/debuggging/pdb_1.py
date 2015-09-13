@@ -20,5 +20,4 @@ def calc():
 			pdb.set_trace()
 		i=i+1
 
-if __name__=='__main__':
-	calc()
+calc()
