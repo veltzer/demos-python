@@ -31,9 +31,9 @@ def send_email(
 	server=smtplib.SMTP(host=smtp_host, port=smtp_port)
 	server.ehlo()
 	#server.connect(host=smtp_host, port=smtp_port)
-	if(debug):
+	if debug:
 		server.set_debuglevel(1)
-	if(usetls):
+	if usetls:
 		server.starttls()
 	server.login(user, password)
 	server.sendmail(fr, to, msg.as_string())

@@ -26,7 +26,7 @@ class MyProtocol(LineReceiver):
 	def handle_auth(self,line):
 		(auth,name,password)=line.split(',')
 		if auth=='auth':
-			if(name*2==password):
+			if name*2==password:
 				self.transport.write('auth ok\r\n')
 				self.curFunc=self.handle_status
 				self.factory.num_users+=1

@@ -11,6 +11,6 @@ def min_max_avg(list):
 		if x>max:
 			max=x
 		sum+=x
-	return (min,max,sum/len(list))
+	return min,max,sum/len(list)
 
 print(min_max_avg(xrange(0,100000)))

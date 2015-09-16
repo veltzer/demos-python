@@ -11,7 +11,7 @@ for i in range(12):
 def get_num_of_days_in_month(month_name):
 	''' Given a month name,
 	return the number of days in this month'''
-	if (name_to_days_num.has_key(month_name)):
+	if month_name in name_to_days_num:
 		return name_to_days_num[months_name]
 	else:
 		raise DateException, 'No such month name'
@@ -19,7 +19,7 @@ def get_num_of_days_in_month(month_name):
 def get_following_month(month_name):
 	''' Given a month name,
 	return the name of the following month'''
-	if (name_to_days_num.has_key(month_name)):
+	if month_name in name_to_days_num:
 		i=months_names.index(month_name)
 		return months_names[(i+1)%12]
 	else:
@@ -27,7 +27,7 @@ def get_following_month(month_name):
 
 def is_leap_year(year):
 	''' Return True if the year is a leap year, False otherwise'''
-	return ((year%4==0) and (year%1000!=0))
+	return year%4==0 and year%1000!=0
 
 class Calendar:
 	''' A callender of events, has an entry for every event,
@@ -51,21 +51,21 @@ class Calendar:
 		month is the number of the month '''
 		month_events={}
 		for name in self.events.keys():
-			if (self.events[name].month==month):
+			if self.events[name].month==month:
 				month_events[name]=self.events[name]
 		return month_events
 
 class Date:
 	def __init__(self, day, month, year):
-		if((type(day)!=type(1)) or (type(month)!=type(1)) or (type(year)!=type(1))):
+		if type(day)!=type(1) or type(month)!=type(1) or type(year)!=type(1):
 			raise DateException, 'Date must be initialized with numbers'
-		if ((month<1) or (month>12)):
+		if month<1 or month>12:
 			raise DateException, 'Month must be between 1 and 12'
-		if (is_leap_year(year)):
-			if((day<0) or (day>days_in_months_leap_year[month-1])):
+		if is_leap_year(year):
+			if day<0 or day>days_in_months_leap_year[month-1]:
 				raise DateException, 'Day must be between 1 and {0}'.format(days_in_months[month-1])
 			else:
-			if((day<0) or (day>days_in_months[month-1])):
+			if day<0 or day>days_in_months[month-1]:
 				raise DateException, 'Day must be between 1 and {0}'.format(days_in_months[month-1])
 
 		self.day=day
@@ -74,13 +74,13 @@ class Date:
 
 	def __gt__(self,other):
 		''' Overloading operator>for dates '''
-		if (self.year>other.year):
+		if self.year>other.year:
 			return True
-		elif (self.year==other.year):
-			if (self.month>other.month):
+		elif self.year==other.year:
+			if self.month>other.month:
 				return True
-			elif (self.month==other.month):
-				if(self.day>other.day):
+			elif self.month==other.month:
+				if self.day>other.day:
 					return True
 		return False
 
@@ -90,19 +90,19 @@ class Date:
 
 	def __eq__(self,other):
 		''' Overloading operator==for dates '''
-		return ( (self.year==other.year) and (self.month==other.month) and (self.day==other.day))
+		return self.year==other.year and self.month==other.month and self.day==other.day
 
 	def __ne__(self,other):
 		''' Overloading operator!=for dates '''
-		return not (self==other)
+		return not self==other
 
 	def __le__(self,other):
 		''' Overloading operator<=for dates '''
-		return (self<other) or (self==other)
+		return self<other or self==other
 
 	def __ge__(self,other):
 		''' Overloading operator>=for dates '''
-		return (self>other) or (self==other)
+		return self>other or self==other
 
 	def __str__(self):
 		return str(self.day)+'.'+str(self.month)+'.'+str(self.year)

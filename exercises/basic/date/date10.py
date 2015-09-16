@@ -8,18 +8,18 @@ for i in range(12):
 def get_num_of_days_in_month(month_name):
 	''' Given a month name,
 	return the number of days in this month'''
-	if (name_to_days_num.has_key(month_name):
+	if month_name in name_to_days_num:
 		return name_to_days_num[months_name]
 	else:
 		print('No such month')
 def get_following_month(month_name):
 	''' Given a month name,
 	return the name of the following month'''
-	if (name_to_days_num.has_key(month_name):
+	if month_name in name_to_days_num:
 		i=months_names.index(month_name)
 		return months_names[(i+1)%12]
 	else:
 		print('No such month')
 def is_leap_year(year):
-		''' Return True if the year is a leap year, False otherwise'''
-		return ((year%4==0) and (year%1000!=0))
+	''' Return True if the year is a leap year, False otherwise'''
+	return year%4==0 and year%1000!=0

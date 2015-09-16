@@ -30,8 +30,8 @@ def system_pipe(list1,list2,getOutput=False,getError=False):
 	status=pr2.returncode
 	if status:
 		raise ValueError('error in executing',list2,s_error2)
-	#return (s_output1,s_error1,s_output2,s_error2)
-	return (s_output2,s_error2)
+	#return s_output1,s_error1,s_output2,s_error2
+	return s_output2,s_error2
 
 try:
 	# test error in first command

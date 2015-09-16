@@ -17,6 +17,6 @@ def min_max_avg(list):
 	rmin=reduce(my_min,list)
 	rmax=reduce(my_max,list)
 	rsum=reduce(my_sum,list)
-	return (rmin,rmax,rsum/len(list))
+	return rmin,rmax,rsum/len(list)
 
 print(min_max_avg(range(0,100)))

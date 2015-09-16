@@ -34,7 +34,7 @@ def make_funcs(l):
 		l[index]=val
 	def f_int():
 		return l
-	return (f_max,f_min,f_set,f_int)
+	return f_max,f_min,f_set,f_int
 
 (f_max,f_min,f_set,f_int)=make_funcs([1,2,3,4])
 # notice that we do not have a direct pointer to the list

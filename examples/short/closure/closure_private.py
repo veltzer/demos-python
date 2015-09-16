@@ -19,7 +19,7 @@ def make_mult_add_print(x):
 		return x+y
 	def f_print():
 		print(x)
-	return (f_mult,f_add,f_print)
+	return f_mult,f_add,f_print
 
 (func_mult3,func_add3,func_print3)=make_mult_add_print(3)
 (func_mult5,func_add5,func_print5)=make_mult_add_print(5)

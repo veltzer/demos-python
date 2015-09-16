@@ -49,7 +49,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
 		# /->./
 		# /index.html -> ./index.html
 		self.realpath='.'+self.path
-		if(os.path.isfile(self.realpath)):
+		if os.path.isfile(self.realpath):
 			#our static HTML content
 			if self.path.endswith('.html'):
 				self.handle_static('text/html')
@@ -61,7 +61,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
 			#unrecognized file suffix
 			self.send_error(500,'Unrecognized file type: {0}'.format(self.path))
 			return
-		if(os.path.isdir(self.realpath)):
+		if os.path.isdir(self.realpath):
 			self.handle_dir()
 	def do_GET(self):
 		print(threading.current_thread())

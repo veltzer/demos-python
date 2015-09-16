@@ -10,7 +10,7 @@ report={}
 for line in open('word_report_1.py'):
 	for word in line.split():
 		# next line is same as: if not word in report
-		if not report.has_key(word):
+		if not word in report:
 			report[word]=0
 		report[word]+=1
 # NOTE: the with statement takes care of closing the file for us...

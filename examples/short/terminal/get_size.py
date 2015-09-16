@@ -23,23 +23,23 @@ def terminal_size1():
 	return w, h
 def terminal_size2():
 	ret=os.popen('stty size', 'r').read().split()
-	return (int(ret[1]), int(ret[0]))
+	return int(ret[1]), int(ret[0])
 def terminal_size3():
 	x=int(os.popen('tput cols', 'r').read())
 	y=int(os.popen('tput lines', 'r').read())
-	return (x,y)
+	return x,y
 def terminal_size4():
 	d=dict()
 	for tc_entry in os.environ['TERMCAP'].split(':'):
 		if tc_entry.find('#')!=-1:
 			key, val=tc_entry.split('#')
 			d[key]=val
-	return (int(d['co']), int(d['li']))
+	return int(d['co']), int(d['li'])
 # this function does not work since LINES and COLUMNS are not exported
 def terminal_size5():
 	x=int(os.environ['LINES'])
 	y=int(os.environ['COLUMNS'])
-	return (x,y)
+	return x,y
 
 print(terminal_size1())
 print(terminal_size2())
