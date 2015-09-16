@@ -16,6 +16,6 @@ print(separator_line)
 for row in zip(columns[0], columns[1], columns[2]):
 	line='|'
 	for text in row:
-		line+=text.ljust(10)+'|')
+		line+=text.ljust(10)+'|'
 	print(line)
 	print(separator_line)

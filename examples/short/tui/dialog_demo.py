@@ -72,7 +72,7 @@ def textbox_demo(d):
 
 def inputbox_demo(d):
 	while 1:
-		(code, answer)=d.inputbox('What's your name?', init='Snow White')
+		(code, answer)=d.inputbox('Whats your name?', init='Snow White')
 		if handle_exit_code(d, code):
 			break
 	return answer
@@ -80,15 +80,15 @@ def inputbox_demo(d):
 def menu_demo(d):
 	while 1:
 		(code, tag)=d.menu(
-			'What's your favorite day of the week?',
+			'Whats your favorite day of the week?',
 			width=60,
 			choices=[('Monday', 'Being the first day of the week...'),
 			('Tuesday', 'Comes after Monday'),
 			('Wednesday', 'Before Thursday day'),
 			('Thursday', 'Itself after Wednesday'),
 			('Friday', 'The best day of all'),
-			('Saturday', 'Well, I've had enough, thanks'),
-			('Sunday', 'Let's rest a little bit')])
+			('Saturday', 'Well, Ive had enough, thanks'),
+			('Sunday', 'Lets rest a little bit')])
 		if handle_exit_code(d, code):
 			break
 	return tag
@@ -113,18 +113,18 @@ def checklist_demo(d):
 def radiolist_demo(d):
 	while 1:
 		(code, tag)=d.radiolist(
-			'What's your favorite kind of sandwich?',
+			'Whats your favorite kind of sandwich?',
 			width=65,
 			choices=[('Hamburger', '2 slices of bread, a steak...', 0),
-			('Hotdog', 'doesn't bite any more', 0),
+			('Hotdog', 'doesnt bite any more', 0),
 			('Burrito', 'no se lo que es', 0),
 			('Doener', 'Huh?', 0),
 			('Falafel', 'Erm...', 0),
 			('Bagel', 'Of course!', 0),
-			('Big Mac', 'Ah, that's easy!', 1),
+			('Big Mac', 'Ah, thats easy!', 1),
 			('Whopper', 'Erm, sorry', 0),
-			('Quarter Pounder', 'called 'le Big Mac' in France', 0),
-			('Peanut Butter and Jelly', 'Well, that's your own '
+			('Quarter Pounder', 'called \'le Big Mac\' in France', 0),
+			('Peanut Butter and Jelly', 'Well, thats your own '
 			'business...', 0),
 			('Grilled cheese', 'And nothing more?', 0)])
 		if handle_exit_code(d, code):
@@ -149,13 +149,13 @@ def comment_on_sarge_release_date(day, month, year):
 	if year<2004 or (year==2004 and month<=3):
 		return 'Mmm... what about a little tour on http://www.debian.org/?'
 	elif year==2004 and month<=4:
-		return 'Damn, how optimistic! You don't know much about Debian, do you?'
+		return 'Damn, how optimistic! You dont know much about Debian, do you?'
 	elif year==2004 and month<=7:
 		return 'Well, good guess. But who knows what the future reserves to us? ;-)'
 	elif year==2004:
-		return 'Oh, well. That's plausible. But please, please don't depress other people with your pronostics... ;-)'
+		return 'Oh, well. Thats plausible. But please, please dont depress other people with your pronostics... ;-)'
 	else:
-		return 'Hey, you're a troll! (or do you know Debian *so* well? ;-)'
+		return 'Hey, youre a troll! (or do you know Debian *so* well? ;-)'
 
 def scrollbox_demo(d, name, favorite_day, toppings, sandwich, date, password):
 	day, month, year=date
@@ -171,7 +171,7 @@ def fselect_demo(d):
 		(code, path)=d.fselect(dir, 10, 50, title='Cute little file to show as in a [tail -f]')
 		if handle_exit_code(d, code):
 			if not os.path.isfile(path):
-				d.scrollbox('Hmm. Didn't I ask you to select a *file*?', width=50, height=10)
+				d.scrollbox('Hmm. Didnt I ask you to select a *file*?', width=50, height=10)
 		else:
 			break
 	return path
@@ -192,7 +192,7 @@ def demo():
 	d.scrollbox('Haha. You thought it was over. Wrong. Even More fun is to come! (well, depending on your definition on fun) Now, please select a file you would like to see growing (or not...).', width=75)
 	file=fselect_demo(d)
 	tailbox_demo(d, file)
-	d.scrollbox('Now, you're done. No, Im not kidding. So, why the hell are you sitting here instead of rushing on that EXIT button? Ah, you did like the demo. Hmm... are you feeling OK? ;-)', width=75)
+	d.scrollbox('Now, youre done. No, Im not kidding. So, why the hell are you sitting here instead of rushing on that EXIT button? Ah, you did like the demo. Hmm... are you feeling OK? ;-)', width=75)
 
 def main():
 	try:

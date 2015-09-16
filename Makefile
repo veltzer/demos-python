@@ -3,6 +3,12 @@ include /usr/share/templar/make/Makefile
 ALL:=$(TEMPLAR_ALL)
 ALL_DEP:=$(TEMPLAR_ALL_DEP)
 
+ALL_PY:=$(shell find . -name "*.py")
+ALL_STAMP:=$(addsuffix .stamp, $(basename $(ALL_PY)))
+
+.PHONY: check_all
+check_all: $(ALL_STAMP)
+
 .PHONY: check
 check: check_return check_if check_has_key
 	
@@ -19,3 +25,11 @@ check_if:
 .PHONY: check_has_key
 check_has_key:
 	@git grep -l "has_key" -- '*.py' || exit 0
+
+$(ALL_STAMP): %.stamp: %.py
+	python2 -m py_compile $< || python3 -m py_compile $<
+	touch $@
+
+.PHONY: debug_me
+debug_me:
+	echo $(ALL_STAMP)

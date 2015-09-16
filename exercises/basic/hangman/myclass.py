@@ -82,11 +82,10 @@ class SimpleHangman(object):
 		'''Call this to play.'''
 		self.open_letters.add(letter)
 		if letter in self._word:
-			print('Yes! '%s' appears %s times:'%(
-				letter, self._word.count(letter)))
+			print('Yes! \'%s\' appears %s times:' %(letter, self._word.count(letter)))
 			print(self)
 		else:
-			print('Bzzz! No '%s' there.'%letter)
+			print('Bzzz! No \'%s\' there.'%letter)
 			print(self)
 
 

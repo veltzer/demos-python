@@ -4,7 +4,7 @@ def lines2paragraphs(lines):
 	'''Group lines into paragraphs as lists of lines.'''
 	paragraph=[]
 	for line in lines:
-	line=line.strip()
+		line=line.strip()
 		if line=='':
 			yield paragraph
 			paragraph=[]
@@ -27,7 +27,7 @@ def reformat(lines2paragraphs,chars):
 	'''
 	for para in lines2paragraphs:
 		for line in textwrap.wrap(' '.join(para),chars):
-		yield line
+			yield line
 		yield ''
 
 mygen=reformat(lines2paragraphs(open('/usr/share/doc/python/copyright')),50)

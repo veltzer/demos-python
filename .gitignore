@@ -3,6 +3,7 @@
 *.pyc
 *.pyo
 __pycache__
+*.stamp
 
 # output files
 *.out

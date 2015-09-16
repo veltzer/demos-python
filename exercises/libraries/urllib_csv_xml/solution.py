@@ -1,5 +1,6 @@
 #!/usr/bin/python2
 
+from __future__ import print_function
 import urllib2
 import xml.etree.cElementTree as ET
 import csv
@@ -21,4 +22,4 @@ output='/tmp/pypi.csv'
 feed=urllib2.urlopen('http://pypi.python.org/pypi?:action=rss').read()
 parsed_feed=parse_feed(feed)
 write_csv(output, parsed_feed)
-print 'wrote file [{0}]'.format(output)
+print('wrote file [{0}]'.format(output))

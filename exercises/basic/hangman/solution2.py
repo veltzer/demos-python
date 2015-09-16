@@ -13,7 +13,7 @@ if len(args)!=1:
 	print(__doc__) # usage message
 	sys.exit(2)
 
-print('Type 'exit' to exit.')
+print('Type \'exit\' to exit.')
 h=Hangman(args[0])
 while True:
 	line=raw_input('TYPE A LETTER: ')

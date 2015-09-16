@@ -1,12 +1,14 @@
 #!/usr/bin/python2
 
-# AsyncNotifier example from tutorial
-#
-# See: http://github.com/seb-m/pyinotify/wiki/Tutorial
-#
-from __future__import print_function
-import asyncore
-import pyinotify
+'''
+AsyncNotifier example from tutorial
+
+See: http://github.com/seb-m/pyinotify/wiki/Tutorial
+'''
+
+from __future__ import print_function
+import asyncore # for loop
+import pyinotify # for WatchManager, IN_CREATE, IN_DELETE, ProcessEvent, AsyncNotifier
 
 wm=pyinotify.WatchManager() # Watch Manager
 mask=pyinotify.IN_DELETE | pyinotify.IN_CREATE # watched events

@@ -47,7 +47,7 @@ def myhandler(signum,frame):
 		stop=True
 	if signum==signal.SIGINT:
 		# here we do not call the old function
-		debug('signalhandler: don't press CTRL+C. Kill me using SIGUSR2')
+		debug('signalhandler: dont press CTRL+C. Kill me using SIGUSR2')
 
 oldsigusr1=signal.getsignal(signal.SIGUSR1)
 oldsigusr2=signal.getsignal(signal.SIGUSR2)

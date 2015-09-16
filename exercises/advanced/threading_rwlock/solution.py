@@ -9,25 +9,25 @@ class RWL:
 		self.c=threading.Condition()
 	def ReaderEnter(self):
 		with self.c:
-			self._readersWaiting++
+			self._readersWaiting+=1
 			while self._writersInside:
 				self.c.wait()
-			self._readersWaiting--
-			self._readersInside++
+			self._readersWaiting-=1
+			self._readersInside+=1
 	def ReaderLeave(self):
 		with self.c:
-			self._readersInside--
+			self._readersInside-=1
 			#self.c.notifyAll()
 			if self._readersInside==0:
 				self.c.notify()
 	def WriterEnter(self):
 		with self.c:
-			self._writersWaiting++
-			while self._readersInside || self._writersInside:
+			self._writersWaiting+=1
+			while self._readersInside or self._writersInside:
 				self.c.wait()
-			self._writersWaiting--
-			self._writerInside++
+			self._writersWaiting-=1
+			self._writerInside+=1
 	def WriterLeave(self):
 		with self.c:
-			self._writerInside--
+			self._writerInside-=1
 			self.c.notifyAll()

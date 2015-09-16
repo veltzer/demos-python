@@ -27,7 +27,7 @@ print(separator_line)
 # If you haven't seen this function(*args_list) syntax yet -
 # it's the same as zip(columns[0], columns[1], columns[2])
 # but would work for any number of columns.
-for row in zip(*columns)
+for row in zip(*columns):
 	line='|'
 	for text, width in zip(row, widths):
 		line+=text.ljust(width)+'|'

@@ -1,7 +1,7 @@
 class Date:
 	days_in_months=[31,29,31,30,31,30,31,31,30,31,30,31]
 	def __init__(self, day, month, year):
-		if type(day)!=type(1) or (type(month)!=type(1)) or (type(year)!=type(1))):
+		if type(day)!=type(1) or type(month)!=type(1) or type(year)!=type(1):
 			print('Date must be initialized with numbers')
 			return
 		if month<1 or month>12:

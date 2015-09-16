@@ -22,7 +22,7 @@ class OperatorChoice(gtk.VBox):
 
 		radio=None # helps RadioButton grouping below
 		for (op, func) in zip('+-*/', [operator.add, operator.sub, operator.mul, operator.div]):
-		radio=gtk.RadioButton(radio, op)
+			radio=gtk.RadioButton(radio, op)
 		self.pack_start(radio)
 		if op=='+':
 			radio.set_active(True)

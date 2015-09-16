@@ -1,5 +1,11 @@
 #!/usr/bin/python
 
+from __future__ import print_function
+import simpleparse.parser
+import simpleparse.dispatchprocessor
+import pprint
+import sys
+
 declaration=r'''# note use of raw string when embedding in python code...
 full		:= ws,expr,ws
 number		:= [0-9eE+.-]+
@@ -7,21 +13,14 @@ expr		:= number,'+',number/number,'-',number
 ws		:= [ \t\v]*
 '''
 
-from __future__ import print_function
-
-import simpleparse.parser
-import simpleparse.dispatchprocessor
-import pprint
-import sys
-
 class MyProcessorClass(simpleparse.dispatchprocessor.DispatchProcessor):
 #	def __init__(self):
 #		print('cons')
-	def number(self,(tag,start,stop,subtags),buf):
+	def number(self, tup, buf):
 		print('in number')
 		'''Process the given production and it's children'''
-	def expr(self,(tag,start,stop,subtags),buf):
-		print('in number')
+	def expr(self, tup,buf):
+		print('in expr')
 		'''Process the given production and it's children'''
 	def __call__(self,value,data):
 		print('value is '+str(value))

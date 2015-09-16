@@ -35,7 +35,7 @@ open('/tmp/out2.txt', 'w').close()
 print('This should output nothing:')
 hello('Fred')
 hello('Barney')
-print('The file now contains this:'):
+print('The file now contains this:')
 print(open('/tmp/out2.txt').read())
 # clean up
 os.remove('/tmp/out2.txt')

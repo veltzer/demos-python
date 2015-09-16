@@ -5,11 +5,11 @@ Showing how to sort tuples in reverse
 '''
 
 def my_tup_revese(t1,t2):
-	if t1[1],t1[0]<t2[1],t2[0]:
+	if (t1[1],t1[0])<(t2[1],t2[0]):
 		return -1
-	if t1[1],t1[0]>t2[1],t2[0]:
+	if (t1[1],t1[0])>(t2[1],t2[0]):
 		return 1
-	if t1[1],t1[0]==t2[1],t2[0]:
+	if (t1[1],t1[0])==(t2[1],t2[0]):
 		return 0
 def my_revese(t1,t2):
 	if t2<t1:

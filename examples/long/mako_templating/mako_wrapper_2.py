@@ -31,4 +31,4 @@ template=mako.template.Template(filename=p_input,lookup=mylookup,output_encoding
 file=open(p_output,'w')
 file.write(template.render(foo='bar',years=years))
 file.close()
-os.chmod(p_output,0444)
+os.chmod(p_output,0o444)
