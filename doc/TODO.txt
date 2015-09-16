@@ -1,5 +1,10 @@
 - add some ipython demos
 
+- do examples of how to check python code without running it.
+	There are many ways to do it.
+	References:
+	http://stackoverflow.com/questions/4284313/how-can-i-check-the-syntax-of-python-script-without-executing-it
+
 - write a python example which does many things simulteneously using 'asynccore' or 'asyncio':
 	- having console UI (like cmd) receiving events on every click.
 	- receiving file system events with fnotify.
