@@ -9,15 +9,18 @@ The __dict__ both for the instances and for the class is public and so can be ac
 from outside the class.
 '''
 
-class A:
-	pi=3.14
-	def __init__(self,val):
-		print('in A constructor')
-		self.a=val
-	def printMe(self):
-		print('a is',self.a)
 
-a=A(7)
+class A:
+    pi = 3.14
+
+    def __init__(self, val):
+        print('in A constructor')
+        self.a = val
+
+    def printMe(self):
+        print('a is', self.a)
+
+a = A(7)
 print('dir(a) follows...')
 print(dir(a))
 print('a.__dict__ follows...')

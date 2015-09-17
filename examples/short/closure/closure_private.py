@@ -12,17 +12,20 @@ then the statement 'x=...' will be taken by python to mean the declaration
 of another *** local *** variable 'x'.
 '''
 
-def make_mult_add_print(x):
-	def f_mult(y):
-		return x*y
-	def f_add(y):
-		return x+y
-	def f_print():
-		print(x)
-	return f_mult,f_add,f_print
 
-(func_mult3,func_add3,func_print3)=make_mult_add_print(3)
-(func_mult5,func_add5,func_print5)=make_mult_add_print(5)
+def make_mult_add_print(x):
+    def f_mult(y):
+        return x * y
+
+    def f_add(y):
+        return x + y
+
+    def f_print():
+        print(x)
+    return f_mult, f_add, f_print
+
+(func_mult3, func_add3, func_print3) = make_mult_add_print(3)
+(func_mult5, func_add5, func_print5) = make_mult_add_print(5)
 
 print('the 3 family of functions')
 func_print3()
@@ -35,14 +38,17 @@ print(func_add5(6))
 
 # lets see if the closures of the functions returned together are the same...
 if func_mult3.__closure__ is func_add3.__closure__ is func_set3.__closure__:
-	print('yes,the three functions have the exact same closure')
+    print('yes,the three functions have the exact same closure')
 # lets see if diffrent invocations actually created different closures...
 if func_mult3.__closure__ is not func_mult5.__closure__:
-	print('yes,the closure object of the 3 familty is not the closure object of the 5 family')
+    print(
+        'yes,the closure object of the 3 familty is not the closure object of the 5 family')
 # here is how we can get to the closure object from the outside:
-print('the closure for the 3 family of functions holds the value',func_add3.__closure__[0].cell_contents)
+print('the closure for the 3 family of functions holds the value',
+      func_add3.__closure__[0].cell_contents)
 try:
-	func_add3.__closure__[0].cell_contents=8
+    func_add3.__closure__[0].cell_contents = 8
 except AttributeError as e:
-	print('no,I cannot set the closure data from the outside. It is indeed \'private\'...')
-	print('the error we got is',e)
+    print(
+        'no,I cannot set the closure data from the outside. It is indeed \'private\'...')
+    print('the error we got is', e)

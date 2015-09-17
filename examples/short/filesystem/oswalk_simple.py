@@ -11,18 +11,18 @@ Notice that the file names and directory names that you get are relative
 to the root that you get and not to the root folder of the scan.
 '''
 
-import os.path # for join
-import os # for walk
-import sys # for argv
+import os.path  # for join
+import os  # for walk
+import sys  # for argv
 
-if len(sys.argv)<2:
-	raise ValueError('plase pass root_folder')
-root_folder=sys.argv[1]
+if len(sys.argv) < 2:
+    raise ValueError('plase pass root_folder')
+root_folder = sys.argv[1]
 
-for root,dirs,files in os.walk(root_folder):
-	for file in files:
-		full=os.path.join(root, file)
-		print(full)
-	for dir in dirs:
-		full=os.path.join(root, dir)
-		print(full)
+for root, dirs, files in os.walk(root_folder):
+    for file in files:
+        full = os.path.join(root, file)
+        print(full)
+    for dir in dirs:
+        full = os.path.join(root, dir)
+        print(full)

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-g=(x**2 for x in range(6))
+g = (x ** 2 for x in range(6))
 
 '''
 this is same as:
@@ -10,4 +10,4 @@ def g():
 '''
 print(g)
 for x in g:
-	print(x)
+    print(x)

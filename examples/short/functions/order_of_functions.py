@@ -10,10 +10,12 @@
 	code. Then you don't have to worry about order at all.
 '''
 
+
 def f():
-	g()
+    g()
+
 
 def g():
-	print('hello')
+    print('hello')
 
 f()

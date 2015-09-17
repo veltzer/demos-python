@@ -7,9 +7,9 @@ References:
 http://stackoverflow.com/questions/377017/test-if-executable-exists-in-python/
 '''
 
-import sys # for argv
-import os.path # for isfile, isabs
-import os # for access, X_OK, pathsep, environ
+import sys  # for argv
+import os.path  # for isfile, isabs
+import os  # for access, X_OK, pathsep, environ
 
 '''
 returns the absolute path of a program
@@ -23,17 +23,19 @@ will check that it is executable and return it.
 if the program cannot be found or is not executable an exception will be raised.
 '''
 
+
 def is_exe(path):
-	return os.path.isfile(path) and os.access(path, os.X_OK)
+    return os.path.isfile(path) and os.access(path, os.X_OK)
+
 
 def which(program):
-	if os.path.isabs(program):
-		assert is_exe(program)
-		return program
-	for path in os.environ['PATH'].split(os.pathsep):
-		curr=os.path.join(path, program)
-		if is_exe(curr):
-			return curr
-	raise ValueError('cannot find the program [{0}] in PATH'.format(program))
+    if os.path.isabs(program):
+        assert is_exe(program)
+        return program
+    for path in os.environ['PATH'].split(os.pathsep):
+        curr = os.path.join(path, program)
+        if is_exe(curr):
+            return curr
+    raise ValueError('cannot find the program [{0}] in PATH'.format(program))
 
 print(which(sys.argv[1]))

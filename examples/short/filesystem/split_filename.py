@@ -8,12 +8,12 @@ NOTES:
 - splitext is for extensions.
 '''
 
-import sys # for stdin
-import os.path # for basename, dirname, splitext
+import sys  # for stdin
+import os.path  # for basename, dirname, splitext
 
 for line in sys.stdin:
-	line=line.strip()
-	print('basename is [{0}]'.format(os.path.basename(line)))
-	print('dirname is [{0}]'.format(os.path.dirname(line)))
-	print('splitext is [{0}]'.format(os.path.splitext(line)))
-	print('split is [{0}]'.format(os.path.split(line)))
+    line = line.strip()
+    print('basename is [{0}]'.format(os.path.basename(line)))
+    print('dirname is [{0}]'.format(os.path.dirname(line)))
+    print('splitext is [{0}]'.format(os.path.splitext(line)))
+    print('split is [{0}]'.format(os.path.split(line)))

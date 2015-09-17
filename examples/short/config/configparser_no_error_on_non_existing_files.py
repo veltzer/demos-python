@@ -6,8 +6,8 @@ reading files which don't exist.
 Quite stupid.
 '''
 
-import os.path # for isfile
-import configparser # for ConfigParser
+import os.path  # for isfile
+import configparser  # for ConfigParser
 
-c=configparser.ConfigParser()
+c = configparser.ConfigParser()
 c.read('nonexit.ini')

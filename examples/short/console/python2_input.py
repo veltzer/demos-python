@@ -14,6 +14,6 @@ or a double or whatever).
 '''
 
 from __future__ import print_function
-text=input('please give me a number: ')
+text = input('please give me a number: ')
 print('type of return from input is', type(text))
 print('value returned from input is', text)

@@ -7,26 +7,32 @@ name. This is true for constructors as well as for regular methods.
 
 from __future__ import print_function
 
+
 class A:
-	def __init__(self,val):
-		self.__privar=val
-	def __init__(self):
-		self.__privar=5
-	def sayHello(self):
-		print(self.__privar,'hello')
-	def sayHello(self,name):
-		print(self.__privar,'hello',name)
+
+    def __init__(self, val):
+        self.__privar = val
+
+    def __init__(self):
+        self.__privar = 5
+
+    def sayHello(self):
+        print(self.__privar, 'hello')
+
+    def sayHello(self, name):
+        print(self.__privar, 'hello', name)
 
 try:
-	a=A(5)
+    a = A(5)
 except TypeError:
-	print('oops,got an error')
-	print('the no argument version of the constructor does not exist...')
+    print('oops,got an error')
+    print('the no argument version of the constructor does not exist...')
 # this will pass without an exception...
-a=A()
+a = A()
 try:
-	a.sayHello()
+    a.sayHello()
 except TypeError:
-	print('oops,got an error')
-	print('the no argument version of the method \'sayHello\' does not exist...')
+    print('oops,got an error')
+    print(
+        'the no argument version of the method \'sayHello\' does not exist...')
 a.sayHello('mark')

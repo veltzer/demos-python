@@ -9,34 +9,40 @@ difference in detail.
 
 import math
 
+
 def my_func():
-	pass
+    pass
+
 
 class A:
-	def __init__(self,val):
-		self.privar=val
-class B(object):
-	def __init__(self,val):
-		self.privar=val
 
-l=[
-	5,
-	5.5,
-	5+6j,
-	'this is a string',
-	True,
-	False,
-	None,
-	[ 1,2,3 ],
-	{},
-	set(),
-	(),
-	type,
-	max,
-	math.sin,
-	my_func,
-	A(6),
-	B(6)
+    def __init__(self, val):
+        self.privar = val
+
+
+class B(object):
+
+    def __init__(self, val):
+        self.privar = val
+
+l = [
+    5,
+        5.5,
+        5 + 6j,
+        'this is a string',
+        True,
+        False,
+        None,
+        [1, 2, 3],
+        {},
+        set(),
+        (),
+        type,
+        max,
+        math.sin,
+        my_func,
+        A(6),
+        B(6)
 ]
 
-print(map(type,l))
+print(map(type, l))

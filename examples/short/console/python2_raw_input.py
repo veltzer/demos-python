@@ -14,8 +14,8 @@ raw input prints to the screen * exactly * what you give it...
 '''
 
 from __future__ import print_function
-text=raw_input('please give me a number: ')
+text = raw_input('please give me a number: ')
 print(type(text))
-val=int(text)
-print('val is',val)
-print('type(val) is',type(val))
+val = int(text)
+print('val is', val)
+print('type(val) is', type(val))

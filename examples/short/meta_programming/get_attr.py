@@ -12,24 +12,28 @@ come in and out of scope at runtime. Uses for this could include:
 And more...
 '''
 
+
 class A(object):
-	def __init__(self):
-		pass
-		#self.d={}
-	def __getattr__(self,name):
-		return name[::-1]
-		#def mymethod(self):
-		#	print('in here with name',name)
-		#return mymethod
-	def __setattr__(self,name,val):
-		#print('ERROR! don't touch this...')
-		#getattr(self,'d').__setitem__('\''+name+'\'',val)
-		pass
+
+    def __init__(self):
+        pass
+        # self.d={}
+
+    def __getattr__(self, name):
+        return name[::-1]
+        # def mymethod(self):
+        #	print('in here with name',name)
+        # return mymethod
+
+    def __setattr__(self, name, val):
+        # print('ERROR! don't touch this...')
+        # getattr(self,'d').__setitem__('\''+name+'\'',val)
+        pass
 
 
-a=A()
+a = A()
 print(dir(a))
 print(a.whatIsThis)
 print(a.whatsGoingOn)
 print(a.howManyAttributesDoesThisObjectHave)
-#a.myprivate=7
+# a.myprivate=7

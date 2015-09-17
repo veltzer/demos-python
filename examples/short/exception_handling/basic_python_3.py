@@ -9,10 +9,11 @@ python 2 the line: 'except ValueError as e' would turn into 'except ValueError,e
 '''
 
 try:
-	raise ValueError('hello')
-# this next line catches only ValueError exceptions, logs and throws them back...
+    raise ValueError('hello')
+# this next line catches only ValueError exceptions, logs and throws them
+# back...
 except ValueError as e:
-	print('in except',e)
-	raise e
+    print('in except', e)
+    raise e
 finally:
-	print('finally is here')
+    print('finally is here')

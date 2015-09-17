@@ -15,12 +15,12 @@ References:
 http://stackoverflow.com/questions/3061336/how-can-i-iterate-over-only-the-first-variable-of-a-tuple
 '''
 
-tuples=[
-	(1,2,3),
-	(4,5,6),
-	(7,8,9),
-	(10,11,12),
+tuples = [
+    (1, 2, 3),
+        (4, 5, 6),
+        (7, 8, 9),
+        (10, 11, 12),
 ]
 
-for (x,_,y) in tuples:
-	print(x,y)
+for (x, _, y) in tuples:
+    print(x, y)

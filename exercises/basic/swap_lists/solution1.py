@@ -2,12 +2,13 @@
 
 from __future__ import print_function
 
-def swap_lists(l1,l2):
-	for i in xrange(len(l1)):
-		[l1[i],l2[i]]=[l2[i],l1[i]]
 
-l1=[2,3,4]
-l2=[8,7,6]
-swap_lists(l1,l2)
+def swap_lists(l1, l2):
+    for i in xrange(len(l1)):
+        [l1[i], l2[i]] = [l2[i], l1[i]]
+
+l1 = [2, 3, 4]
+l2 = [8, 7, 6]
+swap_lists(l1, l2)
 print(l1)
 print(l2)

@@ -46,7 +46,7 @@
 - show a demo of a profiler.
 - show how to see garbage collector events.
 - show examples about data strcutures from third parties.
-- see that I have examples of the following:		
+- see that I have examples of the following:
 	- classmethod
 	- property.
 	- decorators.

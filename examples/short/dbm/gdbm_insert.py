@@ -9,13 +9,13 @@ NOTES:
 	so only strings and bytes are allowed.
 '''
 
-import dbm.gnu # for open
+import dbm.gnu  # for open
 
 # the 'c' in the next row means open rw and create if it doesn't exist
-d=dbm.gnu.open('/tmp/foo.gdbm', 'c')
+d = dbm.gnu.open('/tmp/foo.gdbm', 'c')
 
-d['one']='ehad'
-d['two']='shtaim'
-d['three']=None
+d['one'] = 'ehad'
+d['two'] = 'shtaim'
+d['three'] = None
 
 d.close()

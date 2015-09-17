@@ -4,6 +4,6 @@
 Getting the number of cores via python
 '''
 
-import multiprocessing # for cpu_count
+import multiprocessing  # for cpu_count
 
 print(multiprocessing.cpu_count())

@@ -7,133 +7,136 @@ A notebook pygtk application
 from __future__ import print_function
 import gtk
 
+
 class NotebookExample:
-	'''
-	This method rotates the position of the tabs
-	'''
-	def rotate_book(self,button,notebook):
-		notebook.set_tab_pos((notebook.get_tab_pos()+1)%4)
 
-	# Add/Remove the page tabs and the borders
-	def tabsborder_book(self,button,notebook):
-		tval=False
-		bval=False
-		if self.show_tabs==False:
-			tval=True
-		if self.show_border==False:
-			bval=True
+    '''
+    This method rotates the position of the tabs
+    '''
 
-		notebook.set_show_tabs(tval)
-		self.show_tabs=tval
-		notebook.set_show_border(bval)
-		self.show_border=bval
+    def rotate_book(self, button, notebook):
+        notebook.set_tab_pos((notebook.get_tab_pos() + 1) % 4)
 
-	# Remove a page from the notebook
-	def remove_book(self,button,notebook):
-		page=notebook.get_current_page()
-		notebook.remove_page(page)
-		# Need to refresh the widget --
-		# This forces the widget to redraw itself.
-		notebook.queue_draw_area(0,0,-1,-1)
+    # Add/Remove the page tabs and the borders
+    def tabsborder_book(self, button, notebook):
+        tval = False
+        bval = False
+        if self.show_tabs == False:
+            tval = True
+        if self.show_border == False:
+            bval = True
 
-	def delete(self,widget,event=None):
-		gtk.main_quit()
-		return False
+        notebook.set_show_tabs(tval)
+        self.show_tabs = tval
+        notebook.set_show_border(bval)
+        self.show_border = bval
 
-	def __init__(self):
-		window=gtk.Window(gtk.WINDOW_TOPLEVEL)
-		window.connect('delete_event',self.delete)
-		window.set_border_width(10)
+    # Remove a page from the notebook
+    def remove_book(self, button, notebook):
+        page = notebook.get_current_page()
+        notebook.remove_page(page)
+        # Need to refresh the widget --
+        # This forces the widget to redraw itself.
+        notebook.queue_draw_area(0, 0, -1, -1)
 
-		table=gtk.Table(3,6,False)
-		window.add(table)
+    def delete(self, widget, event=None):
+        gtk.main_quit()
+        return False
 
-		# Create a new notebook,place the position of the tabs
-		notebook=gtk.Notebook()
-		notebook.set_tab_pos(gtk.POS_TOP)
-		table.attach(notebook,0,6,0,1)
-		notebook.show()
-		self.show_tabs=True
-		self.show_border=True
+    def __init__(self):
+        window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+        window.connect('delete_event', self.delete)
+        window.set_border_width(10)
 
-		# Let's append a bunch of pages to the notebook
-		for i in range(5):
-			bufferf='Append Frame {0}'.format(i+1)
-			bufferl='Page {0}'.format(i+1)
+        table = gtk.Table(3, 6, False)
+        window.add(table)
 
-			frame=gtk.Frame(bufferf)
-			frame.set_border_width(10)
-			frame.set_size_request(100,75)
-			frame.show()
+        # Create a new notebook,place the position of the tabs
+        notebook = gtk.Notebook()
+        notebook.set_tab_pos(gtk.POS_TOP)
+        table.attach(notebook, 0, 6, 0, 1)
+        notebook.show()
+        self.show_tabs = True
+        self.show_border = True
 
-			label=gtk.Label(bufferf)
-			frame.add(label)
-			label.show()
+        # Let's append a bunch of pages to the notebook
+        for i in range(5):
+            bufferf = 'Append Frame {0}'.format(i + 1)
+            bufferl = 'Page {0}'.format(i + 1)
 
-			label=gtk.Label(bufferl)
-			notebook.append_page(frame,label)
+            frame = gtk.Frame(bufferf)
+            frame.set_border_width(10)
+            frame.set_size_request(100, 75)
+            frame.show()
 
-		# Now let's add a page to a specific spot
-		checkbutton=gtk.CheckButton('Check me please!')
-		checkbutton.set_size_request(100,75)
-		checkbutton.show ()
+            label = gtk.Label(bufferf)
+            frame.add(label)
+            label.show()
 
-		label=gtk.Label('Add page')
-		notebook.insert_page(checkbutton,label,2)
+            label = gtk.Label(bufferl)
+            notebook.append_page(frame, label)
 
-		# Now finally let's prepend pages to the notebook
-		for i in range(5):
-			bufferf='Prepend Frame {0}'.format(i+1)
-			bufferl='PPage {0}'.format(i+1)
+        # Now let's add a page to a specific spot
+        checkbutton = gtk.CheckButton('Check me please!')
+        checkbutton.set_size_request(100, 75)
+        checkbutton.show()
 
-			frame=gtk.Frame(bufferf)
-			frame.set_border_width(10)
-			frame.set_size_request(100,75)
-			frame.show()
+        label = gtk.Label('Add page')
+        notebook.insert_page(checkbutton, label, 2)
 
-			label=gtk.Label(bufferf)
-			frame.add(label)
-			label.show()
+        # Now finally let's prepend pages to the notebook
+        for i in range(5):
+            bufferf = 'Prepend Frame {0}'.format(i + 1)
+            bufferl = 'PPage {0}'.format(i + 1)
 
-			label=gtk.Label(bufferl)
-			notebook.prepend_page(frame,label)
+            frame = gtk.Frame(bufferf)
+            frame.set_border_width(10)
+            frame.set_size_request(100, 75)
+            frame.show()
 
-		# Set what page to start at (page 4)
-		notebook.set_current_page(3)
+            label = gtk.Label(bufferf)
+            frame.add(label)
+            label.show()
 
-		# Create a bunch of buttons
-		button=gtk.Button('close')
-		button.connect('clicked',self.delete)
-		table.attach(button,0,1,1,2)
-		button.show()
+            label = gtk.Label(bufferl)
+            notebook.prepend_page(frame, label)
 
-		button=gtk.Button('next page')
-		button.connect('clicked',lambda w: notebook.next_page())
-		table.attach(button,1,2,1,2)
-		button.show()
+        # Set what page to start at (page 4)
+        notebook.set_current_page(3)
 
-		button=gtk.Button('prev page')
-		button.connect('clicked',lambda w: notebook.prev_page())
-		table.attach(button,2,3,1,2)
-		button.show()
+        # Create a bunch of buttons
+        button = gtk.Button('close')
+        button.connect('clicked', self.delete)
+        table.attach(button, 0, 1, 1, 2)
+        button.show()
 
-		button=gtk.Button('tab position')
-		button.connect('clicked',self.rotate_book,notebook)
-		table.attach(button,3,4,1,2)
-		button.show()
+        button = gtk.Button('next page')
+        button.connect('clicked', lambda w: notebook.next_page())
+        table.attach(button, 1, 2, 1, 2)
+        button.show()
 
-		button=gtk.Button('tabs/border on/off')
-		button.connect('clicked',self.tabsborder_book,notebook)
-		table.attach(button,4,5,1,2)
-		button.show()
+        button = gtk.Button('prev page')
+        button.connect('clicked', lambda w: notebook.prev_page())
+        table.attach(button, 2, 3, 1, 2)
+        button.show()
 
-		button=gtk.Button('remove page')
-		button.connect('clicked',self.remove_book,notebook)
-		table.attach(button,5,6,1,2)
-		button.show()
+        button = gtk.Button('tab position')
+        button.connect('clicked', self.rotate_book, notebook)
+        table.attach(button, 3, 4, 1, 2)
+        button.show()
 
-		table.show()
-		window.show()
+        button = gtk.Button('tabs/border on/off')
+        button.connect('clicked', self.tabsborder_book, notebook)
+        table.attach(button, 4, 5, 1, 2)
+        button.show()
+
+        button = gtk.Button('remove page')
+        button.connect('clicked', self.remove_book, notebook)
+        table.attach(button, 5, 6, 1, 2)
+        button.show()
+
+        table.show()
+        window.show()
 
 NotebookExample()
 '''
@@ -141,6 +144,6 @@ The try/except is needed so that if you CTRL+C the application you will not get 
 with stack trace
 '''
 try:
-	gtk.main()
+    gtk.main()
 except:
-	pass
+    pass

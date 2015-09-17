@@ -12,11 +12,11 @@ References:
 http://www.python-course.eu/networkx.php
 '''
 
-import networkx # for Graph
+import networkx  # for Graph
 
-G=networkx.Graph()
+G = networkx.Graph()
 G.add_node('a')
-G.add_nodes_from(['b','c'])
+G.add_nodes_from(['b', 'c'])
 
 G.add_edge('d', 'e')
 G.add_edge('a', 'b')

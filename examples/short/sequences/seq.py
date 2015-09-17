@@ -8,17 +8,18 @@
 
 from __future__ import print_function
 
+
 def myfunc(s):
-	for i in s:
-		print(i, end='')
-	print()
+    for i in s:
+        print(i, end='')
+    print()
 
 myfunc(xrange(10))
 myfunc(range(10))
-myfunc((1,2,3))
-myfunc([1,2,3])
+myfunc((1, 2, 3))
+myfunc([1, 2, 3])
 myfunc('hello')
 myfunc(range(10)[:5])
 # these will not work
-#print(xrange(10)[:5])
-#myfunc(xrange(10)[:5])
+# print(xrange(10)[:5])
+# myfunc(xrange(10)[:5])

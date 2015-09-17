@@ -6,7 +6,7 @@ This example explores how best to catenate strings in python.
 The results are surprising.
 '''
 
-import timeit # for timeit
+import timeit  # for timeit
 
 print(timeit.timeit('\'\'.join([\'a\', \'b\', \'c\'])', number=10000))
 print(timeit.timeit('s=\'a\'+\'b\'+\'c\'', number=10000))

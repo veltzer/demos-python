@@ -17,33 +17,39 @@ B This allows the user to call our methods by name instead of by
 position in some returned tuple.
 '''
 
-def Person(name,age):
-	data={}
-	data['name']=name
-	data['age']=age
-	def setName(iname):
-		data['name']=iname
-	def getName():
-		return data['name']
-	def setAge(iage):
-		data['age']=iage
-	def getAge():
-		return data['age']
-	def printMe():
-		print('name',data['name'])
-		print('age',data['age'])
-	methods={}
-	methods['setName']=setName
-	methods['getName']=getName
-	methods['setAge']=setAge
-	methods['getAge']=getAge
-	methods['printMe']=printMe
-	return methods
 
-p1=Person('Bilbo',111)
+def Person(name, age):
+    data = {}
+    data['name'] = name
+    data['age'] = age
+
+    def setName(iname):
+        data['name'] = iname
+
+    def getName():
+        return data['name']
+
+    def setAge(iage):
+        data['age'] = iage
+
+    def getAge():
+        return data['age']
+
+    def printMe():
+        print('name', data['name'])
+        print('age', data['age'])
+    methods = {}
+    methods['setName'] = setName
+    methods['getName'] = getName
+    methods['setAge'] = setAge
+    methods['getAge'] = getAge
+    methods['printMe'] = printMe
+    return methods
+
+p1 = Person('Bilbo', 111)
 p1['setName']('Sam')
 p1['printMe']()
-p2=Person('Frodo',33)
+p2 = Person('Frodo', 33)
 p2['setName']('Sauron')
 p2['printMe']()
 p1['printMe']()

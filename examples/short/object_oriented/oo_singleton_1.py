@@ -21,23 +21,26 @@ as the instance (in A.instance). This can be fixed by moving
 the registration into the constructor function itself.
 '''
 
+
 class A:
-	instance=None
-	def __init__(self):
-		if A.instance is not None:
-			raise Exception('you called the constructor twice!!')
-		else:
-			# constructor code goes here
-			print('in A constructor')
-			self.my_attribute='value'
+    instance = None
+
+    def __init__(self):
+        if A.instance is not None:
+            raise Exception('you called the constructor twice!!')
+        else:
+            # constructor code goes here
+            print('in A constructor')
+            self.my_attribute = 'value'
+
 
 def getInstance():
-	if A.instance is None:
-		A.instance=A()
-	return A.instance
+    if A.instance is None:
+        A.instance = A()
+    return A.instance
 
-myA1=getInstance()
-myA2=getInstance()
+myA1 = getInstance()
+myA2 = getInstance()
 if myA1 is myA2:
-	print('yes,they are the same instance')
+    print('yes,they are the same instance')
 print(dir(myA1))

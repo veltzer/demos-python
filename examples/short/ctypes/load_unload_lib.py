@@ -15,8 +15,8 @@ http://stackoverflow.com/questions/359498/how-can-i-unload-a-dll-using-ctypes-in
 import ctypes
 import signal
 
-l=ctypes.cdll.LoadLibrary('libacl.so')
-libdl=ctypes.CDLL('libdl.so')
+l = ctypes.cdll.LoadLibrary('libacl.so')
+libdl = ctypes.CDLL('libdl.so')
 libdl.dlclose(l._handle)
 while True:
-	signal.pause()
+    signal.pause()

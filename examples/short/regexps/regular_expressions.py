@@ -8,18 +8,18 @@ NOTES:
 - .findall can return all matches as strings.
 '''
 
-import re # for compile, finditer
+import re  # for compile, finditer
 
-c=re.compile('^\tfoobar (\d+)\n$')
+c = re.compile('^\tfoobar (\d+)\n$')
 
 # lets get the match object
-m=c.match('\tfoobar 17\n')
+m = c.match('\tfoobar 17\n')
 if m:
-	print('m.group() is [{g}]'.format(g=m.group()))
-	print('m.group(1) is [{g}]'.format(g=m.group(1)))
+    print('m.group() is [{g}]'.format(g=m.group()))
+    print('m.group(1) is [{g}]'.format(g=m.group(1)))
 else:
-	print('no match')
+    print('no match')
 
-c=re.compile('foobar \d+')
-l=c.findall('adfad foobar 20 sadfasd foobar 5 asdfasdfad foobar 3235')
+c = re.compile('foobar \d+')
+l = c.findall('adfad foobar 20 sadfasd foobar 5 asdfasdfad foobar 3235')
 print(l)

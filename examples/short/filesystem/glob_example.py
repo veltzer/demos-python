@@ -8,4 +8,4 @@ in a directory.
 import glob
 
 for file in glob.glob('/etc/*'):
-	print(file)
+    print(file)

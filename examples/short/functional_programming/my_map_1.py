@@ -6,13 +6,15 @@ this is a naive implementation. the python implementation is coded
 in C and is a lot faster than this one...
 '''
 
-def my_map(func,val_list):
-	result=[]
-	for value in val_list:
-		result.append(func(value))
-	return result
+
+def my_map(func, val_list):
+    result = []
+    for value in val_list:
+        result.append(func(value))
+    return result
+
 
 def square(x):
-	return x*x
+    return x * x
 
-print(my_map(square,xrange(2,8)))
+print(my_map(square, xrange(2, 8)))

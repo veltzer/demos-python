@@ -10,11 +10,11 @@ A few notes:
 - os._exit(N) exists immediately (just like _exit(2)).
 '''
 
-import os # for _exit
+import os  # for _exit
 
-#os._exit(113)
-#exit(114)
+# os._exit(113)
+# exit(114)
 try:
-	exit(115)
-except SystemExit,e:
-	print('hey,I did not exit')
+    exit(115)
+except SystemExit, e:
+    print('hey,I did not exit')

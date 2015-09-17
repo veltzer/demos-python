@@ -12,7 +12,7 @@ sys.path.append('build/lib.linux-i686-2.7')
 
 import car
 
-c=car.Car()
+c = car.Car()
 print(c)
 c.printSelf()
 c.setNumber(777)

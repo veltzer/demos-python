@@ -12,10 +12,10 @@ http://stackoverflow.com/questions/5466451/how-can-i-print-a-literal-characters-
 '''
 
 try:
-	s='''{this will not work} {0}'''.format('mark')
-	print(s)
+    s = '''{this will not work} {0}'''.format('mark')
+    print(s)
 except Exception as e:
-	print('yes, got an exception', e)
+    print('yes, got an exception', e)
 
-s='''{{this will work}} {0}'''.format('mark')
+s = '''{{this will work}} {0}'''.format('mark')
 print(s)

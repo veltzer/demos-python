@@ -36,118 +36,122 @@ banana: YOU WON!
 
 '''
 
+
 class SimpleHangman(object):
-	'''
-	Simple hangman game playable from the interpreter.
 
-	No limit on the number of mistakes.
-	Doesn't detect victory either.
+    '''
+    Simple hangman game playable from the interpreter.
 
-	Call .guess() to play:
+    No limit on the number of mistakes.
+    Doesn't detect victory either.
 
-	>>> h=SimpleHangman('secret')
-	??????
-	>>> h.guess('e')
-	Yes! 'e' appears 2 times:
-	?e??e?
-	>>> h.guess('x')
-	Bzzz! No 'x' there.
-	?e??e?
-	'''
+    Call .guess() to play:
 
-	def __init__(self, word):
-		# Private don't look here!
-		self._word=word
-		# Public
-		self.open_letters=set()
-		print(self)
+    >>> h=SimpleHangman('secret')
+    ??????
+    >>> h.guess('e')
+    Yes! 'e' appears 2 times:
+    ?e??e?
+    >>> h.guess('x')
+    Bzzz! No 'x' there.
+    ?e??e?
+    '''
 
-	def known_parts(self):
-		'''Reveal guessed letters, ? for hidden letters.'''
-		res=[]
-		for c in self._word:
-			if c in self.open_letters:
-				res.append(c)
-			else:
-				res.append('?')
-		return ''.join(res)
+    def __init__(self, word):
+        # Private don't look here!
+        self._word = word
+        # Public
+        self.open_letters = set()
+        print(self)
 
-	# __repr__ defines how the object is displayed.
-	# It's called by 'print' and by the interpreter.
-	def __repr__(self):
-		'''Describe current game state.'''
-		return self.known_parts()
+    def known_parts(self):
+        '''Reveal guessed letters, ? for hidden letters.'''
+        res = []
+        for c in self._word:
+            if c in self.open_letters:
+                res.append(c)
+            else:
+                res.append('?')
+        return ''.join(res)
 
-	def guess(self, letter):
-		'''Call this to play.'''
-		self.open_letters.add(letter)
-		if letter in self._word:
-			print('Yes! \'%s\' appears %s times:' %(letter, self._word.count(letter)))
-			print(self)
-		else:
-			print('Bzzz! No \'%s\' there.'%letter)
-			print(self)
+    # __repr__ defines how the object is displayed.
+    # It's called by 'print' and by the interpreter.
+    def __repr__(self):
+        '''Describe current game state.'''
+        return self.known_parts()
+
+    def guess(self, letter):
+        '''Call this to play.'''
+        self.open_letters.add(letter)
+        if letter in self._word:
+            print('Yes! \'%s\' appears %s times:' %
+                  (letter, self._word.count(letter)))
+            print(self)
+        else:
+            print('Bzzz! No \'%s\' there.' % letter)
+            print(self)
 
 
 class Hangman(SimpleHangman):
-	'''
-	Hangman game playable from the interpreter.
 
-	Counts mistakes, detects victory and defeat.
+    '''
+    Hangman game playable from the interpreter.
 
-	Call .guess() to play:
+    Counts mistakes, detects victory and defeat.
 
-	>>> h=Hangman('secret', 1)
-	??????: 1 mistakes allowed
-	>>> h.guess('e')
-	Yes! 'e' appears 2 times:
-	?e??e?: 1 mistakes allowed
-	>>> h.guess('x')
-	Bzzz! No 'x' there.
-	?e??e?: 0 mistakes allowed
-	>>> h.guess('x')
-	You already tried 'x'.
-	?e??e?: 0 mistakes allowed
-	>>> h.guess('z')
-	Bzzz! No 'z' there.
-	?e??e?: GAME OVER
-	'''
+    Call .guess() to play:
 
-	def __init__(self, word, mistakes_allowed=5):
-		self.mistakes_allowed=mistakes_allowed
-		# SimpleHangman.__init__ prints self, so self.mistakes_allowed
-		# must be defined before we call it.
-		SimpleHangman.__init__(self, word)
+    >>> h=Hangman('secret', 1)
+    ??????: 1 mistakes allowed
+    >>> h.guess('e')
+    Yes! 'e' appears 2 times:
+    ?e??e?: 1 mistakes allowed
+    >>> h.guess('x')
+    Bzzz! No 'x' there.
+    ?e??e?: 0 mistakes allowed
+    >>> h.guess('x')
+    You already tried 'x'.
+    ?e??e?: 0 mistakes allowed
+    >>> h.guess('z')
+    Bzzz! No 'z' there.
+    ?e??e?: GAME OVER
+    '''
 
-	def __repr__(self):
-		'''Describe current game state.'''
-		if set(self._word)<=self.open_letters:
-			return '%s: YOU WON!'%self._word
-		if self.mistakes_allowed<0:
-			return '%s: GAME OVER'%self.known_parts()
-		return ('%s: %s mistakes allowed' %
-				(self.known_parts(), self.mistakes_allowed))
+    def __init__(self, word, mistakes_allowed=5):
+        self.mistakes_allowed = mistakes_allowed
+        # SimpleHangman.__init__ prints self, so self.mistakes_allowed
+        # must be defined before we call it.
+        SimpleHangman.__init__(self, word)
 
-	def guess(self, letter):
-		'''Call this to play.'''
-		# bells and whistles
-		if set(self._word)<=self.open_letters:
-			print('You won. Why do you keep guessing?')
-			return
-		if self.mistakes_allowed<0:
-			print('You lost. Stop trying.')
-			return
-		if letter in self.open_letters:
-			print('You already tried %s.'%letter)
-			print(self)
-			return
+    def __repr__(self):
+        '''Describe current game state.'''
+        if set(self._word) <= self.open_letters:
+            return '%s: YOU WON!' % self._word
+        if self.mistakes_allowed < 0:
+            return '%s: GAME OVER' % self.known_parts()
+        return ('%s: %s mistakes allowed' %
+                (self.known_parts(), self.mistakes_allowed))
 
-		if letter not in self._word:
-			self.mistakes_allowed -= 1
-		SimpleHangman.guess(self, letter)
+    def guess(self, letter):
+        '''Call this to play.'''
+        # bells and whistles
+        if set(self._word) <= self.open_letters:
+            print('You won. Why do you keep guessing?')
+            return
+        if self.mistakes_allowed < 0:
+            print('You lost. Stop trying.')
+            return
+        if letter in self.open_letters:
+            print('You already tried %s.' % letter)
+            print(self)
+            return
+
+        if letter not in self._word:
+            self.mistakes_allowed -= 1
+        SimpleHangman.guess(self, letter)
 
 
 # test if run directly, do nothing if imported
-if __name__=='__main__':
-	import doctest # for testmod
-	doctest.testmod()
+if __name__ == '__main__':
+    import doctest  # for testmod
+    doctest.testmod()

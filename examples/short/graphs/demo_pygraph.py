@@ -15,10 +15,10 @@ https://code.google.com/p/python-graph/wiki/Example
 
 import pygraph.classes.graph
 
-g=pygraph.classes.graph.graph()
+g = pygraph.classes.graph.graph()
 g.add_node('a')
 g.add_node('b')
-g.add_nodes(['c','d'])
+g.add_nodes(['c', 'd'])
 
 g.add_edge(('a', 'b'))
 g.add_edge(('c', 'b'))

@@ -28,7 +28,7 @@ Write a script which creates a calendar from a file built as described below :
 Event_name day.month.year
 Event_name day.month.year
 Event_name day.month.year
-	
+
 Hint: The module time can tell you what the current month is.
 
 Add exceptions

@@ -10,8 +10,13 @@ ALL_STAMP:=$(addsuffix .stamp, $(basename $(ALL_PY)))
 check_all: $(ALL_STAMP)
 
 .PHONY: check
-check: check_return check_if check_has_key
-	
+check: check_ws check_return check_if check_has_key
+
+.PHONY: check_ws
+check_ws:
+	$(info doing [$@])
+	@git grep -E "\s$$" -- '*.py' || exit 0
+
 .PHONY: check_return
 check_return:
 	$(info doing [$@])

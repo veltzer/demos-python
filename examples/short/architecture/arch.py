@@ -4,7 +4,7 @@
 This example shows how to find the current architecture
 '''
 
-import platform # for processor()
+import platform  # for processor()
 
 print(platform.processor())
-#print(platform.architecture())
+# print(platform.architecture())

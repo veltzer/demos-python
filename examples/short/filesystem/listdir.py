@@ -9,12 +9,12 @@ is the right thing to use if you need ALL the files
 in a folder
 '''
 
-import os # for listdir
-import sys # for arv
+import os  # for listdir
+import sys  # for arv
 
-if len(sys.argv)<2:
-	raise ValueError('please pass folder')
-folder=sys.argv[1]
+if len(sys.argv) < 2:
+    raise ValueError('please pass folder')
+folder = sys.argv[1]
 
 for file in os.listdir(folder):
-	print(file)
+    print(file)

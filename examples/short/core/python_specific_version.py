@@ -20,18 +20,18 @@ absolute path on the command line.
 '''
 
 import sys
-print('python version is',sys.version)
-if sys.version_info[0:2]==(2,7):
-	print('version==2,7')
-if sys.version_info[0:2]!=(2,7):
-	print('version!=2,7')
+print('python version is', sys.version)
+if sys.version_info[0:2] == (2, 7):
+    print('version==2,7')
+if sys.version_info[0:2] != (2, 7):
+    print('version!=2,7')
 else:
-	print('version is not!=2,7')
-if sys.version_info[0:2]>(2,5):
-	print('version>2,5')
-if sys.version_info[0:2]<(3,0):
-	print('version<3,0')
-if sys.version_info[0:2]>(2,7):
-	print('version>2,7')
+    print('version is not!=2,7')
+if sys.version_info[0:2] > (2, 5):
+    print('version>2,5')
+if sys.version_info[0:2] < (3, 0):
+    print('version<3,0')
+if sys.version_info[0:2] > (2, 7):
+    print('version>2,7')
 else:
-	print('version is not>2,7')
+    print('version is not>2,7')

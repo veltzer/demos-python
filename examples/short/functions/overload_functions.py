@@ -12,14 +12,16 @@ in this example,defining a variable named 'foo' would override the
 function so that it cannot be used.
 '''
 
+
 def foo():
-	print('hello')
+    print('hello')
+
 
 def foo(a):
-	print('hello',a)
+    print('hello', a)
 
 try:
-	foo()
+    foo()
 except TypeError:
-	print('oops,got an error')
+    print('oops,got an error')
 foo('mark')

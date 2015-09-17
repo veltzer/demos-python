@@ -1,6 +1,6 @@
 #!/usr/bin/python2
 
-declaration=r'''# note use of raw string when embedding in python code...
+declaration = r'''# note use of raw string when embedding in python code...
 file := [ \t\n]*, section+
 section := '[',identifier,']', ts,'\n', body
 body := statement*
@@ -17,7 +17,7 @@ string := (char/escapedchar)*
 escapedchar := '\134\''/'\134\134'
 '''
 
-testdata='''
+testdata = '''
 	[test1]
 	val=23
 	val2='23'
@@ -30,8 +30,8 @@ loose=lips
 
 '''
 
-import simpleparse.parser # for Parser
-import pprint # for pprint
+import simpleparse.parser  # for Parser
+import pprint  # for pprint
 
-parser=simpleparse.parser.Parser(declaration, 'file')
+parser = simpleparse.parser.Parser(declaration, 'file')
 pprint.pprint(parser.parse(testdata))

@@ -16,6 +16,6 @@ You can use the 'timeit' module from the command line like this:
 python -m timeit -s 'text = "sample string"; char = "g"'  'char in text'
 '''
 
-import timeit # for timeit
+import timeit  # for timeit
 
 print(timeit.timeit('\'-\'.join(str(n) for n in range(100))', number=10000))

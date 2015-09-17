@@ -14,10 +14,10 @@ raw input prints to the screen * exactly * what you give it...
 '''
 
 from __future__ import print_function
-text=input('please give me a number: ')
+text = input('please give me a number: ')
 print('type returned from input is', type(text))
 print('value returned from input is', text)
 print('converting to int')
-val=int(text)
-print('new value is',val)
-print('new value type is',type(val))
+val = int(text)
+print('new value is', val)
+print('new value type is', type(val))

@@ -8,10 +8,10 @@ The reason this example uses the 'io.StringIO' stuff is so that we
 could embed the xml in the example and not put it in a file.
 '''
 
-import xml.etree.ElementTree # for ElementTree
-import io # for StringIO
+import xml.etree.ElementTree  # for ElementTree
+import io  # for StringIO
 
-data='''
+data = '''
 <root>
 	<foo>
 		<bar title='this is the text you are looking for'>
@@ -21,10 +21,10 @@ data='''
 </root>
 '''
 
-file=io.StringIO(data)
+file = io.StringIO(data)
 
 # both of these will work
-#mydoc=xml.etree.ElementTree.ElementTree(file=file)
-mydoc=xml.etree.ElementTree.parse(file)
+# mydoc=xml.etree.ElementTree.ElementTree(file=file)
+mydoc = xml.etree.ElementTree.parse(file)
 for e in mydoc.findall('.//bar'):
-	print(e.get('title'))
+    print(e.get('title'))

@@ -13,16 +13,16 @@ except MySQLdb.Error, e:
 '''
 
 from __future__ import print_function
-import MySQLdb # for connect
+import MySQLdb  # for connect
 
-params={
-	'db': 'myworld',
-	'read_default_file': '~/.my.cnf',
+params = {
+    'db': 'myworld',
+        'read_default_file': '~/.my.cnf',
 }
 with MySQLdb.connect(**params) as cursor:
-	cursor.execute('SELECT VERSION()')
-	data=cursor.fetchone()[0]
-	print('Database version is [{0}]'.format(data))
-	cursor.execute('SHOW TABLES')
-	for x in cursor:
-		print(x[0])
+    cursor.execute('SELECT VERSION()')
+    data = cursor.fetchone()[0]
+    print('Database version is [{0}]'.format(data))
+    cursor.execute('SHOW TABLES')
+    for x in cursor:
+        print(x[0])

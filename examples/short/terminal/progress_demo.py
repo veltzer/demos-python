@@ -8,14 +8,14 @@ NOTES:
 - calling pbar.update() (with no value) does nothing. you must pass a value.
 '''
 
-import progressbar # for ProgressBar
-import time # for sleep
+import progressbar  # for ProgressBar
+import time  # for sleep
 
-pbar=progressbar.ProgressBar(maxval=10)
+pbar = progressbar.ProgressBar(maxval=10)
 pbar.start()
 for i in range(10):
-	# do something
-	time.sleep(1)
-	#pbar.update(i+1)
-	pbar.update(pbar.currval+1)
+    # do something
+    time.sleep(1)
+    # pbar.update(i+1)
+    pbar.update(pbar.currval + 1)
 pbar.finish()

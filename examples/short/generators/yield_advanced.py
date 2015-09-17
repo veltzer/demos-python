@@ -14,19 +14,22 @@ This way you can handle thousands of connections in one python thread (this is a
 what happens with twisted).
 '''
 
-def evens():
-	for x in xrange(0,100,2):
-		print('evens say ',x)
-		yield
-def odds():
-	for x in xrange(10001,10101,2):
-		print('odds say ',x)
-		yield
 
-c1=evens()
+def evens():
+    for x in xrange(0, 100, 2):
+        print('evens say ', x)
+        yield
+
+
+def odds():
+    for x in xrange(10001, 10101, 2):
+        print('odds say ', x)
+        yield
+
+c1 = evens()
 c1.next()
-c2=odds()
+c2 = odds()
 c2.next()
 for x in xrange(10):
-	c1.next()
-	c2.next()
+    c1.next()
+    c2.next()

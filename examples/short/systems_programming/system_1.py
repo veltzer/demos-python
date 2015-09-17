@@ -6,9 +6,9 @@ you call them you are no longer running (your executable get replaced or rather 
 virtual machine gets replaced...).
 '''
 
-import os # for system, execl
+import os  # for system, execl
 
-r=os.system('ls -l')
+r = os.system('ls -l')
 print('Im still here')
 os.execl('/bin/ls')
 print('Where am I?')

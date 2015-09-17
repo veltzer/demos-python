@@ -9,10 +9,11 @@ for pedagogic purposes only. Python's own 'map' is written in C
 and performs much better.
 '''
 
-def my_map(f,seq):
-	l=[]
-	for x in seq:
-		l.append(f(x))
-	return l
 
-print(my_map(lambda x:x*x,range(10)))
+def my_map(f, seq):
+    l = []
+    for x in seq:
+        l.append(f(x))
+    return l
+
+print(my_map(lambda x: x * x, range(10)))

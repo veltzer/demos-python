@@ -9,5 +9,5 @@ from __future__ import print_function
 import fileinput
 
 for line in fileinput.input():
-	line=line.rstrip()
-	print(line)
+    line = line.rstrip()
+    print(line)
