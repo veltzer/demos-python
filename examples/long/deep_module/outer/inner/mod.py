@@ -1,5 +1,7 @@
 import sys # for modules
 
+# CHECK_WITH python2
+
 print('hello from [{0}]'.format(__file__))
 
 myglobal=42

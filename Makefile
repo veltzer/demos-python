@@ -3,7 +3,7 @@ include /usr/share/templar/make/Makefile
 ALL:=$(TEMPLAR_ALL)
 ALL_DEP:=$(TEMPLAR_ALL_DEP)
 
-ALL_PY:=$(shell find . -name "*.py")
+ALL_PY:=$(shell find examples exercises -name "*.py")
 ALL_STAMP:=$(addsuffix .stamp, $(basename $(ALL_PY)))
 
 .PHONY: check_all

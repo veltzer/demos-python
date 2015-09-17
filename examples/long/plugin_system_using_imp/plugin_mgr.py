@@ -1,3 +1,5 @@
+# CHECK_WITH python2
+
 import imp # for find_module, load_module
 import os # for listdir
 import os.path # for join, isfile

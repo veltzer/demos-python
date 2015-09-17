@@ -1,3 +1,5 @@
+# CHECK_WITH python2
+
 class Date:
 	days_in_months=[31,29,31,30,31,30,31,31,30,31,30,31]
 	def __init__(self, day, month, year):
