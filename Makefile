@@ -27,8 +27,9 @@ check_has_key:
 	@git grep -l "has_key" -- '*.py' || exit 0
 
 $(ALL_STAMP): %.stamp: %.py
-	python2 -m py_compile $< || python3 -m py_compile $<
-	touch $@
+	$(info doing [$@])
+	@scripts/syntax_check.py $<
+	@touch $@
 
 .PHONY: debug_me
 debug_me:

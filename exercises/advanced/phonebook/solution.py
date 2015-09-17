@@ -6,7 +6,7 @@ import re
 def read_phonebook():
 	pb={}
 	for line in open('data.txt'):
-		line=line.rstrip('\n')
+		line=line.rstrip()
 		mylist=line.split(',')
 		pb[mylist[0]]=mylist[1]
 	return pb
