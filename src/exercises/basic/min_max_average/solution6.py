@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import functools # for reduce
+import functools  # for reduce
 
 
 def single_min_max_sum(x, y):

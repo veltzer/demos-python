@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import functools # for reduce
+import functools  # for reduce
 
 
 def my_min(x, y):

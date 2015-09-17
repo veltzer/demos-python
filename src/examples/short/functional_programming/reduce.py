@@ -4,7 +4,8 @@
 A basic python functional 'reduce' example
 '''
 
-import functools # for reduce
+import functools  # for reduce
+
 
 def add(x, y):
     return x + y
