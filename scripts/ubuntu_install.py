@@ -81,6 +81,9 @@ packs=[
 
 	# python and gtk stuff
 	'glade',
+
+	# lint and code formatting
+	'python-autopep8',
 ]
 
 pips=[
