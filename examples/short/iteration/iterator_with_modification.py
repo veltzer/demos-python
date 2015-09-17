@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 The purpose of this example is to show what happens when we modify elements

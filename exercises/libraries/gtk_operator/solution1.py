@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
-import gtk
+import gtk # for Window, HBox, main_quit, main, Entry, Label
 
 w=gtk.Window()
 w.connect('delete_event', lambda *ignored: gtk.main_quit())

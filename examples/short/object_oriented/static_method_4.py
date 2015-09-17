@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 This shows that 'staticmethod' can be used by inheriting

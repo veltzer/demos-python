@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 This example shows that you cannot change the value of a local variable indirectly

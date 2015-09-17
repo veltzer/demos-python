@@ -1,5 +1,4 @@
-#!/usr/bin/python2.7
-# leave this 2.7 thing alone!
+#!/usr/bin/python2
 
 '''
 This is a script that runs in a python specific version.

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 f=open('c:/tmp.txt')
 report={}

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 This example shows how to use the 'u' prefix to strings and the \\u escape in strings to create

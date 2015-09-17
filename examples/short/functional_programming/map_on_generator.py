@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 This example shows that when map is given a generator it DOES NOT create a list

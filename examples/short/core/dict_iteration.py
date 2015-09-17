@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 An example exploring the many ways,right and wrong,to iterate

@@ -33,3 +33,7 @@ $(ALL_STAMP): %.stamp: %.py
 .PHONY: debug_me
 debug_me:
 	echo $(ALL_STAMP)
+
+.PHONY: show_shbang
+show_shbang:
+	find . -name "*.py" -and -executable -exec head -1 {} \; | sort | uniq

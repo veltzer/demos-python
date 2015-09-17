@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 # this is an unfair solution
 def max_min_avg(* num):

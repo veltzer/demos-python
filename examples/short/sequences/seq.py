@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 	this example shows that you can pass any generator/sequence to a function

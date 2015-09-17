@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 Example code for raising an exception,catching it and executing finally code in python.

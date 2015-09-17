@@ -1,4 +1,4 @@
-#!/usr/bin/python3.4
+#!/usr/bin/python3
 
 import sys # for argv, exit, stderr
 import mako.template # for mako.template.Template

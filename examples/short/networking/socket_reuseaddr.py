@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 This example shows that python suffers from some problem of
@@ -6,7 +6,7 @@ not being able to reuse sockets even though the socket.SO_REUSEADDR
 is used...
 '''
 
-import socket
+import socket # for socket
 
 while True:
 	adr=('localhost', 8080)

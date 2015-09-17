@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 A simple subprocess demo. Create a subprocess and run it. No pipes.

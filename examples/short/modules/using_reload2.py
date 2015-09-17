@@ -1,11 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 Demo to show the usage of the global function 'reload'
 '''
 
 from __future__ import print_function
-import imp
 
 import using_reload_one
 print('add(2,2) is',using_reload_one.add(2,2))

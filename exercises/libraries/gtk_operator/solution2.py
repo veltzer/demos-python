@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 import gtk # for VBox, RadioButton, HBox, Entry, main_quit, Window, Label, main
 import operator # for add, sub, mul, div

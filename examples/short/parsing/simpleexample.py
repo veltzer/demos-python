@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 declaration=r'''# note use of raw string when embedding in python code...
 file := [ \t\n]*, section+

@@ -1,8 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 from __future__ import print_function
-import unittest
-import Book
+import unittest # for main
+import Book # for Book
 
 class BookTest(unittest.TestCase):
 	# tests

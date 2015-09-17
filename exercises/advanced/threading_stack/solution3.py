@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 # this example shows a synchronized stack which does not sleep
 # on pop on empty stack...

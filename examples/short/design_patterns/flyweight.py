@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 An Example of the flyweight pattern in python. The idea is to use the scoping rules of python (instance,

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 '''
 This example demonstrates that an object is just a dictionary and you can access it's

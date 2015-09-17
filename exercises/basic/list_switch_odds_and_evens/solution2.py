@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 num=int(raw_input('Please enter number of elements: '))
 list=range(num)
