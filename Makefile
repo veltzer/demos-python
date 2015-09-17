@@ -14,16 +14,19 @@ check: check_return check_if check_has_key
 	
 .PHONY: check_return
 check_return:
+	$(info doing [$@])
 	@git grep -l -E "return\(.*\)$$" -- '*.py' || exit 0
 	@git grep -l -E "return \(.*\)$$" -- '*.py' || exit 0
 
 .PHONY: check_if
 check_if:
+	$(info doing [$@])
 	@git grep -l -E "if \(" -- '*.py' || exit 0
 	@git grep -l -E "if\(" -- '*.py' || exit 0
 
 .PHONY: check_has_key
 check_has_key:
+	$(info doing [$@])
 	@git grep -l "has_key" -- '*.py' || exit 0
 
 $(ALL_STAMP): %.stamp: %.py
