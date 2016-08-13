@@ -7,6 +7,9 @@ The results are surprising.
 - It seems the + operator is the quickest
 - Join and %s%s come next.
 - Formatting is last.
+
+References:
+- http://blog.lerner.co.il/speedy-string-concatenation-python/
 '''
 
 import timeit  # for timeit
