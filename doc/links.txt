@@ -16,3 +16,6 @@ problems with python's super():
 	https://fuhm.net/super-harmful/
 	http://blog.codekills.net/2014/04/02/the-sadness-of-pythons-super/
 	https://rhettinger.wordpress.com/2011/05/26/super-considered-super/
+
+blogs about python:
+	http://blog.lerner.co.il

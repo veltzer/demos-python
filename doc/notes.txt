@@ -1,9 +1,14 @@
-1. A few notes about pyc files.
-	find /usr/share/pygtk/2.0 -name "*.pyc"
-2. A few notes about python versions.
+- .pyc, .pyo, __pycache__ files are created in the system folders
+	of python to speed up the running of python.
+	Try the following command line to see them:
+		find /usr/lib/python3.5 -name "*.pyc" -or -name "*.pyo" -or -name "__pycache__"
+
+- how do you know the vesion of the python package you have?
+	On an rpm based system (fedora, centos, redhat)
 	rpm -q -i python
-3. A few notes about python packaging.
-	rpm -q -a | fgrep python
-4. A few notes about python dependency in production systems.
-	Use the default python!!! Do NOT roll your own unless
-	you reach guru status!!!
+
+- how to manage python
+	A good rule for beginners is to use the default python.
+	Do NOT roll your own unless you reach guru status!!!
+	Once you do hit a certain level you can start installing your
+	versions of python, use virtualenv etc.
