@@ -1,5 +1,3 @@
-# CHECK_WITH python2
-
 import pkg_resources
 
 import os.path  # for dirname, join

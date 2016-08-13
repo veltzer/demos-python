@@ -1,5 +1,3 @@
-# CHECK_WITH python2
-
 '''
 This is a module that checks if a library given to it is loadable
 (has no undefined references)

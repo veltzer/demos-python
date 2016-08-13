@@ -1,5 +1,3 @@
-# CHECK_WITH python2
-
 print('[{0}] loading'.format(__file__))
 
 import yapsy.IPlugin

@@ -1,4 +1,4 @@
-# CHECK_WITH python2
+# HECK_WITH python2
 
 import mydate  # for is_leap_year, days_in_months_leap_year, days_in_months
 

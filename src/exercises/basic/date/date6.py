@@ -1,6 +1,3 @@
-# CHECK_WITH python2
-
-
 class Date:
 
     def __init__(self, day, month, year):

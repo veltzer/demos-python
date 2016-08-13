@@ -31,6 +31,9 @@ with open(filename, 'r') as f:
 		if line.startswith('# CHECK_WITH'):
 			check_with=line.split()[2]
 			break
+# check with python3 if in doubt
+if check_with is None:
+    check_with='python3'
 
 if check_with is None:
 	print('{0}: couldnt find how to check file [{1}]'.format(sys.argv[0], filename), file=sys.stderr)
