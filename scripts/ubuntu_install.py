@@ -53,6 +53,11 @@ packs=[
 	'python-yapsy-doc', # simple plugin system for Python applications doc
 	'python3-yapsy', # simple plugin system for Python3 applications
 	'python3-pygments', # for syntaxh highlighting
+        'python3-jinja2', # for jinja templating
+
+        # mako
+        'python3-mako', # for mako templating
+        'python-mako-doc', # documentation for mako templating
 
 	# debuggers
 	'winpdb',
@@ -88,7 +93,6 @@ packs=[
 
 	# pdf creation with python
 	'python-pypdf2',
-	'python3-pypdf2',
 ]
 
 pips=[
