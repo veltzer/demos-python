@@ -12,3 +12,4 @@
 	Do NOT roll your own unless you reach guru status!!!
 	Once you do hit a certain level you can start installing your
 	versions of python, use virtualenv etc.
+	virtualenvwrapper is highly recommended for any Python user who works on more than one project.
