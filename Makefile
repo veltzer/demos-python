@@ -6,12 +6,16 @@ include /usr/share/templar/make/Makefile
 ##############
 # parameters #
 ##############
+# what is the tools.stamp file?
+TOOLS:=tools.stamp
 
 ########
 # code #
 ########
 ALL_PY:=$(shell find src -name "*.py")
 ALL_STAMP:=$(addsuffix .stamp, $(basename $(ALL_PY)))
+ALL+=$(ALL_STAMP)
+ALL+=$(TOOLS)
 
 ifeq ($(DO_MKDBG),1)
 Q=
@@ -25,13 +29,16 @@ endif # DO_MKDBG
 # rules #
 #########
 .PHONY: all
-all: check_all
+all: $(ALL)
 
 .PHONY: check_all
 check_all: $(ALL_STAMP)
 
 .PHONY: check
 check: check_ws check_return check_if check_has_key
+
+$(TOOLS):
+	$(Q)templar_cmd install_deps
 
 .PHONY: check_ws
 check_ws:
