@@ -1,16 +1,7 @@
 #!/usr/bin/python3
 
 '''
-This is an example of how to use luigi to get "make" like functionality regarding dependencies.
-
-Lets explain:
-by default luigi only updates targets which *DO NOT EXIST*, with no relation to time stamps.
-That means that if the output file of a task exists, it will not be recreated even if the time
-stamp of the input has changed and the input is now newer than the target.
-
-This could be altered by overriding the 'complete' method of luigi.Task.
-References:
-http://stackoverflow.com/questions/28793832/can-luigi-rerun-tasks-when-the-task-dependencies-become-out-of-date
+This is a mixin solution to the modification time stamps mentioned before.
 '''
 
 import luigi # for Task, Parameter, LocalTarget, run
@@ -20,23 +11,34 @@ import time # for ctime
 def mtime(path):
     return time.ctime(os.path.getmtime(path))
 
-class DepTask(luigi.Task):
-    def complete(self):
-        """Flag this task as incomplete if any requirement is incomplete or has been updated more recently than this task"""
+def to_list(obj):
+    if type(obj) in (type(()), type([])):
+        return obj
+    else:
+        return [obj]
 
-        # assuming 1 output
-        if not os.path.exists(self.output().path):
+class MTimeMixin:
+    """
+        Mixin that flags a task as incomplete if any requirement
+        is incomplete or has been updated more recently than this task
+        This is based on http://stackoverflow.com/a/29304506, but extends
+        it to support multiple input / output dependencies.
+    """
+
+    def complete(self):
+
+        if not all(os.path.exists(out.path) for out in to_list(self.output())):
             return False
 
-        self_mtime = mtime(self.output().path) 
+        self_mtime = min(mtime(out.path) for out in to_list(self.output()))
 
-        # the below assumes a list of requirements, each with a single output
-        for el in self.requires():
+        # the below assumes a list of requirements, each with a list of outputs. YMMV
+        for el in to_list(self.requires()):
             if not el.complete():
                 return False
-            output=el.output()
-            if mtime(output.path) > self_mtime:
-                return False
+            for output in to_list(el.output()):
+                if mtime(output.path) > self_mtime:
+                    return False
 
         return True
 
@@ -47,7 +49,7 @@ class FileExists(luigi.Task):
     def run(self):
         pass
 
-class CountLines(DepTask):
+class CountLines(luigi.Task,MTimeMixin):
 
     def requires(self):
         """
@@ -78,3 +80,5 @@ class CountLines(DepTask):
 #luigi.run()
 luigi.run(main_task_cls=CountLines,local_scheduler=True)
 #luigi.run(['--local-scheduler','CountLines'])
+
+
