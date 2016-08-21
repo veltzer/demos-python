@@ -39,6 +39,7 @@ check: check_ws check_return check_if check_has_key
 
 $(TOOLS):
 	$(Q)templar_cmd install_deps
+	$(Q)make_helper touch-mkdir $@
 
 .PHONY: check_ws
 check_ws:
