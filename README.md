@@ -1,7 +1,7 @@
 demos-python
 ============
 
-version: 0
+version: 3
 
 Demos for the Python programming language
 
