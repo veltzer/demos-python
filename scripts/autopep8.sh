@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-<< COMMENT
+<<'COMMENT'
 
 - We may add "-a" or "-a -a" to the autopep8 to make it fix more.
 - Use 'autopep8 --list-fixes' to see the list of things autopep8 does
