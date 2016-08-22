@@ -94,18 +94,3 @@ packs=[
 	# pdf creation with python
 	'python-pypdf2',
 ]
-
-pips=[
-	'signalfd',
-]
-
-args=['sudo','apt-get','install','--assume-yes']
-args.extend(packs)
-subprocess.check_call(args)
-
-if do_pips:
-	for pip in pips:
-		args=['sudo', 'pip', 'install', pip]
-		subprocess.check_call(args)
-		args=['sudo', 'pip3', 'install', pip]
-		subprocess.check_call(args)
