@@ -12,8 +12,6 @@ a list of all the tuples in advance while izip does not.
 - for python 3 zip has the efficiency of python2.7's izip so you
 don't need to think about any of this (yay python3!)
 
-TODO:
-- show how to iterate two containers in sequence instead of simultaneously.
 '''
 
 ll1 = [1, 2, 3, 4, 5]
