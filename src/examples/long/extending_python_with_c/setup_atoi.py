@@ -7,7 +7,7 @@ setup.py file for SWIG atoi
 import distutils.core # for setup, Extension
 
 atoi_module = distutils.core.Extension('_atoi',
-	sources=['atoi_wrap.c'],
+    sources=['atoi_wrap.c'],
 )
 distutils.core.setup(
     name='atoi',

@@ -3,9 +3,9 @@
 '''
 References:
 The basic code I stole from and modified:
-	https://gist.github.com/evoL/1650115
+    https://gist.github.com/evoL/1650115
 How to write a custom pygtk widget:
-	http://www.pygtk.org/articles/writing-a-custom-widget-using-pygtk/writing-a-custom-widget-using-pygtk.htm
+    http://www.pygtk.org/articles/writing-a-custom-widget-using-pygtk/writing-a-custom-widget-using-pygtk.htm
 '''
 
 import gobject

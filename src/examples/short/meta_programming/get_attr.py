@@ -22,7 +22,7 @@ class A(object):
     def __getattr__(self, name):
         return name[::-1]
         # def mymethod(self):
-        #	print('in here with name',name)
+        #    print('in here with name',name)
         # return mymethod
 
     def __setattr__(self, name, val):

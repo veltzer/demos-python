@@ -14,7 +14,7 @@ def aSillyBlockingMethod(t, stop):
     print(t, 'seconds have passed')
     # this will not work as we are running in a separate thread...
     # if stop:
-    #	reactor.stop()
+    #    reactor.stop()
     # instead we must do:
     if stop:
         reactor.callFromThread(reactor.stop)

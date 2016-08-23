@@ -8,7 +8,7 @@ Things to note:
 - there are two ways to call parent methods.
 - all methods are overloadable.
 - parent attributes are directly accessible from the child
-	(no access control).
+    (no access control).
 - the 'dir' function could be used for debugging.
 '''
 

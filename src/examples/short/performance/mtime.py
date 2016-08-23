@@ -6,7 +6,7 @@ data in user space in python.
 
 You can see that os.path.getmtime() in python is *always* a syscall by doing
 something like:
-	strace ./mtime.py 2>&1 > /dev/null | grep stat64 | grep etc | wc
+    strace ./mtime.py 2>&1 > /dev/null | grep stat64 | grep etc | wc
 when running this.
 
 The answer is: YES!!!

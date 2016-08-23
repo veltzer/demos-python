@@ -19,30 +19,30 @@ import apt.cache # for Cache
 import os # for geteuid
 
 pkg_names=[
-	'templar',
+    'templar',
 ]
 do_update=False
 
 if os.geteuid() == 0:
-	print('you are root, that is good, proceeding...')
+    print('you are root, that is good, proceeding...')
 else:
-	exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
+    exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
 
 cache=apt.cache.Cache()
 if do_update:
-	print('doing update')
-	cache.update()
+    print('doing update')
+    cache.update()
 
 need_commit=False
 for pkg_name in pkg_names:
-	pkg = cache[pkg_name]
-	if pkg.is_installed:
-		print('package [{pkg_name}] already installed'.format(pkg_name=pkg_name))
-	else:
-		pkg.mark_install()
-		need_commit=True
+    pkg = cache[pkg_name]
+    if pkg.is_installed:
+        print('package [{pkg_name}] already installed'.format(pkg_name=pkg_name))
+    else:
+        pkg.mark_install()
+        need_commit=True
 
 # this actually installs
 if need_commit:
-	print('doing commit')
-	cache.commit()
+    print('doing commit')
+    cache.commit()

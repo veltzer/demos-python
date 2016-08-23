@@ -3,10 +3,10 @@ project definitions for templar
 '''
 
 def populate(d):
-	d.project_name='demos-python'
-	d.project_long_description='Demos for the Python programming language'
-	d.project_year_started='2010'
-	d.project_description='''This project explores the python programming language.
+    d.project_name='demos-python'
+    d.project_long_description='Demos for the Python programming language'
+    d.project_year_started='2010'
+    d.project_description='''This project explores the python programming language.
 The idea is that when you are programming you may find many examples
 over the Internet but you always need to tweek them a bit to see
 how you can get to an example which answers your needs precisely.
@@ -21,6 +21,6 @@ that is easy to run, debug and manage. Once you have the example ready and
 running correctly you can incorporate it's code into a larger project.'''.format(**d)
 
 def getdeps():
-	return [
-		__file__, # myself
-	]
+    return [
+        __file__, # myself
+    ]

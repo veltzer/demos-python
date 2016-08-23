@@ -17,20 +17,20 @@ for line in open('word_report_1.py'):
 # this is an unsorted report
 '''
 with open('/tmp/report.txt','w') as f:
-	for word,count in report.items():
-		f.write('word {word} appeared {count} times\n'.format(word=word,count=count))
+    for word,count in report.items():
+        f.write('word {word} appeared {count} times\n'.format(word=word,count=count))
 '''
 
 # the cheapest way to printout the report...
 '''
 with open('/tmp/report.txt','w') as f:
-	f.write(str(report))
+    f.write(str(report))
 '''
 
 # this is a nice sorted report...
 # with open('/tmp/report.txt','w') as f:
-#	for word,count in report.items():
-#		f.write('word {word} appeared {count} times\n'.format(word=word,count=count))
+#    for word,count in report.items():
+#        f.write('word {word} appeared {count} times\n'.format(word=word,count=count))
 # f.write(str(report))
 
 with open('/tmp/report.txt', 'w') as f:

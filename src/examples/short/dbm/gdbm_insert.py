@@ -6,7 +6,7 @@ standard python library
 
 NOTES:
 - the attempt to insert None as value throws an exception.
-	so only strings and bytes are allowed.
+    so only strings and bytes are allowed.
 '''
 
 import dbm.gnu  # for open

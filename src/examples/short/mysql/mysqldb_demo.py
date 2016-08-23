@@ -8,8 +8,8 @@ is python2 specific.
 
 catching errors is done with:
 except MySQLdb.Error, e:
-	print('Error {0}: {1}'.format(*e))
-	sys.exit(1)
+    print('Error {0}: {1}'.format(*e))
+    sys.exit(1)
 '''
 
 import MySQLdb  # for connect

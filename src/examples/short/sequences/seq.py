@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 '''
-	this example shows that you can pass any generator/sequence to a function
-	that only uses the generator/sequence API and get the right results.
-	What can't you do? Use slices on generators but that is obvious.
+    this example shows that you can pass any generator/sequence to a function
+    that only uses the generator/sequence API and get the right results.
+    What can't you do? Use slices on generators but that is obvious.
 '''
 
 

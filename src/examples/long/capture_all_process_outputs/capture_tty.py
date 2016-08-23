@@ -31,16 +31,16 @@ else:
     This is kinda ugly since strictly speaking this is not an error, but oh well.
     '''
     '''
-	bufsize=1024
-	buf=os.read(fd, bufsize)
-	over=False
-	while len(buf)>0 and not over:
-		print('got line [{0}]'.format(buf.decode().rstrip()))
-		try:
-			buf=os.read(fd, bufsize)
-		except OSError as e:
-			over=True
-	'''
+    bufsize=1024
+    buf=os.read(fd, bufsize)
+    over=False
+    while len(buf)>0 and not over:
+        print('got line [{0}]'.format(buf.decode().rstrip()))
+        try:
+            buf=os.read(fd, bufsize)
+        except OSError as e:
+            over=True
+    '''
     try:
         for line in os.fdopen(fd):
             print('got line [{0}]'.format(line.rstrip()))

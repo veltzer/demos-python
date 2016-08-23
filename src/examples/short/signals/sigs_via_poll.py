@@ -34,14 +34,14 @@ signal.set_wakeup_fd(pipe_w)
 signal.signal(signal.SIGUSR1, lambda x, y: None)
 
 '''
-	We need this functions since python, unlike glibc, does not restart system
-	calls.
-	This means that when a signal arrives the poll system call will be broken,
-	signal handler called by the system call not restarted. This means that the
-	signal handler will work, will write the single byte to the pipe, but we will
-	not be woken up by poll and instead, as is in python, an IOError will fly
-	out with errno=EINTR.
-	To overcome this we need a restartable poll
+    We need this functions since python, unlike glibc, does not restart system
+    calls.
+    This means that when a signal arrives the poll system call will be broken,
+    signal handler called by the system call not restarted. This means that the
+    signal handler will work, will write the single byte to the pipe, but we will
+    not be woken up by poll and instead, as is in python, an IOError will fly
+    out with errno=EINTR.
+    To overcome this we need a restartable poll
 '''
 
 

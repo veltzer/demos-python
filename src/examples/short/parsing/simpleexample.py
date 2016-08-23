@@ -18,12 +18,12 @@ escapedchar := '\134\''/'\134\134'
 '''
 
 testdata = '''
-	[test1]
-	val=23
-	val2='23'
-	wherefore='art thou'
-	; why not
-	log=heavy_wood
+    [test1]
+    val=23
+    val2='23'
+    wherefore='art thou'
+    ; why not
+    log=heavy_wood
 
 [test2]
 loose=lips

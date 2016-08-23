@@ -15,16 +15,16 @@ whitespaces = re.compile('\s+')
 
 '''
 def omit_whitespaces(iter):
-	for event, elem in iter:
-		if whitespaces.match(elem.text):
-			elem.text=''
-		if elem.tail is not None and whitespaces.match(elem.tail):
-			elem.tail=''
-		yield event,elem
+    for event, elem in iter:
+        if whitespaces.match(elem.text):
+            elem.text=''
+        if elem.tail is not None and whitespaces.match(elem.tail):
+            elem.tail=''
+        yield event,elem
 
 for event, elem in omit_whitespaces(xml.etree.ElementTree.iterparse('data.xml')):
-	if elem.tag=='root':
-		print(xml.etree.ElementTree.tostring(elem))
+    if elem.tag=='root':
+        print(xml.etree.ElementTree.tostring(elem))
 '''
 
 dom = xml.etree.ElementTree.parse('data.xml')

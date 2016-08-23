@@ -16,5 +16,5 @@ module_checker.check_lib('./libadd_wrap.so')
 '''
 module_checker.load_lib('./libadd_wrap.so')
 while True:
-	signal.pause()
+    signal.pause()
 '''

@@ -6,16 +6,16 @@ import pprint
 import sys
 
 declaration = r'''# note use of raw string when embedding in python code...
-full		:= ws,expr,ws
-number		:= [0-9eE+.-]+
-expr		:= number,'+',number/number,'-',number
-ws		:= [ \t\v]*
+full        := ws,expr,ws
+number        := [0-9eE+.-]+
+expr        := number,'+',number/number,'-',number
+ws        := [ \t\v]*
 '''
 
 
 class MyProcessorClass(simpleparse.dispatchprocessor.DispatchProcessor):
-#	def __init__(self):
-#		print('cons')
+    # def __init__(self):
+    #     print('cons')
 
     def number(self, tup, buf):
         print('in number')

@@ -3,8 +3,8 @@
 '''
 This is quite an advanced example of doing meta programming in python.
 This exercise shows how to:
-	- add a method to a class
-	- add a method to an instance.
+    - add a method to a class
+    - add a method to an instance.
 '''
 
 from new import instancemethod

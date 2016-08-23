@@ -17,9 +17,9 @@ class HellowWorldGTK():
         self.glade.add_from_file(self.gladefile)
         self.glade.connect_signals(self)
         '''
-		the name 'MainWindow' matches the name of the main window widget
-		in the glade XML file
-		'''
+        the name 'MainWindow' matches the name of the main window widget
+        in the glade XML file
+        '''
         self.glade.get_object('MainWindow').show_all()
 
     ''' the name of this method matches the event handler in the glade xml file '''
