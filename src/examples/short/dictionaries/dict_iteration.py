@@ -3,6 +3,14 @@
 '''
 An example exploring the many ways,right and wrong,to iterate
 a dictionary in python.
+
+Misconceptions:
+- there were 'viewitems' and 'iteritems' members of dictionaries
+in python2.7 but they are now gone in python3.
+- python3's .items() is efficient (does not generated an explicit
+list of key, value pairs).
+- you are not allowed to change the dictionary while you are
+iterating it without expecting weird results.
 '''
 
 h = {}
