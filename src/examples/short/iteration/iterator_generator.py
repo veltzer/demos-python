@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 
 '''
-This is an example of how to build a simple generator
+This example shows that every generator in python can
+be used as an iterator.
+
+This is one of the ways in which you can write an iterator
+in python.
 '''
 
 
