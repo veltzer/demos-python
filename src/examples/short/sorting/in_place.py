@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 
 '''
-This shows sorting arrays in place
+This shows sorting lists in place
+Sorting in place is much more memory efficient than using the 'sorted'
+function.
+- 'sort' is a method on list that use can use to achieve this.
 '''
 
-mylist = sorted([5, 2, 3, 1, 4])
-print(mylist)
+l=[5, 2, 3, 1, 4]
+l.sort()
+print(l)
