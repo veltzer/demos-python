@@ -6,7 +6,7 @@ There are two ways to do it: cls.__dict__ and hasattr.
 '''
 
 
-class A(object):
+class A:
     foo = 'foo'
     bar = 'bar'
 

@@ -13,7 +13,7 @@ Things to note:
 '''
 
 
-class A(object):
+class A:
 
     def __init__(self, p_a):
         print('A.__init__')

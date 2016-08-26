@@ -20,7 +20,7 @@ class A:
         self.privar = val
 
 
-class B(object):
+class B:
 
     def __init__(self, val):
         self.privar = val

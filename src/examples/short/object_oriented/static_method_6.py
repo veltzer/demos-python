@@ -6,7 +6,7 @@ Once set, subclass properties shadows properties on the base class.
 '''
 
 
-class Book(object):
+class Book:
     num = 0
 
     def __init__(self, title):

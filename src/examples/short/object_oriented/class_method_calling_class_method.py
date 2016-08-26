@@ -5,7 +5,7 @@ This is an exploration of how one class method calls another.
 '''
 
 
-class A(object):
+class A:
 
     @classmethod
     def bar(cls, p):

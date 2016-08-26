@@ -13,7 +13,7 @@ And more...
 '''
 
 
-class A(object):
+class A:
 
     def __init__(self):
         pass

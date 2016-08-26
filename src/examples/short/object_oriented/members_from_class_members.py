@@ -9,7 +9,7 @@ ones.
 
 from abc import ABCMeta
 
-class MyClass(object):
+class MyClass:
     __metaclass__ = ABCMeta
     foo=14;
 

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-class Book(object):
+class Book:
     # constructor
 
     def __init__(self, price):

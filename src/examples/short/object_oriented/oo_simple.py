@@ -5,7 +5,7 @@ This is a fairly simple basic OO example
 '''
 
 
-class Book(object):
+class Book:
     NumberOfBooks = 17
     ''' constructor '''
 

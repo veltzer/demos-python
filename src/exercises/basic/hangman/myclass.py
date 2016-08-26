@@ -37,7 +37,7 @@ banana: YOU WON!
 '''
 
 
-class SimpleHangman(object):
+class SimpleHangman:
 
     '''
     Simple hangman game playable from the interpreter.

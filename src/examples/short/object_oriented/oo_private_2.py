@@ -11,7 +11,7 @@ difference as to this point.
 '''
 
 
-class Book(object):
+class Book:
 
     def __init__(self, price, name):
         self.__price = price
