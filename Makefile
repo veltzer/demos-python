@@ -6,16 +6,29 @@ include /usr/share/templar/make/Makefile
 ##############
 # parameters #
 ##############
+# do you want to check python syntax?
+DO_CHECK_SYNTAX:=1
+# do you want to bring in tools?
+DO_TOOLS:=1
 # what is the tools.stamp file?
 TOOLS:=tools.stamp
 
 ########
 # code #
 ########
+ALL:=
 ALL_PY:=$(shell find src -name "*.py")
 ALL_STAMP:=$(addsuffix .stamp, $(basename $(ALL_PY)))
-ALL+=$(ALL_STAMP)
-ALL+=$(TOOLS)
+
+ifeq ($(DO_CHECK_SYNTAX),1)
+	ALL+=$(ALL_STAMP)
+endif # DO_CHECK_SYNTAX
+
+ALL_DEP:=Makefile
+
+ifeq ($(DO_TOOLS),1)
+	ALL_DEP+=$(TOOLS)
+endif # DO_TOOLS
 
 ifeq ($(DO_MKDBG),1)
 Q=
@@ -32,38 +45,48 @@ endif # DO_MKDBG
 all: $(ALL)
 
 .PHONY: check_all
-check_all: $(ALL_STAMP)
+check_all: $(ALL_STAMP) $(ALL_DEP)
 
 .PHONY: check
-check: check_ws check_return check_if check_has_key
+check: check_ws check_return check_if check_has_key check_no_python2
 
 $(TOOLS):
 	$(Q)templar_cmd install_deps
 	$(Q)make_helper touch-mkdir $@
 
 .PHONY: check_ws
-check_ws:
+check_ws: $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)git grep -E "\s$$" -- '*.py' || exit 0
 
 .PHONY: check_return
-check_return:
+check_return: $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)git grep -l -E "return\(.*\)$$" -- '*.py' || exit 0
 	$(Q)git grep -l -E "return \(.*\)$$" -- '*.py' || exit 0
 
 .PHONY: check_if
-check_if:
+check_if: $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)git grep -l -E "if \(" -- '*.py' || exit 0
 	$(Q)git grep -l -E "if\(" -- '*.py' || exit 0
 
 .PHONY: check_has_key
-check_has_key:
+check_has_key: $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)git grep -l "has_key" -- '*.py' || exit 0
 
-$(ALL_STAMP): %.stamp: %.py
+.PHONY: check_no_python2
+check_no_python2: $(ALL_DEP)
+	$(info doing [$@])
+	$(Q)git grep -E "^#!/usr/bin/python2" || exit 0
+
+.PHONY: check_no_future
+check_no_future: $(ALL_DEP)
+	$(info doing [$@])
+	$(Q)git grep "__future__" || exit 0
+
+$(ALL_STAMP): %.stamp: %.py $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)scripts/syntax_check.py $<
 	$(Q)touch $@
@@ -71,6 +94,8 @@ $(ALL_STAMP): %.stamp: %.py
 .PHONY: debug_me
 debug_me:
 	$(Q)$(info ALL_STMAP is $(ALL_STAMP))
+	$(Q)$(info ALL is $(ALL))
+	$(Q)$(info ALL_DEP is $(ALL_DEP))
 
 .PHONY: show_shbang
 show_shbang:

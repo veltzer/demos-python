@@ -44,7 +44,7 @@
 	returning the same object.
 - do a multi theading example that shows thread ids at the operating system level.
 - do example about finally.
-- do example about __future__ division and //.
+- do example about division and //.
 - do example about cyclic dependency between modules.
 - do example of iteritems in the dict example and more.
 - show a demo of a profiler.

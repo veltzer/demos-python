@@ -1,16 +1,16 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 
 '''
 This is an example of a weird pattern in OO python
 in which the local attributes of an
 instance get populated from the global (class based)
 ones.
+
+This is based on the loop
 '''
 
-#from abc import ABCMeta
 
 class MyClass:
-    #__metaclass__ = ABCMeta
     foo=14;
 
     def __init__(self, foo):
@@ -20,7 +20,7 @@ class MyClass:
             self.foo=self.foo
 
     def do_print(self):
-        print 'foo is', self.foo
+        print('foo is', self.foo)
 
 ''' Lets show how we use our object... '''
 b = MyClass(15)
