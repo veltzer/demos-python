@@ -15,6 +15,9 @@ this is no longer required in python3.
 strictly speaking __init__ in python is not a constructor
 but an initializer since __init__ receives 'self' which is already
 an object of the required type.
+
+If you don't write an explicit '__init__' initializer for your
+class then your class still works. It's just that it's empty.
 '''
 
 # class without a constructor
@@ -53,7 +56,6 @@ class E:
     def __init__(self, * args , ** kwargs):
         print('in E constructor')
         print(type(self))
-
 
 n=NoCons()
 print(type(n))
