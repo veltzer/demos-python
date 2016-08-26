@@ -20,29 +20,28 @@ list_of_tuples=[(3,4),(5,6),(7,8)]
 
 # simplest way, built in the language syntax, empty dictionary
 d1 = {}
+print(d1)
 # explicit dictionary syntax with some data
 d2 = { "one": "two", "three": "four" }
+print(d2)
 # empty constructor -> empty dictionary
 d3 = dict()
+print(d3)
 # constructor with key, value pairs to initialize the dictionary
 d4 = dict(one='two', three='four')
+print(d4)
 # copy
 d5 = dict(d1)
+print(d5)
 # comprehension
 d6 = {x: x * x for x in range(5)}
+print(d6)
 # dict.fromkeys
 d7 = dict.fromkeys(range(5), "foo")
+print(d7)
 # any generator that return tuples
 d8 = dict(gen_tuples())
+print(d8)
 # any container of tuples
 d9 = dict(list_of_tuples)
-
-print(d1)
-print(d2)
-print(d3)
-print(d4)
-print(d5)
-print(d6)
-print(d7)
-print(d8)
 print(d9)
