@@ -1,5 +1,9 @@
 - add some ipython demos
 
+- do examples of the following packages:
+	operator
+	functools
+
 - do examples of how to check python code without running it.
 	There are many ways to do it.
 	References:

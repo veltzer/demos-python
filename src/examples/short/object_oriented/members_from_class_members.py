@@ -7,10 +7,10 @@ instance get populated from the global (class based)
 ones.
 '''
 
-from abc import ABCMeta
+#from abc import ABCMeta
 
 class MyClass:
-    __metaclass__ = ABCMeta
+    #__metaclass__ = ABCMeta
     foo=14;
 
     def __init__(self, foo):
@@ -26,4 +26,6 @@ class MyClass:
 b = MyClass(15)
 b.do_print()
 b = MyClass(16)
+b.do_print()
+b = MyClass(None)
 b.do_print()
