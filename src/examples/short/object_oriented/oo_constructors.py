@@ -8,11 +8,22 @@ Errors for not having the right method occur at runtime and not at
 compile time. Because python does not have overloading then if you
 do decide to write an __init__ method you have to write it well in
 order to avoid a runtime error.
+
+Note that in python2.7 you should have inherited from 'object'
+this is no longer required in python3.
+
+strictly speaking __init__ in python is not a constructor
+but an initializer since __init__ receives 'self' which is already
+an object of the required type.
 '''
 
+# class without a constructor
+class NoCons:
+    pass
 
 class A:
 
+    # wrong! don't do this...
     def __init__():
         print('in A constructor')
 
@@ -21,23 +32,40 @@ class B:
 
     def __init__(self):
         print('in B constructor')
+        print(type(self))
 
 
 class C:
 
     def __init__(self, arg1, arg2):
         print('in C constructor')
+        print(type(self))
 
 
 class D:
 
     def __init__(self, * args):
-        print('in C constructor')
+        print('in D constructor')
+        print(type(self))
 
+class E:
+
+    def __init__(self, * args , ** kwargs):
+        print('in E constructor')
+        print(type(self))
+
+
+n=NoCons()
+print(type(n))
 try:
     a = A()
 except TypeError:
     print('oh,no. Cant construct an object. Must pass self')
 b = B()
-c = C()
+print(type(b))
+c = C(2,3)
+print(type(c))
 d = D()
+print(type(d))
+e = E()
+print(type(e))
