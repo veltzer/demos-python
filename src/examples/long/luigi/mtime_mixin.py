@@ -49,7 +49,8 @@ class FileExists(luigi.Task):
     def run(self):
         pass
 
-class CountLines(luigi.Task,MTimeMixin):
+# take heed - mixin order in python is SUPER critical...
+class CountLines(MTimeMixin, luigi.Task):
 
     def requires(self):
         """
