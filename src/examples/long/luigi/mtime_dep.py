@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 '''
-This is an example of how to use luigi to get "make" like functionality regarding dependencies.
+This is an example of how to use luigi to get 'make' like functionality regarding dependencies.
 
 Lets explain:
 by default luigi only updates targets which *DO NOT EXIST*, with no relation to time stamps.
@@ -22,7 +22,7 @@ def mtime(path):
 
 class DepTask(luigi.Task):
     def complete(self):
-        """Flag this task as incomplete if any requirement is incomplete or has been updated more recently than this task"""
+        '''Flag this task as incomplete if any requirement is incomplete or has been updated more recently than this task'''
 
         # assuming 1 output
         if not os.path.exists(self.output().path):
@@ -50,29 +50,29 @@ class FileExists(luigi.Task):
 class CountLines(DepTask):
 
     def requires(self):
-        """
+        '''
         What is the input to this task?
         This is an array because there could be many inputs to one task.
-        """
+        '''
         return [FileExists(filename='input.txt')]
 
     def output(self):
-        """
+        '''
         Where will this Task produce output?
         This is just a single output.
-        """
+        '''
         return luigi.LocalTarget('output.txt')
 
     def run(self):
-        """
+        '''
         How do I run this Task?
-        """
+        '''
         count=0
         for i in self.input():
             with i.open() as f_in:
                 while f_in.readline():
                     count+=1
-        with self.output().open("w") as f_out:
+        with self.output().open('w') as f_out:
             f_out.write(str(count))
 
 #luigi.run()
