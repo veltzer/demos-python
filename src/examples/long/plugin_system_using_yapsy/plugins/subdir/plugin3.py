@@ -2,7 +2,7 @@ print('[{0}] loading'.format(__file__))
 
 import yapsy.IPlugin
 
-class PluginOne(yapsy.IPlugin.IPlugin):
+class PluginThree(yapsy.IPlugin.IPlugin):
     def __init__(self):
         print('This is __init__ of {0}'.format(__name__))
     def activate(self):
@@ -11,8 +11,7 @@ class PluginOne(yapsy.IPlugin.IPlugin):
         print('{0} is deactivated'.format(__name__))
     def do_something(self):
         print('This is plugin {0}'.format(__name__))
-        print('This is plugin {0}'.format(__name__))
 
-var = 'plugin1_value'
+var = 'plugin3_value'
 
-extra_var_only_for_plugin1 = 'extra_value_only_for_plugin1'
+extra_var_only_for_plugin3 = 'extra_value_only_for_plugin3'

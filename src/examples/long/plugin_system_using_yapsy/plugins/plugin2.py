@@ -4,12 +4,16 @@ import yapsy.IPlugin
 
 
 class PluginTwo(yapsy.IPlugin.IPlugin):
-
     def __init__(self):
-        print('This is plugin 2 __init__')
-
-    def print_name(self):
-        print('This is plugin 2')
+        print('This is __init__ of {0}'.format(__name__))
+    '''
+    def activate(self):
+        print('{0} is activated'.format(__name__))
+    def deactivate(self):
+        print('{0} is deactivated'.format(__name__))
+    '''
+    def do_something(self):
+        print('This is plugin {0}'.format(__name__))
 
 var = 'plugin2_value'
 
