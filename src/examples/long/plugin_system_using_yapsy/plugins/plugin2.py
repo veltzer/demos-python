@@ -9,12 +9,10 @@ class PluginTwo(yapsy.IPlugin.IPlugin):
     '''
     def activate(self):
         print('{0} is activated'.format(__name__))
+    '''
     def deactivate(self):
         print('{0} is deactivated'.format(__name__))
-    '''
     def do_something(self):
-        print('This is plugin {0}'.format(__name__))
+        print('do_something for {0}'.format(__name__))
 
-var = 'plugin2_value'
-
-extra_var_only_for_plugin2 = 'extra_value_only_for_plugin2'
+var = 'my variable value is [{0}]'.format(__name__)
