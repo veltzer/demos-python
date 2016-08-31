@@ -4,3 +4,4 @@ The advantages of this approach:
 
 The disadvantages of this approach:
 - not recursive.
+- still needs to add auto class detection if one wants this.
