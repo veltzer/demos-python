@@ -40,8 +40,7 @@ for importer, modname, ispkg in pkgutil.walk_packages(
         print('imported {0}'.format(modname))
         for name,t in module.__dict__.items():
             if type(t) is type and issubclass(t, base.BaseClass):
-                instance=t.__new__(t)
-                instance.__init__()
+                instance=t()
                 print(name)
                 print(t)
                 print(instance)
