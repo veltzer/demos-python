@@ -1,18 +1,24 @@
 #!/usr/bin/python3
 
 '''
-This is a simple example of how to use Scrapy
+This example tries to show how to get ridd of the scrapy logging.
 
-Note that this is an 'in code' running of scrapy which *does not*
-use the scrapy(1) command line tool. This is an integrated way
-of running scrapy from within your code. There is another way
-of running scrapy when all you are doing is scraping with a full
-project structure and all. This is not that way.
+Notes:
+- in order to disable scrapy logging you need to pass 'LOG_ENABLED':False
+as a config option to the scrapy object. This will cause scrapy
+to be totaly silent.
+- if you still want to see some logs you need to configure python logging
+with the logger name 'scrapy'.
+- you also need to configure the logging level of your own spider (in
+this example 'jetsearch'.
 '''
 
+import logging # for getLogger
 import scrapy # for Spider, Request
 import scrapy.crawler # for CrawlerProcess
  
+logger=logging.getLogger(__name__)
+
 class SearchSpider(scrapy.Spider):
     name = 'jetsearch'
     allowed_domains = [
@@ -36,6 +42,10 @@ class SearchSpider(scrapy.Spider):
         self.logger.info('in parse')
 
 if __name__=='__main__':
-    process=scrapy.crawler.CrawlerProcess()
+    logging.getLogger('scrapy').setLevel(logging.WARN)
+    logging.getLogger('jetsearch').setLevel(logging.WARN)
+    process=scrapy.crawler.CrawlerProcess({
+        'LOG_ENABLED': False,
+    })
     process.crawl(SearchSpider)
     process.start()
