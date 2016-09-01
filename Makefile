@@ -48,7 +48,7 @@ all: $(ALL)
 check_all: $(ALL_STAMP) $(ALL_DEP)
 
 .PHONY: check
-check: check_ws check_return check_if check_has_key check_no_python2
+check: check_ws check_has_key check_no_python2
 
 $(TOOLS): requirements3.txt
 	$(Q)templar_cmd install_deps
@@ -59,12 +59,14 @@ check_ws: $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)git grep -E "\s$$" -- '*.py' || exit 0
 
+# this is a bad check because returning tuples in python is perfectly legit
 .PHONY: check_return
 check_return: $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)git grep -l -E "return\(.*\)$$" -- '*.py' || exit 0
 	$(Q)git grep -l -E "return \(.*\)$$" -- '*.py' || exit 0
 
+# this is a bad check because comparing tuples in python is perfectly legit
 .PHONY: check_if
 check_if: $(ALL_DEP)
 	$(info doing [$@])

@@ -28,7 +28,7 @@ class DepTask(luigi.Task):
         if not os.path.exists(self.output().path):
             return False
 
-        self_mtime = mtime(self.output().path) 
+        self_mtime = mtime(self.output().path)
 
         # the below assumes a list of requirements, each with a single output
         for el in self.requires():

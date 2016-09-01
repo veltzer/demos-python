@@ -21,18 +21,18 @@ def concat1():
     return z
 concat1.name='+ operator'
 def concat2():
-    z = '%s%s' % (x, y) 
-    return z 
+    z = '%s%s' % (x, y)
+    return z
 concat2.name='%s%s'
-def concat3(): 
-    z = '{}{}'.format(x, y) 
-    return z 
+def concat3():
+    z = '{}{}'.format(x, y)
+    return z
 concat3.name='{}{}'
-def concat4(): 
-    z = '{0}{1}'.format(x, y) 
+def concat4():
+    z = '{0}{1}'.format(x, y)
     return z
 concat4.name='{0}{1}'
-def concat5(): 
+def concat5():
     return ''.join([x,y])
 concat5.name='join'
 
