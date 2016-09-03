@@ -20,7 +20,7 @@ import scrapy.crawler # for CrawlerProcess
 logger=logging.getLogger(__name__)
 
 class SearchSpider(scrapy.Spider):
-    name = 'jetsearch'
+    name = __name__
     allowed_domains = [
         'jet.com'
     ]
@@ -33,17 +33,19 @@ class SearchSpider(scrapy.Spider):
         super(scrapy.Spider, self).__init__(*args, **kwargs)
         self.logger.info('in __init__')
     '''
+    This method is called whenever you get a response
+    '''
+    def parse(self, response):
+        self.logger.info('in parse')
+    '''
     This method is called automatically when the crawler finishes
     '''
     def closed(self, reason):
         self.logger.info('in closed')
-        pass
-    def parse(self, response):
-        self.logger.info('in parse')
 
 if __name__=='__main__':
     logging.getLogger('scrapy').setLevel(logging.WARN)
-    logging.getLogger('jetsearch').setLevel(logging.WARN)
+    logging.getLogger(__name__).setLevel(logging.WARN)
     process=scrapy.crawler.CrawlerProcess({
         'LOG_ENABLED': False,
     })

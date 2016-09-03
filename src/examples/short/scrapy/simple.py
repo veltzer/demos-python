@@ -27,13 +27,15 @@ class SearchSpider(scrapy.Spider):
         super(scrapy.Spider, self).__init__(*args, **kwargs)
         self.logger.info('in __init__')
     '''
+    This method is called whenever you get a response
+    '''
+    def parse(self, response):
+        self.logger.info('in parse')
+    '''
     This method is called automatically when the crawler finishes
     '''
     def closed(self, reason):
         self.logger.info('in closed')
-        pass
-    def parse(self, response):
-        self.logger.info('in parse')
 
 if __name__=='__main__':
     process=scrapy.crawler.CrawlerProcess()
