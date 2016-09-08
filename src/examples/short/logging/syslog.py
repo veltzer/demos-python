@@ -2,15 +2,22 @@
 
 '''
 This is an example of how to log to syslogd
+
+- After running this look at /var/log/syslog to see
+the output...
+- the default formatter only logs the message without saying the level
+and who the message came from
 '''
 
 import logging # for getLogger
 import logging.handlers
 
-my_logger = logging.getLogger('MyLogger')
-my_logger.setLevel(logging.DEBUG)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 handler = logging.handlers.SysLogHandler(address = '/dev/log')
-my_logger.addHandler(handler)
+formatter = logging.Formatter('%(name)s %(levelname)s %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
 
-my_logger.debug('this is debug')
-my_logger.critical('this is critical')
+logger.debug('this is debug')
+logger.critical('this is critical')

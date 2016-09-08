@@ -73,6 +73,9 @@ def populate(d):
 
         # web scraping
         'python3-requests',
+
+        # logging tree
+        'python3-logging-tree',
     ]
 
 def getdeps():
