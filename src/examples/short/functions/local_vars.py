@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 
+'''
+This example shows that scope of variables in a python function
+is really local
+'''
 
-def myfunc(y):
-    print(locals())
-    print(x)
+
+def myfunc():
     x = 5
     print(x)
-    print(locals())
 
 x = 7
-myfunc(9)
+myfunc()
 print(x)
