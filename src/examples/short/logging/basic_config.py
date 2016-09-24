@@ -7,7 +7,7 @@ The key is the logging.basicConfig method to setup the config
 for basic usage.
 '''
 
-import logging # for getLogger
+import logging # for basicConfig, getLogger
 
 logging.basicConfig()
 logger=logging.getLogger(__name__)
