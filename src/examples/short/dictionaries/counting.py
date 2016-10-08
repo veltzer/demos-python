@@ -4,6 +4,8 @@
 This example shows how to count using a dictionary
 '''
 
+import collections # for defaultdict
+
 colors = [
     'red',
     'green',
@@ -25,4 +27,14 @@ print(d)
 d={}
 for color in colors:
     d[color]=d.get(color, 0)+1
+print(d)
+
+# with collections.defaultdict
+d=collections.defaultdict(int)
+for color in colors:
+    d[color]+=1
+print(d)
+
+# with collections.Counter
+d=collections.Counter(colors)
 print(d)
