@@ -8,6 +8,7 @@ Notes:
 '''
 
 import json  # for dump, load
+import sys # for exit
 
 my_dict = {
     'one': 'onev',
@@ -22,10 +23,13 @@ filename = '/tmp/json_store.json'
 
 with open(filename, 'w') as f:
     json.dump(my_dict, f, indent=4)
-    #json.dump(my_set, f)
+    try:
+        json.dump(my_set, f)
+        sys.exit(1)
+    except:
+        pass
 
 with open(filename) as f:
     other_dict = json.load(f)
-    #other_set = json.load(f)
+
 print(other_dict)
-#print(other_set)
