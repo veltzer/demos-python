@@ -37,11 +37,11 @@ def concat5():
 concat5.name='join'
 
 functions=[
-        concat1,
-        concat2,
-        concat3,
-        concat4,
-        concat5,
+    concat1,
+    concat2,
+    concat3,
+    concat4,
+    concat5,
 ]
 
 number=2000000
