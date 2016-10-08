@@ -11,7 +11,7 @@ TODO:
 - compare the two and discuss the conclusions.
 '''
 
-import time
+import time # for sleep
 
 acc = []
 counter = 0
