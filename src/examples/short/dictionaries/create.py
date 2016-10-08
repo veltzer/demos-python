@@ -17,6 +17,7 @@ def gen_tuples():
         yield i,i+1
 
 list_of_tuples=[(3,4),(5,6),(7,8)]
+list_of_keys=['red','green','blue']
 
 # simplest way, built in the language syntax, empty dictionary
 d1 = {}
@@ -45,3 +46,6 @@ print(d8)
 # any container of tuples
 d9 = dict(list_of_tuples)
 print(d9)
+# use zip to construct a dictionary from anything iterable as keys and anything iterable as values
+d10 = dict(zip(list_of_keys, range(3)))
+print(d10)
