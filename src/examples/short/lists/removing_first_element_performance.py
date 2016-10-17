@@ -24,7 +24,7 @@ def func3():
 func3.name='insert(0, newelement)'
 
 def func4():
-    del d[0] 
+    del d[0]
 func4.name='del deque[0]'
 
 def func5():

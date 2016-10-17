@@ -23,7 +23,7 @@ print(type(m))
 
 def myfunc(self):
     print('in myfunc', self)
-    
+
 b.newmethod=myfunc
 print(type(b.newmethod))
 b.newmethod() #-> newmethod(b)

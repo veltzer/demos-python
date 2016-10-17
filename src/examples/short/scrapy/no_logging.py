@@ -16,7 +16,7 @@ this example 'jetsearch'.
 import logging # for getLogger
 import scrapy # for Spider, Request
 import scrapy.crawler # for CrawlerProcess
- 
+
 logger=logging.getLogger(__name__)
 
 class SearchSpider(scrapy.Spider):

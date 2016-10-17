@@ -12,7 +12,7 @@ project structure and all. This is not that way.
 
 import scrapy # for Spider, Request
 import scrapy.crawler # for CrawlerProcess
- 
+
 class SearchSpider(scrapy.Spider):
     name = 'jetsearch'
     allowed_domains = [
