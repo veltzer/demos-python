@@ -76,6 +76,9 @@ def populate(d):
 
         # logging tree
         'python3-logging-tree',
+
+        # click
+        'python3-click',
     ]
 
 def getdeps():
