@@ -17,9 +17,13 @@ def myfunc(i):
     print('thread {0} is waking up...'.format(i))
 
 threads = []
+print('creating the threads')
 for i in range(10):
     threads.append(threading.Thread(target=myfunc, args=(i,)))
+print('launching the threads')
 for thread in threads:
     thread.start()
+print('joining the threads')
 for thread in threads:
     thread.join()
+print('done')
