@@ -80,6 +80,13 @@ def populate(d):
         # click
         'python3-click',
     ]
+    d.requirements3=[
+        'signalfd',
+        'luigi',
+        'scrapy',
+        'unidecode',
+        'click',
+    ]
 
 def getdeps():
     return [ __file__ ]

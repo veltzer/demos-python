@@ -50,7 +50,7 @@ check_all: $(ALL_STAMP) $(ALL_DEP)
 .PHONY: check
 check: check_ws check_has_key check_no_python2
 
-$(TOOLS): requirements3.txt templardefs/deps.py
+$(TOOLS): templardefs/deps.py
 	$(Q)templar_cmd install_deps
 	$(Q)make_helper touch-mkdir $@
 

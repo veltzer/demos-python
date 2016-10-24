@@ -1,5 +1,0 @@
-signalfd
-luigi
-scrapy
-unidecode
-click
