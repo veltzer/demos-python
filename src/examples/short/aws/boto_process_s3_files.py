@@ -6,6 +6,10 @@ in some "subfolder" of s3.
 
 The credentials for this are NOT stored in this script
 but rather are in ~/.aws/credentials.
+
+References:
+- http://boto.cloudhackers.com/en/latest/
+- http://boto.cloudhackers.com/en/latest/ref/
 '''
 
 import boto # for connect_s3
