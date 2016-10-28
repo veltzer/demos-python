@@ -79,6 +79,10 @@ def populate(d):
 
         # click
         'python3-click',
+
+        # boto
+        'python3-boto',
+        'python3-boto3',
     ]
     d.requirements3=[
         'signalfd',
