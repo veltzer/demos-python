@@ -11,3 +11,10 @@ Copyright Linus Torvalds ${years(2007)}
 %>
 
 You are running on ${hostname}
+
+% if 'a' in d:
+	${d['a']}
+	'a' is in d
+% else:
+	'a' is not in d
+% endif
