@@ -12,6 +12,8 @@ Copyright Linus Torvalds ${years(2007)}
 
 You are running on ${hostname}
 
+This checks if a variable is in a mako dict or not...
+http://stackoverflow.com/questions/18624290/how-to-check-if-a-key-exists-in-mako-dict
 % if 'a' in d:
 	${d['a']}
 	'a' is in d
