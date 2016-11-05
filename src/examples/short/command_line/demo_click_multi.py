@@ -2,6 +2,9 @@
 
 '''
 A demo of how to do multi commands in click
+
+TODO:
+- add how to pass options to the subcommands and global options.
 '''
 
 import click
