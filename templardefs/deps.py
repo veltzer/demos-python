@@ -90,6 +90,7 @@ def populate(d):
         'scrapy',
         'unidecode',
         'click',
+        'pandas',
     ]
 
 def getdeps():
