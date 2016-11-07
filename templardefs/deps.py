@@ -91,6 +91,7 @@ def populate(d):
         'unidecode',
         'click',
         'pandas',
+        'pyyaml',
     ]
 
 def getdeps():
