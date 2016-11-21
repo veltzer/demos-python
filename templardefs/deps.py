@@ -92,6 +92,8 @@ def populate(d):
         'click',
         'pandas',
         'pyyaml',
+        'tqdm',
+        'inject',
     ]
 
 def getdeps():
