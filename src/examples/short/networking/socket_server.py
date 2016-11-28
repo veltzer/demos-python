@@ -5,38 +5,26 @@ Echo server program
 """
 
 import socket
-import sys
 
-HOST = None  # Symbolic name meaning all available interfaces
-PORT = 5000  # Arbitrary non-privileged port
-s = None
-for res in socket.getaddrinfo(HOST, PORT, socket.AF_UNSPEC, socket.SOCK_STREAM, 0, socket.AI_PASSIVE):
-    af, socktype, proto, canonname, sa = res
-    try:
-        s = socket.socket(af, socktype, proto)
-    except socket.error as msg:
-        s = None
-        continue
-    try:
-        s.bind(sa)
-        s.listen(1)
-    except socket.error as msg:
-        s.close()
-        s = None
-        continue
-    break
-    if s is None:
-        print('could not open socket')
-        sys.exit(1)
+
+HOST = '0.0.0.0'  # this means all interfaces
+PORT = 5000  # arbitrary non-privileged port (above 1024, can be listened to by non-root user)
+af = socket.AF_INET
+socket_type = socket.SOCK_STREAM
+proto = socket.IPPROTO_TCP
+socket_address = (HOST, PORT)
+
+s = socket.socket(af, socket_type, proto)
+s.bind(socket_address)
+s.listen(1)
+print('contact me at {}'.format(socket_address))
 while True:
-    conn, addr = s.accept()
-    print('Connected by', addr)
+    conn, address = s.accept()
+    print('Connected by {}'.format(address))
     while True:
-        try:
-            data = conn.recv(1024)
-            if not data:
-                break
-            conn.send(data)
-        except:
-            print('exception happened...')
+        data = conn.recv(1024)
+        if not data:
+            break
+        conn.send(data)
+    print('connection closed')
     conn.close()

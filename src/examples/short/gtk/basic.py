@@ -4,7 +4,11 @@
 A minimal gtk application demo.
 """
 
-import gtk  # for Button, Window, main, main_quit
+import gi
+
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk as gtk
+import signal
 
 
 def clicked_callback(b):
@@ -15,6 +19,7 @@ def clicked_callback(b):
 def quit_callback(window, event):
     gtk.main_quit()
 
+
 b = gtk.Button('Click me')  # create a button
 b.num = 0  # attache some data to it
 b.connect('clicked', clicked_callback)  # attach it to the callback
@@ -24,11 +29,5 @@ w.add(b)  # put it inside the window
 w.connect('delete-event', quit_callback)
 w.show_all()  # must do this in GTK
 
-'''
-The try/except is needed so that if you CTRL+C the application you will not get an exception
-with stack trace
-'''
-try:
-    gtk.main()  # main loop. Will only quit if you call 'gtk.main_quit()'
-except:
-    pass
+signal.signal(signal.SIGINT, signal.SIG_DFL)
+gtk.main()  # main loop. Will only quit if you call 'gtk.main_quit()'

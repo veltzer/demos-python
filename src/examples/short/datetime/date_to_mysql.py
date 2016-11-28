@@ -5,15 +5,15 @@ example of how to convert the output of date(1) on the command line
 to mysql type dates.
 """
 
-import subprocess  # for check_output
-import datetime  # for strptime
+import subprocess
+import datetime
 
 
 def date_to_mysql(output):
-    format = '%a %b %d %H:%M:%S %Z %Y'
-    d = datetime.datetime.strptime(output, format)
-    # print('d is [{0}]'.format(d))
-    return d
+    format_str = '%a %b %d %H:%M:%S %Z %Y'
+    mysql_str = datetime.datetime.strptime(output, format_str)
+    # print('mysql_str is [{0}]'.format(mysql_str))
+    return mysql_str
 
 output = subprocess.check_output('date').decode().strip()
 print('output is [{0}]'.format(output))

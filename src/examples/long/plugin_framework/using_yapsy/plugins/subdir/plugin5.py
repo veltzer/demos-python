@@ -5,6 +5,7 @@ print('[{0}] loading'.format(__file__))
 
 class PluginThree(yapsy.IPlugin.IPlugin):
     def __init__(self):
+        super(PluginThree, self).__init__()
         print('This is __init__ of {0}'.format(__name__))
 
     def activate(self):

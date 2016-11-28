@@ -8,12 +8,15 @@ How to write a custom pygtk widget:
     http://www.pygtk.org/articles/writing-a-custom-widget-using-pygtk/writing-a-custom-widget-using-pygtk.htm
 """
 
-import gobject
-import gtk
+import signal
+import gi
+
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk as gtk
+from gi.repository import GObject as gobject
 
 
 class EntryMultiCompletion(gtk.Entry):
-
     def __init__(self):
         gtk.Entry.__init__(self)
         self.completion = gtk.EntryCompletion()
@@ -57,6 +60,8 @@ class EntryMultiCompletion(gtk.Entry):
         # stop the event propagation
         return True
 
+
+signal.signal(signal.SIGINT, signal.SIG_DFL)
 win = gtk.Window()
 win.connect('delete-event', gtk.main_quit)
 entrycompl = EntryMultiCompletion()
@@ -67,11 +72,5 @@ for word in ['python', 'perl', 'scala', 'c++', 'ruby', 'c#', 'java', 'assembly',
     liststore.append([word])
 win.add(entrycompl)
 win.show_all()
-'''
-The try/except is needed so that if you CTRL+C the application you will not get an exception
-with stack trace
-'''
-try:
-    gtk.main()
-except:
-    pass
+
+gtk.main()

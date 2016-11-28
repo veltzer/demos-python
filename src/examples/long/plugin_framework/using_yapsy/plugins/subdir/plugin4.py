@@ -1,10 +1,11 @@
-print('[{0}] loading'.format(__file__))
-
 import yapsy.IPlugin
+
+print('[{0}] loading'.format(__file__))
 
 
 class PluginFour(yapsy.IPlugin.IPlugin):
     def __init__(self):
+        super(PluginFour, self).__init__()
         print('This is __init__ of {0}'.format(__name__))
 
     def activate(self):
@@ -14,7 +15,7 @@ class PluginFour(yapsy.IPlugin.IPlugin):
         print('{0} is deactivated'.format(__name__))
 
     def do_something(self):
-        print('do_something for {0}'.format(__name__))
+        print('do_something for {0}'.format(__name__, self))
 
 
 var = 'my variable value is [{0}]'.format(__name__)

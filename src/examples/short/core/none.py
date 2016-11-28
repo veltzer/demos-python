@@ -56,7 +56,7 @@ h = {
 print(h)
 
 # lets compare None to various things...
-if None == 0:
+if 0 is None:
     print('None==0')
 else:
     print('None!=0')

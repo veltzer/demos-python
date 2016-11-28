@@ -15,7 +15,7 @@ def doit(var):
     print(var)
 
 
-def configure(binder):  # type: (inject.binder) -> None
+def configure(binder: inject.Binder) -> None:
     binder.bind(list, [1, 2, 3])
 
 

@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+import simpleparse.parser
+import pprint
+
+
 declaration = r'''# note use of raw string when embedding in python code...
 file := [ \t\n]*, section+
 section := '[',identifier,']', ts,'\n', body
@@ -30,8 +34,6 @@ loose=lips
 
 '''
 
-import simpleparse.parser  # for Parser
-import pprint  # for pprint
 
 parser = simpleparse.parser.Parser(declaration, 'file')
 pprint.pprint(parser.parse(testdata))

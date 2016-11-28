@@ -19,26 +19,26 @@ the data through that.
 
 
 def make_funcs(l):
-    def f_max():
-        max = 0
+    def func_max():
+        current_max = 0
         for x in l:
-            if x > max:
-                max = x
-        return max
+            if x > current_max:
+                current_max = x
+        return current_max
 
-    def f_min():
-        min = 10000
+    def func_min():
+        current_min = 10000
         for x in l:
-            if x < min:
-                min = x
-        return min
+            if x < current_min:
+                current_min = x
+        return current_min
 
-    def f_set(index, val):
+    def func_set(index, val):
         l[index] = val
 
-    def f_int():
+    def func_int():
         return l
-    return f_max, f_min, f_set, f_int
+    return func_max, func_min, func_set, func_int
 
 (f_max, f_min, f_set, f_int) = make_funcs([1, 2, 3, 4])
 # notice that we do not have a direct pointer to the list

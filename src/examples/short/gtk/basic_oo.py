@@ -4,11 +4,14 @@
 A pygtk hello world application
 """
 
-import gtk
+import gi
+import signal
+
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk as gtk
 
 
 class HelloWorld:
-
     def hello(self, widget, data=None):
         """
         This is a callback function. The data arguments are ignored
@@ -38,12 +41,12 @@ class HelloWorld:
 
     def __init__(self):
         """ create a new window """
-        self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+        self.window = gtk.Window()
 
         '''
         When the window is given the 'delete_event' signal (this is given
         by the window manager,usually by the 'close' option,or on the
-        titlebar),we ask it to call the delete_event () function
+        title bar),we ask it to call the delete_event () function
         as defined above. The data passed to the callback
         function is NULL and is ignored in the callback function.
         '''
@@ -102,12 +105,11 @@ class HelloWorld:
         """
         gtk.main()
 
+
 """
 If the program is run directly or passed as an argument to the python
 interpreter then create a HelloWorld instance and show it
 """
+signal.signal(signal.SIGINT, signal.SIG_DFL)
 hello = HelloWorld()
-try:
-    hello.main()
-except:
-    pass
+hello.main()

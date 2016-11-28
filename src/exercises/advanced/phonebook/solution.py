@@ -51,7 +51,7 @@ def add_a_name():
 
 def edit_a_name():
     name = input('please give me a name to edit: ')
-    if not name in mypb:
+    if name not in mypb:
         print('sorry, name', name, 'is not in the phonebook...')
         return
     phone = input('please give me a new phone: ')

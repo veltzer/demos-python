@@ -19,7 +19,7 @@ places = {
 
 # Only checking reachability:
 
-reachable = set(['Rivendell'])
+reachable = {'Rivendell'}
 for i in range(7):
     for place in list(reachable):
         reachable.update(places[place].values())

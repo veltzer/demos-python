@@ -4,11 +4,14 @@
 A notebook pygtk application
 """
 
-import gtk
+import signal
+import gi
+
+from gi.repository import Gtk as gtk
+gi.require_version('Gtk', '3.0')
 
 
 class NotebookExample:
-
     """
     This method rotates the position of the tabs
     """
@@ -43,7 +46,7 @@ class NotebookExample:
         return False
 
     def __init__(self):
-        window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+        window = gtk.Window()
         window.connect('delete_event', self.delete)
         window.set_border_width(10)
 
@@ -52,7 +55,7 @@ class NotebookExample:
 
         # Create a new notebook,place the position of the tabs
         notebook = gtk.Notebook()
-        notebook.set_tab_pos(gtk.POS_TOP)
+        # notebook.set_tab_pos(gtk.POS_TOP)
         table.attach(notebook, 0, 6, 0, 1)
         notebook.show()
         self.show_tabs = True
@@ -63,7 +66,7 @@ class NotebookExample:
             bufferf = 'Append Frame {0}'.format(i + 1)
             bufferl = 'Page {0}'.format(i + 1)
 
-            frame = gtk.Frame(bufferf)
+            frame = gtk.Frame()
             frame.set_border_width(10)
             frame.set_size_request(100, 75)
             frame.show()
@@ -88,7 +91,7 @@ class NotebookExample:
             bufferf = 'Prepend Frame {0}'.format(i + 1)
             bufferl = 'PPage {0}'.format(i + 1)
 
-            frame = gtk.Frame(bufferf)
+            frame = gtk.Frame()
             frame.set_border_width(10)
             frame.set_size_request(100, 75)
             frame.show()
@@ -137,12 +140,7 @@ class NotebookExample:
         table.show()
         window.show()
 
+
+signal.signal(signal.SIGINT, signal.SIG_DFL)
 NotebookExample()
-'''
-The try/except is needed so that if you CTRL+C the application you will not get an exception
-with stack trace
-'''
-try:
-    gtk.main()
-except:
-    pass
+gtk.main()

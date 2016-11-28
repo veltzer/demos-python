@@ -11,7 +11,7 @@ This is based on the loop
 
 
 class MyClass:
-    foo = 14;
+    foo = 14
 
     def __init__(self, foo):
         if foo:

@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
-# Using a for loop
-# ================
+import doctest
+
+"""
+Using a for loop
+"""
 
 
 def apply_funcs1(funcs, x):
@@ -18,8 +21,9 @@ def apply_funcs1(funcs, x):
     return results
 
 
-# Using list comprehensions
-# =========================
+"""
+Using list comprehensions
+"""
 
 
 def apply_funcs2(funcs, x):
@@ -32,9 +36,9 @@ def apply_funcs2(funcs, x):
     """
     return [f(x) for f in funcs]
 
-
-# Using map()
-# ===========
+"""
+Using map()
+"""
 
 
 def apply_funcs3(funcs, x):
@@ -62,8 +66,5 @@ def apply_funcs4(funcs, *args, **kw):
     [7, 12]
     """
     return [f(*args, **kw) for f in funcs]
-
-
-import doctest
 
 doctest.testmod()

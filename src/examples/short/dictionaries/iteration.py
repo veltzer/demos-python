@@ -42,8 +42,8 @@ for x in h.keys():
 # this is TERRIBLE performance wise although to a novice it looks
 # almost the same... Some versions of python may be smart enough to optimize
 # this away but you really shouldn't count on it.
-list = h.keys()
-for x in list:
+key_list = h.keys()
+for x in key_list:
     print(x)
     print('key is', x)
     print('val is', h[x])

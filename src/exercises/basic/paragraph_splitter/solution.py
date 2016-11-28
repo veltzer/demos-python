@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import textwrap
+
 
 def lines2paragraphs(lines):
     """Group lines into paragraphs as lists of lines."""
@@ -17,18 +19,17 @@ def lines2paragraphs(lines):
         yield paragraph
 
 
-# Bonus: streaming lines->lines reformatter
-# =========================================
+"""
+Bonus: streaming lines->lines reformatter
+"""
 
-import textwrap
 
-
-def reformat(lines2paragraphs, chars):
-    """Generate lines of reformatted paragraphs.
-
+def reformat(lines, chars):
+    """
+    Generate lines of reformatted paragraphs.
     Paragraph in input and output are separated by empty lines.
     """
-    for para in lines2paragraphs:
+    for para in lines:
         for line in textwrap.wrap(' '.join(para), chars):
             yield line
         yield ''

@@ -14,10 +14,10 @@ the same in every run. So it guarantees determinism, not order which is
 sometimes good enough.
 '''
 
-print("No PYTHONHASHSEED");
+print("No PYTHONHASHSEED")
 os.system('./sample.py')
 os.system('./sample.py')
 os.environ['PYTHONHASHSEED'] = "1"
-print("PYTHONHASHSEED=1");
+print("PYTHONHASHSEED=1")
 os.system('./sample.py')
 os.system('./sample.py')

@@ -13,6 +13,7 @@ print('add(2,2) is', add(2, 2))
 imp.load_source('__main__', 'using_imp_two.py')
 print('add(2,2) is', add(2, 2))
 
+# noinspection PyPep8
 import math
 
 print('math.sin(0.5) is', math.sin(0.5))

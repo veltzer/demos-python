@@ -27,8 +27,8 @@ except AttributeError as e:
 
 try:
     set_a = set()
-    set_a.add(set(['a', 'b']))
-    set_a.add(set(['b', 'a']))
+    set_a.add({'a', 'b'})
+    set_a.add({'b', 'a'})
 except TypeError as e:
     print('yes, got TypeError')
 
