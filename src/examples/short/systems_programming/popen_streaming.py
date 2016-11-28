@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to call popen and get the return text.
-'''
+"""
 
-import os  # for popen2
+import os
 
-(pin, pout) = os.popen2(['./demo_process.py'], bufsize=1)
-print(dir(pout))
-for line in pout.readlines():
+pout = os.popen('./demo_process.py', buffering=1)
+for line in pout:
     print('line is', line, end='')

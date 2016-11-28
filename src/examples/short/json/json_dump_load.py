@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example explores loading/saving dictionaries in python from/to files
 
 Notes:
 - python sets are not JSON serializable
-'''
+"""
 
 import json  # for dump, load
-import sys # for exit
+import sys  # for exit
 
 my_dict = {
     'one': 'onev',

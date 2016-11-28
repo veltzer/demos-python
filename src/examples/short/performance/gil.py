@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example is taken from the following talk:
 http://pyvideo.org/video/588/mindblowing-python-gil
 
@@ -17,7 +17,7 @@ still in place. So you get the performance of just one core. Now you can write m
 - alternatives are: write multi-processed code (python has great support for that) or write
 single threaded multiplexed code.
 - in any case the gil got heavily improved from python2 where is has 50% overhead.
-'''
+"""
 
 #
 # imports #

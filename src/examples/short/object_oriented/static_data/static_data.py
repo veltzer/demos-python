@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 An example of an 'id generator' using two ways:
 1) simple global variable
 2) hiding the data in a closure.
@@ -8,7 +8,7 @@ An example of an 'id generator' using two ways:
 
 * Notice that the closure must be a list or object and not a primitive
 since a primitive will be a local variable in 'give_me_unique'.
-'''
+"""
 
 # first example
 counter = 0

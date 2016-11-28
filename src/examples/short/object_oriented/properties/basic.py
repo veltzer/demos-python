@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of using a property in python.
 - We store the value in the 'real' attribute '__price'.
 - This attribute is 'private' (well,mangled anyway...).
@@ -8,7 +8,7 @@ This is an example of using a property in python.
 which cashes the value of __price but does not do this for
 the magical 'x.price' property.
 - This idea is similar to ideas in languages such as C#.
-'''
+"""
 
 
 class Book:

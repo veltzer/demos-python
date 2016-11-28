@@ -16,7 +16,7 @@ class Date:
         self.year = year
 
     def __gt__(self, other):
-        ''' Overloading operator>for dates '''
+        """ Overloading operator>for dates """
         if self.year > other.year:
             return True
         elif self.year == other.year:
@@ -28,23 +28,23 @@ class Date:
         return False
 
     def __lt__(self, other):
-        ''' Overloading operator<for dates '''
+        """ Overloading operator<for dates """
         return other > self
 
     def __eq__(self, other):
-        ''' Overloading operator==for dates '''
+        """ Overloading operator==for dates """
         return self.year == other.year and self.month == other.month and self.day == other.day
 
     def __ne__(self, other):
-        ''' Overloading operator!=for dates '''
+        """ Overloading operator!=for dates """
         return not (self == other)
 
     def __le__(self, other):
-        ''' Overloading operator<=for dates '''
+        """ Overloading operator<=for dates """
         return self < other or self == other
 
     def __ge__(self, other):
-        ''' Overloading operator>=for dates '''
+        """ Overloading operator>=for dates """
         return self > other or self == other
 
     def __str__(self):

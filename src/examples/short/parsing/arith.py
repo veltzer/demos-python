@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-# doing simple arithmetic evaluation in python
+"""
+doing simple arithmetic evaluation in python
+"""
 
 import pyparsing
 import sys
@@ -8,21 +10,21 @@ import sys
 number = pyparsing.Word(pyparsing.nums).setParseAction(lambda t: int(t[0]))
 
 
-def number_act(s, loc, tok):
+# noinspection PyUnusedLocal
+def number_act(string, location, tok):
     return int(tok[0])
-    # return 'foo'+tok[0]
+
 number.setParseAction(number_act)
 
 expr = pyparsing.Forward()
 operand = number | expr
 
-multop = pyparsing.oneOf('* /')
-plusop = pyparsing.oneOf('+ -')
-expr = pyparsing.operatorPrecedence(operand,
-                                    [
-                                    (multop, 2, pyparsing.opAssoc.LEFT),
-                                    (plusop, 2, pyparsing.opAssoc.LEFT),
-                                    ])
+op_multiply = pyparsing.oneOf('* /')
+op_plus = pyparsing.oneOf('+ -')
+expr = pyparsing.operatorPrecedence(operand, [
+    (op_multiply, 2, pyparsing.opAssoc.LEFT),
+    (op_plus, 2, pyparsing.opAssoc.LEFT),
+])
 
 
 def expr_act(s, loc, tok):

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 Example of a graph using pygraph
 
 Notes:
@@ -11,7 +11,7 @@ Notes:
 
 References:
 https://code.google.com/p/python-graph/wiki/Example
-'''
+"""
 
 import pygraph.classes.graph
 

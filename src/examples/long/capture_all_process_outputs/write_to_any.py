@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a simple process that can log to what you want.
 Examples:
 [process] stdout
@@ -10,7 +10,7 @@ will log to stderr
 [process] tty
 will log to tty
 and you can combine...
-'''
+"""
 
 import sys  # for stderr, argv, exit
 

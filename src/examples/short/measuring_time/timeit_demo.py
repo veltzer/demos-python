@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 Example of timing python code using the 'timeit' module
 
 Why should you use this module and not time everything yourself?
@@ -37,13 +37,14 @@ just measure a few times and take the best time.
 The IO and wait issues are avoiding by not having them in your code.
 The other thread/process/garbage collector/OS CPU moving issues are avoided
 by taking the best measurement.
-'''
+"""
 
-import timeit  # for timeit
-import time # for sleep
+import timeit
+import time
 
-def mysleep():
+
+def my_sleep():
     time.sleep(2)
 
 print(timeit.timeit('\'-\'.join(str(n) for n in range(100))', number=10000))
-print(timeit.timeit(mysleep, number=1))
+print(timeit.timeit(my_sleep, number=1))

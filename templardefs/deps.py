@@ -1,11 +1,11 @@
-'''
+"""
 dependencies for this project
-'''
+"""
 
-opt_python_version='3.5'
 
 def populate(d):
-    d.packs=[
+    opt_python_version = '3.5'
+    d.packs = [
         # python core
         'python3',
         'python3-doc',
@@ -16,7 +16,7 @@ def populate(d):
         'python{0}-dev'.format(opt_python_version),
         'python{0}-venv'.format(opt_python_version),
 
-        # iteractive, parallel python
+        # interactive, parallel python
         'ipython3',
 
         # tools for python packaging and upload
@@ -34,16 +34,16 @@ def populate(d):
         # misc modules
         'python3-mysql.connector',
         'python3-progressbar',
-        'python3-networkx', # tool to create, manipulate and study complex networks (Python3)
-        'python3-pygraph', # library for working with graphs in Python (Python3)
-        'python-yapsy-doc', # simple plugin system for Python applications doc
-        'python3-yapsy', # simple plugin system for Python3 applications
-        'python3-pygments', # for syntaxh highlighting
-        'python3-jinja2', # for jinja templating
+        'python3-networkx',  # tool to create, manipulate and study complex networks (Python3)
+        'python3-pygraph',  # library for working with graphs in Python (Python3)
+        'python-yapsy-doc',  # simple plugin system for Python applications doc
+        'python3-yapsy',  # simple plugin system for Python3 applications
+        'python3-pygments',  # for syntax highlighting
+        'python3-jinja2',  # for jinja templating
 
         # mako
-        'python3-mako', # for mako templating
-        'python-mako-doc', # documentation for mako templating
+        'python3-mako',  # for mako templating
+        'python-mako-doc',  # documentation for mako templating
 
         # debuggers
         'winpdb',
@@ -51,11 +51,11 @@ def populate(d):
         'python3-pudb',
 
         # sphinx
-        'python3-sphinx', # documentation generator for Python projects (implemented in Python 3)
-        'python3-sphinx-paramlinks', # allows param links in Sphinx function/method descriptions to be linkable
-        'python3-sphinxcontrib.programoutput', # insert the output of arbitrary commands into documents Python 3.x
-        'python3-sphinxcontrib.spelling', # Sphinx spelling extension (Python 3)
-        'python3-sphinxcontrib.youtube', # Sphinx YouTube extension
+        'python3-sphinx',  # documentation generator for Python projects (implemented in Python 3)
+        'python3-sphinx-paramlinks',  # allows param links in Sphinx function/method descriptions to be linkable
+        'python3-sphinxcontrib.programoutput',  # insert the output of arbitrary commands into documents Python 3.x
+        'python3-sphinxcontrib.spelling',  # Sphinx spelling extension (Python 3)
+        'python3-sphinxcontrib.youtube',  # Sphinx YouTube extension
 
         # notify related packages
         'python3-notify2',
@@ -84,7 +84,7 @@ def populate(d):
         'python3-boto',
         'python3-boto3',
     ]
-    d.requirements3=[
+    d.requirements3 = [
         'signalfd',
         'luigi',
         'scrapy',
@@ -94,7 +94,9 @@ def populate(d):
         'pyyaml',
         'tqdm',
         'inject',
+        'simpleparse',
     ]
 
-def getdeps():
-    return [ __file__ ]
+
+def get_deps():
+    return [__file__]

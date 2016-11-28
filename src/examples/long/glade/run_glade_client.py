@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
-'''
+"""
 A basic glade based python project.
-'''
+"""
 
 import gtk
 
 
 class HellowWorldGTK():
 
-    '''This is a Hello World GTK/Glade application'''
+    """This is a Hello World GTK/Glade application"""
 
     def __init__(self):
         self.gladefile = 'project.glade'
@@ -27,10 +27,10 @@ class HellowWorldGTK():
     def delete_event(self, *args):
         gtk.main_quit(*args)
 
-'''
+"""
 The try/except is needed so that if you CTRL+C the application you will not get an exception
 with stack trace
-'''
+"""
 try:
     app = HellowWorldGTK()
     gtk.main()

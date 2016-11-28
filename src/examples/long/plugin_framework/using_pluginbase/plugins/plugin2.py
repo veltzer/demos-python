@@ -10,7 +10,10 @@ import demo
 def do_something():
     print('[{0}] running'.format(__file__))
 
+
 class Plugin2Class1(dict):
     pass
+
+
 class Plugin2Class2(demo.BaseClass):
     pass

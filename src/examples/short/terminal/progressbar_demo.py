@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-'''
+"""
 An example of how to use python3-progressbar
 
 NOTES:
 - maxval is 100 by default.
 - calling pbar.update() (with no value) does nothing. you must pass a value.
-'''
+"""
 
 import progressbar  # for ProgressBar
 import time  # for sleep

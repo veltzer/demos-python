@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of overloading the __getattr__ python method. This allows
 one to pretend to have various attributes or to decide that attributes
 come in and out of scope at runtime. Uses for this could include:
@@ -10,7 +10,7 @@ come in and out of scope at runtime. Uses for this could include:
 - ORM solutions.
 - Backwards compatibility solutions.
 And more...
-'''
+"""
 
 
 class A:

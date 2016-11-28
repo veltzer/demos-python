@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 Example of how to create more than one constructor for a class.
 
 Notes:
@@ -12,33 +12,37 @@ for the user should be the subclass and not the parent class.
 sure that we get passed the 'cls' parameter which is very important
 (see above). The second is to make sure that this method will be
 called on the class and not on an instance.
-'''
+"""
+
 
 class A:
-
     def __init__(self, p):
-        self.p=p
+        self.p = p
+
     def __str__(self):
         return str(self.p)
+
     @classmethod
     def from_q(cls, q):
         return cls(-q)
 
+
 class B(A):
     pass
 
-o1=A(1)
+
+o1 = A(1)
 print(o1)
 print(type(o1))
 
-o2=A.from_q(-2)
+o2 = A.from_q(-2)
 print(o2)
 print(type(o2))
 
-o3=B(3)
+o3 = B(3)
 print(o3)
 print(type(o3))
 
-o4=B.from_q(-4)
+o4 = B.from_q(-4)
 print(o4)
 print(type(o4))

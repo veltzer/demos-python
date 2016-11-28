@@ -2,7 +2,7 @@
 
 
 def right_align_to(lines, width):
-    '''Right-align all lines to given width.'''
+    """Right-align all lines to given width."""
     result = []
     for line in lines:
         result.append(line.rjust(width))
@@ -10,7 +10,7 @@ def right_align_to(lines, width):
 
 
 def max_len(lines):
-    '''Return the length of the longest string.'''
+    """Return the length of the longest string."""
     lengths = []
     for line in lines:
         lengths.append(len(line))
@@ -18,7 +18,7 @@ def max_len(lines):
 
 
 def right_align_to_longest(lines):
-    '''Right-align all lines to the longest.'''
+    """Right-align all lines to the longest."""
     return right_align_to(lines, max_len(lines))
 
 for line in right_align_to_longest(['foo', 'x', '12345678']):

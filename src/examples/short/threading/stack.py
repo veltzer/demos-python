@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 An example of a stack for multi threaded programming.
-'''
+"""
 
 import threading  # for RLock, Thread
 

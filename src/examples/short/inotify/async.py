@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-'''
+"""
 AsyncNotifier example from tutorial
 
 See: http://github.com/seb-m/pyinotify/wiki/Tutorial
-'''
+"""
 
 import asyncore  # for loop
 import pyinotify  # for WatchManager, IN_DELETE, IN_CREATE, AsyncNotifier

@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of how to use the os.listdir API
 to get all the files in a specific folder.
 This is more efficient than the glob module since it
 does not support regular expressions of any kind and
 is the right thing to use if you need ALL the files
 in a folder
-'''
+"""
 
 import os  # for listdir
 import sys  # for arv

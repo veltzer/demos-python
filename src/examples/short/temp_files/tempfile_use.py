@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Demo how to create a temp file in python
-'''
+"""
 
 import tempfile  # for NamedTemporaryFile
 

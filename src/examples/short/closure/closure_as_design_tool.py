@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of how to use closure as a facade design pattern.
-'''
+"""
 
 '''
 A big function which has too many variables

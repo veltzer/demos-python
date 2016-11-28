@@ -1,6 +1,5 @@
 # these are .gitignore statements regarding the python project
 # we want pyc and pyo files ignore in ANY folder
-*.pyc
 *.pyo
 __pycache__
 *.stamp
@@ -11,3 +10,6 @@ __pycache__
 # templar generated
 /.tdefs.config
 /tools
+
+# idea
+/.idea/workspace.xml

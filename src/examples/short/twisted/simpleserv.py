@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 A simple twisted server doing echo on two ports.
-'''
+"""
 
 from twisted.internet import reactor, protocol
 
@@ -11,6 +11,9 @@ As soon as any data is received,write it back.'''
 
 
 class Echo(protocol.Protocol):
+
+    def __init__(self):
+        super(Echo, self).__init__()
 
     def dataReceived(self, data):
         self.transport.write(data)

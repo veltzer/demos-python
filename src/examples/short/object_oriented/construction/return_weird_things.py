@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 Trying to return weird things from the constructor
 
 Conclusions:
@@ -15,28 +15,36 @@ it works is already alive and well and is already determined
 and the initializer function has no say in that matter.
 That is why it's return value is uninteresting (it is not
 even returned to the programmer).
-'''
+"""
+
 
 class A:
     def __init__(self):
         return 0
+
+
 class B:
     def __init__(self):
         return None
+
+
 class C:
     def __init__(self):
         return self
+
+
 class D:
     def __init__(self):
         return
+
 
 try:
     a = A()
 except Exception as e:
     print('yes, got the exception [{0}]...'.format(str(e)))
-b=B()
+b = B()
 try:
-    c=C()
+    c = C()
 except Exception as e:
     print('yes, got the exception [{0}]...'.format(str(e)))
-d=D()
+d = D()

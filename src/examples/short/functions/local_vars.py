@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows that scope of variables in a python function
 is really local
-'''
+"""
 
 
 def myfunc():

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example explores whether it is efficient or not to cache os.path.getmtime()
 data in user space in python.
 
@@ -10,7 +10,7 @@ something like:
 when running this.
 
 The answer is: YES!!!
-'''
+"""
 
 import time  # for time
 import random  # for ???
@@ -44,7 +44,7 @@ if doFirst:
     time_after = time.time()
     print('time taken for {count} os.path.getmtime : {time:.3f} seconds'.format(
         time=time_after - time_before,
-            count=count,
+        count=count,
     ))
 
 if doSecond:
@@ -60,5 +60,5 @@ if doSecond:
     time_after = time.time()
     print('time taken for {count} cache getmtime : {time:.3f} seconds'.format(
         time=time_after - time_before,
-            count=count,
+        count=count,
     ))

@@ -9,10 +9,10 @@ outfile = '/tmp/out3.txt'
 
 @contextlib.contextmanager
 def redirect_output_to(fname):
-    '''Context manager to run with stdout redirected to fname.
+    """Context manager to run with stdout redirected to fname.
     The file is opened for appending and closed when the block
     finishes.
-    '''
+    """
     old_stdout = sys.stdout
     new_stdout = sys.stdout = open(fname, 'a')
     try:

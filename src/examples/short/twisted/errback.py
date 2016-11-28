@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 An example of using errbacks in twisted.
-'''
+"""
 
 # from twisted.internet.protocol import Factory,Protocol
 from twisted.internet import reactor

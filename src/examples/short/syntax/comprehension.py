@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Exapmles of various types of comprehensions.
-'''
+"""
 
 # multiplication table as comprehenshion
 l = [x * y for x in range(10) for y in range(10)]

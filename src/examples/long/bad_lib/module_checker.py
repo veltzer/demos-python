@@ -1,7 +1,7 @@
-'''
+"""
 This is a module that checks if a library given to it is loadable
 (has no undefined references)
-'''
+"""
 
 import ctypes  # for CDLL
 import ctypes.cdll  # for LoadLibrary
@@ -12,6 +12,7 @@ lib = None
 
 def check_lib(name):
     l = ctypes.cdll.LoadLibrary(name)
+    # noinspection PyProtectedMember
     libdl.dlclose(l._handle)
 
 

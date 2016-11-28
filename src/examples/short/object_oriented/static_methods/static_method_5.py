@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This method shows the types of regular methods vs the types of real static methods.
-'''
+"""
 
 
 class Book():

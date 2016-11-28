@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Echo client program
-'''
+"""
 
 import socket  # for socket
 

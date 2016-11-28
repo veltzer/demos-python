@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a simple example of using pyinotify.
 
 References:
 https://github.com/seb-m/pyinotify/blob/master/python2/examples/loop.py
 https://github.com/seb-m/pyinotify/wiki/List-of-Examples
-'''
+"""
 
 import pyinotify
 

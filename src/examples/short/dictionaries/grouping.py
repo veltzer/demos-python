@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to group data with dictionaries
-'''
+"""
 
-import collections # for defaultdict
+import collections  # for defaultdict
 
 colors = [
     'red',
@@ -19,24 +19,24 @@ colors = [
 ]
 
 # the simple way
-d={}
+d = {}
 for color in colors:
-    key=len(color)
+    key = len(color)
     if key not in d:
-        d[key]=[]
+        d[key] = []
     d[key].append(color)
 print(d)
 
 # using 'setdefault'
-d={}
+d = {}
 for color in colors:
-    key=len(color)
+    key = len(color)
     d.setdefault(key, []).append(color)
 print(d)
 
 # using 'collections.defaultdict'
-d=collections.defaultdict(list)
+d = collections.defaultdict(list)
 for color in colors:
-    key=len(color)
+    key = len(color)
     d[key].append(color)
 print(d)

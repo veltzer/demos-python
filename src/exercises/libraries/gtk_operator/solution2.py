@@ -16,7 +16,7 @@ group of widgets, together with some functionality.
 
 class OperatorChoice(gtk.VBox):
 
-    '''An operator selection box.'''
+    """An operator selection box."""
 
     def __init__(self):
         gtk.VBox.__init__(self)
@@ -62,7 +62,7 @@ for widget in [entry1, operator, entry2, gtk.Label('='), result]:
 
 
 def compute(*ignored):
-    '''Recompute result.'''
+    """Recompute result."""
     try:
         arg1 = float(entry1.get_text())
         arg2 = float(entry2.get_text())

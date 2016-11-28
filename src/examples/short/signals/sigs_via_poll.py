@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 Example of how to receive signals synchronously via select and signal.set_wakeup_fd
 This is copy of the referenced example which underwent heavy massaging.
 
@@ -12,7 +12,7 @@ TODO:
 
 References:
 http://www.pocketnix.org/doc/Fighting_set__wakeup__fd/
-'''
+"""
 
 import select  # for epoll, EPOLLIN
 import signal  # for set_wakeup_fd, signal, SIGUSR1

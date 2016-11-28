@@ -6,11 +6,11 @@ import os  # for remove
 
 
 def with_output_to(fname):
-    '''Make decorator to run with stdout redirected to fname.
+    """Make decorator to run with stdout redirected to fname.
 
     The file is opened for appending each time f will be called and
     closed when it returns.
-    '''
+    """
     def decorator(f):
         @functools.wraps(f)
         def decorated_f(*args, **kw):

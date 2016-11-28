@@ -2,10 +2,12 @@ import sys  # for modules
 
 print('hello from [{0}]'.format(__file__))
 
-myglobal = 42
+my_global = 42
+
 
 def print_module_info():
-    mylocal = 42
+    # noinspection PyUnusedLocal
+    my_local = 42
     print('module variables are [{0}]'.format(vars()))
     sane_globals = {
         k: v for k, v in globals().items() if not k.startswith('__')}

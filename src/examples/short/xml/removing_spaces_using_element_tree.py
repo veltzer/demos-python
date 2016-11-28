@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to remove whitespace elements from an ElementTree based dom.
 
 References:
 http://stackoverflow.com/questions/1098118/stripping-spaces-between-xml-nodes-with-python
-'''
+"""
 
 import xml.etree.ElementTree  # for iterparse
 import io  # for StringIO

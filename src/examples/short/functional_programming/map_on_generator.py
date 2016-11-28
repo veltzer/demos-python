@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows that when map is given a generator it DOES NOT create a list
 with all the elements that the generator provides but rather iterates the generator
 added one element at a time to the resulting list.
-'''
+"""
 
 
 def my_gen():

@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of how to read XML in python using the built in
 xml.etree module
 
 The reason this example uses the 'io.StringIO' stuff is so that we
 could embed the xml in the example and not put it in a file.
-'''
+"""
 
 import xml.etree.ElementTree  # for ElementTree
 import io  # for StringIO

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example demonstrates the use of signal.pause().
 If you already know about UNIX signals then this is no great surprise.
 For those of you who do not know about UNIX signals,pause allows you
@@ -14,7 +14,7 @@ thread to react,just as in this example.
 Another thing to note is that when the signal handler is running it is running
 in the context of the main thead and the threading module reports it as such.
 This is typical UNIX behaviour.
-'''
+"""
 
 import os
 import signal

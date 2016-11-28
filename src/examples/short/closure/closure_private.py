@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of a shared closure. The three functions here share the x
 variable.
 
@@ -10,7 +10,7 @@ the parameter of the function 'make_mult_add_print'
 If we try to change it in another function that we add,say f_set,
 then the statement 'x=...' will be taken by python to mean the declaration
 of another *** local *** variable 'x'.
-'''
+"""
 
 
 def make_mult_add_print(x):

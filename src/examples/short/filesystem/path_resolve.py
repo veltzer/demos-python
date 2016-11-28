@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of how to resolve a path in python
 
 References:
 http://stackoverflow.com/questions/377017/test-if-executable-exists-in-python/
-'''
+"""
 
 import sys  # for argv
 import os.path  # for isfile, isabs

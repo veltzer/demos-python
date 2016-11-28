@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is the right way to create a static method in python.
 Decorate it with the builtin 'staticmethod' decorator function.
 You can then call the method using the instance AND using
 the class.
-'''
+"""
 
 
 class Book:

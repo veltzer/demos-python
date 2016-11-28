@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Usage: hangman.py <secret_word>
-'''
+"""
 
 from ex10_ex11_classes import Hangman
 
@@ -16,7 +16,7 @@ if len(args) != 1:
 print('Type \'exit\' to exit.')
 h = Hangman(args[0])
 while True:
-    line = raw_input('TYPE A LETTER: ')
+    line = input('TYPE A LETTER: ')
     if line.strip().lower() in ['exit', 'quit']:
         break
     h.guess(line)

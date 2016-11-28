@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 Demonstration program for pythondialog.
 
 This is a simple program demonstrating the possibilities offered by
@@ -14,13 +14,13 @@ policy for pythondialog calls in this demo.
 
 References:
 http://pythondialog.sourceforge.net/doc/#main-contents
-'''
+"""
 
-import sys # for exit, stderr
-import os # for sep, getenv
-import os.path # for isfile
-import time # for sleep
-import dialog # for Dialog
+import sys  # for exit, stderr
+import os  # for sep, getenv
+import os.path  # for isfile
+import time  # for sleep
+import dialog  # for Dialog
 
 FAST_DEMO = True
 
@@ -38,10 +38,12 @@ def handle_exit_code(d, code):
     else:
         return 1
 
+
 def show_and_exit(collected):
-    for k,v in collected.items():
+    for k, v in collected.items():
         print('{k} is [{v}]'.format(k=k, v=v))
     sys.exit(0)
+
 
 def demo_inputbox(d):
     while True:
@@ -50,21 +52,23 @@ def demo_inputbox(d):
             break
     return answer
 
+
 def demo_menu(d):
     while True:
         (code, tag) = d.menu(
             'Whats your favorite day of the week?',
-                width=60,
-                choices=[('Monday', 'Being the first day of the week...'),
-                         ('Tuesday', 'Comes after Monday'),
-                         ('Wednesday', 'Before Thursday day'),
-                         ('Thursday', 'Itself after Wednesday'),
-                         ('Friday', 'The best day of all'),
-                         ('Saturday', 'Well, Ive had enough, thanks'),
-                         ('Sunday', 'Lets rest a little bit')])
+            width=60,
+            choices=[('Monday', 'Being the first day of the week...'),
+                     ('Tuesday', 'Comes after Monday'),
+                     ('Wednesday', 'Before Thursday day'),
+                     ('Thursday', 'Itself after Wednesday'),
+                     ('Friday', 'The best day of all'),
+                     ('Saturday', 'Well, Ive had enough, thanks'),
+                     ('Sunday', 'Lets rest a little bit')])
         if handle_exit_code(d, code):
             break
     return tag
+
 
 def demo_infobox(d):
     d.infobox(
@@ -119,7 +123,7 @@ def demo_checklist(d):
                                            ('Sun-dried tomatoes', '', 1)],
                                   title='Do you prefer ham or spam?',
                                   backtitle='And now, for something '
-                                  'completely different...')
+                                            'completely different...')
         if handle_exit_code(d, code):
             break
     return tag
@@ -129,20 +133,20 @@ def demo_radiolist(d):
     while True:
         (code, tag) = d.radiolist(
             'Whats your favorite kind of sandwich?',
-                width=65,
-                choices=[('Hamburger', '2 slices of bread, a steak...', 0),
-                         ('Hotdog', 'doesnt bite any more', 0),
-                         ('Burrito', 'no se lo que es', 0),
-                         ('Doener', 'Huh?', 0),
-                         ('Falafel', 'Erm...', 0),
-                         ('Bagel', 'Of course!', 0),
-                         ('Big Mac', 'Ah, thats easy!', 1),
-                         ('Whopper', 'Erm, sorry', 0),
-                         ('Quarter Pounder',
-                          'called \'le Big Mac\' in France', 0),
-                         ('Peanut Butter and Jelly', 'Well, thats your own '
-                          'business...', 0),
-                         ('Grilled cheese', 'And nothing more?', 0)])
+            width=65,
+            choices=[('Hamburger', '2 slices of bread, a steak...', 0),
+                     ('Hotdog', 'doesnt bite any more', 0),
+                     ('Burrito', 'no se lo que es', 0),
+                     ('Doener', 'Huh?', 0),
+                     ('Falafel', 'Erm...', 0),
+                     ('Bagel', 'Of course!', 0),
+                     ('Big Mac', 'Ah, thats easy!', 1),
+                     ('Whopper', 'Erm, sorry', 0),
+                     ('Quarter Pounder',
+                      'called \'le Big Mac\' in France', 0),
+                     ('Peanut Butter and Jelly', 'Well, thats your own '
+                                                 'business...', 0),
+                     ('Grilled cheese', 'And nothing more?', 0)])
         if handle_exit_code(d, code):
             break
     return tag
@@ -167,7 +171,7 @@ def demo_passwordbox(d):
 
 
 def demo_fselect(d):
-    homedir=os.getenv('HOME')+os.sep
+    homedir = os.getenv('HOME') + os.sep
     while True:
         (code, path) = d.fselect(homedir, 10, 50,
                                  title='Cute little file to show as in a [tail -f]')
@@ -186,14 +190,14 @@ def demo_tailbox(d, file):
 
 
 def demo_scrollbox(d, collected):
-    msg='Here are your choice...\n'
-    for k,v in collected.items():
-        msg+='{k} is [{v}]\n'.format(k=k, v=v)
+    msg = 'Here are your choice...\n'
+    for k, v in collected.items():
+        msg += '{k} is [{v}]\n'.format(k=k, v=v)
     d.scrollbox(msg, height=20, width=75, title='Great Report of the Year')
 
 
 def demo():
-    collected={}
+    collected = {}
     d = dialog.Dialog(dialog='dialog')
     d.add_persistent_args(['--backtitle', 'pythondialog demo'])
 
@@ -201,7 +205,7 @@ def demo():
     collected['favourite_day'] = demo_menu(d)
     demo_infobox(d)
     demo_gauge(d)
-    collected['yesno']=demo_yesno(d)
+    collected['yesno'] = demo_yesno(d)
     demo_textbox(d)
     collected['toppings'] = demo_checklist(d)
     collected['sandwich'] = demo_radiolist(d)
@@ -210,10 +214,12 @@ def demo():
     collected['file'] = demo_fselect(d)
     demo_tailbox(d, collected['file'])
     demo_scrollbox(d, collected)
-    #show_and_exit(collected)
+    # show_and_exit(collected)
+
 
 def main():
     demo()
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     main()

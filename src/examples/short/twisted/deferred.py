@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 A more complex example involving deferreds.
-'''
+"""
 
 from twisted.internet import defer
 import time

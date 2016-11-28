@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a solution with a generator...
-'''
+"""
 
 
 def apply_funcs(funcs, x):

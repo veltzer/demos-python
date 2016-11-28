@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of creating a thread and passing it data via it's closure
-'''
+"""
 
 import threading  # for Thread
 

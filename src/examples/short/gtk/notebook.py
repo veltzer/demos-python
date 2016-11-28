@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 
-'''
+"""
 A notebook pygtk application
-'''
+"""
 
 import gtk
 
 
 class NotebookExample:
 
-    '''
+    """
     This method rotates the position of the tabs
-    '''
+    """
 
     def rotate_book(self, button, notebook):
         notebook.set_tab_pos((notebook.get_tab_pos() + 1) % 4)
@@ -20,9 +20,9 @@ class NotebookExample:
     def tabsborder_book(self, button, notebook):
         tval = False
         bval = False
-        if self.show_tabs == False:
+        if not self.show_tabs:
             tval = True
-        if self.show_border == False:
+        if not self.show_border:
             bval = True
 
         notebook.set_show_tabs(tval)

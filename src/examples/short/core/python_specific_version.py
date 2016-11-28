@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a script that runs in a python specific version.
 You can also see that via the output that it does.
 
@@ -17,7 +17,7 @@ version of python install it (either from the vendor if it's available
 or from binary or source code on your own) and use your own version
 explicitly with the shbang line or envrionment variables,or maybe
 absolute path on the command line.
-'''
+"""
 
 import sys
 print('python version is', sys.version)

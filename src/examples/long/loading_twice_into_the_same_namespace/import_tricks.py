@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to use the 'imp' module to do double importing of content
 into the same namespace
-'''
+"""
 
 import imp
 

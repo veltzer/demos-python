@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to call popen and get the return text.
-'''
+"""
 
 import subprocess  # for Popen
 

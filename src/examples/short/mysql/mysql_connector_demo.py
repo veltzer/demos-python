@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 Example using MySQL Connector/Python. This is python3 mysql work.
 * that show engines works..
-'''
+"""
 
 import mysql.connector  # for Connect
 import configparser  # for ConfigParser

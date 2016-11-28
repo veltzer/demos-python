@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 Example of a graph using networkx
 
 Notes:
@@ -10,7 +10,7 @@ Notes:
 
 References:
 http://www.python-course.eu/networkx.php
-'''
+"""
 
 import networkx  # for Graph
 

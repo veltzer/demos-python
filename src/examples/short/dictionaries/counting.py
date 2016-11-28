@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to count using a dictionary
-'''
+"""
 
-import collections # for defaultdict
+import collections
+
 
 colors = [
     'red',
@@ -16,25 +17,26 @@ colors = [
 ]
 
 # the simple way
-d={}
+d = {}
 for color in colors:
     if color not in d:
-        d[color]=0
-    d[color]+=1
+        d[color] = 0
+    d[color] += 1
 print(d)
 
 # shorter code
-d={}
+d = {}
 for color in colors:
-    d[color]=d.get(color, 0)+1
+    d[color] = d.get(color, 0) + 1
 print(d)
 
 # with collections.defaultdict
-d=collections.defaultdict(int)
+d = collections.defaultdict(int)
 for color in colors:
-    d[color]+=1
+    d[color] += 1
 print(d)
 
 # with collections.Counter
-d=collections.Counter(colors)
+# noinspection PyArgumentList
+d = collections.Counter(colors)
 print(d)

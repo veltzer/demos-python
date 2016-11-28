@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is to show that cloures can be more than one layer deep.
 Here y is a local variable, x is in the closure and z is in
 the closure of the closure.
-'''
+"""
 
 z = 2
 

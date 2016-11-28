@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example of how to wrap a dictionary to look like a namespace
-'''
+"""
 
 
 class D(dict):
 
     def __init__(self):
-        pass
+        super(D, self).__init__()
 
     def __getattr__(self, name):
         return self[name]
@@ -17,8 +17,8 @@ class D(dict):
         self[name] = val
 
 a = D()
-a['one'] = 'onev'
-a.two = 'twov'
+a['one'] = 'one_value'
+a.two = 'two_value'
 
 print(a['one'])
 print(a.one)

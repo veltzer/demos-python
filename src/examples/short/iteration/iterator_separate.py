@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of building an iterator. In this case the iterator
 object returned is a different object than the one which is being iterated.
 This is a nicer design.
-'''
+"""
 
 
 class RevIter:
@@ -16,7 +16,7 @@ class RevIter:
     def __next__(self):
         if self.index == 0:
             raise StopIteration
-        self.index = self.index - 1
+        self.index -= 1
         return self.data[self.index]
 
 '''

@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a simple example of how to use the dbm.gnu module of the
 standard python library
-'''
+"""
 
 import dbm.gnu  # for open
 

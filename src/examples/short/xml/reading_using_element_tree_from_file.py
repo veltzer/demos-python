@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of how to read XML in python using the built in
 xml.etree module
 
-'''
+"""
 
 import xml.etree.ElementTree  # for parse
 

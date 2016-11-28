@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
-'''
+"""
 setup.py file for SWIG car
-'''
+"""
 
-import distutils.core # for setup, Extension
+import distutils.core  # for setup, Extension
 
 car_module = Extension('_car',
-    sources=['car_wrap.cxx', 'car.cc'],
-)
+                       sources=['car_wrap.cxx', 'car.cc'],
+                       )
 
 setup(
     name='car',

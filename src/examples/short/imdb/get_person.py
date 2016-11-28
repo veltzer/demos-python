@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 Usage: get_person.py 'personID'
 
 NOTES:
 - this script is python2 on purpose because the imdb module is currently only available for python2 in ubuntu.
-'''
+"""
 
 import sys  # for exit, argv, getdefaultencoding
 import imdb  # for IMDb

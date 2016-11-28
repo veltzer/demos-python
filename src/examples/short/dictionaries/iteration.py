@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 An example exploring the many ways,right and wrong,to iterate
 a dictionary in python.
 
@@ -11,11 +11,12 @@ in python2.7 but they are now gone in python3.
 list of key, value pairs).
 - you are not allowed to change the dictionary while you are
 iterating it without expecting weird results.
-'''
+"""
 
-h = {}
-h['keyone'] = 'valone'
-h['keytwo'] = 'valtwo'
+h = {
+    'keyone': 'valone',
+    'keytwo': 'valtwo',
+}
 
 # this is the most efficient method
 # most common and very efficient way (does not guarantee order)...

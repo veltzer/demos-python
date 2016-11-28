@@ -4,6 +4,7 @@ print('hello from [{0}]'.format(__file__))
 
 myglobal = 42
 
+
 def print_module_info():
     mylocal = 42
     print('module variables are [{0}]'.format(vars()))

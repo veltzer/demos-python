@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to store method pointers and call them
-'''
+"""
 
 
 class MyObj():

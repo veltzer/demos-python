@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 This demo explores the meaning of 'private' members in python (__).
 
 The end result is that you can override both _ and __ values in
 python.
-'''
+"""
 
 
 class MyClass:
@@ -46,6 +46,7 @@ b.__privar = 6
 b.pr()
 print('didnt work,huh ?')
 print('from outside its value looks like ' + str(b.__privar))
+# noinspection PyProtectedMember
 print('this is our real var ' + str(b._MyClass__privar))
 print('this means that there is no real security for the __[var] in python')
 print('lets look at our class')

@@ -8,11 +8,11 @@ outfile = '/tmp/out.txt'
 
 
 def with_output_to_outfile(f):
-    '''Decorate f to run with stdout redirected to [outfile].
+    """Decorate f to run with stdout redirected to [outfile].
 
     The file is opened for appending each time f will be called and
     closed when it returns.
-    '''
+    """
     @functools.wraps(f)
     def decorated_f(*args, **kw):
         old_stdout = sys.stdout

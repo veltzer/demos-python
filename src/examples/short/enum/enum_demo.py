@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Example of an enum in python3
-'''
+"""
 
 import enum  # for Enum
 
@@ -26,6 +26,7 @@ def is_enum(x):
     else:
         print('no')
 
+
 is_enum(7)
 is_enum(Event.edgepredel)
 
@@ -33,9 +34,9 @@ print(Event.edgepredel)
 print(dir(Event.edgepredel))
 print('name is [{name}] and type is [{type}]'.format(
     name=Event.edgepredel.name,
-        type=type(Event.edgepredel.name),
+    type=type(Event.edgepredel.name),
 ))
 print('value is [{value}] and type is [{type}]'.format(
     value=Event.edgepredel.value,
-        type=type(Event.edgepredel.value),
+    type=type(Event.edgepredel.value),
 ))

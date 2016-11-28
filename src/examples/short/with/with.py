@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of creating your own resource to be used with the 'with'
 python syntax.
 
 TODO:
 - show how to use the return value of __enter__
-'''
+"""
 
 
 class MyResource:

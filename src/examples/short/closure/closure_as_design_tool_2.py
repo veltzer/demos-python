@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of information hiding in functions
-'''
+"""
 
 
 def make_print_something(s):

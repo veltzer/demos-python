@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 Sometimes you want to iterate tuples and you dont want all members.
 Here is how you do it.
 
@@ -14,7 +14,7 @@ in that position within the tuple.
 
 References:
 http://stackoverflow.com/questions/3061336/how-can-i-iterate-over-only-the-first-variable-of-a-tuple
-'''
+"""
 
 tuples = [
     (1, 2, 3),

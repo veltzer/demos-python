@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example demostrates that you can throw exceptions
 in the middle of python "constructors" (which are
 actually initializers).
@@ -10,7 +10,8 @@ really a constructor but rather a standard method to do
 post construction initialization. As such it does not
 have any isseu with throwing exceptions or calling methods
 that may throw exceptions.
-'''
+"""
+
 
 class A:
     def __init__(self):

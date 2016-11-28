@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Implementing grep in python in less than 10 lines of code...
-'''
+"""
 
 import re  # for compile
 import sys  # for argv, exit

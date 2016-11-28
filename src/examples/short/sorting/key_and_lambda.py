@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example how to quickly use key and partial to achieve custom sorting.
-'''
+"""
 
 import operator
 
@@ -10,8 +10,12 @@ import operator
 
 # long way
 mylist = [(1, 7), (2, 5), (0, 0), (3, 8), (1, 8), (2, 8)]
+
+
 def get_second(t):
     return t[1]
+
+
 mylist.sort(key=get_second)
 print(mylist)
 

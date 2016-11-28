@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example only captures stdout
 
 References:
 http://stackoverflow.com/questions/11495783/redirect-subprocess-stderr-to-stdout
-'''
+"""
 
 import subprocess  # for Popen, PIPE,
 import sys  # for argv, stderr, exit

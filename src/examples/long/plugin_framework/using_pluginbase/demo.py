@@ -1,23 +1,26 @@
 #!/usr/bin/python3
 
 from pluginbase import PluginBase
-import inspect # for isclass
+import inspect  # for isclass
+
 
 class BaseClass:
     pass
+
 
 def main():
     plugin_base = PluginBase(package='plugins')
     plugin_source = plugin_base.make_plugin_source(searchpath=['plugins'])
     for plugin in plugin_source.list_plugins():
-        p=plugin_source.load_plugin(plugin)
+        p = plugin_source.load_plugin(plugin)
         p.do_something()
-        for k,v in p.__dict__.items():
+        for k, v in p.__dict__.items():
             if not inspect.isclass(v):
                 continue
             print(type(v))
             if issubclass(v.__class__, BaseClass.__class__):
                 print(k)
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     main()

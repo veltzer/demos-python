@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of how to use pythons built-in configparser.
-'''
+"""
 
 import os.path  # for isfile
 import configparser  # for ConfigParser

@@ -1,30 +1,29 @@
 #!/usr/bin/python3
 
-'''
+"""
 A pygtk hello world application
-'''
+"""
 
 import gtk
 
 
 class HelloWorld:
 
-    '''
-    This is a callback function. The data arguments are ignored
-    in this example. More on callbacks below.
-    '''
-
     def hello(self, widget, data=None):
+        """
+        This is a callback function. The data arguments are ignored
+        in this example. More on callbacks below.
+        """
         print('Hello World')
 
     def delete_event(self, widget, event, data=None):
-        '''
+        """
         If you return FALSE in the 'delete_event' signal handler,
         GTK will emit the 'destroy' signal. Returning TRUE means
         you don't want the window to be destroyed.
         This is useful for popping up 'are you sure you want to quit?'
         type dialogs.
-        '''
+        """
         print('delete event occurred')
 
         '''
@@ -38,7 +37,7 @@ class HelloWorld:
         gtk.main_quit()
 
     def __init__(self):
-        ''' create a new window '''
+        """ create a new window """
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
 
         '''
@@ -97,16 +96,16 @@ class HelloWorld:
         self.window.show()
 
     def main(self):
-        '''
+        """
         All PyGTK applications must have a gtk.main(). Control ends here
         and waits for an event to occur (like a key press or mouse event).
-        '''
+        """
         gtk.main()
 
-'''
+"""
 If the program is run directly or passed as an argument to the python
 interpreter then create a HelloWorld instance and show it
-'''
+"""
 hello = HelloWorld()
 try:
     hello.main()

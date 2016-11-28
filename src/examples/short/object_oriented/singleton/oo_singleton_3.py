@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an improvement on the previous singleton example.
 This time we protect against concurrent access.
-'''
+"""
 
 import threading
 

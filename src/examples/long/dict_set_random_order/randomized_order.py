@@ -17,7 +17,7 @@ sometimes good enough.
 print("No PYTHONHASHSEED");
 os.system('./sample.py')
 os.system('./sample.py')
-os.environ['PYTHONHASHSEED']="1"
+os.environ['PYTHONHASHSEED'] = "1"
 print("PYTHONHASHSEED=1");
 os.system('./sample.py')
 os.system('./sample.py')

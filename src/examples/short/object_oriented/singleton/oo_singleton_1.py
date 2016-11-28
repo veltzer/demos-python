@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of a singleton pattern in python.
 Notice that since we cannot make the constructor private
 we resort to making sure,inside the constructor code,
@@ -19,7 +19,7 @@ constructor for A * without * the 'getInstance' method
 (simply by a=A()) and in this case it will not be registered
 as the instance (in A.instance). This can be fixed by moving
 the registration into the constructor function itself.
-'''
+"""
 
 
 class A:

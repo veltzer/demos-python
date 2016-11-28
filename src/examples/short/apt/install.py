@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to use the apt package from python.
 This shows how to install packages.
 
@@ -13,34 +13,34 @@ already installed and how long it takes this script to do the same work...
 
 References:
 http://stackoverflow.com/questions/17537390/how-to-install-a-package-using-the-python-apt-api
-'''
+"""
 
-import apt.cache # for Cache
-import os # for geteuid
+import apt.cache  # for Cache
+import os  # for geteuid
 
-pkg_names=[
+pkg_names = [
     'templar',
 ]
-do_update=False
+do_update = False
 
 if os.geteuid() == 0:
     print('you are root, that is good, proceeding...')
 else:
     exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
 
-cache=apt.cache.Cache()
+cache = apt.cache.Cache()
 if do_update:
     print('doing update')
     cache.update()
 
-need_commit=False
+need_commit = False
 for pkg_name in pkg_names:
     pkg = cache[pkg_name]
     if pkg.is_installed:
         print('package [{pkg_name}] already installed'.format(pkg_name=pkg_name))
     else:
         pkg.mark_install()
-        need_commit=True
+        need_commit = True
 
 # this actually installs
 if need_commit:

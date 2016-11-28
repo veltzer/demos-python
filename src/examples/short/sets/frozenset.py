@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows the difference between set and frozenset.
 
 Notes:
@@ -9,7 +9,7 @@ Notes:
 - the hash code of frozenset(a,b) is the same as the hash code for frozenset(b,a)
 the result of which is that if you put frozenset(b,a) into a set which already contains
 frozenset(a,b) then you don't actually change the set.
-'''
+"""
 
 # frozenset does not support 'add'
 try:

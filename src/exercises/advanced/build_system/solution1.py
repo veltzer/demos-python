@@ -1,21 +1,21 @@
 #!/usr/bin/python3
 
-'''
+"""
 Parse a simple Makefile (without commands) and output a build plan.
 Doen't support comments, variables, patterns or anything complex...
 Doesn't check file system, all targets are always built.
-'''
+"""
 
 import os
 
 
 def parse_makefile(fname):
-    '''Parses a file of lines of the form::
+    """Parses a file of lines of the form::
 
             target: dependency1 dependency2...
 
     Returns a dict {'target': ['dependency1', ...], ...}
-    '''
+    """
     rules = {}
     for line in open(fname):
         target, rest = line.split(':')
@@ -25,11 +25,11 @@ def parse_makefile(fname):
 
 
 def build_plan(target, rules):
-    '''Compute order in which things should be built for target.
+    """Compute order in which things should be built for target.
 
     >>> build_plan('a', {'a': ['b', 'c'], 'b': ['d']})
     ['b', 'a']
-    '''
+    """
     if target not in rules:
         # Nothing needs to be done.
         # (A real make tool would verify that the file exists.)
@@ -46,7 +46,9 @@ def build_plan(target, rules):
 
     return plan
 
+
 import doctest
+
 doctest.testmod()
 
 rules = parse_makefile('make.txt')

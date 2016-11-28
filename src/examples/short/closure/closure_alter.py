@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example that shows that we can change the closure if
 it made up of non primitive data.
 
@@ -15,7 +15,7 @@ then they will also be returned by reference and again we could
 alter them from the outside.
 - A third way would be to use the __closure__ attribute and access
 the data through that.
-'''
+"""
 
 
 def make_funcs(l):

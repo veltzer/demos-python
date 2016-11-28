@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 this example explores whether it is better to not remove files vs the try/except
 paradigm or rather via the os.path.isfile paradigm.
 
 it proves that maintaining a cache in user space is the best approach.
-'''
+"""
 
 import time  # for time
 import os  # for unlink
@@ -22,7 +22,7 @@ for i in range(count):
 time_after = time.time()
 print('time taken for {count} os.unlinks+exception handling : {time:.3f} seconds'.format(
     time=time_after - time_before,
-        count=count,
+    count=count,
 ))
 
 time_before = time.time()
@@ -33,7 +33,7 @@ for i in range(count):
 time_after = time.time()
 print('time taken for {count} isfile+unlink : {time:.3f} seconds'.format(
     time=time_after - time_before,
-        count=count,
+    count=count,
 ))
 
 time_before = time.time()
@@ -55,5 +55,5 @@ for i in range(count):
 time_after = time.time()
 print('time taken for {count} cached unlink ops : {time:.3f} seconds'.format(
     time=time_after - time_before,
-        count=count,
+    count=count,
 ))

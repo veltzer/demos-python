@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example showing how to create object hierarchies in python.
 
 Things to note:
@@ -10,7 +10,7 @@ Things to note:
 - parent attributes are directly accessible from the child
     (no access control).
 - the 'dir' function could be used for debugging.
-'''
+"""
 
 
 class A:

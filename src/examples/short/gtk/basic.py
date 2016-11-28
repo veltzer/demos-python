@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 A minimal gtk application demo.
-'''
+"""
 
 import gtk  # for Button, Window, main, main_quit
 

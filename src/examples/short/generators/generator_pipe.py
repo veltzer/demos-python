@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Example of generators using generators
-'''
+"""
 
 # input_list=range(100000)
 

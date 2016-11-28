@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Echo server program
-'''
+"""
 
 import socket
 import sys

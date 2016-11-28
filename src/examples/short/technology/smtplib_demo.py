@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 An example of an application sending an email. This uses smtplib which is a standard python library.
 
 References:
 http://stackoverflow.com/questions/23616803/smtplib-smtp-starttls-fails-with-tlsv1-alert-decode-error
-'''
+"""
 
 import smtplib  # for SMTP
 import email.mime.text  # for MIMEText
@@ -40,11 +40,12 @@ def send_email(
     server.sendmail(fr, to, msg.as_string())
     server.quit()
 
+
 send_email(
     smtp_host='smtp.gmail.com',
-        user='myname@gmail.com',
-        to='myname@gmail.com',
-        fr='myname@gmail.com',
-        password='XXXXXXXX',
-        debug=True,
+    user='myname@gmail.com',
+    to='myname@gmail.com',
+    fr='myname@gmail.com',
+    password='XXXXXXXX',
+    debug=True,
 )

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example explores issues that one may have with formatting.
 
 Notes:
@@ -9,7 +9,7 @@ curly braces.
 
 References:
 http://stackoverflow.com/questions/5466451/how-can-i-print-a-literal-characters-in-python-string-and-also-use-format
-'''
+"""
 
 try:
     s = '''{this will not work} {0}'''.format('mark')

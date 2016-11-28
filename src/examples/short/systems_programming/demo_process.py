@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a demo process that others will run.
 It will send some data and then exit.
-'''
+"""
 
 import time  # for sleep
 import random  # for randint

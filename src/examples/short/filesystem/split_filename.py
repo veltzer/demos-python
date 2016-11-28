@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to split a filename into its components.
 
 NOTES:
 - split is just like (dirname, basename)
 - splitext is for extensions.
-'''
+"""
 
 import sys  # for stdin
 import os.path  # for basename, dirname, splitext

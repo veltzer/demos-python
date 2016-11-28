@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example iterates two or more containers at the same time.
 
 Notes:
@@ -13,9 +13,9 @@ a list of all the tuples in advance while izip does not.
 python2.7's izip so you don't need to think about any of this
 (yay python3!).
 - in python 3 zip is in the default namespace.
-'''
+"""
 
-import itertools # for zip_longest
+import itertools  # for zip_longest
 
 ll1 = [1, 2, 3, 4, 5]
 ll2 = [10, 11, 12, 13, 14]

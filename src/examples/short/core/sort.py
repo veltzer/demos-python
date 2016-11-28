@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 Example of sorting with python.
 Notice the passing of the comparator and it's triped (1,0,-1) return value.
-'''
+"""
 
 
 def compare(a, b):

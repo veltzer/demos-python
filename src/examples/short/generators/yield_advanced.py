@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a time sharing example...
 The main code of this example is like an operating system that shares time
 between the two 'threads' or 'processes'. Each one has a state,stack and all.
@@ -12,7 +12,7 @@ IO in your code and just ask the 'OS' (main code) using the return value of yiel
 to do the calls for you. The 'OS' will return the data needed via the 'next()' method.
 This way you can handle thousands of connections in one python thread (this is actually
 what happens with twisted).
-'''
+"""
 
 
 def evens():
@@ -27,9 +27,9 @@ def odds():
         yield
 
 c1 = evens()
-c1.next()
+c1.__next__()
 c2 = odds()
-c2.next()
+c2.__next__()
 for x in range(10):
-    c1.next()
-    c2.next()
+    c1.__next__()
+    c2.__next__()

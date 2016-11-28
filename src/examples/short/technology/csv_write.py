@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-'''
+"""
 Example of how to use the 'csv' module to write csv files
-'''
+"""
 
-import csv # for writer
+import csv  # for writer
 
-data=[
+data = [
     ['first, element', 5, ],
     ['second, element', 7, ],
 ]

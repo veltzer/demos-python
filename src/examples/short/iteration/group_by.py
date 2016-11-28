@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a demo of itertools.groupby
-'''
+"""
 
 import itertools  # for groupby
 

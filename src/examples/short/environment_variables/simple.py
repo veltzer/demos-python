@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 A simple example of how to get or set environment variables from python
-'''
+"""
 
 import os  # for environ
 

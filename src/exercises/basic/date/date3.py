@@ -12,20 +12,20 @@ class Calendar:
         self.events = {}
 
     def add_event(self, name, date):
-        ''' Add a new entry to the callender'''
+        """ Add a new entry to the callender"""
         self.events[name] = date
 
     def is_event(self, date):
-        ''' Check if the given date appears in the callender'''
+        """ Check if the given date appears in the callender"""
         return date in self.events.values()
 
     def get_date(self, name):
-        ''' Return the date of the given event name'''
+        """ Return the date of the given event name"""
         return self.events[name]
 
     def get_all_events_in_month(self, month):
-        ''' Return a dictionary with all the events in the given month
-        month is the number of the month '''
+        """ Return a dictionary with all the events in the given month
+        month is the number of the month """
         month_events = {}
         for name in self.events.keys():
             if self.events[name].month == month:
@@ -54,7 +54,7 @@ class Date:
         self.year = year
 
     def __gt__(self, other):
-        ''' Overloading operator>for dates '''
+        """ Overloading operator>for dates """
         if self.year > other.year:
             return True
         elif self.year == other.year:
@@ -66,23 +66,23 @@ class Date:
         return False
 
     def __lt__(self, other):
-        ''' Overloading operator<for dates '''
+        """ Overloading operator<for dates """
         return other > self
 
     def __eq__(self, other):
-        ''' Overloading operator==for dates '''
+        """ Overloading operator==for dates """
         return self.year == other.year and self.month == other.month and self.day == other.day
 
     def __ne__(self, other):
-        ''' Overloading operator!=for dates '''
+        """ Overloading operator!=for dates """
         return not (self == other)
 
     def __le__(self, other):
-        ''' Overloading operator<=for dates '''
+        """ Overloading operator<=for dates """
         return self < other or self == other
 
     def __ge__(self, other):
-        ''' Overloading operator>=for dates '''
+        """ Overloading operator>=for dates """
         return self > other or self == other
 
     def __str__(self):

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a classic thread creation example.
-'''
+"""
 
 import threading  # for Thread
 

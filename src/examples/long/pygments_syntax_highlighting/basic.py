@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Basic coloring with pygments
-'''
+"""
 
 from pygments import highlight
 from pygments.lexers import PythonLexer

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 A basic python functional 'reduce' example
-'''
+"""
 
 import functools  # for reduce
 

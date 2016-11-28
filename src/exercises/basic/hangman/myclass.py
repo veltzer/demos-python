@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 Simple implementation of a hangman game.
 
 >>> h1=Hangman('banana', mistakes_allowed=2)
@@ -34,12 +34,12 @@ Yes! 'n' appears 2 times:
 Yes! 'b' appears 1 times:
 banana: YOU WON!
 
-'''
+"""
 
 
 class SimpleHangman:
 
-    '''
+    """
     Simple hangman game playable from the interpreter.
 
     No limit on the number of mistakes.
@@ -55,7 +55,7 @@ class SimpleHangman:
     >>> h.guess('x')
     Bzzz! No 'x' there.
     ?e??e?
-    '''
+    """
 
     def __init__(self, word):
         # Private don't look here!
@@ -65,7 +65,7 @@ class SimpleHangman:
         print(self)
 
     def known_parts(self):
-        '''Reveal guessed letters, ? for hidden letters.'''
+        """Reveal guessed letters, ? for hidden letters."""
         res = []
         for c in self._word:
             if c in self.open_letters:
@@ -77,11 +77,11 @@ class SimpleHangman:
     # __repr__ defines how the object is displayed.
     # It's called by 'print' and by the interpreter.
     def __repr__(self):
-        '''Describe current game state.'''
+        """Describe current game state."""
         return self.known_parts()
 
     def guess(self, letter):
-        '''Call this to play.'''
+        """Call this to play."""
         self.open_letters.add(letter)
         if letter in self._word:
             print('Yes! \'%s\' appears %s times:' %
@@ -94,7 +94,7 @@ class SimpleHangman:
 
 class Hangman(SimpleHangman):
 
-    '''
+    """
     Hangman game playable from the interpreter.
 
     Counts mistakes, detects victory and defeat.
@@ -115,7 +115,7 @@ class Hangman(SimpleHangman):
     >>> h.guess('z')
     Bzzz! No 'z' there.
     ?e??e?: GAME OVER
-    '''
+    """
 
     def __init__(self, word, mistakes_allowed=5):
         self.mistakes_allowed = mistakes_allowed
@@ -124,7 +124,7 @@ class Hangman(SimpleHangman):
         SimpleHangman.__init__(self, word)
 
     def __repr__(self):
-        '''Describe current game state.'''
+        """Describe current game state."""
         if set(self._word) <= self.open_letters:
             return '%s: YOU WON!' % self._word
         if self.mistakes_allowed < 0:
@@ -133,7 +133,7 @@ class Hangman(SimpleHangman):
                 (self.known_parts(), self.mistakes_allowed))
 
     def guess(self, letter):
-        '''Call this to play.'''
+        """Call this to play."""
         # bells and whistles
         if set(self._word) <= self.open_letters:
             print('You won. Why do you keep guessing?')

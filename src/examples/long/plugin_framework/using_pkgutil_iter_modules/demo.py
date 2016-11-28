@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of using pkgutil to create a lightweight plugin based system.
-'''
+"""
 
 import pkgutil  # for iter_modules
 

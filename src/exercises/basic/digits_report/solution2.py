@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-s = raw_input('Please enter a line of digits: ')
+s = input('Please enter a line of digits: ')
 l = [0] * 10
 already_moron = False
 for d in s:

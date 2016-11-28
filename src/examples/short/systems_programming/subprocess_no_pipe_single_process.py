@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 A simple subprocess demo. Create a subprocess and run it. No pipes.
 Find the return code of the process.
-'''
+"""
 
 import subprocess  # for Popen
 

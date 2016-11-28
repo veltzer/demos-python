@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This script shows all users on a UNIX system
-'''
+"""
 
 file_name = '/etc/passwd'
 all_users = []

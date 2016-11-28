@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of doing our own range
-'''
+"""
 
 
 def my_range(fr, to, jump):

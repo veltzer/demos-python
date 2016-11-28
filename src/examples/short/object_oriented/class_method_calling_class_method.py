@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an exploration of how one class method calls another.
-'''
+"""
 
 
 class A:

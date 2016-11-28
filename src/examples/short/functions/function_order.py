@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example explores corret function order in the source code.
 
 This means that a function cannot be used until after it has been defined.
-'''
+"""
 
 # this is wrong since foo is not defined
 try:
@@ -12,9 +12,11 @@ try:
 except:
     print('yep, this failed')
 
+
 def foo():
     print('this is foo')
     bar()
+
 
 # this will call foo but will fail once foo tried to call bar
 try:
@@ -22,8 +24,10 @@ try:
 except:
     print('yep, this failed')
 
+
 def bar():
     print('this is bar')
+
 
 # this should work now that both 'foo' and 'bar' are defined
 foo()

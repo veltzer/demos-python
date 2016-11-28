@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows that you can put code on the same line as
 a block starter
-'''
+"""
 
 if True:
     print('show')

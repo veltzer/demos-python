@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 A demo of how warnings work in python.
 
 When should you issue a warning?
@@ -10,7 +10,7 @@ being used by the user, then issue a warning.
 
 You should only issue a warning if you can continue running despite the warning.
 If you cannot continue to run, raise an exception.
-'''
+"""
 
 import warnings  # for warn, simplefilter
 

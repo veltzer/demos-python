@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of a shared closure. All three functions share the same closure or data.
-'''
+"""
 
 
 def create_funcs(l):

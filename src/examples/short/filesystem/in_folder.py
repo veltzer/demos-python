@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to find if a file is in a certain folder.
-'''
+"""
 
 import sys  # for stdin
 

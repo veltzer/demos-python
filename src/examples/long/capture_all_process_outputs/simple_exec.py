@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example only does an os.execv
-'''
+"""
 
 import sys  # for argv, stderr
 import os  # for execv

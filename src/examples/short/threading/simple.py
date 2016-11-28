@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 A very simple example of python threads
 
 References:
 http://www.saltycrane.com/blog/2008/09/simplistic-python-thread-example/
-'''
+"""
 
 import threading  # for Thread
 import time  # for sleep

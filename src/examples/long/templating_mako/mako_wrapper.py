@@ -6,6 +6,7 @@ import mako.lookup  # for mako.lookup.TemplateLookup
 import os  # for os.chmod
 import datetime  # for datetime
 
+
 #
 # functions #
 #
@@ -15,9 +16,10 @@ def years(x):
     curr_year = datetime.datetime.now().year
     return ','.join(map(str, range(x, curr_year + 1)))
 
+
 d = {
-    'a':'b',
-    'c':'d',
+    'a': 'b',
+    'c': 'd',
 }
 
 #
@@ -25,7 +27,7 @@ d = {
 #
 if len(sys.argv) != 3:
     print(sys.argv[0] + ': usage: ' + sys.argv[
-          0] + ' [input] [output]', file=sys.stderr)
+        0] + ' [input] [output]', file=sys.stderr)
     sys.exit(1)
 
 input_encoding = 'utf-8'
@@ -42,8 +44,8 @@ template = mako.template.Template(
 # an exception. Only then do we open the file for writing.
 # otherwise we will leave behind a partially written file and force the user
 # to fix his makefile to remove the cruft we left behind...
-output=template.render(foo='bar', years=years, d=d)
+output = template.render(foo='bar', years=years, d=d)
 file = open(p_output, 'wb')
 file.write(output)
 file.close()
-#os.chmod(p_output, 0o0444)
+# os.chmod(p_output, 0o0444)

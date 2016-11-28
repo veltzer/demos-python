@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 example of how to convert the output of date(1) on the command line
 to mysql type dates.
-'''
+"""
 
 import subprocess  # for check_output
 import datetime  # for strptime

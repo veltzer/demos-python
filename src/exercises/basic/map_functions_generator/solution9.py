@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a solution with a generator...
-'''
+"""
 
 
 def apply_funcs(funcs, x):
-    ''' a different version with an iteration '''
+    """ a different version with an iteration """
     for f in funcs:
         print('in the function, going to yield {0}'.format(f(x)))
         yield f(x)

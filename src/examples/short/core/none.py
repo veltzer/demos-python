@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example explores the None variable and NoneType in python.
-'''
+"""
 
 a = None
 
@@ -47,11 +47,12 @@ print('str(None) has type', type(s), 'and has value [{0}]'.format(s))
 # lets show that None is not 0 or the empry string or False as far as actual value.
 # We show this by storing all of them as keys in a dictionary.
 # Notice that False and 0 do step one over the other (not nice!).
-h = {}
-h[None] = 'value for None'
-h[''] = 'value for \'\''
-h[False] = 'value for False'
-h[0] = 'value for 0'
+h = {
+    None: 'value for None',
+    '': 'value for \'\'',
+    False: 'value for False',
+    0: 'value for 0',
+}
 print(h)
 
 # lets compare None to various things...
@@ -59,8 +60,8 @@ if None == 0:
     print('None==0')
 else:
     print('None!=0')
-if None == False:
-    print('None==False')
+if not None:
+    print('not None')
 else:
     print('None!=False')
 if None:

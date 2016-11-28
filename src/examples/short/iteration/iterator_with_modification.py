@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 The purpose of this example is to show what happens when we modify elements
 while iterating. What is the moral of this example? DONT DO IT. Do not modify
 data structures while you are iterating them. Mind you that python,unlike
@@ -21,7 +21,7 @@ from a dictionary while iterating it.
 What about changing the data structure via the iterator (like in Java) ?
 Not supported since the iterators are not intended to be used directly. See the
 relevant example.
-'''
+"""
 
 print('''
 example number 1: removing elements in the list in the position before

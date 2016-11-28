@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 get_movie.py
 
 Usage: get_movie 'movieID'
@@ -11,7 +11,7 @@ Notice that movieID, using 'sql', are not the same IDs used on the web.
 
 NOTES:
 - this script is python2 on purpose because the imdb module is currently only available for python2 in ubuntu.
-'''
+"""
 
 import sys  # for exit, argv, stdout, getdefaultencoding
 import imdb  # for IMDb

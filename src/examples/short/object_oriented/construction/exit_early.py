@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to get out of a constructor early.
 This is done via 'return None' or simply 'return' (which is the same).
 
@@ -14,7 +14,7 @@ following error: __init__() should return None
 If you want a constructor to return something else than an instance
 of the class then you can override the __new__ method. But that
 is a different story.
-'''
+"""
 
 
 class Book:

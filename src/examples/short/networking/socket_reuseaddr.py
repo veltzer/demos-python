@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows that python suffers from some problem of
 not being able to reuse sockets even though the socket.SO_REUSEADDR
 is used...
-'''
+"""
 
 import socket  # for socket
 

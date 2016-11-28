@@ -16,6 +16,7 @@ References:
 
 do_fork = False
 
+
 def single_runner():
     program_name = os.path.splitext(os.path.basename(sys.argv[0]))[0]
     pid_file = '/tmp/{}.pid'.format(program_name)
@@ -27,14 +28,15 @@ def single_runner():
         print('this program is already running...', file=sys.stderr)
         sys.exit(1)
 
+
 # this does not work
 def single_runner_simple():
     program_name = os.path.splitext(os.path.basename(sys.argv[0]))[0]
     pid_file = '/tmp/{}.pid'.format(program_name)
-    #if os.path.isfile(pid_file):
+    # if os.path.isfile(pid_file):
     #    os.unlink(pid_file)
     try:
-        os.open(pid_file, os.O_CREAT|os.O_EXCL)
+        os.open(pid_file, os.O_CREAT | os.O_EXCL)
     except IOError as e:
         print(e)
         # another instance is running

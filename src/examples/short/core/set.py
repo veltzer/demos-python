@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 A demo of sets
-'''
+"""
 
 # create an empty set
 a = set()

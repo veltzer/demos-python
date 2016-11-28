@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to find the current architecture
-'''
+"""
 
 import platform  # for processor()
 

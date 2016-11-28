@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 demo of simple web server in python using HTTPServer
 originally grabbed from 'http://fragments.turtlemeat.com/pythonwebserver.php'.
 Copyright Jon Berg , turtlemeat.com
-'''
+"""
 
-import string
 import cgi
 import time
 import os
@@ -17,7 +16,7 @@ import threading
 
 class ThreadedServer(SocketServer.ThreadingMixIn, BaseHTTPServer.HTTPServer):
 
-    '''Handle requests in a separate thread.'''
+    """Handle requests in a separate thread."""
     pass
 
 

@@ -16,7 +16,7 @@ for widget in [entry1, gtk.Label('+'), entry2, gtk.Label('='), result]:
 
 
 def compute(*ignored):
-    '''Recompute result.'''
+    """Recompute result."""
     try:
         arg1 = float(entry1.get_text())
         arg2 = float(entry2.get_text())

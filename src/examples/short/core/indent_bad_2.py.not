@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of what bad indentation can cause.
 In this example it will cause a compliation abort with an IndentationError.
-'''
+"""
 
-x=6
-if x==5:
-        print('gdbye')
-	 print('hello')
+x = 6
+if x == 5:
+    print('gdbye')
+    print('hello')

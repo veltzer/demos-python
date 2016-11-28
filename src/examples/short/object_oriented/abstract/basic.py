@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of how to make an abstract class in python
 
 Notes:
@@ -11,29 +11,34 @@ it cannot be instantiated (second example).
 - in python2 the syntax for this was different:
     class A:
         __metaclass__ = abc.ABCMeta
-'''
+"""
 
-import abc # for ABCMeta, abstractmethod
+import abc  # for ABCMeta, abstractmethod
+
 
 class A(metaclass=abc.ABCMeta):
     pass
 
+
 class B(metaclass=abc.ABCMeta):
     __metaclass__ = abc.ABCMeta
+
     @abc.abstractmethod
     def foo(self):
         pass
+
 
 class C(B):
     def foo(self):
         pass
 
-a=A()
-assert isinstance(a,A)
+
+a = A()
+assert isinstance(a, A)
 try:
-    b=B()
+    b = B()
 except Exception as e:
     print('yes, got exception [{0}]...'.format(str(e)))
-c=C()
-assert isinstance(c,C)
+c = C()
+assert isinstance(c, C)
 assert issubclass(C, B)

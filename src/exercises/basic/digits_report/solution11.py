@@ -2,7 +2,7 @@
 
 found = True
 while found:
-    input_string = raw_input('Please give me some digits... \n')
+    input_string = input('Please give me some digits... \n')
     found = False
     for character in input_string:
         if ord(character) < ord('0') or ord(character) > ord('9'):

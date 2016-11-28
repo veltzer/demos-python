@@ -7,7 +7,7 @@ columns = [['H', 'He', 'Li', 'Be'], ['Hidrogen', 'Helium',
 
 
 def max_len(lines):
-    '''Return the length of the longest string.'''
+    """Return the length of the longest string."""
     lengths = []
     for line in lines:
         lengths.append(len(line))

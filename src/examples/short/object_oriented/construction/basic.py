@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 Examples of constructors in python.
 You must accept at least one argument in a constructor in order for it
 to count as a constructor. You can also write a 'varargs' constructor.
@@ -18,46 +18,45 @@ an object of the required type.
 
 If you don't write an explicit '__init__' initializer for your
 class then your class still works. It's just that it's empty.
-'''
+"""
+
 
 # class without a constructor
 class NoCons:
     pass
 
-class A:
 
+class A:
     # wrong! don't do this...
     def __init__():
         print('in A constructor')
 
 
 class B:
-
     def __init__(self):
         print('in B constructor')
         print(type(self))
 
 
 class C:
-
     def __init__(self, arg1, arg2):
         print('in C constructor')
         print(type(self))
 
 
 class D:
-
-    def __init__(self, * args):
+    def __init__(self, *args):
         print('in D constructor')
         print(type(self))
 
-class E:
 
-    def __init__(self, * args , ** kwargs):
+class E:
+    def __init__(self, *args, **kwargs):
         print('in E constructor')
         print(type(self))
 
-n=NoCons()
+
+n = NoCons()
 print(type(n))
 try:
     a = A()
@@ -65,7 +64,7 @@ except TypeError:
     print('oh,no. Cant construct an object. Must pass self')
 b = B()
 print(type(b))
-c = C(2,3)
+c = C(2, 3)
 print(type(c))
 d = D()
 print(type(d))

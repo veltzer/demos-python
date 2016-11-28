@@ -13,7 +13,7 @@ def Person(name, age):
 
     def setAge(age):
         if age <= 0:
-            raise 'age error'
+            raise ValueError('age error')
         data.__dict__['age'] = age
 
     def getAge():

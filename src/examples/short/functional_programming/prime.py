@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import math # for sqrt
+import math  # for sqrt
 
 
 def is_prime(n):
@@ -12,6 +12,7 @@ def is_prime(n):
 
 def is_prime_functional(n):
     return not any(n % i == 0 for i in range(2, int(math.sqrt(n))))
+
 
 print(is_prime(17))
 print(is_prime(12))

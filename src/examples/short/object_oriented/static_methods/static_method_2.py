@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 A nicer version
-'''
+"""
 
 
 class Book:

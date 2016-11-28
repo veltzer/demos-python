@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 An example for using class methods to keep per class properties.
 Once set, subclass properties shadows properties on the base class.
-'''
+"""
 
 
 class Book:

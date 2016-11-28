@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an exapmle of how to use the closure feature to do some
 oo work.
 Notice:
@@ -15,13 +15,14 @@ dozens of elements we return all method pointers in a dictionary as
 well.
 B This allows the user to call our methods by name instead of by
 position in some returned tuple.
-'''
+"""
 
 
 def Person(name, age):
-    data = {}
-    data['name'] = name
-    data['age'] = age
+    data = {
+        'name': name,
+        'age': age,
+    }
 
     def setName(iname):
         data['name'] = iname
@@ -38,12 +39,13 @@ def Person(name, age):
     def printMe():
         print('name', data['name'])
         print('age', data['age'])
-    methods = {}
-    methods['setName'] = setName
-    methods['getName'] = getName
-    methods['setAge'] = setAge
-    methods['getAge'] = getAge
-    methods['printMe'] = printMe
+    methods = {
+        'setName': setName,
+        'getName': getName,
+        'setAge': setAge,
+        'getAge': getAge,
+        'printMe': printMe,
+    }
     return methods
 
 p1 = Person('Bilbo', 111)

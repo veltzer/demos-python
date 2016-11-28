@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of how to resolve a path in python
-'''
+"""
 
 import os.path  # for join
 import os  # for walk

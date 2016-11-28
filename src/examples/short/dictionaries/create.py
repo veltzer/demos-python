@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 An example showing the different ways to create dicts
 
 Notes:
@@ -10,21 +10,23 @@ Notes:
 TODO:
 - from help(dict) it seems that there should be a way to create a dictionary
 from a mapping object. I need to add an example of this.
-'''
+"""
+
 
 def gen_tuples():
     for i in range(5):
-        yield i,i+1
+        yield i, i + 1
 
-list_of_tuples=[(3,4),(5,6),(7,8)]
-list_of_keys=['red','green','blue']
-list_of_values=['red','green','blue']
+
+list_of_tuples = [(3, 4), (5, 6), (7, 8)]
+list_of_keys = ['red', 'green', 'blue']
+list_of_values = ['red', 'green', 'blue']
 
 # simplest way, built in the language syntax, empty dictionary
 d1 = {}
 print(d1)
 # explicit dictionary syntax with some data
-d2 = { "one": "two", "three": "four" }
+d2 = {"one": "two", "three": "four"}
 print(d2)
 # empty constructor -> empty dictionary
 d3 = dict()

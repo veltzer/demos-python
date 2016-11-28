@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-import simpleparse.parser
 import simpleparse.dispatchprocessor
 import pprint
 import sys

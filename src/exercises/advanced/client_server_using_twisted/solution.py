@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 
-from twisted.internet.protocol import Factory, Protocol
 from twisted.internet import reactor
+from twisted.internet.protocol import Factory, connectionDone
 from twisted.protocols.basic import LineReceiver
 
 
 class MyProtocol(LineReceiver):
+
+    def rawDataReceived(self, data):
+        pass
 
     def __init__(self):
         self.name = None
@@ -65,7 +68,7 @@ class MyProtocol(LineReceiver):
         print('got line ', line)
         self.curFunc(line)
 
-    def connectionLost(self, reason):
+    def connectionLost(self, reason=connectionDone):
         print('connection was lost')
         if self.loggedIn:
             self.factory.num_users -= 1

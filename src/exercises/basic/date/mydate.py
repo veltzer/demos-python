@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Module to handle dates
-'''
+"""
 
 days_in_months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 days_in_months_leap_year = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -15,8 +15,8 @@ for i in range(12):
 
 
 def get_num_of_days_in_month(month_name):
-    ''' Given a month name,
-    return the number of days in this month'''
+    """ Given a month name,
+    return the number of days in this month"""
     if month_name in name_to_days_num:
         return name_to_days_num[month_name]
     else:
@@ -24,8 +24,8 @@ def get_num_of_days_in_month(month_name):
 
 
 def get_following_month(month_name):
-    ''' Given a month name,
-    return the name of the following month'''
+    """ Given a month name,
+    return the name of the following month"""
     if month_name in name_to_days_num:
         i = months_name.index(month_name)
         return months_name[(i + 1) % 12]
@@ -34,5 +34,5 @@ def get_following_month(month_name):
 
 
 def is_leap_year(year):
-    ''' Return True if the year is a leap year, False otherwise'''
+    """ Return True if the year is a leap year, False otherwise"""
     return year % 4 == 0 and year % 1000 != 0

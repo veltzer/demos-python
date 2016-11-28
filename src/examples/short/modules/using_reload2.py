@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Demo to show the usage of the global function 'reload'
-'''
+"""
 
 import using_reload_one
 

@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 
-'''
+"""
 An example showing how, to some extent closure can be seen as a replacement
 for object oriented programming. The 'Person' function below could
 be seen as a sort of a constructor
-'''
+"""
 
 
 def Person(name, age):
     o = {
         'name': name,
-            'age': age,
+        'age': age,
     }
 
     def getName():
@@ -24,12 +24,14 @@ def Person(name, age):
 
     def setAge(iage):
         o['age'] = iage
+
     return {
         'getName': getName,
-            'setName': setName,
-            'getAge': getAge,
-            'setAge': setAge,
+        'setName': setName,
+        'getAge': getAge,
+        'setAge': setAge,
     }
+
 
 p = Person('Bilbo', 111)
 p['setAge'](112)

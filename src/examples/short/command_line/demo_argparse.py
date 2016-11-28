@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 A demo for the argparse module which is arguably the best python
 command line parsing module.
 
@@ -10,18 +10,19 @@ try this command to check it out:
 References:
 https://docs.python.org/3/howto/argparse.html
 https://docs.python.org/3/library/argparse.html#module-argparse
-'''
+"""
 
-import argparse  # for ArgumentParser
+import argparse
+
 
 parser = argparse.ArgumentParser()
-subparsers = parser.add_subparsers(title='subcommands', dest='subcommand')
-subparser_process = subparsers.add_parser('process')
-subparser_process.add_argument('--input', help='input file')
-subparser_process.add_argument('--output', help='output file')
-subparser_process.add_argument(
+subparsers = parser.add_subparsers(title='sub commands', dest='sub_command')
+sub_parser_process = subparsers.add_parser('process')
+sub_parser_process.add_argument('--input', help='input file')
+sub_parser_process.add_argument('--output', help='output file')
+sub_parser_process.add_argument(
     '--chmod', help='chmod the output?', default=True, action='store_false')
-subparser_print = subparsers.add_parser('print')
+sub_parser_print = subparsers.add_parser('print')
 parser.add_argument(
     '-d', '--debug', help='debug the script', default=False, action='store_true')
 parser.add_argument(

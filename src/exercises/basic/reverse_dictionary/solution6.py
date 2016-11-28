@@ -2,9 +2,9 @@
 
 d = {
     'Israel': 'Jerusalem',
-        'France': 'Paris',
-        'Italy': 'Rome',
-        'Egypt': 'Cairo',
+    'France': 'Paris',
+    'Italy': 'Rome',
+    'Egypt': 'Cairo',
 }
 
 # Build from reverse items:

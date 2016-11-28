@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 
-'''
+"""
 Example for catching all exception types.
-'''
+"""
 
 try:
     raise ValueError('hello')

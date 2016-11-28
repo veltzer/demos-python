@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows that you cannot overload functions in python.
 The second function 'overwrites' the first.
 
@@ -10,7 +10,7 @@ variable arguments but not of this kind.
 Functions also share the same namespace with regular variables. So,
 in this example,defining a variable named 'foo' would override the
 function so that it cannot be used.
-'''
+"""
 
 
 def foo():
@@ -21,6 +21,7 @@ def foo(a):
     print('hello', a)
 
 try:
+    # noinspection PyArgumentList
     foo()
 except TypeError:
     print('oops,got an error')

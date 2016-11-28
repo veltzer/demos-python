@@ -37,7 +37,7 @@ exiting the game.
 
 **Hints**:
 
-- ``raw_input()`` reads a line from the user and returns it.
+- ``input()`` reads a line from the user and returns it.
 
 Solution: ``solution1.py``
 

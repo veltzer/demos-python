@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 simple example of how to use a mysql database using pythons
 MySQLdb module.
 Note that this module is not ported to python3 and so this example
@@ -10,13 +10,13 @@ catching errors is done with:
 except MySQLdb.Error, e:
     print('Error {0}: {1}'.format(*e))
     sys.exit(1)
-'''
+"""
 
 import MySQLdb  # for connect
 
 params = {
     'db': 'myworld',
-        'read_default_file': '~/.my.cnf',
+    'read_default_file': '~/.my.cnf',
 }
 with MySQLdb.connect(**params) as cursor:
     cursor.execute('SELECT VERSION()')

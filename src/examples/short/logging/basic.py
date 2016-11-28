@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a basic logging example
 
 NOTES:
@@ -17,14 +17,14 @@ see no logging at debug level.
     set the formatting for the formatter
     attach the fromatter to the handler
     add the handler to the logger
-'''
+"""
 
-import logging # for getLogger, StreamHandler, Formatter
-import logging_tree # for printout
+import logging  # for getLogger, StreamHandler, Formatter
+import logging_tree  # for printout
 
-do_addhandler=True
+do_addhandler = True
 
-logger=logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 logging_tree.printout()
@@ -33,7 +33,7 @@ print(logger.handlers)
 if do_addhandler:
     handler = logging.StreamHandler()
     handler.setLevel(logging.DEBUG)
-    formatter=logging.Formatter('%(name)s %(levelname)s %(message)s')
+    formatter = logging.Formatter('%(name)s %(levelname)s %(message)s')
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 

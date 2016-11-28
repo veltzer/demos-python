@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to find a function name as a string
 
 We show how to find the function name from:
@@ -11,10 +11,11 @@ We show how to find the function name from:
 References:
 - http://stackoverflow.com/questions/251464/how-to-get-a-function-name-as-a-string-in-python
 http://stackoverflow.com/questions/5067604/determine-function-name-from-within-that-function-without-using-traceback
-'''
+"""
 
-import sys # for _getframe
-import inspect # for stack, currentframe
+import sys  # for _getframe
+import inspect  # for stack, currentframe
+
 
 def myfunc():
     print('inside the function')
@@ -22,7 +23,9 @@ def myfunc():
     print('inspect.stack()[0][0].f_code.co_name is [{0}]'.format(inspect.stack()[0][0].f_code.co_name))
     print('inspect.stack()[0][3] is [{0}]'.format(inspect.stack()[0][3]))
     print('inspect.currentframe().f_code.co_name is [{0}]'.format(inspect.currentframe().f_code.co_name))
+    # noinspection PyProtectedMember
     print('sys._getframe().f_code.co_name is [{0}]'.format(sys._getframe().f_code.co_name))
+
 
 print('outside the function')
 print('====================')

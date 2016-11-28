@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an improvement on the previous singleton example.
 This time we make the singleton access method a static method
 and not just a global function.
 
 Notes:
 - In this example we do not protect against concurrent access.
-'''
+"""
 
 
 class A:
@@ -21,15 +21,15 @@ class A:
             print('in A constructor')
             self.my_attribute = 'value'
 
-    #@classmethod
-    def getInstance(cls):
+    @classmethod
+    def get_instance(cls):
         if cls.instance is None:
             cls.instance = cls()
         return cls.instance
-    getInstance = classmethod(getInstance)
 
-a1 = A.getInstance()
-a2 = A.getInstance()
+
+a1 = A.get_instance()
+a2 = A.get_instance()
 if a1 is a2:
     print('yes,they are the same instance')
 print(a1)

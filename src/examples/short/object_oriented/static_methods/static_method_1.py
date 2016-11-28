@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a * sort * of static method but is ugly since the
 function is really global and not in the class.
-'''
+"""
 
 
 class Book:

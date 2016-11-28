@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 An even better implementation of map as a generator.
-'''
+"""
 
 
 def my_map(func, val_list):

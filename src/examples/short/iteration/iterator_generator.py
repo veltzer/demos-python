@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows that every generator in python can
 be used as an iterator.
 
 This is one of the ways in which you can write an iterator
 in python.
-'''
+"""
 
 
 def my_reverse(data):

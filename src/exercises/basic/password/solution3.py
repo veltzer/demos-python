@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-login = raw_input('insert login: ')
-full_name = raw_input('insert full name: ')
-password = raw_input('insert password: ')
+login = input('insert login: ')
+full_name = input('insert full name: ')
+password = input('insert password: ')
 
 if login == '':
     print('Error: Login must not be empty')

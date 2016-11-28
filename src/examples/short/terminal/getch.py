@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows how to read just one character from the keyboard in python
 
 References:
 - http://stackoverflow.com/questions/27750536/python-input-single-character-without-enter
-'''
+"""
 
-import termios # for tcgetattr, tcsetattr, TCSADRAIN
-import sys # for stdin
-import tty # for setraw
+import termios  # for tcgetattr, tcsetattr, TCSADRAIN
+import sys  # for stdin
+import tty  # for setraw
+
 
 def getch():
     fd = sys.stdin.fileno()
@@ -21,10 +22,11 @@ def getch():
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
     return ch
 
+
 print('press 6 to end')
 while True:
-    c=getch()
+    c = getch()
     print(c, end='')
     sys.stdout.flush()
-    if c=='6':
+    if c == '6':
         break

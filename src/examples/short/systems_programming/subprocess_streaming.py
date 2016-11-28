@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is an example of how to use the subprocess module for streaming
-'''
+"""
 
 import subprocess  # for Popen
 

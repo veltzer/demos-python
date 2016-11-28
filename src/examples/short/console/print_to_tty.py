@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-'''
+"""
 This example shows:
 - how to open and print to /dev/tty
 - how to print to standard streams.
 - how to close standard streams
 - writing to a closed stream
-'''
+"""
 
 import sys  # for stdout, stderr
 

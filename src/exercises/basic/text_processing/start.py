@@ -2,7 +2,7 @@
 
 
 def right_align_to(lines, width):
-    '''Right-align all lines to given width.'''
+    """Right-align all lines to given width."""
     result = []
     for line in lines:
         result.append(line.rjust(width))

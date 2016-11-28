@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 Showing how to sort tuples in reverse
-'''
+"""
 
 
 def my_tup_revese(t1, t2):

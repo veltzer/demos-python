@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-'''
+"""
 This is a basic closure example.
-'''
+"""
 
 
 def make_adder(x):

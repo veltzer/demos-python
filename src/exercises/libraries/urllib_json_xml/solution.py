@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
-import urllib2
+import urllib.request
 import json
-import xml.etree.cElementTree as ET
+import xml.etree.cElementTree as ElementTree
 
 URL = 'http://ws.geonames.org/hierarchyJSON?geonameId=2657896'
-places = json.loads(urllib2.urlopen(URL).read())['geonames']
+places = json.loads(urllib.request.urlopen(URL).read())['geonames']
 
-root = last = ET.Element('place', name=places[0]['name'])
+root = last = ElementTree.Element('place', name=places[0]['name'])
 for place in places[1:]:
-    last = ET.SubElement(last, 'place', name=place['name'])
+    last = ElementTree.SubElement(last, 'place', name=place['name'])
 
-print(ET.tostring(root))
+print(ElementTree.tostring(root))
