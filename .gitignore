@@ -10,6 +10,3 @@ __pycache__
 # templar generated
 /.tdefs.config
 /tools
-
-# idea
-/.idea/workspace.xml
