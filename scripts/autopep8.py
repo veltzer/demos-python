@@ -12,5 +12,11 @@ import subprocess
 
 
 subprocess.check_call([
-    'autopep8', '-a', '-a', '-a', '-r', '-i', 'src',
+    'autopep8',
+#   '--aggressive',
+#   '--aggressive',
+#   '--aggressive',
+    '--recursive',
+    '--in-place',
+    'src',
 ])
