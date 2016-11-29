@@ -7,7 +7,7 @@ A basic glade based python project.
 import gtk
 
 
-class HellowWorldGTK():
+class HellowWorldGTK:
 
     """This is a Hello World GTK/Glade application"""
 

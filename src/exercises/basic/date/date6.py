@@ -5,7 +5,7 @@ class Date:
         self.month = month
         self.year = year
 
-    def __add__(days=0, months=0, years=0):
+    def __add__(self, days=0, months=0, years=0):
         if isinstance(years, int):
             self.years -= years
         if isinstance(months, int):

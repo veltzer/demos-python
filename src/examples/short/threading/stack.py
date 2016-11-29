@@ -50,7 +50,7 @@ class Consumer(threading.Thread):
     def run(self):
         for i in range(20):
             number = self.stack.pop()
-            while (number is None):
+            while number is None:
                 number = self.stack.pop()
 
 stack = Stack()

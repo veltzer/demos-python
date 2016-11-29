@@ -5,7 +5,7 @@ This example shows how to create a read only dictionary
 """
 
 
-class RoDict():
+class RoDict:
 
     def __init__(self):
         self.d = {}

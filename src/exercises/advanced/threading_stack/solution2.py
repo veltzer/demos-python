@@ -46,7 +46,7 @@ class ProduceOrConsume(threading.Thread):
         if self.consume:
             for i in range(numberOfElems):
                 number = self.stack.pop()
-                while (number is None):
+                while number is None:
                     number = self.stack.pop()
                     time.sleep(1.0 / (self.number + 1))
         else:

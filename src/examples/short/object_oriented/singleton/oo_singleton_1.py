@@ -34,7 +34,7 @@ class A:
             self.my_attribute = 'value'
 
 
-def getInstance():
+def getInstance() -> A:
     if A.instance is None:
         A.instance = A()
     return A.instance

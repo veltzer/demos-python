@@ -11,9 +11,9 @@ pdb.set_trace()
 
 def calc():
     i = 0
-    sum = 0
+    current_sum = 0
     while True:
-        sum += i
+        current_sum += i
         i += 1
 
 calc()

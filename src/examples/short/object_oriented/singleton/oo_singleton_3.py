@@ -6,10 +6,11 @@ This time we protect against concurrent access.
 """
 
 import threading
+import typing
 
 
 class A:
-    instance = None
+    instance = None  # type: A
 
     def __init__(self):
         if A.instance is not None:
@@ -21,14 +22,16 @@ class A:
 
     lock = threading.Lock()
 
-    def getInstance():
+    def getInstance() -> typing.Union['A', None]:
         A.lock.acquire()
         if A.instance is None:
             A.instance = A()
         ret = A.instance
         A.lock.release()
         return ret
+
     getInstance = staticmethod(getInstance)
+
 
 a1 = A.getInstance()
 a2 = A.getInstance()

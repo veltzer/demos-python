@@ -34,9 +34,12 @@ class Book:
     def printMe(self):
         print('printMe: price is', self.__price)
 
-b = Book(50)
-print(b)
-b.setPrice(60)
-print(type(b))
-print(dir(b))
-b.printMe()
+try:
+    b = Book(50)
+    print(b)
+    b.setPrice(60)
+    print(type(b))
+    print(dir(b))
+    b.printMe()
+except TypeError:
+    print('yes, got an exception')

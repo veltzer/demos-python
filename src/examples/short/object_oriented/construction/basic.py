@@ -28,6 +28,7 @@ class NoCons:
 
 class A:
     # wrong! don't do this...
+    # noinspection PyMethodParameters
     def __init__():
         print('in A constructor')
 

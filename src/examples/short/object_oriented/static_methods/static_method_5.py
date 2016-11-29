@@ -5,7 +5,7 @@ This method shows the types of regular methods vs the types of real static metho
 """
 
 
-class Book():
+class Book:
     num = 0
 
     def __init__(self, price):

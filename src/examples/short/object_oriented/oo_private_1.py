@@ -21,11 +21,11 @@ class MyClass:
     # this demonstrates that you dont have to call 'self' as 'self',its just
     # a convention
 
-    def setPrivate(s, val):
-        s.__privar = val
+    def setPrivate(self, val):
+        self.__privar = val
 
-    def setPublic(s, val):
-        s.pubvar = val
+    def setPublic(self, val):
+        self.pubvar = val
 
 print('constructing')
 b = MyClass()
