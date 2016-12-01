@@ -12,10 +12,10 @@ References:
 - http://boto.cloudhackers.com/en/latest/ref/
 """
 
-import boto  # for connect_s3
-import codecs  # for getreader
+import boto
 
-do_count_lines = False
+do_count_lines = True
+do_print = True
 
 conn = boto.connect_s3()
 bucket = conn.get_bucket('twiggle-click-streams')
@@ -25,10 +25,11 @@ for key in key_list:
     print('doing [{0}]'.format(key.name))
     file_num += 1
     if do_count_lines:
-        wrapped_key = codecs.getreader('utf-8')(key)
         key.open_read()
-        count = 0
+        line_number = 0
         for line in key:
-            count += 1
-        print('got [{0}] lines...'.format(count))
+            if do_print:
+                print(line, end='')
+            line_number += 1
+        print('got [{0}] lines...'.format(line_number))
 print('got [{0}] files...'.format(file_num))

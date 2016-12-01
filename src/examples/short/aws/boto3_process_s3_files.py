@@ -11,8 +11,8 @@ References:
 - https://boto3.readthedocs.io/en/latest/
 """
 
-import boto3  # for connect_s3
-import codecs  # for getreader
+import boto3
+import codecs
 
 do_count_lines = True
 bucket_name = 'twiggle-click-streams'
