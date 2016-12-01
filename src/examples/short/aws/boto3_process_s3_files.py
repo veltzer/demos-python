@@ -9,6 +9,7 @@ but rather are in ~/.aws/credentials.
 
 References:
 - https://boto3.readthedocs.io/en/latest/
+- http://stackoverflow.com/questions/36205481/read-file-content-from-s3-bucket-with-boto3
 """
 
 import boto3
