@@ -13,7 +13,7 @@ import time  # for sleep
 
 def myfunc(i):
     print('thread {0} is going to sleep...'.format(i))
-    time.sleep(5)
+    time.sleep(1)
     print('thread {0} is waking up...'.format(i))
 
 threads = []
