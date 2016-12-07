@@ -17,4 +17,7 @@ instances = ec2.instances.filter(
     ]
 )
 for instance in instances:
-    print(instance.id, instance.instance_type)
+    print(instance.id)
+    print(instance.instance_type)
+    print(instance.public_dns_name)
+    print(instance.key_name)
