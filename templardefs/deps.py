@@ -67,6 +67,12 @@ def populate(d):
 
         # lint and code formatting
         'python-autopep8',
+        'pylint3',
+        'pylint',
+        'pylint-doc',
+        'pyflakes',
+        'pyflakes3',
+        'python-pyflakes',
 
         # pdf creation with python
         'python3-pypdf2',

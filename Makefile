@@ -55,6 +55,11 @@ check_ws: $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)git grep -E "\s$$" -- '*.py' || exit 0
 
+.PHONY: check_lint
+check_lint: $(ALL_DEP)
+	$(info doing [$@])
+	$(Q)pylint3 --py3k --rcfile=support/pylint.conf `find src -name "*.py"`
+
 # this is a bad check because returning tuples in python is perfectly legit
 .PHONY: check_return
 check_return: $(ALL_DEP)
