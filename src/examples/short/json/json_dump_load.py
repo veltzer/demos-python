@@ -21,15 +21,15 @@ my_set = {
 
 filename = '/tmp/json_store.json'
 
-with open(filename, 'w') as f:
-    json.dump(my_dict, f, indent=4)
+with open(filename, 'w') as file_handle:
+    json.dump(my_dict, file_handle, indent=4)
     try:
-        json.dump(my_set, f)
+        json.dump(my_set, file_handle)
         sys.exit(1)
     except:
         pass
 
-with open(filename) as f:
-    other_dict = json.load(f)
+with open(filename) as file_handle:
+    other_dict = json.load(file_handle)
 
 print(other_dict)
