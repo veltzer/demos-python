@@ -2,10 +2,13 @@
 
 """
 This example will show how to wrap one io object with another.
+
+References:
+- http://stackoverflow.com/questions/34447623/wrap-an-open-stream-with-io-textiowrapper
 """
 
-import io  # for TextIOWrapper
-import sys  # for stdin
+import io
+import sys
 import itertools
 
 filename = "/etc/passwd"
