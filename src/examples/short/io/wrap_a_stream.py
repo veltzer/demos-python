@@ -2,16 +2,20 @@
 
 """
 This example will show how to wrap one io object with another.
-
-TODO:
-- write this example
 """
 
 import io  # for TextIOWrapper
 import sys  # for stdin
+import itertools
 
-print(sys.stdout.detach())
-f = io.TextIOWrapper(sys.stdin.detach())
+filename = "/etc/passwd"
 
-for line in f:
-    print(line)
+# default mode of open is "rt"
+with open(filename, "rb") as file_handle:
+    for line in itertools.islice(file_handle, 5):
+        print(line)
+
+with open(filename, "rb") as file_handle:
+    wrapped = io.TextIOWrapper(file_handle)
+    for line in itertools.islice(wrapped, 5):
+        print(line, end='')
