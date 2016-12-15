@@ -101,6 +101,8 @@ def populate(d):
         'tqdm',
         'inject',
         'simpleparse',
+        'attrs',
+        'attr',
     ]
 
 
