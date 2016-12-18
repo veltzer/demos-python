@@ -1,5 +1,8 @@
 - add some ipython demos
 
+- add demos of dispy distribution framework
+	http://dispy.sourceforge.net
+
 - do examples of the following packages:
 	operator
 	functools
