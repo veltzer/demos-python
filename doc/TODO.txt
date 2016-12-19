@@ -1,5 +1,3 @@
-- do demos of loading and storing objects with the pickle module.
-
 - add some ipython demos
 
 - add demos of dispy distribution framework
