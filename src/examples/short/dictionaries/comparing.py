@@ -6,6 +6,9 @@ This example shows how to compare dictionaries
 Note that in earlier version of python there was a 'cmp'
 function that compared dictionaries which is now gone.
 use the '==' operator instead.
+
+References:
+- http://stackoverflow.com/questions/4527942/comparing-two-dictionaries-in-python
 """
 
 dict1 = {'Name': 'Mark', 'Age': 7}
