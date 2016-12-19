@@ -27,11 +27,13 @@ def is_enum(x):
         print('no')
 
 
+# passing numbers is no good, we need to pass the real values
 is_enum(7)
 is_enum(Event.edgepredel)
 
 print(Event.edgepredel)
 print(dir(Event.edgepredel))
+print(dir(Event))
 print('name is [{name}] and type is [{type}]'.format(
     name=Event.edgepredel.name,
     type=type(Event.edgepredel.name),
@@ -40,3 +42,9 @@ print('value is [{value}] and type is [{type}]'.format(
     value=Event.edgepredel.value,
     type=type(Event.edgepredel.value),
 ))
+
+print("listing all values of the enum...")
+for x in Event:
+    print(x)
+    print(x.name)
+    print(x.value)
