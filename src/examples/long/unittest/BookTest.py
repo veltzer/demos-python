@@ -16,18 +16,18 @@ class BookTest(unittest.TestCase):
     def testBasic(self):
         print('in testBasic')
         p = Book.Book(50)
-        self.assertTrue(50 == p.getPrice())
+        self.assertTrue(50 == p.get_price())
 
     def testMore(self):
         print('in testMore')
         p = Book.Book(50)
         p._Book__price = 60
-        self.assertTrue(60 == p.getPrice())
+        self.assertTrue(60 == p.get_price())
 
     def runTest(self):
         print('in runTest')
         p = Book.Book(50)
         p._Book__price = 60
-        self.assertTrue(60 == p.getPrice())
+        self.assertTrue(60 == p.get_price())
 
 unittest.main()

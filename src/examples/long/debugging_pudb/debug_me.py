@@ -36,7 +36,7 @@ def fermat(n):
 
 print('SF', simple_func(10))
 
-for i in fermat(2):
-    print(i)
+for j in fermat(2):
+    print(j)
 
 print('FINISHED')

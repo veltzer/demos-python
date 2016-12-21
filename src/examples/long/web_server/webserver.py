@@ -21,6 +21,9 @@ class ThreadedServer(SocketServer.ThreadingMixIn, BaseHTTPServer.HTTPServer):
 
 
 class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
+    def __init__(self):
+        super(MyHandler).__init__()
+        slef.readlpath = None
 
     def handle_static(self, mimetype):
         f = open(self.realpath)
@@ -93,6 +96,8 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
                 self.headers.getheader('content-type'))
             if ctype == 'multipart/form-data':
                 query = cgi.parse_multipart(self.rfile, pdict)
+            else:
+                raise ValueError("not a form")
             self.send_response(301)
             self.end_headers()
             upfilecontent = query.get('upfile')

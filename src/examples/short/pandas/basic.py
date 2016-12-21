@@ -37,7 +37,7 @@ def create_large_table():
     data_frames = DataFrame("", index=numpy.arange(large_table_size), columns=columns)
     del data_frames
 
-random_strings = None
+random_strings = []
 
 
 def create_random_strings():

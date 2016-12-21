@@ -2,20 +2,20 @@
 
 
 class Book:
-    # constructor
-
     def __init__(self, price):
-        # call parent constructor
+        """ constructor """
+        """ call parent constructor """
         super(Book, self).__init__()
         self.__price = price
-    # getters/setters
 
-    def getPrice(self):
+    def get_price(self):
+        """ getter """
         return self.__price
 
-    def setPrice(self, newprice):
-        self.__price = newprice
-    # printing function
+    def set_price(self, new_price):
+        """ setter """
+        self.__price = new_price
 
-    def printMe(self):
+    def print_me(self):
+        """ printing function """
         print('price is', self.__price)
