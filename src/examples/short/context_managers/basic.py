@@ -2,7 +2,7 @@
 
 """
 This is an example of creating your own resource to be used with the 'with'
-python syntax.
+python syntax. This is called a 'Context Manager'.
 
 TODO:
 - show how to use the return value of __enter__
@@ -12,19 +12,19 @@ TODO:
 class MyResource:
     enterCallsCounter = 0
     exitCallsCounter = 0
-    ''' this is the constructor (the thing we call at the 'with') '''
 
     def __init__(self, suppress=False):
+        ''' this is the constructor (the thing we call at the 'with') '''
         self.suppress = suppress
-    ''' this method will be called at the begining of the 'with' block '''
 
     def __enter__(self):
+        ''' this method will be called at the begining of the 'with' block '''
         print('doing __enter__')
         MyResource.enterCallsCounter += 1
         return self
-    ''' this method will be called at the end of the 'with' block '''
 
     def __exit__(self, itype, value, traceback):
+        ''' this method will be called at the end of the 'with' block '''
         print('doing __exit__', itype, value, traceback)
         MyResource.exitCallsCounter += 1
         return self.suppress
