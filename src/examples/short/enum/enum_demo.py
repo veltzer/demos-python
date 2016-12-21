@@ -48,3 +48,6 @@ for x in Event:
     print(x)
     print(x.name)
     print(x.value)
+
+# tanslate from string to number
+print(Event["edgepredel"])
