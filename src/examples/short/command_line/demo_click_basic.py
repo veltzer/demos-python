@@ -15,10 +15,12 @@ import click
 @click.option('--name', prompt='Your name', help='The person to greet.')
 @click.option('--required', required=True, help='this is a required parameter')
 @click.option('--output', required=True, help='output file', type=click.File('w', lazy=False))
-def hello(count, name, required, output):
+@click.option('--hash-type', required=True, type=click.Choice(['md5', 'sha1']))
+def hello(count, name, required, output, hash_type):
     """Simple program that greets NAME for a total of COUNT times."""
     print(required)
     print(output)
+    print(hash_type)
     for x in range(count):
         click.echo('Hello %s!' % name)
 
