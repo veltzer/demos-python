@@ -7,12 +7,16 @@ Note that this feature only works on python>=3.2.
 
 References:
 - https://docs.python.org/3/library/concurrent.futures.html
+
+TODO:
+- show how to handle exceptions coming out of the processes.
 """
 
 import concurrent.futures
 
 
 def work(n):
+    raise ValueError("foo")
     for i in range(n):
         pass
     return i
