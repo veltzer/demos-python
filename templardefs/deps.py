@@ -103,6 +103,7 @@ def populate(d):
         'simpleparse',
         'attrs',
         'attr',
+        'dispy',
     ]
 
 
