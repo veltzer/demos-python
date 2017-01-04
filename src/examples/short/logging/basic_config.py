@@ -5,6 +5,10 @@ This is how you want to use the logging module in a small script.
 
 The key is the logging.basicConfig method to setup the config
 for basic usage.
+
+The problem with this example is that you set your own logging
+level which is contrary to logging philosophy. You shuld not
+set your own logging level.
 """
 
 import logging  # for basicConfig, getLogger
