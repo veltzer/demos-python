@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+Another basic example of a generator
+"""
+
 
 def give_me_some_data():
     yield 7
