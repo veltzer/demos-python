@@ -1,26 +1,27 @@
 #!/usr/bin/python3
-# !/usr/bin/python3
 
 """
-This example shows that map knows when it is used as a generator and behaves differently
-in that context (not generating the full list).
-You need python 3.0 to see this in action,in versions before 3 it actually creates the
-list. In version 3 the first output will not work since it returns a generator
+This example shows that in python3 map is a generator and does not return a list.
+If you want to turn it's output into a list there are two ways to do it:
+- list()
+- [] (list comprehension)
+
+Note that in python2.7 the behaviour was different.
 """
 
 
-def my_gen():
+def generate_items():
     for i in range(10):
-        # print('my_gen')
-        yield i ** 2
+        yield i
 
 
-def plus1(x):
-    # print('plus1')
-    return x + 1
+def square(x):
+    return x ** 2
 
 
-print(map(plus1, my_gen()))
-for x in map(plus1, my_gen()):
-    pass
-    # print(x)
+# wrong, still a generator
+print(map(square, generate_items()))
+# right, using the list() function
+print(list(map(square, generate_items())))
+# right, using list comprehension
+print([x for x in map(square, generate_items())])
