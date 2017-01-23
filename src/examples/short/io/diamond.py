@@ -17,8 +17,8 @@ def diamond_lines():
     else:
         for filename in sys.argv[1:]:
             with open(filename, 'rt') as file_handle:
-                 for line in file_handle:
-                     yield line
+                for line in file_handle:
+                    yield line
 
 for line in diamond_lines():
     print(line, end='')
