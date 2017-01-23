@@ -6,6 +6,9 @@ in python.
 
 Reminder: the <> operator (or as it's called diamond) reads
 all line seither specified on the command line or from standard input.
+
+References:
+- https://mail.python.org/pipermail/tutor/2005-September/041607.html
 """
 
 import sys
