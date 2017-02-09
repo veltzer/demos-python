@@ -14,10 +14,12 @@ References:
 
 import boto3
 import codecs
+import io
+import tqdm
 
 do_count_lines = True
 bucket_name = 'twiggle-click-streams'
-folder = 'catalogs/flipkart/catalog/2016-11-23/uncompressed'
+folder = 'mft.similarweb.com/'
 
 s3 = boto3.resource('s3')
 bucket = s3.Bucket('twiggle-click-streams')
@@ -31,10 +33,12 @@ for object_summary in gen:
     file_num += 1
     if do_count_lines:
         stream = object_summary.get()['Body']
-        wrapped_stream = codecs.getreader('utf-8')(stream)
+        # stream = io.BufferedReader(stream)
+        # stream = io.TextIOWrapper(stream)
+        stream = codecs.getreader(encoding='utf-8')(stream)
         lines = 0
-        for line in wrapped_stream:
-            print(line, end='')
+        for line in tqdm.tqdm(stream):
+            # print(line, end='')
             lines += 1
         print('got [{0}] lines...'.format(lines))
 print('got [{0}] files...'.format(file_num))
