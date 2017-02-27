@@ -104,6 +104,7 @@ def populate(d):
         'attrs',
         'attr',
         'dispy',
+        'tsv',
     ]
 
 
