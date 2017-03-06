@@ -1,0 +1,2 @@
+- compare the speed of converting numbers with command between the locale methods
+and the replace method.
