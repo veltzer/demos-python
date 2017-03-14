@@ -105,6 +105,7 @@ def populate(d):
         'attr',
         'dispy',
         'tsv',
+        # 'lzma', # standard python module
     ]
 
 
