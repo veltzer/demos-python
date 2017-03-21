@@ -2,6 +2,9 @@
 
 """
 This is an example of how to write a simple md5 sum function in python
+
+References:
+- https://docs.python.org/3/library/hashlib.html
 """
 
 import hashlib  # for md5
