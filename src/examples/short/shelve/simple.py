@@ -4,6 +4,9 @@
 This is a basic demo of the shelve module
 
 Run this several times to see how it works.
+
+References:
+- https://docs.python.org/3/library/shelve.html
 """
 
 import shelve

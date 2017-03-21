@@ -2,6 +2,9 @@
 
 """
 This is a simple example of how to get random numbers in python.
+
+References:
+- https://docs.python.org/3/library/random.html
 """
 
 import random
