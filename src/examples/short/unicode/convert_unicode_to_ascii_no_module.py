@@ -6,6 +6,8 @@ This example shows how to convert unicode to ascii in python.
 The solution here is to convert to ascii and ignore all errors.
 Not the best solution but OK for some cases.
 
+It python2 this may not work....
+
 References:
 - http://stackoverflow.com/questions/4299675/python-script-to-convert-from-utf-8-to-ascii
 """
