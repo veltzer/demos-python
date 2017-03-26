@@ -7,6 +7,11 @@ and throw exceptions from the processes.
 THIS IS REALLY BAD! NOTHING HAPPENS!
 Solution: ALWAYS pass the 'error_callback' parameter with a function
 that prints the exceptions.
+
+NOTES:
+- in python2 the 'error_callback' feature of the 'apply_async' method
+does not exist. Instead use the 'get' method on the value returned
+from the import 'apply_async' call.
 """
 
 import multiprocessing  # for cpu_count
