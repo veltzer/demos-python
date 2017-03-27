@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 """
+This example shows that the python 'split' method on strings words
+will full regular expressions.
 """
 
 import re

@@ -9,6 +9,9 @@ Two ways to do it:
 
 NOTES:
 - in python2 only 'os' module does not supply a 'cpu_count' function.
+
+References:
+- http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
 """
 
 import multiprocessing
