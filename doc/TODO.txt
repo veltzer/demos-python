@@ -1,5 +1,8 @@
 - add some ipython demos
 
+- add demos of the prompt_toolkit:
+	https://github.com/jonathanslenders/python-prompt-toolkit
+
 - add demos of dispy distribution framework
 	http://dispy.sourceforge.net
 
