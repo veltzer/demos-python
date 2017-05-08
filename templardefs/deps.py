@@ -107,6 +107,7 @@ def populate(d):
         'tsv',
         'termcolor',
         # 'lzma', # standard python module
+        'lmdb',
     ]
 
 
