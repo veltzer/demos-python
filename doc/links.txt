@@ -19,3 +19,6 @@ problems with python's super():
 
 blogs about python:
 	http://blog.lerner.co.il
+
+python tricks collection:
+	http://sahandsaba.com/thirty-python-language-features-and-tricks-you-may-not-know.html
