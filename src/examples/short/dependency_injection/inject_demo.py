@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 
 """
-This is a demo of using the inject framework for python.
+This is a demo of using the inject framework for python which is
+a dependency injection framework.
 
 References:
-- https://pypi.python.org/pypi/Inject/3.1.1
+- https://pypi.python.org/pypi/Inject
+
+TODO:
+- show how to inject by name instead of by type.
 """
 
 import inject
