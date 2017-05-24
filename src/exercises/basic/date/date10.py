@@ -21,8 +21,8 @@ def get_following_month(month_name):
     """ Given a month name,
     return the name of the following month"""
     if month_name in name_to_days_num:
-        i = months_names.index(month_name)
-        return months_names[(i + 1) % 12]
+        index = months_names.index(month_name)
+        return months_names[(index + 1) % 12]
     else:
         print('No such month')
 

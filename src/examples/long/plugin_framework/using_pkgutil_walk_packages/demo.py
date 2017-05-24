@@ -34,11 +34,11 @@ for importer, modname, is_package in pkgutil.walk_packages(
     try:
         if modname in done:
             continue
-        module = importlib.import_module(modname)
+        module_obj = importlib.import_module(modname)
         done.add(modname)
         print(done)
         print('imported {0}'.format(modname))
-        for name, t in module.__dict__.items():
+        for name, t in module_obj.__dict__.items():
             if type(t) is type and issubclass(t, base.BaseClass):
                 instance = t()
                 print(name)

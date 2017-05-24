@@ -21,8 +21,8 @@ def get_num_of_days_in_month(month_name):
 
 def get_following_month(month_name):
     if month_name in name_to_days_num:
-        i = month_name_to_index[month_name]
-        return months_names[(i + 1) % 12]
+        index = month_name_to_index[month_name]
+        return months_names[(index + 1) % 12]
     else:
         print('No such month')
 

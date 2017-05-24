@@ -5,15 +5,16 @@ A minimal gtk application demo.
 """
 
 import gi
-
-gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk as gtk
 import signal
 
 
-def clicked_callback(b):
-    b.set_label('Hello World!' + str(b.num))
-    b.num += 1
+gi.require_version('Gtk', '3.0')
+
+
+def clicked_callback(button):
+    button.set_label('Hello World!' + str(button.num))
+    button.num += 1
 
 
 def quit_callback(window, event):

@@ -91,7 +91,7 @@ try:
     all_elements = set(d.keys())
     elements_visited = set()
     i = 0
-    for (k, v) in d.iteritems():
+    for (k, v) in d.items():
         if i == 1:
             d['four'] = 'arba'
         elements_visited.add(k)
@@ -107,7 +107,7 @@ try:
     all_elements = set(d.keys())
     elements_visited = set()
     i = 0
-    for (k, v) in d.iteritems():
+    for (k, v) in d.items():
         if i == 1:
             del d['one']
         elements_visited.add(k)
@@ -124,7 +124,7 @@ d = {'one': 'ehad', 'two': 'shnaim', 'three': 'shalosh'}
 all_elements = set(d.keys())
 elements_visited = set()
 i = 0
-for (k, v) in d.iteritems():
+for (k, v) in d.items():
     if i == 1:
         d['four'] = 'arba'
         d['five'] = 'hamesh'

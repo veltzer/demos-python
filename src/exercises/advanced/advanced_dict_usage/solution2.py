@@ -29,7 +29,7 @@ print('Mordor' in reachable)
 # Finding the actual path:
 
 way_to = {'Rivendell': []}
-for i in range(7):
+for _ in range(7):
     for place in way_to.keys():
         for action, place2 in places[place].items():
             # If we already knew a way to place2, the new way must be longer.

@@ -19,21 +19,25 @@ even returned to the programmer).
 
 
 class A:
+    # noinspection PyReturnFromInit
     def __init__(self):
         return 0
 
 
 class B:
+    # noinspection PyReturnFromInit
     def __init__(self):
         return None
 
 
 class C:
+    # noinspection PyReturnFromInit
     def __init__(self):
         return self
 
 
 class D:
+    # noinspection PyReturnFromInit
     def __init__(self):
         return
 

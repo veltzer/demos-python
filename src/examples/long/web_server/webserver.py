@@ -112,17 +112,17 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
 
 
 def main():
+    host = 'localhost'
+    port = 8001
+    url = 'http://' + host + ':' + str(port)
+    print('constructing server')
+    threaded = True
+    # threaded=False
+    if threaded:
+        server = ThreadedServer((host, port), MyHandler)
+    else:
+        server = BaseHTTPServer.HTTPServer((host, port), MyHandler)
     try:
-        host = 'localhost'
-        port = 8001
-        url = 'http://' + host + ':' + str(port)
-        print('constructing server')
-        threaded = True
-        # threaded=False
-        if threaded:
-            server = ThreadedServer((host, port), MyHandler)
-        else:
-            server = BaseHTTPServer.HTTPServer((host, port), MyHandler)
         print('contact me at ' + url)
         server.serve_forever()
     except KeyboardInterrupt:

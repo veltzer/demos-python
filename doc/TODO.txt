@@ -52,7 +52,7 @@
 - do example about finally.
 - do example about division and //.
 - do example about cyclic dependency between modules.
-- do example of iteritems in the dict example and more.
+- do example of items in the dict example and more.
 - show a demo of a profiler.
 - show how to see garbage collector events.
 - show examples about data strcutures from third parties.

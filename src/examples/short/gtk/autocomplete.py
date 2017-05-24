@@ -28,10 +28,10 @@ class EntryMultiCompletion(gtk.Entry):
         self.completion.connect('match-selected', self.on_completion_match)
         self.set_completion(self.completion)
 
-    def match_func(self, completion, key_string, iter, data):
+    def match_func(self, completion, key_string, iterator, data):
         model = self.completion.get_model()
         # get the completion strings
-        modelstr = model[iter][0]
+        modelstr = model[iterator][0]
         # check if the user has typed in a space char,
         # get the last word and check if it matches something
         if ' ' in key_string:
@@ -40,7 +40,7 @@ class EntryMultiCompletion(gtk.Entry):
         # we have only one word typed
         return modelstr.startswith(key_string)
 
-    def on_completion_match(self, completion, model, iter):
+    def on_completion_match(self, completion, model, iterator):
         current_text = self.get_text()
         # if more than a word has been typed, we throw away the
         # last one because we want to replace it with the matching word
@@ -50,7 +50,7 @@ class EntryMultiCompletion(gtk.Entry):
             current_text = ' '.join(current_text.split()[:-1])
             # current_text='%s %s'%(current_text, model[iter][0])
         else:
-            current_text = model[iter][0]
+            current_text = model[iterator][0]
         # add the matching word
         # current_text='%s %s'%(current_text, model[iter][0])
         # set back the whole text

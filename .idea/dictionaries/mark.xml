@@ -7,6 +7,7 @@
       <w>boto</w>
       <w>dbus</w>
       <w>defaultdict</w>
+      <w>intersetellar</w>
       <w>jinja</w>
       <w>jsonschema</w>
       <w>mordor</w>

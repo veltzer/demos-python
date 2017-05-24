@@ -25,8 +25,8 @@ for pluginInfo in simplePluginManager.getAllPlugins():
     print('path is [{0}]'.format(pluginInfo.path))
     print('plugin_object is [{0}]'.format(pluginInfo.plugin_object))
     # here is how to get to the module the plugin is in
-    module = sys.modules[pluginInfo.plugin_object.__module__]
-    print('var is [{0}]'.format(module.var))
+    module_obj = sys.modules[pluginInfo.plugin_object.__module__]
+    print('var is [{0}]'.format(module_obj.var))
     # debug starts here
     # print(dir(sys.modules[pluginInfo.plugin_object.__module__]))
     # print(dir(pluginInfo))
