@@ -19,9 +19,11 @@ is a different story.
 
 class Book:
 
-    def __init__(self, price):
+    # noinspection PyReturnFromInit
+    def __init__(self, price) -> 'Book':
         self.__price = price
         # return None
+        # noinspection PyTypeChecker
         return 7
         # return
 
