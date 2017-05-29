@@ -5,6 +5,7 @@ This example shows how to use the 'imp' module to do double importing of content
 into the same namespace
 """
 
+# noinspection PyDeprecation
 import imp
 
 imp.load_source('config', 'myfolder/mymod.py')
