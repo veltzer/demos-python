@@ -5,8 +5,11 @@ This is a simple example of how to use the dbm.gnu module of the
 standard python library
 
 NOTES:
-- the attempt to insert None as value throws an exception.
-    so only strings and bytes are allowed.
+- the attempt to insert 'None' as value or key throws an exception.
+- anything which is given to gdbm is converted to bytes, so
+    if you have bytes do not convert them to strings (they will
+    just be converted back again).
+- empty strings or bytes are allowed as both values and keys.
 """
 
 import dbm.gnu
@@ -22,6 +25,10 @@ if os.path.isfile(filename):
 d = dbm.gnu.open(filename, 'n')
 d['one'] = 'ehad'
 d['two'] = 'shtaim'
+d[b''] = b'emptybytes'
+d[b'emptybytes'] = b''
+d[''] = 'emptystring'
+d['emptystring'] = ''
 try:
     d['three'] = None
 except TypeError as e:
