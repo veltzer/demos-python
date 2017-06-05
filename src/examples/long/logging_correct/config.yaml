@@ -1,0 +1,21 @@
+---
+# see http://victorlin.me/posts/2012/08/26/good-logging-practice-in-python
+# values for level are: NOTSET, DEBUG, INFO, WARN, WARNING
+version: 1
+disable_existing_loggers: True
+formatters:
+        simple:
+                format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+handlers:
+        console:
+                class: logging.StreamHandler
+                level: DEBUG
+                formatter: simple
+                stream: ext://sys.stdout
+root:
+        level: INFO
+        handlers: [console]
+        propagate: no
+loggers:
+        simple:
+                level: INFO
