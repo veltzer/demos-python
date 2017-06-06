@@ -108,6 +108,7 @@ def populate(d):
         'termcolor',
         # 'lzma', # standard python module
         'lmdb',
+        'fastparquet',
     ]
 
 
