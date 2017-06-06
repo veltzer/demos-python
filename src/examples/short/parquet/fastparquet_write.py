@@ -2,6 +2,9 @@
 
 """
 An example of writing parquet files with 'fastparquet'.
+
+References:
+- https://github.com/dask/fastparquet
 """
 
 from fastparquet import write
