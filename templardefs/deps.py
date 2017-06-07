@@ -16,6 +16,9 @@ def populate(d):
         'python{0}-dev'.format(opt_python_version),
         'python{0}-venv'.format(opt_python_version),
 
+        # cython
+        'cython3',
+
         # interactive, parallel python
         'ipython3',
 
