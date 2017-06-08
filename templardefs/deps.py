@@ -112,6 +112,7 @@ def populate(d):
         # 'lzma', # standard python module
         'lmdb',
         'fastparquet',
+        'paramiko',  # ssh module
     ]
 
 
