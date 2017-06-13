@@ -8,6 +8,7 @@ Notes:
 
 References:
 - https://www.python.org/dev/peps/pep-0249/#arraysize
+- https://stackoverflow.com/questions/17933344/python-postgres-can-i-fetchall-1-million-rows
 """
 
 import psycopg2

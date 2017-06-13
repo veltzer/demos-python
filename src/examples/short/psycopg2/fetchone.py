@@ -7,6 +7,9 @@ of psycopg2.
 Note:
 - the best way to use it is not in a for loop but rather in a while
 type loop (see below).
+
+References:
+- https://stackoverflow.com/questions/17933344/python-postgres-can-i-fetchall-1-million-rows
 """
 
 import psycopg2
