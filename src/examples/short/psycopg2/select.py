@@ -18,5 +18,5 @@ connection_string="postgresql://localhost/postgres"
 with psycopg2.connect(connection_string) as connection:
     cursor = connection.cursor()
     cursor.execute("select VERSION()")
-    for row in cursor.fetchall():
-        print(row)
+    row = cursor.fetchone()
+    print(row)
