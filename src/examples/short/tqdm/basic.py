@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This shows how to use tqdm as a progress bar
+This is a basic example of how to use tqdm.
 
 References:
 - https://pypi.python.org/pypi/tqdm
