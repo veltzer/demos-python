@@ -10,5 +10,7 @@ References:
 import tqdm
 import time
 
-for i in tqdm.tqdm(range(1000), desc="some job"):
+for i in tqdm.tqdm(range(1000)):
     time.sleep(1)
+    for i in tqdm.tqdm(range(1000)):
+        time.sleep(0.001)
