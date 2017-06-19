@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import textwrap  # for wrap
+import textwrap
 
 
 def lines2paragraphs(lines):

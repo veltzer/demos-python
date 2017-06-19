@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-import gtk  # for VBox, RadioButton, HBox, Entry, main_quit, Window, Label, main
-import operator  # for add, sub, mul, div
+import gtk
+import operator
 
 '''
 This extended version allow selection of the arithmetic operator by

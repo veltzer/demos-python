@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import re  # for search
+import re
 
 
 def read_phonebook():

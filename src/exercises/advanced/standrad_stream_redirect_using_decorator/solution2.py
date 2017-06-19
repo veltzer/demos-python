@@ -2,7 +2,7 @@
 
 import sys
 import functools
-import os  # for remove
+import os
 
 
 def with_output_to(fname):

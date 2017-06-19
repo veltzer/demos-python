@@ -38,7 +38,7 @@ def guess(letter):
 
 # test if run directly, print if imported
 if __name__ == '__main__':
-    import doctest  # for testmod
+    import doctest
     doctest.testmod()
 else:
     print_known_parts()

@@ -1,4 +1,4 @@
-import mydate  # for is_leap_year, days_in_months_leap_year, days_in_months
+import mydate
 
 '''
 A callender of events, has an entry for every event,

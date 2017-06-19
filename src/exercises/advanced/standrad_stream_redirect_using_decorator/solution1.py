@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-import sys  # for stdout
-import functools  # for wraps
-import os  # for remove
+import sys
+import functools
+import os
 
 outfile = '/tmp/out.txt'
 

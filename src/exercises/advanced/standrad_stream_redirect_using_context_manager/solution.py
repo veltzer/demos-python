@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-import sys  # for stdout
-import contextlib  # for contextmanager
-import os  # for remove
+import sys
+import contextlib
+import os
 
 outfile = '/tmp/out3.txt'
 

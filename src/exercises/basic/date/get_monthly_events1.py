@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-import sys  # for argv
-import date  # for Calendar
-import time  # for localtime
+import sys
+import date
+import time
 
 filename = sys.argv[0]
 f = open(filename)

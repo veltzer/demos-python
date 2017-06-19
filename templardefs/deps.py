@@ -41,11 +41,11 @@ def populate(d):
         'python3-pygraph',  # library for working with graphs in Python (Python3)
         'python-yapsy-doc',  # simple plugin system for Python applications doc
         'python3-yapsy',  # simple plugin system for Python3 applications
-        'python3-pygments',  # for syntax highlighting
-        'python3-jinja2',  # for jinja templating
+        'python3-pygments',  # syntax highlighting
+        'python3-jinja2',  # jinja templating
 
         # mako
-        'python3-mako',  # for mako templating
+        'python3-mako',  # mako templating
         'python-mako-doc',  # documentation for mako templating
 
         # debuggers

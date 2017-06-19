@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import sys  # for stderr
+import sys
 from date import *
 from time import localtime
 
