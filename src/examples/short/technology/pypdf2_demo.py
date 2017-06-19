@@ -7,8 +7,8 @@ References:
 https://github.com/mstamy2/PyPDF2/raw/master/Sample_Code/makesimple.py
 """
 
-import sys  # for argv
-import reportlab.pdfgen.canvas  # for Canvas
+import sys
+import reportlab.pdfgen.canvas
 
 point = 1
 inch = 72

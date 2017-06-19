@@ -7,9 +7,9 @@ References:
 http://stackoverflow.com/questions/377017/test-if-executable-exists-in-python/
 """
 
-import sys  # for argv
-import os.path  # for isfile, isabs
-import os  # for access, X_OK, pathsep, environ
+import sys
+import os.path
+import os
 
 '''
 returns the absolute path of a program

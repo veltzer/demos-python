@@ -9,11 +9,11 @@ References:
 http://stackoverflow.com/questions/566746/how-to-get-console-window-width-in-python
 """
 
-import os  # for popen, environ
-import fcntl  # for ioctl
-import struct  # for unpack, pack
-import termios  # for TIOCGWINSZ
-import timeit  # for timeit
+import os
+import fcntl
+import struct
+import termios
+import timeit
 
 
 def terminal_size1():

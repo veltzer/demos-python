@@ -4,7 +4,7 @@
 This example shows how to call popen and get the return text.
 """
 
-import subprocess  # for Popen
+import subprocess
 
 '''
 A function that runs a command in a shell,checks that it succeeded and returns the output of that command

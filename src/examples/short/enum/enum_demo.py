@@ -4,7 +4,7 @@
 Example of an enum in python3
 """
 
-import enum  # for Enum
+import enum
 
 
 class Event(enum.Enum):

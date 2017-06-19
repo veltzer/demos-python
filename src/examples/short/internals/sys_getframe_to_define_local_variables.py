@@ -5,7 +5,7 @@ This example shows how you can manipulate via sys._getframe any stack
 frame including your own
 """
 
-import sys  # for _getframe
+import sys
 
 # define a new local variable 'foo' and assign the value '42' to it...
 # noinspection PyProtectedMember

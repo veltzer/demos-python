@@ -4,9 +4,9 @@
 This is a mixin solution to the modification time stamps mentioned before.
 """
 
-import luigi  # for Task, Parameter, LocalTarget, run
-import os.path  # for exists, getmtime
-import time  # for ctime
+import luigi
+import os.path
+import time
 
 
 def mtime(path):

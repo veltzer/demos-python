@@ -3,8 +3,8 @@ This is a module that checks if a library given to it is loadable
 (has no undefined references)
 """
 
-import ctypes  # for CDLL
-import ctypes.cdll  # for LoadLibrary
+import ctypes
+import ctypes.cdll
 
 libdl = ctypes.CDLL('libdl.so')
 lib = None

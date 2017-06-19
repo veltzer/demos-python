@@ -19,8 +19,8 @@ do not point to a real file (in that case it just stops). See the shorter
 version in the code below.
 """
 
-import os  # for readlink
-import os.path  # for islink, dirname, abspath, join, isabs, realpath
+import os
+import os.path
 
 
 def find_link_target(link):

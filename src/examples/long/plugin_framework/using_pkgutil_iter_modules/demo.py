@@ -4,7 +4,7 @@
 This is an example of using pkgutil to create a lightweight plugin based system.
 """
 
-import pkgutil  # for iter_modules
+import pkgutil
 
 do_debug = False
 do_print_members = False

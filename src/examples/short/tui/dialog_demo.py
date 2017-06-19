@@ -16,11 +16,11 @@ References:
 http://pythondialog.sourceforge.net/doc/#main-contents
 """
 
-import sys  # for exit, stderr
-import os  # for sep, getenv
-import os.path  # for isfile
-import time  # for sleep
-import dialog  # for Dialog
+import sys
+import os
+import os.path
+import time
+import dialog
 
 FAST_DEMO = True
 

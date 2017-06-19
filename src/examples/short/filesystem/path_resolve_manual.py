@@ -4,10 +4,10 @@
 This is an example of how to resolve a path in python
 """
 
-import os.path  # for join
-import os  # for walk
-import re  # for compile, finditer
-import sys  # for argv
+import os.path
+import os
+import re
+import sys
 
 if len(sys.argv) < 2:
     raise ValueError('plase pass regexp')

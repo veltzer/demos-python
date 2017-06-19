@@ -4,7 +4,7 @@
 This example shows how to group data with dictionaries
 """
 
-import collections  # for defaultdict
+import collections
 
 colors = [
     'red',

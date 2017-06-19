@@ -7,8 +7,8 @@ Notes:
 - python sets are not JSON serializable
 """
 
-import json  # for dump, load
-import sys  # for exit
+import json
+import sys
 
 my_dict = {
     'one': 'onev',

@@ -12,7 +12,7 @@ except MySQLdb.Error, e:
     sys.exit(1)
 """
 
-import MySQLdb  # for connect
+import MySQLdb
 
 params = {
     'db': 'myworld',

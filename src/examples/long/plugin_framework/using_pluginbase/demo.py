@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from pluginbase import PluginBase
-import inspect  # for isclass
+import inspect
 
 
 class BaseClass:

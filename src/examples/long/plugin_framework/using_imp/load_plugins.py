@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import plugin_mgr  # for importPlugins, importPlugin
+import plugin_mgr
 
 # the easiest way to use
 plugins = plugin_mgr.importPlugins(folder='plugins')

@@ -4,7 +4,7 @@
 This is a simple doctest example.
 """
 
-import doctest  # for testmod
+import doctest
 
 
 def triple(x):

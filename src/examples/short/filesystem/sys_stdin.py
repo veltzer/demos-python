@@ -6,7 +6,7 @@ This program copies data from standard input into standard
 output line by line.
 """
 
-import sys  # for stdin
+import sys
 
 for x in sys.stdin:
     print(x, end='')

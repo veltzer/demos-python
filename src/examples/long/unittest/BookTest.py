@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-import unittest  # for main
-import Book  # for Book
+import unittest
+import Book
 
 
 class BookTest(unittest.TestCase):

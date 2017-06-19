@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-import sys  # for argv
-import PyQt4  # for
-import PyQt4.QtGui  # QApplication, QPushButton
-import PyQt4.QtCore  # for QT_VERSION_STR
+import sys
+import PyQt4
+import PyQt4.QtGui
+import PyQt4.QtCore
 
 print('version is', PyQt4.QtCore.QT_VERSION_STR)
 a = PyQt4.QtGui.QApplication(sys.argv)

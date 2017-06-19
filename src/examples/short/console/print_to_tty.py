@@ -8,7 +8,7 @@ This example shows:
 - writing to a closed stream
 """
 
-import sys  # for stdout, stderr
+import sys
 
 print('Hello from regular print')
 print('Hello from sys.stdout', file=sys.stdout)

@@ -7,8 +7,8 @@ References:
 - http://stackoverflow.com/questions/30519366/pythonic-way-to-detach-a-process
 """
 
-import os  # for fork
-import time  # for sleep
+import os
+import time
 
 if os.fork() == 0:
     for i in range(10):

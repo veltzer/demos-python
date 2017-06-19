@@ -5,7 +5,7 @@ An example demonstrating twisteds 'callInThread' function.
 """
 
 from twisted.internet import reactor
-import time  # for sleep
+import time
 
 
 def aSillyBlockingMethod(t, stop):

@@ -9,8 +9,8 @@ is the right thing to use if you need ALL the files
 in a folder
 """
 
-import os  # for listdir
-import sys  # for arv
+import os
+import sys
 
 if len(sys.argv) < 2:
     raise ValueError('please pass folder')

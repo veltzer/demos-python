@@ -9,8 +9,8 @@ the folder must exist. If you want a softer solution then look at
 the rmtree_if_exists function below...
 """
 
-import shutil  # for rmtree
-import os.path  # for isdir
+import shutil
+import os.path
 
 
 def rmtree_if_exists(folder):

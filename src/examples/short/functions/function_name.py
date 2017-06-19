@@ -13,8 +13,8 @@ References:
 http://stackoverflow.com/questions/5067604/determine-function-name-from-within-that-function-without-using-traceback
 """
 
-import sys  # for _getframe
-import inspect  # for stack, currentframe
+import sys
+import inspect
 
 
 def myfunc():

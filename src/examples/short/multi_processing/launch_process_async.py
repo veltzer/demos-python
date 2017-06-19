@@ -8,8 +8,8 @@ References:
 """
 
 import subprocess
-import time  # for sleep
+import time
 
-p = subprocess.Popen(['watch', 'ls'])  # something long running
+p = subprocess.Popen(['watch', 'ls'])
 time.sleep(10)
 p.terminate()

@@ -15,8 +15,8 @@ References:
 http://stackoverflow.com/questions/17537390/how-to-install-a-package-using-the-python-apt-api
 """
 
-import apt.cache  # for Cache
-import os  # for geteuid
+import apt.cache
+import os
 
 pkg_names = [
     'templar',

@@ -7,7 +7,7 @@ Refrences:
 - https://docs.python.org/3/library/collections.html#collections.namedtuple
 """
 
-import collections  # for namedtuple
+import collections
 
 Point = collections.namedtuple('Point', ['x', 'y'])
 print(type(Point))

@@ -12,7 +12,7 @@ References:
 - http://blog.lerner.co.il/speedy-string-concatenation-python/
 """
 
-import timeit  # for timeit
+import timeit
 
 x = 'abc'
 y = 'def'

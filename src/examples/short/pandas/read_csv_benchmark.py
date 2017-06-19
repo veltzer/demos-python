@@ -66,8 +66,15 @@ def read_it_with_pandas_chunks(input_file: str, separator: str):
 @time_it
 def read_it_with_python(input_file: str, separator: str):
     line_count = 0
-    # for line in gzip.open(input_file, "rt"):
     for line in open(input_file, "rt"):
+        _ = line.split(separator)
+        line_count += 1
+    return line_count
+
+@time_it
+def read_it_with_python_gzip(input_file: str, separator: str):
+    line_count = 0
+    for line in gzip.open(input_file, "rt"):
         _ = line.split(separator)
         line_count += 1
     return line_count

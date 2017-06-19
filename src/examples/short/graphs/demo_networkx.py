@@ -12,7 +12,7 @@ References:
 http://www.python-course.eu/networkx.php
 """
 
-import networkx  # for Graph
+import networkx
 
 G = networkx.Graph()
 G.add_node('a')

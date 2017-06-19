@@ -7,7 +7,7 @@ Basic coloring with pygments
 from pygments import highlight
 from pygments.lexers import PythonLexer
 from pygments.formatters import HtmlFormatter
-import sys  # for argv
+import sys
 
 #
 # paramters #

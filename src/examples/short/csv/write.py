@@ -4,7 +4,7 @@
 Example of how to use the 'csv' module to write csv files
 """
 
-import csv  # for writer
+import csv
 
 data = [
     ['first, element', 5, ],

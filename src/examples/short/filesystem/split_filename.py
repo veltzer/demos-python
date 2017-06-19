@@ -8,8 +8,8 @@ NOTES:
 - splitext is for extensions.
 """
 
-import sys  # for stdin
-import os.path  # for basename, dirname, splitext
+import sys
+import os.path
 
 for line in sys.stdin:
     line = line.strip()

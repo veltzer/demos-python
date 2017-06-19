@@ -7,7 +7,7 @@ Note that the time measured by time.time() is the wall
 clock time which is not always what you want to measure.
 """
 
-import time  # for time, sleep
+import time
 
 time_before = time.time()
 time.sleep(2)

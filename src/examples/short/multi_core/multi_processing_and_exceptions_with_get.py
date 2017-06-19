@@ -13,8 +13,8 @@ After the processing is done you iterate the array and get all the results.
 See below.
 """
 
-import multiprocessing  # for cpu_count
-import time  # for sleep
+import multiprocessing
+import time
 
 def sleep_a_little(num):
     time.sleep(1)

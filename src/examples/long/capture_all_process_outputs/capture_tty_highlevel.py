@@ -7,9 +7,9 @@ References:
 http://stackoverflow.com/questions/11495783/redirect-subprocess-stderr-to-stdout
 """
 
-import sys  # for argv, stderr, exit, wait, WIFEXISTED, WEXITSTATUS, WIFSTOPPED, WSTOPSIG, WIFSIGNALED, WTERMSIG
-import pty  # for fork
-import os  # for execv, fdopen, read
+import sys
+import pty
+import os
 
 if len(sys.argv) < 2:
     print('{0}: must supply process to run and arguments for it'.format(

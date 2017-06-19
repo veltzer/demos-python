@@ -7,7 +7,7 @@ to iterate the cartesian product of two iterables.
 Notes:
 """
 
-import itertools  # for product
+import itertools
 
 ll1 = [1, 2, 3]
 ll2 = ['a', 'b', 'c', 'd']

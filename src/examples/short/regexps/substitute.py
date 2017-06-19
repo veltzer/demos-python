@@ -4,6 +4,6 @@
 Example of how to substitute parts of a string using regular expressions.
 """
 
-import re  # for sub
+import re
 
 print(re.sub(r'abc', 'z', 'abcdefghijkabcde'))

@@ -9,8 +9,8 @@ References:
 http://pythoncentral.io/hashing-files-with-python/
 """
 
-import hashlib  # for new
-import subprocess  # for check_output
+import hashlib
+import subprocess
 
 
 def hex_digest(filename, algo):

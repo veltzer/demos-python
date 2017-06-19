@@ -14,8 +14,8 @@ does not exist. Instead use the 'get' method on the value returned
 from the import 'apply_async' call.
 """
 
-import multiprocessing  # for cpu_count
-import time  # for sleep
+import multiprocessing
+import time
 
 def sleep_a_little(num):
     time.sleep(1)

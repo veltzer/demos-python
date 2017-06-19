@@ -7,7 +7,7 @@ References:
 http://stackoverflow.com/questions/7781260/how-can-i-represent-an-infinite-number-in-python
 """
 
-import math  # for inf
+import math
 
 test = math.inf
 

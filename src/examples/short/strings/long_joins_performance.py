@@ -5,7 +5,7 @@ This example proves that when you want to catenate many strings 'join' is
 the right way to go.
 """
 
-import timeit  # for timeit
+import timeit
 
 
 def func1():

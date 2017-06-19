@@ -1,15 +1,10 @@
 #!/usr/bin/python3
 
-import sys  # for argv, exit, stderr
-import mako.template  # for mako.template.Template
-import mako.lookup  # for mako.lookup.TemplateLookup
-import os  # for os.chmod
-import datetime  # for datetime
-
-
-#
-# functions #
-#
+import sys
+import mako.template
+import mako.lookup
+import os
+import datetime
 
 
 def years(x):
@@ -22,9 +17,6 @@ d = {
     'c': 'd',
 }
 
-#
-# code #
-#
 if len(sys.argv) != 3:
     print(sys.argv[0] + ': usage: ' + sys.argv[
         0] + ' [input] [output]', file=sys.stderr)

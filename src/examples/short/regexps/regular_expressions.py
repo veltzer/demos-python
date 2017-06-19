@@ -8,7 +8,7 @@ NOTES:
 - .findall can return all matches as strings.
 """
 
-import re  # for compile, finditer
+import re
 
 c = re.compile('^\tfoobar (\d+)\n$')
 

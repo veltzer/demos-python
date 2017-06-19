@@ -6,7 +6,7 @@ Note that an exception is thrown if a directory name which cannot be
 changed to is supplied (bad name, access problem and more).
 """
 
-import os  # for chdir, system
+import os
 
 # a wrong directory on purpose...
 try:

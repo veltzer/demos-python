@@ -5,8 +5,8 @@ This example shows how to know, in python, whether the file name
 that you get is realtive or absolute
 """
 
-import os.path  # for isabs, abspath
-import sys  # for stdin
+import os.path
+import sys
 
 for line in sys.stdin:
     # remove white space

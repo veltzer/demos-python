@@ -11,9 +11,9 @@ Notice that the file names and directory names that you get are relative
 to the root that you get and not to the root folder of the scan.
 """
 
-import os.path  # for join
-import os  # for walk
-import sys  # for argv
+import os.path
+import os
+import sys
 
 if len(sys.argv) < 2:
     raise ValueError('plase pass root_folder')

@@ -15,7 +15,7 @@ python2.7's izip so you don't need to think about any of this
 - in python 3 zip is in the default namespace.
 """
 
-import itertools  # for zip_longest
+import itertools
 
 ll1 = [1, 2, 3, 4, 5]
 ll2 = [10, 11, 12, 13, 14]

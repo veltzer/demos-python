@@ -5,7 +5,7 @@ This is an example of using pkgutil to create a lightweight plugin based system.
 
 Here is how you would use a fully well designed object like this:
 
-import whatever # for myBaseClass1
+import whatever
 
 mgr=plugger.mgr.Mgr()
 mgr.load_plugins(folder)

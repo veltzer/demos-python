@@ -11,7 +11,7 @@ The result is that there is about 10% difference in performance
 between the two methods.
 """
 
-import time  # for time
+import time
 
 
 class A:

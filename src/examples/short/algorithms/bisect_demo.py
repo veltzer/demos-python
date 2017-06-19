@@ -8,7 +8,7 @@ to apply. This means that to use it you must maintain your own array which
 contains only the values by which to look.
 """
 
-import bisect  # for bisect
+import bisect
 
 l = [1, 3, 4, 5, 71, 82]
 

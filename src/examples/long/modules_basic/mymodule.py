@@ -1,4 +1,4 @@
-import sys  # for modules
+import sys
 
 print('hello from [{0}]'.format(__file__))
 

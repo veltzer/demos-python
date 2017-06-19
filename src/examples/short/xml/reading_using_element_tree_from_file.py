@@ -6,7 +6,7 @@ xml.etree module
 
 """
 
-import xml.etree.ElementTree  # for parse
+import xml.etree.ElementTree
 
 # both of these will work
 mydoc = xml.etree.ElementTree.ElementTree(file='data.xml')

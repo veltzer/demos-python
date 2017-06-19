@@ -4,7 +4,7 @@
 This example demonstrates how to analyze the return code of a child process.
 """
 
-import os  # for system
+import os
 
 ret = os.system('ls -l >/dev/null')
 print(ret)

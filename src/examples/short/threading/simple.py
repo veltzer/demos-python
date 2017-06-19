@@ -7,8 +7,8 @@ References:
 http://www.saltycrane.com/blog/2008/09/simplistic-python-thread-example/
 """
 
-import threading  # for Thread
-import time  # for sleep
+import threading
+import time
 
 
 def myfunc(i):

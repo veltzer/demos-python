@@ -4,7 +4,7 @@
 setup.py file for SWIG car
 """
 
-import distutils.core  # for setup, Extension
+import distutils.core
 
 car_module = Extension('_car',
                        sources=['car_wrap.cxx', 'car.cc'],

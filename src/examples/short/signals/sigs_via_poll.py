@@ -14,11 +14,11 @@ References:
 http://www.pocketnix.org/doc/Fighting_set__wakeup__fd/
 """
 
-import select  # for epoll, EPOLLIN
-import signal  # for set_wakeup_fd, signal, SIGUSR1
-import fcntl  # for fcntl, F_GETFL, F_SETFL
-import os  # for pipe, O_NONBLOCK, read, getpid
-import errno  # for EINTR
+import select
+import signal
+import fcntl
+import os
+import errno
 
 # create a non blocking pipe
 pipe_r, pipe_w = os.pipe()

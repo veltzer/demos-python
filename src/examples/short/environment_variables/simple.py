@@ -4,7 +4,7 @@
 A simple example of how to get or set environment variables from python
 """
 
-import os  # for environ
+import os
 
 print(os.environ['USER'])
 if 'HOSTNAME' in os.environ:

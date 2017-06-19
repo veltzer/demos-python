@@ -4,8 +4,8 @@
 Example of disassembling a python function using the 'dis' and 'inspect' modules.
 """
 
-import dis  # for dis
-import inspect  # for getsourcelines
+import dis
+import inspect
 
 
 def add(a, b):

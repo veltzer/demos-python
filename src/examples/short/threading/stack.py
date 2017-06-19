@@ -4,7 +4,7 @@
 An example of a stack for multi threaded programming.
 """
 
-import threading  # for RLock, Thread
+import threading
 
 
 class Stack:

@@ -12,22 +12,15 @@ when running this.
 The answer is: YES!!!
 """
 
-import time  # for time
-import random  # for ???
-import os  # for unlink
-import os.path  # for isfile, getmtime
-import glob  # for glob
+import time
+import random
+import os
+import os.path
+import glob
 
-#
-# parameters #
-#
 count = 1000000
 doFirst = True
 doSecond = True
-
-#
-# code #
-#
 
 # get the list of all files accessible from /etc
 files = [f for f in glob.glob('/etc/*') if os.path.isfile(f)]

@@ -5,10 +5,10 @@ Example using MySQL Connector/Python. This is python3 mysql work.
 * that show engines works..
 """
 
-import mysql.connector  # for Connect
-import configparser  # for ConfigParser
-import os.path  # for isfile, expanduser
-import getpass  # for getuser
+import mysql.connector
+import configparser
+import os.path
+import getpass
 
 '''
 get the configuration, including user and password from the ~/.my.cnf

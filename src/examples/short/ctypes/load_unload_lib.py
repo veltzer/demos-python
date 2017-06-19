@@ -12,8 +12,8 @@ References:
 http://stackoverflow.com/questions/359498/how-can-i-unload-a-dll-using-ctypes-in-python
 """
 
-import ctypes  # for cdll, CDLL
-import signal  # for pause
+import ctypes
+import signal
 
 l = ctypes.cdll.LoadLibrary('libacl.so')
 libdl = ctypes.CDLL('libdl.so')

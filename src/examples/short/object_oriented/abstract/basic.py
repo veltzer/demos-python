@@ -13,7 +13,7 @@ it cannot be instantiated (second example).
         __metaclass__ = abc.ABCMeta
 """
 
-import abc  # for ABCMeta, abstractmethod
+import abc
 
 
 class A(metaclass=abc.ABCMeta):

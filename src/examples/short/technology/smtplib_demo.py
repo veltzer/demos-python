@@ -7,8 +7,8 @@ References:
 http://stackoverflow.com/questions/23616803/smtplib-smtp-starttls-fails-with-tlsv1-alert-decode-error
 """
 
-import smtplib  # for SMTP
-import email.mime.text  # for MIMEText
+import smtplib
+import email.mime.text
 
 
 def send_email(

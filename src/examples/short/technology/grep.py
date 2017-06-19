@@ -4,8 +4,8 @@
 Implementing grep in python in less than 10 lines of code...
 """
 
-import re  # for compile
-import sys  # for argv, exit
+import re
+import sys
 
 # command line usage...
 if len(sys.argv) < 3:

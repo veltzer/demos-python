@@ -4,7 +4,7 @@
 This is an example of creating a thread and passing it data via it's closure
 """
 
-import threading  # for Thread
+import threading
 
 # this function was written with NO consideratiion of threading...
 

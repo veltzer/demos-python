@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import sys  # for stdin
+import sys
 
 last = None
 count = 0

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import luigi  # for Task, Parameter
+import luigi
 
 
 class FileExists(luigi.Task):

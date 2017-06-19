@@ -6,7 +6,7 @@ you call them you are no longer running (your executable get replaced or rather 
 virtual machine gets replaced...).
 """
 
-import os  # for system, execl
+import os
 
 r = os.system('ls -l')
 print('Im still here')

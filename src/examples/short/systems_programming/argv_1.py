@@ -8,7 +8,7 @@ diffrent behaviour. An prime example of this (although not in python) is the bus
 toolset for embedded linux systems.
 """
 
-import sys  # for argv
+import sys
 
 if sys.argv[0] == './argv_1.py':
     print('Heya. you called ./argv_1.py')

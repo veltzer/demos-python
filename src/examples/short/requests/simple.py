@@ -8,7 +8,7 @@ References:
 - http://docs.python-guide.org/en/latest/scenarios/scrape
 """
 
-import requests  # for post
+import requests
 
 url = 'http://www.google.com'
 r = requests.get(url)

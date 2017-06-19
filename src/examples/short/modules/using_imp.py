@@ -6,7 +6,7 @@ This clearly shows that you can reload any module into any name space using
 the imp module.
 """
 
-import imp  # for load_source
+import imp
 
 imp.load_source('__main__', 'using_imp_one.py')
 print('add(2,2) is', add(2, 2))

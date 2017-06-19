@@ -12,7 +12,7 @@ You should only issue a warning if you can continue running despite the warning.
 If you cannot continue to run, raise an exception.
 """
 
-import warnings  # for warn, simplefilter
+import warnings
 
 
 def fxn():

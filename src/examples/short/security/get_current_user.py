@@ -7,9 +7,9 @@ References:
 - http://stackoverflow.com/questions/842059/is-there-a-portable-way-to-get-the-current-username-in-python
 """
 
-import getpass  # for getuser
-import os  # for getlogin, getuid, getuid
-import pwd  # for getpwuid
+import getpass
+import os
+import pwd
 
 print(getpass.getuser())
 print(os.getlogin())

@@ -11,7 +11,7 @@ level which is contrary to logging philosophy. You shuld not
 set your own logging level.
 """
 
-import logging  # for basicConfig, getLogger
+import logging
 
 logging.basicConfig()
 logger = logging.getLogger(__name__)

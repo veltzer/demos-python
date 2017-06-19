@@ -19,8 +19,8 @@ will log to tty
 and you can combine...
 """
 
-import sys  # for stderr, argv, exit
-import time  # for sleep
+import sys
+import time
 
 args = sys.argv[1:]
 if 'stdout' in args:

@@ -1,7 +1,7 @@
 import pkg_resources
 
-import os.path  # for dirname, join
-import pkgutil  # for get_data
+import os.path
+import pkgutil
 
 static_file_content = pkg_resources.resource_string(
     'mypack', 'static_file.html').decode()

@@ -6,7 +6,7 @@ An example of how to use functools.partial
 This is implemented the same in python2.7 and python3.
 """
 
-import functools  # for partial
+import functools
 
 
 def print_it(x):

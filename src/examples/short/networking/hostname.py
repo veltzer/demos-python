@@ -7,9 +7,9 @@ References:
 http://stackoverflow.com/questions/4271740/how-can-i-use-python-to-get-the-system-hostname
 """
 
-import socket  # for gethostname
-import platform  # for node, uname
-import os  # for uname, getenv
+import socket
+import platform
+import os
 
 print(socket.gethostname())
 print(platform.node())

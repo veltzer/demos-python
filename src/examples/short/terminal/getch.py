@@ -7,9 +7,9 @@ References:
 - http://stackoverflow.com/questions/27750536/python-input-single-character-without-enter
 """
 
-import termios  # for tcgetattr, tcsetattr, TCSADRAIN
-import sys  # for stdin
-import tty  # for setraw
+import termios
+import sys
+import tty
 
 
 def getch():

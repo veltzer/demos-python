@@ -4,7 +4,7 @@
 This is an example of debugging python with pdb.
 """
 
-import pdb  # for set_trace
+import pdb
 
 pdb.set_trace()
 

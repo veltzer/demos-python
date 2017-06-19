@@ -6,7 +6,7 @@ Copyright Linus Torvalds ${years(2007)}
 % endfor
 
 <%
-	import platform # for node
+	import platform
 	hostname=platform.node()
 %>
 

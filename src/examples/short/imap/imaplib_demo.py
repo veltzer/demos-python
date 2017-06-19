@@ -10,9 +10,9 @@ This thing started from me wanting to import my old mail to gmail and seeing
 this blog post: http://scott.yang.id.au/2009/01/migrate-emails-maildir-gmail.html
 """
 
-import imaplib  # for IMAP4_SSL
-import ConfigParser  # for ConfigParser
-import os.path  # for expanduser
+import imaplib
+import ConfigParser
+import os.path
 
 config = ConfigParser.ConfigParser()
 config.read(os.path.expanduser('~/.pyimap.ini'))

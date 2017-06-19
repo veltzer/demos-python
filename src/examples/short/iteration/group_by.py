@@ -4,7 +4,7 @@
 This is a demo of itertools.groupby
 """
 
-import itertools  # for groupby
+import itertools
 
 
 def indentation(line):

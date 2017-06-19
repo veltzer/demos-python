@@ -19,29 +19,16 @@ single threaded multiplexed code.
 - in any case the gil got heavily improved from python2 where is has 50% overhead.
 """
 
-#
-# imports #
-#
-import threading  # for Thread
-import time  # for time
+import threading
+import time
 
-#
-# parameters #
-#
 limit = 100000000
-
-#
-# functions #
-#
 
 
 def count(n):
     while n > 0:
         n -= 1
 
-#
-# code #
-#
 
 # first single thread
 time_before = time.time()

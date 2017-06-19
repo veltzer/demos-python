@@ -6,7 +6,7 @@ not being able to reuse sockets even though the socket.SO_REUSEADDR
 is used...
 """
 
-import socket  # for socket
+import socket
 
 while True:
     adr = ('localhost', 8080)

@@ -1,6 +1,6 @@
-import imp  # for find_module, load_module
-import os  # for listdir
-import os.path  # for join, isfile
+import imp
+import os
+import os.path
 
 
 def load_module(module_ns, name, folder):

@@ -19,8 +19,8 @@ see no logging at debug level.
     add the handler to the logger
 """
 
-import logging  # for getLogger, StreamHandler, Formatter
-import logging_tree  # for printout
+import logging
+import logging_tree
 
 do_addhandler = True
 

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import math  # for sqrt
+import math
 
 
 def is_prime(n):

@@ -4,8 +4,8 @@
 This example shows how to use a multiprocessing pool
 """
 
-import multiprocessing  # for cpu_count
-import time  # for sleep
+import multiprocessing
+import time
 
 def sleep_a_little(num):
     print('before', num)

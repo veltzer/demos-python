@@ -7,8 +7,8 @@ References:
 http://stackoverflow.com/questions/22676/how-do-i-download-a-file-over-http-using-python
 """
 
-import urllib.request  # for urlretrieve
-import progressbar  # for ProgressBar
+import urllib.request
+import progressbar
 
 '''
 A function to download a file and show progress report

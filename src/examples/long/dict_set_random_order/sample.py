@@ -4,7 +4,7 @@
 This is an example which shows a stadard dictionary vs an ordered dict.
 """
 
-import collections  # for OrderedDict
+import collections
 
 ud = dict()
 od = collections.OrderedDict()

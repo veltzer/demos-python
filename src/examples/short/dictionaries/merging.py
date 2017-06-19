@@ -8,7 +8,7 @@ There are two ways:
 - the collections.ChainMap class.
 """
 
-import collections  # for ChainMap
+import collections
 
 d1 = {
     "one": 1,

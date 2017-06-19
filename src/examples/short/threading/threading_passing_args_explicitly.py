@@ -4,7 +4,7 @@
 This is a classic thread creation example.
 """
 
-import threading  # for Thread
+import threading
 
 # this function was written with NO consideratiion of threading...
 

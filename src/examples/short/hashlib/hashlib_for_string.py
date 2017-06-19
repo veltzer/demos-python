@@ -7,7 +7,7 @@ References:
 - https://docs.python.org/3/library/hashlib.html
 """
 
-import hashlib  # for md5
+import hashlib
 
 def md5_string(s: str) -> str:
     m = hashlib.md5()
