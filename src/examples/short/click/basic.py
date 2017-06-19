@@ -4,7 +4,7 @@
 A Demo for click
 
 Notes:
-- when you give a boolean flag the "--XXX" could be written as "--XXX/--YYY" and then
+- when you give a flag the "--XXX" could be written as "--XXX/--YYY" and then
     --XXX will turn on the flag and --YYY will turn it off.
     In this case *YOU MUST NOT* pass the 'type=bool' parameters (bug in click)
 
