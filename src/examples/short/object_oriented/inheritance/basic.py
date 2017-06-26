@@ -3,7 +3,7 @@
 """
 This is an example showing how to create object hierarchies in python.
 
-Things to note:
+NOTES:
 - inheriting from object is recommended (you get lots of methods)
 - there are two ways to call parent methods.
 - all methods are overloadable.
