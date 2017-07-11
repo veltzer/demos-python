@@ -1,0 +1,5 @@
+pylogconf
+click
+requests
+tqdm
+cmd2
