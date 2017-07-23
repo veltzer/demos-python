@@ -7,7 +7,7 @@ Notes:
 - when you give a flag the "--XXX" could be written as "--XXX/--YYY" and then
     --XXX will turn on the flag and --YYY will turn it off.
     In this case *YOU MUST NOT* pass the 'type=bool' parameters (bug in click)
-- add 'show_default=True' to evey option to show the default value for that option.
+- add 'show_default=True' to every option to show the default value for that option.
 
 References:
 - http://click.pocoo.org/5
