@@ -23,7 +23,7 @@ import click
 @click.option('--output', required=True, help='output file', type=click.File('w', lazy=False))
 @click.option('--hash-type', required=True, type=click.Choice(['md5', 'sha1']))
 @click.option('--foo/--bar', required=False, help="this is foo")
-def hello(count, name, required, output, hash_type):
+def main(count, name, required, output, hash_type):
     """Simple program that greets NAME for a total of COUNT times."""
     print(required)
     print(output)
@@ -33,4 +33,4 @@ def hello(count, name, required, output, hash_type):
 
 
 if __name__ == '__main__':
-    hello()
+    main()

@@ -3,12 +3,6 @@
 """
 This example demonstrates how to show the default value for a paramter
 in click.
-
-The parameters:
-    show_default,
-    help,
-    type,
-as NOT allowed for the free arguments section (click.argument).
 """
 
 import click
@@ -22,14 +16,9 @@ import click
         help='Number of greetings.',
         show_default=True,
 )
-@click.argument(
-        'args',
-        nargs=-1,
-)
-def main(count, args):
+def main(count: int) -> None:
     """ simple demo that shows default values """
     print(count)
-    print(args)
 
 
 if __name__ == '__main__':
