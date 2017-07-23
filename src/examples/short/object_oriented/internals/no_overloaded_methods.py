@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 This example plainly shows that you cannot have two methods in a class by the same

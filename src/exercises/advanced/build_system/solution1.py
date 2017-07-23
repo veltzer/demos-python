@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 Parse a simple Makefile (without commands) and output a build plan.

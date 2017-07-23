@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 size = int(input('please enter a list size: '))
 l = []

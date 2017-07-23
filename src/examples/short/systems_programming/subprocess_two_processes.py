@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 This example shows how to create two processes in python that communicate via a pipe.

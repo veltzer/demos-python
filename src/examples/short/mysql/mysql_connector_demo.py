@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 Example using MySQL Connector/Python. This is python3 mysql work.

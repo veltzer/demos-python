@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 This is an example of how to create a closure which is 'fat': meaning

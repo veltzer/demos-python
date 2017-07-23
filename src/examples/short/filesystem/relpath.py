@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 This is an example that shows how to calculate the relative paths of one path to the other.

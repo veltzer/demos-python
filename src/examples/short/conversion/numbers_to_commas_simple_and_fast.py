@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 This is a fast way to convert numbers with commas in them from string to the right type

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 This is an example of a shared closure. All three functions share the same closure or data.

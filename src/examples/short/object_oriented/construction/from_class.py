@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 An example of constructing an object from the class when the class is a parameter.

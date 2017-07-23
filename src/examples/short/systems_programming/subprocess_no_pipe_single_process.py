@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 A simple subprocess demo. Create a subprocess and run it. No pipes.

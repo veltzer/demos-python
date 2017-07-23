@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 nums = range(0, 100)
 for d in range(2, 11):

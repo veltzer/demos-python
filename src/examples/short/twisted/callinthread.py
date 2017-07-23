@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 An example demonstrating twisteds 'callInThread' function.

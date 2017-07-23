@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 mymin = 1000000000000000000000
 mymax = -1000000000000000000000

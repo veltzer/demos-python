@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 This example explores whether it is efficient or not to cache os.path.getmtime()

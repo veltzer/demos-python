@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 This example is very similar to the command line groups(1) or id(1) utilities.

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 num = int(input('Please enter number of elements: '))
 my_list = []

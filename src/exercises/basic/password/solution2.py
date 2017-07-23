@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 login = input('insert login: ')
 full_name = input('insert full name: ')

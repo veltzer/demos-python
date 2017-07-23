@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 # this is a function accepting a list of unary functions and an argument
 # the function returns a list where each element is the application of the

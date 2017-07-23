@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 this example explores whether it is better to not remove files vs the try/except

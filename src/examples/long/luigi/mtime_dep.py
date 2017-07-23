@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 This is an example of how to use luigi to get 'make' like functionality regarding dependencies.

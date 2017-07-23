@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 This is a program showing how to redirect both stdout and stderr for a subprocess

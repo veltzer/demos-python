@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 d1 = {'Israel': 'Jerusalem', 'France':
       'Paris', 'Italy': 'Rome', 'Egypt': 'Cairo'}

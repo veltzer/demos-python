@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 INPUT_NAME = 'tmp.txt'
 OUTPUT = 'tmp2.txt'

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 # this solution is the 'varargs' type. You can call the min_max_avg function in any
 # of the following ways:

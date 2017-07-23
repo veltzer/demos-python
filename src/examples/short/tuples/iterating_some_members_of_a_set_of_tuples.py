@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 
 """
 Sometimes you want to iterate tuples and you dont want all members.
