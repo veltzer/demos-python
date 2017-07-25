@@ -9,6 +9,9 @@ Notes:
 - struct.unpack return type is tuple
 - length of a packed buffer is exactly what you would expect it to be
 from the import basic types that you are packing.
+
+References:
+- https://docs.python.org/3/library/struct.html
 """
 
 import struct
