@@ -115,7 +115,7 @@ def demo_yesno(d):
 
 
 def demo_textbox(d):
-    d.textbox('dialog_demo.py', width=76)
+    d.textbox(sys.argv[0], width=76)
 
 
 def demo_checklist(d):
