@@ -33,6 +33,7 @@ def populate(d):
         # curses
         'python3-newt',
         'python3-dialog',
+        'python-dialog',
 
         # misc modules
         'python3-mysql.connector',

@@ -3,3 +3,4 @@ click
 requests
 tqdm
 cmd2
+pythondialog
