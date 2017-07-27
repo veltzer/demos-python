@@ -14,6 +14,13 @@ policy for pythondialog calls in this demo.
 
 References:
 http://pythondialog.sourceforge.net/doc/#main-contents
+
+Installing:
+via apt:
+    python 2: python-dialog
+    python 3: python3-dialog
+via pip:
+    $ pip install pythondialog
 """
 
 import sys
