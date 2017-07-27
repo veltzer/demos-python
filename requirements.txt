@@ -4,3 +4,4 @@ requests
 tqdm
 cmd2
 pythondialog
+# snack (having problems with it and python3)

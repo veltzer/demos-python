@@ -13,7 +13,8 @@ function in order to understand the somewhat relaxed error checking
 policy for pythondialog calls in this demo.
 
 References:
-http://pythondialog.sourceforge.net/doc/#main-contents
+- http://pythondialog.sourceforge.net/doc/#main-contents
+- https://pypi.python.org/pypi/pythondialog/3.4.0
 
 Installing:
 via apt:
