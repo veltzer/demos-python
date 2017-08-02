@@ -23,7 +23,6 @@ class Encoder:
         self.size = size
         self = ctypes.create_string_buffer(size)
         self.pos = 0
-    def add_int
 
     def get_bytes(self):
         """ return all the bytes collected """
