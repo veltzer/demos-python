@@ -4,4 +4,5 @@ requests
 tqdm
 cmd2
 pythondialog
+lmdb
 # snack (having problems with it and python3)

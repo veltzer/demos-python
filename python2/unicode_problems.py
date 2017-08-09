@@ -14,6 +14,7 @@ if sys.stdout.encoding is None:
 # in the environment
 
 data = u'\xe9'
+t = bytes(data)
 print(data)
 try:
     print('this is data {}'.format(data))
