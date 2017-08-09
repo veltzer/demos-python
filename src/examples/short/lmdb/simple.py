@@ -11,23 +11,23 @@ import lmdb
 
 env=lmdb.open('/tmp', map_size=1000000000000)
 with env.begin(write=True) as txn:
-    k=bytes('hello','utf8')  # Data on disk is a byte array...
-    v=bytes('world','utf8')  # ...so explicitly state the encoding!
-
-    txn.put(k,v)                   # write
-    v=txn.get(k,default='what??')  # read
-
-    v=str(v,'utf8')          # again: Explicitly state the encoding!
+    k=bytes('hello','utf8')
+    v=bytes('world','utf8')
+    txn.put(k,v)
+    v=txn.get(k,default='what??')
+    v=str(v,'utf8')
     assert v == "world"
 
+"""
+The next code does not work
 env=lmdb.open('/tmp/file.mdb', subdir=False, max_dbs=2)
 with env.begin(write=True, db="a") as txn:
-    k=bytes('a_key','utf8')  # Data on disk is a byte array...
-    v=bytes('a_val','utf8')  # ...so explicitly state the encoding!
-    txn.put(k,v)                   # write
-print(env)
+    k=bytes('a_key','utf8')
+    v=bytes('a_val','utf8')
+    txn.put(k,v)
 
 with env.begin(write=False, db="a") as txn:
-    v=txn.get("a_key")  # read
-    v=str(v,'utf8')          # again: Explicitly state the encoding!
-    print(v)
+    v=txn.get("a_key")
+    v=str(v,'utf8')
+    assert v == "a_val"
+"""
