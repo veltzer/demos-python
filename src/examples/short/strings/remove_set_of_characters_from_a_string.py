@@ -26,7 +26,10 @@ def using_re():
 using_re.name = 'using_re'
 
 def using_translate():
-    return line.translate(translate_map)
+    # python3
+    # return line.translate(translate_map)
+    # python2
+    return line.translate(None, "abcdefghijklmnopqrstuvwzyz")
 
 using_translate.name = 'using_translate'
 
