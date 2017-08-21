@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 """
 This example deals with removing a set of characters from a string.
@@ -26,7 +26,7 @@ def using_re():
 using_re.name = 'using_re'
 
 def using_translate():
-    return line.translate(translate_map)
+    return line.translate(None, "abcdefghijklmnopqrstuvwzyz")
 
 using_translate.name = 'using_translate'
 
