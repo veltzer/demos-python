@@ -2,6 +2,9 @@
 
 """
 A basic example for using the 'cachetools' module
+
+References:
+- https://docs.python.org/3/library/functools.html#functools.lru_cache
 """
 
 from functools import lru_cache
