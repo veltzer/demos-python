@@ -5,4 +5,5 @@ tqdm
 cmd2
 pythondialog
 lmdb
+cachetools
 # snack (having problems with it and python3)
