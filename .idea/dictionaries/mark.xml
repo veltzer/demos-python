@@ -9,6 +9,9 @@
       <w>centos</w>
       <w>dbus</w>
       <w>defaultdict</w>
+      <w>errno</w>
+      <w>fibonnaci</w>
+      <w>glibc</w>
       <w>intersetellar</w>
       <w>jinja</w>
       <w>jsonschema</w>
@@ -18,6 +21,7 @@
       <w>networkx</w>
       <w>paramlinks</w>
       <w>passwd</w>
+      <w>poller</w>
       <w>popen</w>
       <w>programoutput</w>
       <w>pudb</w>
@@ -38,6 +42,7 @@
       <w>rivendell</w>
       <w>scrapy</w>
       <w>signalfd</w>
+      <w>sigusr</w>
       <w>sphinxcontrib</w>
       <w>tqdm</w>
       <w>unidecode</w>

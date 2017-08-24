@@ -5,7 +5,7 @@ This example shows how to approximate the <> operator of perl
 in python.
 
 Reminder: the <> operator (or as it's called diamond) reads
-all line seither specified on the command line or from standard input.
+all lines either specified on the command line or from standard input.
 
 References:
 - https://mail.python.org/pipermail/tutor/2005-September/041607.html
@@ -25,5 +25,9 @@ def diamond_lines():
                     yield line
 
 
-for line in diamond_lines():
-    print(line, end='')
+def main():
+    for line in diamond_lines():
+        print(line, end='')
+
+if __name__ == "__main__":
+    main()

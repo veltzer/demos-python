@@ -35,9 +35,14 @@ def fermat(n):
                     yield x, y, z
 
 
-print('SF', simple_func(10))
+def main():
+    print('SF', simple_func(10))
 
-for i in fermat(2):
-    print(i)
+    for i in fermat(2):
+        print(i)
 
-print('FINISHED')
+    print('FINISHED')
+
+
+if __name__ == "__main__":
+    main()

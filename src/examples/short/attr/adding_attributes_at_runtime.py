@@ -17,6 +17,7 @@ class MyObject(object):
     b = attrib(default=None)  # type: int
 
     def add_attribute(self, val):
+        # noinspection PyAttributeOutsideInit
         self.another = val
 
     def print(self):

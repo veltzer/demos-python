@@ -16,6 +16,9 @@ class Console(cmd.Cmd):
         cmd.Cmd.__init__(self)
         self.prompt = "=>> "
         self.intro = "Welcome to console!"  # defaults to None
+        self._hist = None
+        self._locals = None
+        self._globals = None
 
     # Command definitions
     def do_hist(self, args):

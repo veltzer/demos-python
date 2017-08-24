@@ -45,7 +45,7 @@ signal.signal(signal.SIGUSR1, lambda x, y: None)
 '''
 
 
-def dopoll(poller):
+def do_poll(poller):
     while True:
         try:
             return poller.poll()
@@ -54,14 +54,19 @@ def dopoll(poller):
                 raise
 
 
-poller = select.epoll()
-poller.register(pipe_r, select.EPOLLIN)
+def main():
+    poller = select.epoll()
+    poller.register(pipe_r, select.EPOLLIN)
 
-print('mail loop staring...')
-# print('press CTRL+C to see how I catch the signal...')
-print('signal me with [kill -s SIGUSR1 {0}]...'.format(os.getpid()))
-while True:
-    events = dopoll(poller)
-    for fd, flags in events:
-        print('we got signal')
-        os.read(pipe_r, 1)
+    print('mail loop staring...')
+    # print('press CTRL+C to see how I catch the signal...')
+    print('signal me with [kill -s SIGUSR1 {0}]...'.format(os.getpid()))
+    while True:
+        events = do_poll(poller)
+        for _ in events:
+            print('we got signal')
+            os.read(pipe_r, 1)
+
+
+if __name__ == '__main__':
+    main()

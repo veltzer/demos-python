@@ -4,7 +4,7 @@ def compute(n):
     import socket
     time.sleep(n)
     host = socket.gethostname()
-    return (host, n)
+    return host, n
 
 
 if __name__ == '__main__':

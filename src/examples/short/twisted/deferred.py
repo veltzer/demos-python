@@ -30,23 +30,24 @@ def largeFibonnaciNumber():
     return d
 
 
-timeBefore = time.time()
-
-# call the function and get our Deferred
-d = largeFibonnaciNumber()
-
-timeAfter = time.time()
-
-print(
-    'Total time taken for largeFibonnaciNumber call: {0:.3f} seconds'.format(timeAfter - timeBefore))
-
-
-# add a callback to it to output the number
-
-
 def printNumber(number):
     print('The %dth Fibonacci number is %d' % (TARGET, number))
 
 
-print('Adding the callback now.')
-d.addCallback(printNumber)
+def main():
+    timeBefore = time.time()
+
+    # call the function and get our Deferred
+    d = largeFibonnaciNumber()
+
+    timeAfter = time.time()
+
+    print(
+        'Total time taken for largeFibonnaciNumber call: {0:.3f} seconds'.format(timeAfter - timeBefore))
+
+    # add a callback to it to output the number
+    print('Adding the callback now.')
+    d.addCallback(printNumber)
+
+if __name__ == '__main__':
+    main()

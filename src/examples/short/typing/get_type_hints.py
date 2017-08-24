@@ -9,12 +9,12 @@ from typing import get_type_hints
 
 class Data:
     # a: ClassVar[int] = 0
-    def doit(a: float) -> float:
-        return a + 1
+    def doit(self, param: float) -> float:
+        return param + 1
 
 
-def func(a: int) -> int:
-    return a + 1
+def func(param: int) -> int:
+    return param + 1
 
 
 import __main__
