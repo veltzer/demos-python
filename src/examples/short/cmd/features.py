@@ -1,11 +1,17 @@
 #!/usr/bin/env python
 
-'''
+"""
 This is an example of how to use the cmd python module adjusted for python3
+
+Notes:
+- all commands are in the 'do_XXX' methods.
+- these methods *must* received both self and args.
+You may choose to not use the args but they must be received.
+- an empty line method must really be called 'emptyline'
 
 References:
 http://code.activestate.com/recipes/280500-console-built-with-cmd-object/
-'''
+"""
 
 import cmd
 import os
@@ -21,10 +27,12 @@ class Console(cmd.Cmd):
         self._globals = None
 
     # Command definitions
+    # noinspection PyUnusedLocal
     def do_hist(self, args):
         """Print a list of commands that have been entered"""
         print(self._hist)
 
+    # noinspection PyMethodMayBeStatic, PyUnusedLocal
     def do_exit(self, args):
         """Exits from the console"""
         return -1
@@ -34,6 +42,7 @@ class Console(cmd.Cmd):
         """Exit on system end of file character"""
         return self.do_exit(args)
 
+    # noinspection PyMethodMayBeStatic
     def do_shell(self, args):
         """Pass command to a system shell when line begins with '!'"""
         os.system(args)
@@ -58,14 +67,14 @@ class Console(cmd.Cmd):
 
     def postloop(self):
         """Take care of any unfinished business.
-           Despite the claims in the Cmd documentaion, Cmd.postloop() is not a stub.
+           Despite the claims in the Cmd documentation, Cmd.postloop() is not a stub.
         """
         cmd.Cmd.postloop(self)  # Clean up command completion
         print("Exiting...")
 
     def precmd(self, line):
         """ This method is called after the line has been input but before
-            it has been interpreted. If you want to modifdy the input line
+            it has been interpreted. If you want to modify the input line
             before execution (for example, variable substitution) do it here.
         """
         self._hist += [line.strip()]
@@ -79,7 +88,7 @@ class Console(cmd.Cmd):
 
     def emptyline(self):
         """Do nothing on empty input line"""
-        pass
+        print("this is an empty line")
 
     def default(self, line):
         """Called on an input line when the command prefix is not recognized.
