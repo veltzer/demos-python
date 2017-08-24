@@ -6,11 +6,11 @@ is really local
 """
 
 
-def myfunc():
+def my_function():
     x = 5
     print(x)
 
 
 x = 7
-myfunc()
+my_function()
 print(x)

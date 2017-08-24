@@ -9,6 +9,8 @@
       <w>centos</w>
       <w>dbus</w>
       <w>defaultdict</w>
+      <w>errback</w>
+      <w>errbacks</w>
       <w>errno</w>
       <w>fibonnaci</w>
       <w>glibc</w>
@@ -44,6 +46,7 @@
       <w>signalfd</w>
       <w>sigusr</w>
       <w>sphinxcontrib</w>
+      <w>textiowrapper</w>
       <w>tqdm</w>
       <w>unidecode</w>
       <w>venv</w>

@@ -18,7 +18,7 @@ def do_error():
         raise ValueError('outer') from e
 
 
-def excepthook(type, value, traceback):
+def excepthook(_type, value, _traceback):
     # this loop will drill to the core of the problem
     # use only if this is what you want to show...
     while value.__cause__:

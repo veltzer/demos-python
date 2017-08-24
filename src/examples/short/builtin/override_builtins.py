@@ -13,21 +13,21 @@ There are two ways to solve this:
 import builtins
 
 
-def max(*args):
+def my_max(*args):
     print("hey, I am here...")
     # now call the builtin 'max' function
     return builtins.max(args)
 
 
-print(max(1, 2))
+print(my_max(1, 2))
 
 original_min = min
 
 
-def min(*args):
+def my_min(*args):
     print("hey, I am here...")
     # now call the builtin 'min' function
     return original_min(args)
 
 
-print(min(1, 2))
+print(my_min(1, 2))

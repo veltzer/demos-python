@@ -16,6 +16,7 @@ class PluginThree(yapsy.IPlugin.IPlugin):
         print('{0} is deactivated'.format(__name__))
     '''
 
+    # noinspection PyMethodMayBeStatic
     def do_something(self):
         print('do_something for {0}'.format(__name__))
 

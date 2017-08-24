@@ -36,6 +36,7 @@ def fermat(n):
 
 
 def main():
+    # noinspection PyTypeChecker
     print('SF', simple_func(10))
 
     for i in fermat(2):

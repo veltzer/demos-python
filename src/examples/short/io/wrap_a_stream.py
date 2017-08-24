@@ -9,6 +9,7 @@ References:
 
 import io
 import itertools
+from io import BufferedIOBase
 
 filename = "/etc/passwd"
 
@@ -17,7 +18,7 @@ with open(filename, "rb") as file_handle:
     for line in itertools.islice(file_handle, 5):
         print(line)
 
-with open(filename, "rb") as file_handle:
+with open(filename, "rb") as file_handle:  # type: BufferedIOBase
     wrapped = io.TextIOWrapper(file_handle)
     for line in itertools.islice(wrapped, 5):
         print(line, end='')

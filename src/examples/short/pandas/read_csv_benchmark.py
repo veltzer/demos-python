@@ -90,11 +90,16 @@ def loop_with_python(input_file: str, separator: str):
             pass
 
 
-input_file = "/tmp/large.tsv"
-size = 1000000
-# prepare_large_tsv_file(input_file, size)
-lc3 = read_it_with_python(input_file, "\t")
-lc2 = read_it_with_pandas(input_file, "\t")
-lc1 = read_it_with_pandas_chunks(input_file, "\t")
-lc3 = loop_with_python(input_file, "\t")
-assert lc1 == lc2
+def main():
+    input_file = "/tmp/large.tsv"
+    size = 1000000
+    # prepare_large_tsv_file(input_file, size)
+    lc3 = read_it_with_python(input_file, "\t")
+    lc2 = read_it_with_pandas(input_file, "\t")
+    lc1 = read_it_with_pandas_chunks(input_file, "\t")
+    lc3 = loop_with_python(input_file, "\t")
+    assert lc1 == lc2
+
+
+if __name__ == '__main__':
+    main()

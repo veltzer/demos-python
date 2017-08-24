@@ -49,7 +49,7 @@ class Console(cmd.Cmd):
     # Override methods in Cmd object
     def preloop(self):
         """Initialization before prompting user for commands.
-           Despite the claims in the Cmd documentaion, Cmd.preloop() is not a stub.
+           Despite the claims in the Cmd documentation, Cmd.preloop() is not a stub.
         """
         cmd.Cmd.preloop(self)  # sets up command completion
         self._hist = []  # No history yet

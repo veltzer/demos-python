@@ -2,26 +2,26 @@
 
 
 def my_min(my_list):
-    min = my_list[0]
+    current_min = my_list[0]
     for x in my_list:
-        if x < min:
-            min = x
-    return min
+        if x < current_min:
+            current_min = x
+    return current_min
 
 
 def my_max(my_list):
-    max = my_list[0]
+    current_max = my_list[0]
     for x in my_list:
-        if x > max:
-            max = x
-    return max
+        if x > current_max:
+            current_max = x
+    return current_max
 
 
 def my_sum(my_list):
-    sum = 0
+    current_sum = 0
     for x in my_list:
-        sum += x
-    return sum
+        current_sum += x
+    return current_sum
 
 
 def min_max_avg(my_list):

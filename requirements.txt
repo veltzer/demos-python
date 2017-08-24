@@ -12,4 +12,6 @@ mako
 gi
 luigi
 pyinotify
+twisted
+yapsy
 # gtk

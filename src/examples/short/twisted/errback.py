@@ -19,8 +19,8 @@ def my_other_callback(content):
 
 def my_callback(content):
     print('in callback', content)
-    defr = getPage('http://localhost/~user/')
-    defr.addCallback(my_other_callback)
+    deferred = getPage('http://localhost/~user/')
+    deferred.addCallback(my_other_callback)
     # raise Exception('this is an exception')
     # reactor.stop()
 
@@ -30,7 +30,12 @@ def my_errback(error):
     reactor.stop()
 
 
-defr = getPage('http://localhost')
-defr.addCallback(my_callback)
-defr.addErrback(my_errback)
-reactor.run()
+def main():
+    deferred = getPage('http://localhost')
+    deferred.addCallback(my_callback)
+    deferred.addErrback(my_errback)
+    reactor.run()
+
+
+if __name__ == '__main__':
+    main()

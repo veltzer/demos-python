@@ -24,7 +24,8 @@ def simple_func(x):
 
 
 def fermat(n):
-    """Returns triplets of the form x^n+y^n=z^n.
+    """
+    Returns triplets of the form x^n+y^n=z^n.
     Warning! Untested with n>2.
     """
     for x in range(100):
@@ -35,6 +36,7 @@ def fermat(n):
                     yield x, y, z
 
 
+# noinspection PyTypeChecker
 print('SF', simple_func(10))
 
 for j in fermat(2):
