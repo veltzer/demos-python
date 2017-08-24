@@ -7,15 +7,15 @@ Copyright Jon Berg , turtlemeat.com
 """
 
 import cgi
-import time
 import os
+import threading
+import time
+
 import BaseHTTPServer
 import SocketServer
-import threading
 
 
 class ThreadedServer(SocketServer.ThreadingMixIn, BaseHTTPServer.HTTPServer):
-
     """Handle requests in a separate thread."""
     pass
 
@@ -130,5 +130,6 @@ def main():
         print()
         print('CTRL+C received, shutting down server')
         server.socket.close()
+
 
 main()

@@ -35,6 +35,7 @@ print(Book.getNumBooks())
 class FictionBook(Book):
     pass
 
+
 b3 = FictionBook(15)
 print(Book.num)
 print(FictionBook.num)

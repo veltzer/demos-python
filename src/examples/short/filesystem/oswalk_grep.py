@@ -6,10 +6,9 @@ a directory of files recursivly.
 This is used to implement find(1)+grep(1) in just a few lines of python.
 """
 
-import os
+import os.path
 import re
 import sys
-import os.path
 
 if len(sys.argv) < 2:
     raise ValueError('please pass regexp')

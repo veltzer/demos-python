@@ -21,6 +21,7 @@ def system_check_output(arg):
         raise ValueError('error in executing', cmd)
     return output
 
+
 try:
     system_check_output(['nonexistant', '--nonexist'])
 except:

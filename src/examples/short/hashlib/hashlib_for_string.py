@@ -9,9 +9,11 @@ References:
 
 import hashlib
 
+
 def md5_string(s: str) -> str:
     m = hashlib.md5()
     m.update(s.encode())
     return m.hexdigest()
+
 
 print(md5_string("hello"))

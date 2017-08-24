@@ -20,6 +20,7 @@ def foo():
 def foo(a):
     print('hello', a)
 
+
 try:
     # noinspection PyArgumentList
     foo()

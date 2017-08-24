@@ -14,7 +14,6 @@ NOTES:
 
 
 class A:
-
     def __init__(self, p_a):
         print('A.__init__')
         self.a = p_a
@@ -34,7 +33,6 @@ class A:
 
 
 class B(A):
-
     def __init__(self, p_b, p_a):
         print('B.__init__')
         # this is one way to call the parent constructor
@@ -62,6 +60,7 @@ class B(A):
         print('B.method_onlyb')
         print('a is', self.a)
         print('b is', self.b)
+
 
 a = A(6)
 print('dir(a) is')

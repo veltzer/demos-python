@@ -27,4 +27,5 @@ def my_sum(lst):
 def min_max_avg(lst):
     return my_min(lst), my_max(lst), my_sum(lst) / len(lst)
 
+
 print(min_max_avg(range(100000)))

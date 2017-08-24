@@ -8,7 +8,6 @@ Notes:
 """
 
 import json
-import sys
 
 my_dict = {
     'one': 'one value',

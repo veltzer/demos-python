@@ -11,8 +11,9 @@ this blog post: http://scott.yang.id.au/2009/01/migrate-emails-maildir-gmail.htm
 """
 
 import imaplib
-import ConfigParser
 import os.path
+
+import ConfigParser
 
 config = ConfigParser.ConfigParser()
 config.read(os.path.expanduser('~/.pyimap.ini'))
@@ -53,6 +54,7 @@ def imap_login(imap, username, password):
     (res, l) = imap.login(username, password)
     if res != 'OK':
         raise ValueError('could not login')
+
 
 imap = imaplib.IMAP4_SSL(opt_hostname, opt_port)
 imap_login(imap, opt_username, opt_password)

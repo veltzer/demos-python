@@ -7,8 +7,8 @@ References:
 - http://stackoverflow.com/questions/27750536/python-input-single-character-without-enter
 """
 
-import termios
 import sys
+import termios
 import tty
 
 

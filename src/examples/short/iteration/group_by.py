@@ -10,6 +10,7 @@ import itertools
 def indentation(line):
     return len(line) - len(line.lstrip())
 
+
 data = '''this is no indent 1
 this is no indent 2
     this is 1 indent 1

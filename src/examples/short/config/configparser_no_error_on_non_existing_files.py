@@ -6,7 +6,6 @@ reading files which don't exist.
 Quite stupid.
 """
 
-import os.path
 import configparser
 
 c = configparser.ConfigParser()

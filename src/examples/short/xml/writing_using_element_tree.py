@@ -9,9 +9,9 @@ to pretty output xml and so I do the corretion using xml.dom.minidom at
 the bottom.
 """
 
-import xml.etree.ElementTree as ElementTree
-import xml
 import io
+import xml
+import xml.etree.ElementTree as ElementTree
 
 root = ElementTree.Element('root')
 doc = ElementTree.SubElement(root, 'doc')

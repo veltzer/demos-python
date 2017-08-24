@@ -24,10 +24,11 @@ via pip:
     $ pip install pythondialog
 """
 
-import sys
 import os
 import os.path
+import sys
 import time
+
 import dialog
 
 FAST_DEMO = True

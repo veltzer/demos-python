@@ -6,7 +6,6 @@ This example shows how to create a read only dictionary
 
 
 class RoDict:
-
     def __init__(self):
         self.d = {}
         self.ro = False
@@ -19,6 +18,7 @@ class RoDict:
             raise Exception('dont touch this')
         else:
             self.d[key] = val
+
 
 d = RoDict()
 d['a'] = 'b'

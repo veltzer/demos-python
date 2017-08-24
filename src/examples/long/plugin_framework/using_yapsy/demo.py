@@ -7,8 +7,9 @@ References:
 http://yapsy.sourceforge.net
 """
 
-import yapsy.PluginManager
 import sys
+
+import yapsy.PluginManager
 
 simplePluginManager = yapsy.PluginManager.PluginManager()
 # Tell it the default place(s) where to find plugins

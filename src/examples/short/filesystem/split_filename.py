@@ -8,8 +8,8 @@ NOTES:
 - splitext is for extensions.
 """
 
-import sys
 import os.path
+import sys
 
 for line in sys.stdin:
     line = line.strip()

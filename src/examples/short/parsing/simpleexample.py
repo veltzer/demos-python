@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import simpleparse.parser
 import pprint
 
+import simpleparse.parser
 
 declaration = r'''# note use of raw string when embedding in python code...
 file := [ \t\n]*, section+
@@ -33,7 +33,6 @@ testdata = '''
 loose=lips
 
 '''
-
 
 parser = simpleparse.parser.Parser(declaration, 'file')
 pprint.pprint(parser.parse(testdata))

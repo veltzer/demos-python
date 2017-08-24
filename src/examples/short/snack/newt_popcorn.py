@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
 from snack import *
-import sys
 
 
 def help(screen, text):
     ButtonChoiceWindow(screen, 'Help', text, help='Help on help')
+
 
 t = TextboxReflowed(25, 'Some text which needs to be wrapped at a good place.')
 li = Listbox(5, width=20, returnExit=1)
@@ -48,6 +48,7 @@ r2 = SingleRadioButton('Radio 2', r1)
 
 def something():
     print(hello)
+
 
 screen = SnackScreen()
 
@@ -97,7 +98,6 @@ g = GridForm(screen, 'Tree', 1, 2)
 g.add(ct, 0, 0, (0, 0, 0, 1))
 g.add(Button('Ok'), 0, 1)
 g.runOnce()
-
 
 screen.finish()
 

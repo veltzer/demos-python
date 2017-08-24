@@ -36,6 +36,7 @@ class Button:
     def getWeight(self):
         return self.weight
 
+
 b1 = Button()
 b2 = Button()
 b1.printMe()

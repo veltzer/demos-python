@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 import ftplib
-import sys
 import os.path
+import sys
 
 p_debug = False
 

@@ -8,12 +8,12 @@ This demos:
 - adding data to frames
 - getting data from frames
 """
-import timeit
-
-from pandas import DataFrame
-import numpy
 import random
 import string
+import timeit
+
+import numpy
+from pandas import DataFrame
 
 
 def random_word(length):
@@ -36,6 +36,7 @@ def create_large_table():
     ]
     data_frames = DataFrame("", index=numpy.arange(large_table_size), columns=columns)
     del data_frames
+
 
 random_strings = []
 
@@ -64,6 +65,7 @@ def create_set_from_strings():
 
 def create_dict_from_strings():
     _ = {x: x for x in random_strings}
+
 
 input("press any key...")
 print("creating 15mil empty table [{}]".format(timeit.timeit(create_large_table, number=1)))

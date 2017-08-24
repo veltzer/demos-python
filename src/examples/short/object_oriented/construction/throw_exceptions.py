@@ -17,6 +17,7 @@ class A:
     def __init__(self):
         raise ValueError('this is my error')
 
+
 try:
     a = A()
 except ValueError as ve:

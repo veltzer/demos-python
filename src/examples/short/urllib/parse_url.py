@@ -4,8 +4,8 @@
 This is a basic example of how to parse urls
 """
 
-import urllib.parse
 import sys
+import urllib.parse
 
 url = "https://www.wish.com/search/living%20room#default"
 o = urllib.parse.urlparse(url)

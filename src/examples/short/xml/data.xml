@@ -1,8 +1,8 @@
 <!--suppress XmlHighlighting -->
 <root xmlns="http://www.w3.org/1999/root">
-	<foo>
-		<bar title='this is the text you are looking for'>
-			bar content
-		</bar>
-	</foo>
+    <foo>
+        <bar title='this is the text you are looking for'>
+            bar content
+        </bar>
+    </foo>
 </root>

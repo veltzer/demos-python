@@ -7,9 +7,9 @@ References:
 http://stackoverflow.com/questions/377017/test-if-executable-exists-in-python/
 """
 
-import sys
-import os.path
 import os
+import os.path
+import sys
 
 '''
 returns the absolute path of a program
@@ -37,5 +37,6 @@ def which(program):
         if is_exe(curr):
             return curr
     raise ValueError('cannot find the program [{0}] in PATH'.format(program))
+
 
 print(which(sys.argv[1]))

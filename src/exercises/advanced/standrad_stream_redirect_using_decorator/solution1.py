@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import sys
 import functools
 import os
+import sys
 
 outfile = '/tmp/out.txt'
 
@@ -13,6 +13,7 @@ def with_output_to_outfile(f):
     The file is opened for appending each time f will be called and
     closed when it returns.
     """
+
     @functools.wraps(f)
     def decorated_f(*args, **kw):
         old_stdout = sys.stdout
@@ -22,12 +23,14 @@ def with_output_to_outfile(f):
         finally:
             sys.stdout = old_stdout
             new_stdout.close()
+
     return decorated_f
 
 
 @with_output_to_outfile
 def hello(name):
     print('Hello, {0}!'.format(name))
+
 
 # Running this will destroy [outfile]!
 # make sure file is empty

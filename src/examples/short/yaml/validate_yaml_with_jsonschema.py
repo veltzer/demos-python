@@ -7,8 +7,8 @@ References:
 - https://stackoverflow.com/questions/3262569/validating-a-yaml-document-in-python
 """
 
-from jsonschema import validate
 import yaml
+from jsonschema import validate
 
 schema = """
 type: object

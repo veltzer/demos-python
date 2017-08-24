@@ -25,6 +25,7 @@ class Book:
     def getNumBooks():
         return Book.num
 
+
 b1 = Book(14)
 b2 = Book(13)
 

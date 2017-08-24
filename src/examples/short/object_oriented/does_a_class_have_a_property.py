@@ -18,6 +18,7 @@ class A:
     def do_i_have_it2(cls, prop):
         return hasattr(cls, prop)
 
+
 print(A.do_i_have_it('foo'))
 print(A.do_i_have_it('bar'))
 print(A.do_i_have_it('zoo'))

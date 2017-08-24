@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
 import sys
-from date import *
 from time import localtime
+
+from date import *
 
 filename = 'c:/tmp.txt'
 f = open(filename)

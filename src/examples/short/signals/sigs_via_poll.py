@@ -14,11 +14,11 @@ References:
 http://www.pocketnix.org/doc/Fighting_set__wakeup__fd/
 """
 
-import select
-import signal
+import errno
 import fcntl
 import os
-import errno
+import select
+import signal
 
 # create a non blocking pipe
 pipe_r, pipe_w = os.pipe()
@@ -52,6 +52,7 @@ def dopoll(poller):
         except IOError as e:
             if e.errno != errno.EINTR:
                 raise
+
 
 poller = select.epoll()
 poller.register(pipe_r, select.EPOLLIN)

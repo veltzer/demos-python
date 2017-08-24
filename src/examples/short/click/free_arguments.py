@@ -18,9 +18,9 @@ import click
 
 @click.command()
 @click.argument(
-        'args',
-        nargs=-1,
-        required=True,
+    'args',
+    nargs=-1,
+    required=True,
 )
 def main(args):
     """Simple program that greets NAME for a total of COUNT times."""

@@ -14,4 +14,5 @@ def calc():
         current_sum += i
         i += 1
 
+
 calc()

@@ -15,7 +15,9 @@ if sys.version_info >= (3, 0):
 else:
     print("you are in python 2")
 
+
 def is_2():
-    return sys.version_info[0]==2
+    return sys.version_info[0] == 2
+
 
 print(is_2())

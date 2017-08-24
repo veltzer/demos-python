@@ -9,7 +9,6 @@ the output...
 and who the message came from
 """
 
-import logging
 import logging.handlers
 
 logger = logging.getLogger(__name__)

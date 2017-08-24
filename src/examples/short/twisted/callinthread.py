@@ -4,8 +4,9 @@
 An example demonstrating twisteds 'callInThread' function.
 """
 
-from twisted.internet import reactor
 import time
+
+from twisted.internet import reactor
 
 
 def aSillyBlockingMethod(t, stop):
@@ -18,6 +19,7 @@ def aSillyBlockingMethod(t, stop):
     # instead we must do:
     if stop:
         reactor.callFromThread(reactor.stop)
+
 
 # run method in thread
 reactor.callInThread(aSillyBlockingMethod, 10, True)

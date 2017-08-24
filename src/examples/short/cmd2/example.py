@@ -3,6 +3,7 @@
 
 from cmd2 import Cmd, make_option, options, set_use_arg_list
 
+
 class CmdLineApp(Cmd):
     def __init__(self):
         self.multilineCommands = ['orate']
@@ -21,7 +22,7 @@ class CmdLineApp(Cmd):
     @options([make_option('-p', '--piglatin', action="store_true", help="atinLay"),
               make_option('-s', '--shout', action="store_true", help="N00B EMULATION MODE"),
               make_option('-r', '--repeat', type="int", help="output [n] times")
-             ])
+              ])
     def do_speak(self, arg, opts=None):
         """Repeats what you tell me to."""
         arg = ''.join(arg)
@@ -36,8 +37,9 @@ class CmdLineApp(Cmd):
             # self.stdout.write is better than "print", because Cmd can be
             # initialized with a non-standard output destination
 
-    do_say = do_speak     # now "say" is a synonym for "speak"
-    do_orate = do_speak   # another synonym, but this one takes multi-line input
+    do_say = do_speak  # now "say" is a synonym for "speak"
+    do_orate = do_speak  # another synonym, but this one takes multi-line input
+
 
 if __name__ == '__main__':
     c = CmdLineApp()

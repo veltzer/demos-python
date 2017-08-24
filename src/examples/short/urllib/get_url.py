@@ -8,6 +8,7 @@ http://stackoverflow.com/questions/22676/how-do-i-download-a-file-over-http-usin
 """
 
 import urllib.request
+
 import progressbar
 
 '''
@@ -37,6 +38,7 @@ def get_url(url, file):
         pbar.update(pbar.currval + 1)
     pbar.finish()
     f.close()
+
 
 url1 = 'http://images.iskysoft.com/mac-itube-studio/main.jpg'
 file1 = '/tmp/downloaded.jpg'

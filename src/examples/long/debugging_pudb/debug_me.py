@@ -34,6 +34,7 @@ def fermat(n):
                 if x ** n + y ** n == z ** n:
                     yield x, y, z
 
+
 print('SF', simple_func(10))
 
 for j in fermat(2):

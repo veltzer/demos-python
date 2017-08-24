@@ -9,8 +9,8 @@ References:
 http://stackoverflow.com/questions/566746/how-to-get-console-window-width-in-python
 """
 
-import os
 import fcntl
+import os
 import struct
 import termios
 import timeit

@@ -12,7 +12,9 @@ z = 2
 def make_adder(x):
     def adder(y):
         return x + y + z
+
     return adder
+
 
 add5 = make_adder(5)
 add3 = make_adder(3)

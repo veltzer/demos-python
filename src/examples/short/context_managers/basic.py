@@ -25,6 +25,7 @@ class MyResource:
     def __exit__(self, itype, value, traceback):
         print("exit")
 
+
 print("lets see a basic use of the context manager...")
 with MyResource() as r:
     print("block of code")

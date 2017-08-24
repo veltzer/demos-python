@@ -8,8 +8,9 @@ NOTES:
 - calling pbar.update() (with no value) does nothing. you must pass a value.
 """
 
-import progressbar
 import time
+
+import progressbar
 
 pbar = progressbar.ProgressBar(maxval=10)
 pbar.start()

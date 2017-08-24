@@ -12,6 +12,7 @@ def myfunc(s):
         print(i, end='')
     print()
 
+
 myfunc(range(10))
 myfunc(range(10))
 myfunc((1, 2, 3))

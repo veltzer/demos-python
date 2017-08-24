@@ -17,4 +17,5 @@ def my_map(func, val_list):
 def square(x):
     return x * x
 
+
 print(my_map(square, range(2, 8)))

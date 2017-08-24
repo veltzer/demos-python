@@ -12,7 +12,6 @@ only the 'print' function.
 import sys
 import time
 
-
 print("Hello", end="")
 time.sleep(5)
 sys.stdout.flush()

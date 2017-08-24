@@ -7,7 +7,6 @@ which is a mapping from event name to Date object
 
 
 class Calendar:
-
     def __init__(self):
         self.events = {}
 
@@ -34,7 +33,6 @@ class Calendar:
 
 
 class Date:
-
     def __init__(self, day, month, year):
         if not isinstance(day, int) or not isinstance(month, int) or not isinstance(year, int):
             print('Date must be initialized with numbers')

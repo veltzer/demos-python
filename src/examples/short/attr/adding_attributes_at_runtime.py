@@ -10,6 +10,7 @@ and from within the object and is seen in dir(object).
 
 from attr import attrs, attrib
 
+
 @attrs
 class MyObject(object):
     a = attrib(default=None)  # type: int

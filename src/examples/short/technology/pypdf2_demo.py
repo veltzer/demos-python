@@ -7,7 +7,6 @@ References:
 https://github.com/mstamy2/PyPDF2/raw/master/Sample_Code/makesimple.py
 """
 
-import sys
 import reportlab.pdfgen.canvas
 
 point = 1

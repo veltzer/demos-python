@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import urllib.request
 import json
+import urllib.request
 import xml.etree.cElementTree as ElementTree
 
 URL = 'http://ws.geonames.org/hierarchyJSON?geonameId=2657896'

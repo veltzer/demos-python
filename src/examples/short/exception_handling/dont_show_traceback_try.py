@@ -8,11 +8,13 @@ References:
 - http://stackoverflow.com/questions/17784849/in-python-how-do-i-print-an-error-message-without-printing-a-traceback-and-clos
 """
 
+
 def do_error():
     try:
         raise ValueError('core')
     except Exception as e:
         raise ValueError('outer') from e
+
 
 try:
     do_error()

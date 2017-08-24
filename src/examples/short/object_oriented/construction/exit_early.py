@@ -18,7 +18,6 @@ is a different story.
 
 
 class Book:
-
     # noinspection PyReturnFromInit
     def __init__(self, price) -> 'Book':
         self.__price = price
@@ -35,6 +34,7 @@ class Book:
 
     def printMe(self):
         print('printMe: price is', self.__price)
+
 
 try:
     b = Book(50)

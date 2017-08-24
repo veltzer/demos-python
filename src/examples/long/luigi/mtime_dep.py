@@ -13,9 +13,10 @@ References:
 http://stackoverflow.com/questions/28793832/can-luigi-rerun-tasks-when-the-task-dependencies-become-out-of-date
 """
 
-import luigi
 import os.path
 import time
+
+import luigi
 
 
 def mtime(path):

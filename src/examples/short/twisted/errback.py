@@ -7,6 +7,8 @@ An example of using errbacks in twisted.
 # from twisted.internet.protocol import Factory,Protocol
 from twisted.internet import reactor
 from twisted.web.client import getPage
+
+
 # from twisted.protocols.basic import LineReceiver
 
 
@@ -26,6 +28,7 @@ def my_callback(content):
 def my_errback(error):
     print('in error', error)
     reactor.stop()
+
 
 defr = getPage('http://localhost')
 defr.addCallback(my_callback)

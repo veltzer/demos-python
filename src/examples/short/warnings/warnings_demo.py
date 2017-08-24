@@ -21,6 +21,7 @@ def fxn():
     # warnings.warn('this is a warning', Warning)
     warnings.warn('this is a problem')
 
+
 # with warnings.catch_warnings():
 # warnings.simplefilter('ignore')
 # warnings.filterwarnings('error')

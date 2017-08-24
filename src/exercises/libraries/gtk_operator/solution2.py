@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-import gtk
 import operator
+
+import gtk
 
 '''
 This extended version allow selection of the arithmetic operator by
@@ -15,7 +16,6 @@ group of widgets, together with some functionality.
 
 
 class OperatorChoice(gtk.VBox):
-
     """An operator selection box."""
 
     def __init__(self):
@@ -45,6 +45,7 @@ class OperatorChoice(gtk.VBox):
         for radio in self.radio_funcs:
             radio.connect('toggled', callback, *args, **kw)
 
+
 # Notice how the rest of the app is almost unchanged. Success!
 
 w = gtk.Window()
@@ -69,6 +70,7 @@ def compute(*ignored):
         result.set_text(str(operator.compute(arg1, arg2)))
     except ValueError:
         result.set_text('<ERROR>')
+
 
 entry1.connect('changed', compute)
 entry2.connect('changed', compute)

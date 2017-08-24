@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import sys
 import functools
 import os
+import sys
 
 
 def with_output_to(fname):
@@ -11,6 +11,7 @@ def with_output_to(fname):
     The file is opened for appending each time f will be called and
     closed when it returns.
     """
+
     def decorator(f):
         @functools.wraps(f)
         def decorated_f(*args, **kw):
@@ -21,13 +22,16 @@ def with_output_to(fname):
             finally:
                 sys.stdout = old_stdout
                 new_stdout.close()
+
         return decorated_f
+
     return decorator
 
 
 @with_output_to('/tmp/out2.txt')
 def hello(name):
     print('Hello, {0}!'.format(name))
+
 
 # Running this will destroy '/tmp/out2.txt'!
 

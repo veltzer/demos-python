@@ -14,7 +14,6 @@ https://docs.python.org/3/library/argparse.html#module-argparse
 
 import argparse
 
-
 parser = argparse.ArgumentParser()
 subparsers = parser.add_subparsers(title='sub commands', dest='sub_command')
 sub_parser_process = subparsers.add_parser('process')

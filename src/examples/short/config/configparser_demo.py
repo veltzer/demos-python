@@ -4,8 +4,8 @@
 This is an example of how to use pythons built-in configparser.
 """
 
-import os.path
 import configparser
+import os.path
 
 inifile = '/tmp/demo.ini'
 if os.path.isfile(inifile):

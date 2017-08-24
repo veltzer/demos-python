@@ -11,8 +11,8 @@ References:
 - https://docs.python.org/3/library/struct.html
 """
 
-import struct
 import ctypes
+import struct
 
 
 class Encoder:

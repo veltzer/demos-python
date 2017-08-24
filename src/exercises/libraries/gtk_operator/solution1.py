@@ -23,6 +23,8 @@ def compute(*ignored):
         result.set_text(str(arg1 + arg2))
     except ValueError:
         result.set_text('<ERROR>')
+
+
 entry1.connect('changed', compute)
 entry2.connect('changed', compute)
 

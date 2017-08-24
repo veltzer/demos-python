@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import sys
 import contextlib
 import os
+import sys
 
 outfile = '/tmp/out3.txt'
 

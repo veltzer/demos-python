@@ -7,9 +7,9 @@ References:
 http://stackoverflow.com/questions/11495783/redirect-subprocess-stderr-to-stdout
 """
 
-import sys
-import pty
 import os
+import pty
+import sys
 
 if len(sys.argv) < 2:
     print('{0}: must supply process to run and arguments for it'.format(
@@ -27,11 +27,11 @@ else:
     At the end of the loop we get an exception when the connection with the other side terminates.
     This is kinda ugly since strictly speaking this is not an error, but oh well.
     '''
-    bufsize=1024
-    buf=os.read(fd, bufsize).decode()
-    over=False
-    while len(buf)>0 and not over:
-        #print('got buf [{0}]'.format(buf))
+    bufsize = 1024
+    buf = os.read(fd, bufsize).decode()
+    over = False
+    while len(buf) > 0 and not over:
+        # print('got buf [{0}]'.format(buf))
         lines = buf.split('\n')
         buf = lines[-1]
         del lines[-1]
@@ -41,7 +41,7 @@ else:
         try:
             buf += os.read(fd, bufsize).decode()
         except OSError as e:
-            over=True
+            over = True
     (pid, ret) = os.wait()
     if os.WIFEXITED(ret):
         print('proc exited and status was [{}]'.format(os.WEXITSTATUS(ret)))

@@ -12,11 +12,9 @@ when running this.
 The answer is: YES!!!
 """
 
-import time
-import random
-import os
-import os.path
 import glob
+import os.path
+import time
 
 count = 1000000
 doFirst = True

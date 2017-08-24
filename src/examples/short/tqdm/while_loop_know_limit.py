@@ -12,8 +12,9 @@ References:
 - https://pypi.python.org/pypi/tqdm
 """
 
-import tqdm
 import random
+
+import tqdm
 
 limit = 100000000
 

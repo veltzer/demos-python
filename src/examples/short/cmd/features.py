@@ -7,9 +7,8 @@ References:
 http://code.activestate.com/recipes/280500-console-built-with-cmd-object/
 '''
 
-import os
 import cmd
-import readline
+import os
 
 
 class Console(cmd.Cmd):

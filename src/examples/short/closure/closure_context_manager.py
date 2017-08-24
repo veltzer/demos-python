@@ -23,5 +23,6 @@ def main():
         for j in i:
             print(j, end='')
 
+
 if __name__ == '__main__':
     main()

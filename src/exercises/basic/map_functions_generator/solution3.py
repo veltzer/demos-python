@@ -23,4 +23,5 @@ def mul(x, y, correction_factor=7):
 def sub(x, y, correction_factor=7):
     return x - y
 
+
 print(map_like([add, mul, sub], 7, 3, correction_factor=2))

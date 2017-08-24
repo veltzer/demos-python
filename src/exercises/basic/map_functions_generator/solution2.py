@@ -23,4 +23,5 @@ def triple(x):
 def plusone(x):
     return x + 1
 
+
 print(map_like([square, triple, plusone], 7))

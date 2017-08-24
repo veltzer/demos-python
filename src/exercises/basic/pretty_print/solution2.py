@@ -3,6 +3,7 @@
 columns = [['H', 'He', 'Li', 'Be'], ['Hidrogen', 'Helium',
                                      'Litium', 'Berilium'], ['1.008', '4.003', '6.941', '9.012']]
 
+
 # Before printing, we must know the width for each column.
 
 
@@ -12,6 +13,7 @@ def max_len(lines):
     for line in lines:
         lengths.append(len(line))
     return max(lengths)
+
 
 widths = []
 for column in columns:

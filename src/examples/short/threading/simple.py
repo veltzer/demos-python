@@ -16,6 +16,7 @@ def myfunc(i):
     time.sleep(1)
     print('thread {0} is waking up...'.format(i))
 
+
 threads = []
 print('creating the threads')
 for i in range(10):

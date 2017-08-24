@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-from pluginbase import PluginBase
 import inspect
+
+from pluginbase import PluginBase
 
 
 class BaseClass:

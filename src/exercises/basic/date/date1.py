@@ -34,7 +34,6 @@ def is_leap_year(year):
 
 
 class Calendar:
-
     """ A callender of events, has an entry for every event,
             which is a mapping from event name to Date o bject"""
 
@@ -65,7 +64,6 @@ class Calendar:
 
 
 class Date:
-
     def __init__(self, day, month, year):
         if not isinstance(day, int) or not isinstance(month, int) or not isinstance(year, int):
             raise DateException('Date must be initialized with numbers')

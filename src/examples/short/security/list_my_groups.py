@@ -7,9 +7,9 @@ References:
 http://stackoverflow.com/questions/9323834/python-how-to-get-group-ids-of-one-username-like-id-gn
 """
 
+import getpass
 import grp
 import pwd
-import getpass
 
 username = getpass.getuser()
 userid = pwd.getpwnam(username).pw_uid

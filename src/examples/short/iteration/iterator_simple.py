@@ -14,7 +14,6 @@ Differences between python2.7 and python3:
 
 
 class Reverse:
-
     def __init__(self, data):
         self.data = data
         self.index = len(data)
@@ -27,6 +26,7 @@ class Reverse:
             raise StopIteration
         self.index -= 1
         return self.data[self.index]
+
 
 '''
 And now lets use the iterator...

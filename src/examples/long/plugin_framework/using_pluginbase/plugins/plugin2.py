@@ -1,6 +1,5 @@
 import demo
 
-
 print('[{0}] loading'.format(__file__))
 
 var = 'plugin2_value'

@@ -4,9 +4,10 @@
 This is a mixin solution to the modification time stamps mentioned before.
 """
 
-import luigi
 import os.path
 import time
+
+import luigi
 
 
 def mtime(path):

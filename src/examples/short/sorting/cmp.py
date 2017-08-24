@@ -30,6 +30,7 @@ def my_first_cor_key(t):
 def by_y_x(t):
     return t[1], t[0]
 
+
 my_list = [(1, 7), (2, 5), (0, 0), (3, 8), (1, 8), (2, 8)]
 # lets see how regular sort works...
 print(sorted(my_list))

@@ -25,7 +25,7 @@ r = s.encode("ascii", errors="ignore").decode()
 print(type(r))
 print(r)
 
-r=''.join(c for c in s if ord(c)<128)
+r = ''.join(c for c in s if ord(c) < 128)
 print(type(r))
 print(r)
 

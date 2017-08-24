@@ -4,8 +4,8 @@
 This example only does an os.execv
 """
 
-import sys
 import os
+import sys
 
 if len(sys.argv) < 2:
     print('{0}: must supply process to run and arguments for it'.format(

@@ -14,7 +14,9 @@ def create_funcs(l):
 
     def sum_f():
         return sum(l)
+
     return append_f, print_f, sum_f
+
 
 (ap_f, pr_f, su_f) = create_funcs([1, 2, 3])
 # lets start doing stuff with the three functions...

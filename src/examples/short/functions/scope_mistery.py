@@ -22,6 +22,7 @@ def my_mistery_function():
         g += 17
     print(g)
 
+
 g = 4
 try:
     my_mistery_function()

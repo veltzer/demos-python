@@ -33,6 +33,7 @@ class MyResource:
         MyResource.exitCallsCounter += 1
         return self.suppress
 
+
 ''' first lets try to just see if enter and exit are called '''
 with MyResource() as r:
     print(r)

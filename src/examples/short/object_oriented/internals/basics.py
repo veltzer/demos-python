@@ -20,6 +20,7 @@ class A:
     def printMe(self):
         print('a is', self.a)
 
+
 a = A(7)
 print('dir(a) follows...')
 print(dir(a))

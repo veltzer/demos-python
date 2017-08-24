@@ -9,4 +9,5 @@ def mysum(lst):
         s += x
     return s
 
+
 print('the sum is ', mysum([1, 2, 3, 4, 5]))

@@ -16,10 +16,12 @@ References:
 - http://stackoverflow.com/questions/275018/how-can-i-remove-chomp-a-newline-in-python
 """
 
+
 def chomp(x):
     if x.endswith("\r\n"): return x[:-2]
     if x.endswith("\n"): return x[:-1]
     return x
+
 
 s = "hello\n\n\t\n"
 

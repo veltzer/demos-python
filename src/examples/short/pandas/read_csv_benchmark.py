@@ -5,11 +5,12 @@ check which is faster, pandas with chunks or python with
 no module.
 """
 
-import pandas
-import gzip
-import time
-import random
 import gc
+import gzip
+import random
+import time
+
+import pandas
 
 
 def time_it(f):
@@ -21,6 +22,7 @@ def time_it(f):
         time2 = time.perf_counter()
         print(time2 - time1, f.__name__)
         return r
+
     return inner
 
 
@@ -33,17 +35,17 @@ def prepare_large_tsv_file(input_file: str, size: int):
                 str(random.random()),
                 str(random.random()),
                 str(random.random()),
-                ])+"\n"
-            )
+            ]) + "\n"
+                                )
 
 
 @time_it
 def read_it_with_pandas(input_file: str, separator: str):
     df = pandas.read_csv(
-            input_file,
-            sep=separator,
-            header=None,
-            # dtype="str",
+        input_file,
+        sep=separator,
+        header=None,
+        # dtype="str",
     )
     return df.shape[0]
 
@@ -51,11 +53,11 @@ def read_it_with_pandas(input_file: str, separator: str):
 @time_it
 def read_it_with_pandas_chunks(input_file: str, separator: str):
     reader = pandas.read_csv(
-            input_file,
-            sep=separator,
-            chunksize=10000,
-            header=None,
-            # dtype="str",
+        input_file,
+        sep=separator,
+        chunksize=10000,
+        header=None,
+        # dtype="str",
     )
     line_count = 0
     for chunk in reader:
@@ -71,6 +73,7 @@ def read_it_with_python(input_file: str, separator: str):
         line_count += 1
     return line_count
 
+
 @time_it
 def read_it_with_python_gzip(input_file: str, separator: str):
     line_count = 0
@@ -79,12 +82,12 @@ def read_it_with_python_gzip(input_file: str, separator: str):
         line_count += 1
     return line_count
 
+
 @time_it
 def loop_with_python(input_file: str, separator: str):
     for i in range(1000000):
         if i == 2:
             pass
-
 
 
 input_file = "/tmp/large.tsv"

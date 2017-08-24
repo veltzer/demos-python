@@ -12,7 +12,6 @@ difference as to this point.
 
 
 class Book:
-
     def __init__(self, price, name):
         self.__price = price
         self._name = name
@@ -32,6 +31,7 @@ class Book:
 
     def getName(self):
         return self._name
+
 
 b = Book(50, 'Lord of the Rings')
 b.printMe()

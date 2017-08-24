@@ -8,8 +8,8 @@ It also shows that the same operations on a 'collections.deque' data structure a
 efficient.
 """
 
-import timeit
 import collections
+import timeit
 
 
 def func1():

@@ -4,8 +4,9 @@
 A more complex example involving deferreds.
 """
 
-from twisted.internet import defer
 import time
+
+from twisted.internet import defer
 
 TARGET = 10000
 
@@ -28,6 +29,7 @@ def largeFibonnaciNumber():
     # return the Deferred with the answer:
     return d
 
+
 timeBefore = time.time()
 
 # call the function and get our Deferred
@@ -38,11 +40,13 @@ timeAfter = time.time()
 print(
     'Total time taken for largeFibonnaciNumber call: {0:.3f} seconds'.format(timeAfter - timeBefore))
 
+
 # add a callback to it to output the number
 
 
 def printNumber(number):
     print('The %dth Fibonacci number is %d' % (TARGET, number))
+
 
 print('Adding the callback now.')
 d.addCallback(printNumber)

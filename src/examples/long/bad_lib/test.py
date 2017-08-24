@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import module_checker
-import signal
 
 # this works
 # module_checker.check_lib('libacl.so')

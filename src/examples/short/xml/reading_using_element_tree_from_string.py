@@ -8,8 +8,8 @@ The reason this example uses the 'io.StringIO' stuff is so that we
 could embed the xml in the example and not put it in a file.
 """
 
-import xml.etree.ElementTree
 import io
+import xml.etree.ElementTree
 
 data = '''
 <root>

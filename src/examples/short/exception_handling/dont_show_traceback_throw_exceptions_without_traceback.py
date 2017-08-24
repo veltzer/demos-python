@@ -8,8 +8,9 @@ References:
 - http://stackoverflow.com/questions/17784849/in-python-how-do-i-print-an-error-message-without-printing-a-traceback-and-clos
 """
 
-import sys
 import inspect
+import sys
+
 
 class NoTraceBackWithLineNumber(Exception):
     def __init__(self, msg):
@@ -20,7 +21,9 @@ class NoTraceBackWithLineNumber(Exception):
         self.args = "{0.__name__} (line {1}): {2}".format(type(self), ln, msg),
         sys.exit(self)
 
+
 class MyNewError(NoTraceBackWithLineNumber):
     pass
+
 
 raise MyNewError("Now TraceBack Is Gone")

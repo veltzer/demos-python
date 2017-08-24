@@ -4,10 +4,11 @@
 Basic coloring with pygments
 """
 
-from pygments import highlight
-from pygments.lexers import PythonLexer
-from pygments.formatters import HtmlFormatter
 import sys
+
+from pygments import highlight
+from pygments.formatters import HtmlFormatter
+from pygments.lexers import PythonLexer
 
 #
 # paramters #

@@ -10,11 +10,11 @@ import click
 
 @click.command()
 @click.option(
-        '--count',
-        default=1,
-        type=int,
-        help='Number of greetings.',
-        show_default=True,
+    '--count',
+    default=1,
+    type=int,
+    help='Number of greetings.',
+    show_default=True,
 )
 def main(count: int) -> None:
     """ simple demo that shows default values """

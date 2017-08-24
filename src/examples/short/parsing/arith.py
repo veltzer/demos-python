@@ -4,8 +4,9 @@
 doing simple arithmetic evaluation in python
 """
 
-import pyparsing
 import sys
+
+import pyparsing
 
 number = pyparsing.Word(pyparsing.nums).setParseAction(lambda t: int(t[0]))
 
@@ -13,6 +14,7 @@ number = pyparsing.Word(pyparsing.nums).setParseAction(lambda t: int(t[0]))
 # noinspection PyUnusedLocal
 def number_act(string, location, tok):
     return int(tok[0])
+
 
 number.setParseAction(number_act)
 
@@ -38,6 +40,8 @@ def expr_act(s, loc, tok):
     if tok[0][1] == '-':
         return tok[0][0] - tok[0][2]
     return None
+
+
 expr.setParseAction(expr_act)
 
 expr.setDebug()

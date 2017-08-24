@@ -14,6 +14,6 @@ with no password.
 
 import psycopg2
 
-connection_string="postgresql://localhost/postgres"
+connection_string = "postgresql://localhost/postgres"
 with psycopg2.connect(connection_string) as connection:
     pass

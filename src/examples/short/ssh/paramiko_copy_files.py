@@ -5,21 +5,22 @@ This is an example of how to copy files via paramiko.
 """
 
 import os
-import paramiko
 import sys
+
+import paramiko
 
 # server = "MarksHome"
 server = "172.34.5.111"
 username = "ubuntu"
 key_filename = os.path.expanduser("~/.aws/keys/ec2_instances.pem")
 
-sshcon   = paramiko.SSHClient()
+sshcon = paramiko.SSHClient()
 # no known_hosts error
 sshcon.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 sshcon.connect(
-        server,
-        username=username,
-        key_filename=key_filename,
+    server,
+    username=username,
+    key_filename=key_filename,
 )
 
 # this is ssh
@@ -43,6 +44,6 @@ sys.exit(1)
 print("here")
 
 # this is sftp
-#sftp = ssh.open_sftp()
-#sftp.put(localpath, remotepath)
-#sftp.close()
+# sftp = ssh.open_sftp()
+# sftp.put(localpath, remotepath)
+# sftp.close()

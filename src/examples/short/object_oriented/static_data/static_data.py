@@ -18,9 +18,12 @@ def give_me_a_unique_value():
     global counter
     counter += 1
     return counter
+
+
 print(give_me_a_unique_value())
 print(give_me_a_unique_value())
 print(give_me_a_unique_value())
+
 
 # second example
 
@@ -31,11 +34,15 @@ def give_me_unique_generator():
     def give_me_unique():
         l[0] += 1
         return l[0]
+
     return give_me_unique
+
+
 g = give_me_unique_generator()
 print(g())
 print(g())
 print(g())
+
 
 # third example
 
@@ -43,6 +50,8 @@ print(g())
 def give_me_a_unique_value2():
     give_me_a_unique_value2.counter += 1
     return give_me_a_unique_value2.counter
+
+
 give_me_a_unique_value2.counter = 0
 print(give_me_a_unique_value2())
 print(give_me_a_unique_value2())

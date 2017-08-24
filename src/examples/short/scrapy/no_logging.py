@@ -14,6 +14,7 @@ this example 'no_logging'.
 """
 
 import logging
+
 import scrapy.crawler
 
 logger = logging.getLogger(__name__)
@@ -28,15 +29,19 @@ class SearchSpider(scrapy.Spider):
         'https://jet.com/search/',
     )
     ''' constructor '''
+
     def __init__(self, *args, **kwargs):
         super(SearchSpider, self).__init__(*args, **kwargs)
         # important, call the parent
         self.logger.info('in __init__')
+
     '''
     This method is called whenever you get a response
     '''
+
     def parse(self, response):
         self.logger.info('in parse')
+
     '''
     This method is called automatically when the crawler finishes
     Note that because of python tricks this methods signature is different
@@ -46,6 +51,7 @@ class SearchSpider(scrapy.Spider):
     # noinspection PyUnusedLocal
     def closed(self, reason):
         self.logger.info('in closed')
+
 
 if __name__ == '__main__':
     logging.getLogger('scrapy').setLevel(logging.WARN)

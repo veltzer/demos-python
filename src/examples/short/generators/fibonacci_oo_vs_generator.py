@@ -9,7 +9,6 @@ def fib():
 
 
 class Fib:
-
     def __init__(self):
         self.a = self.b = 1
 
@@ -17,6 +16,7 @@ class Fib:
         res = self.a
         self.a, self.b = self.b, self.a + self.b
         return res
+
 
 f = Fib()
 i = 0

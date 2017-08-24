@@ -7,9 +7,8 @@ References:
 - https://github.com/dask/fastparquet
 """
 
-from fastparquet import write
-
 import pandas
+from fastparquet import write
 
 df = pandas.read_csv("/etc/passwd", sep=":")
 

@@ -9,8 +9,8 @@ References:
 - https://docs.python.org/3/library/shelve.html
 """
 
-import shelve
 import random
+import shelve
 
 with shelve.open("/tmp/shelve.db") as d:
     for i in range(10):

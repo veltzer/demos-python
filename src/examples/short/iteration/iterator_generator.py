@@ -13,6 +13,7 @@ def my_reverse(data):
     for index in range(len(data) - 1, -1, -1):
         yield data[index]
 
+
 for char in my_reverse('golf'):
     print(char)
 

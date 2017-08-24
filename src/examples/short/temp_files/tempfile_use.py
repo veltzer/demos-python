@@ -7,8 +7,8 @@ References:
 - https://docs.python.org/3/library/tempfile.html
 """
 
-import tempfile
 import os.path
+import tempfile
 
 # delete=True is the default...
 with tempfile.NamedTemporaryFile(mode="wt") as t:

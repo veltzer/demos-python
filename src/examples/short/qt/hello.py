@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 
 import sys
-import PyQt4
-import PyQt4.QtGui
+
 import PyQt4.QtCore
 
 print('version is', PyQt4.QtCore.QT_VERSION_STR)

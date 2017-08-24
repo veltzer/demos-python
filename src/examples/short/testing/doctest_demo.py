@@ -25,4 +25,5 @@ def square(x):
     # notice this bug...
     return x * x + 1
 
+
 doctest.testmod()

@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
+from pygraph.algorithms.searching import depth_first_search
 # Import the module and instantiate a graph object
 from pygraph.classes.graph import graph
-from pygraph.algorithms.searching import depth_first_search
+
 gr = graph()
 # Add nodes
 gr.add_nodes(['X', 'Y', 'Z'])
@@ -22,6 +23,7 @@ print(st)
 def nodes(graph, node):
     for y in graph[node]:
         yield y
+
 
 for x in nodes(gr, 'X'):
     print(x)

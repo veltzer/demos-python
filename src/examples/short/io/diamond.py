@@ -13,8 +13,9 @@ References:
 
 import sys
 
+
 def diamond_lines():
-    if len(sys.argv)==1:
+    if len(sys.argv) == 1:
         for line in sys.stdin.readlines():
             yield line
     else:
@@ -22,6 +23,7 @@ def diamond_lines():
             with open(filename, 'rt') as file_handle:
                 for line in file_handle:
                     yield line
+
 
 for line in diamond_lines():
     print(line, end='')

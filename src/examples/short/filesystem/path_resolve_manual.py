@@ -4,7 +4,6 @@
 This is an example of how to resolve a path in python
 """
 
-import os.path
 import os
 import re
 import sys

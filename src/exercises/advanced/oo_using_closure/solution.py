@@ -22,6 +22,7 @@ def Person(name, age):
     def printMe():
         print('name is ', data.name)
         print('age is ', data.age)
+
     data.setName = setName
     data.getName = getName
     data.setAge = setAge
@@ -30,6 +31,7 @@ def Person(name, age):
     setName(name)
     setAge(age)
     return data
+
 
 # usage...
 p1 = Person('mark', 36)

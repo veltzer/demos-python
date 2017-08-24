@@ -38,6 +38,7 @@ def lasers(fname):
             # hit something
             return char == 'x'
 
+
 for fname in ['lasers_hit.txt', 'lasers_miss.txt']:
     print(open(fname).read())
     print(lasers(fname))

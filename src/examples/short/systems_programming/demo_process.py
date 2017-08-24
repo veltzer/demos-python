@@ -5,9 +5,9 @@ This is a demo process that others will run.
 It will send some data and then exit.
 """
 
-import time
 import random
 import sys
+import time
 
 for x in range(5):
     print(x)

@@ -6,8 +6,6 @@ Doen't support comments, variables, patterns or anything complex...
 Doesn't check file system, all targets are always built.
 """
 
-import os
-
 
 def parse_makefile(fname):
     """Parses a file of lines of the form::

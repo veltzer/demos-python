@@ -8,7 +8,6 @@ References:
 """
 
 import io
-import sys
 import itertools
 
 filename = "/etc/passwd"

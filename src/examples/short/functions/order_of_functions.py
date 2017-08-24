@@ -18,4 +18,5 @@ def f():
 def g():
     print('hello')
 
+
 f()

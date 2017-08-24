@@ -27,4 +27,5 @@ def min_max_avg(list):
     rsum = functools.reduce(my_sum, list)
     return rmin, rmax, rsum / len(list)
 
+
 print(min_max_avg(range(0, 100)))

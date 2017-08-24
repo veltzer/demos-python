@@ -8,6 +8,7 @@ NOTES:
 """
 
 import sys
+
 import imdb
 
 if len(sys.argv) != 2:

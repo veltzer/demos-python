@@ -10,5 +10,6 @@ def my_range(fr, to, jump):
         yield fr
         fr += jump
 
+
 for i in my_range(1, 13, 3):
     print(i)

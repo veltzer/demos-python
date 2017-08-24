@@ -11,7 +11,6 @@ Notice that the file names and directory names that you get are relative
 to the root that you get and not to the root folder of the scan.
 """
 
-import os.path
 import os
 import sys
 

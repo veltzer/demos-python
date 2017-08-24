@@ -8,7 +8,6 @@ import gtk
 
 
 class HellowWorldGTK:
-
     """This is a Hello World GTK/Glade application"""
 
     def __init__(self):
@@ -27,6 +26,7 @@ class HellowWorldGTK:
     # noinspection PyMethodMayBeStatic
     def delete_event(self, *args):
         gtk.main_quit(*args)
+
 
 """
 The try/except is needed so that if you CTRL+C the application you will not get an exception

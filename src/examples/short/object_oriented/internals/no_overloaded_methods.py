@@ -8,7 +8,6 @@ from pyfakeuse import pyfakeuse
 
 
 class A:
-
     def __init__(self, val):
         self.__privar = val
 
@@ -22,6 +21,7 @@ class A:
     # noinspection PyRedeclaration
     def sayHello(self, name):
         print(self.__privar, 'hello', name)
+
 
 try:
     a = A(5)

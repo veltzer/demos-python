@@ -10,7 +10,6 @@ numberOfElems = 400
 
 
 class Stack:
-
     def __init__(self):
         self.cv = threading.Condition()
         self.data = []
@@ -40,7 +39,6 @@ class Stack:
 
 
 class ProduceOrConsume(threading.Thread):
-
     def __init__(self, stack, consume, number):
         threading.Thread.__init__(self)
         self.stack = stack
@@ -56,6 +54,7 @@ class ProduceOrConsume(threading.Thread):
             for i in range(numberOfElems):
                 self.stack.push(i)
                 time.sleep(4.0 * 1.0 / (self.number + 1))
+
 
 stack = Stack()
 threads = [None] * 6

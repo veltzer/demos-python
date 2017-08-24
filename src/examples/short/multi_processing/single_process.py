@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-import os
-import sys
-import os.path
 import fcntl
+import os
+import os.path
+import sys
 import time
 
 '''

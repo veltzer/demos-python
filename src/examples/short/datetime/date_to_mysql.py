@@ -5,8 +5,8 @@ example of how to convert the output of date(1) on the command line
 to mysql type dates.
 """
 
-import subprocess
 import datetime
+import subprocess
 
 
 def date_to_mysql(output):
@@ -14,6 +14,7 @@ def date_to_mysql(output):
     mysql_str = datetime.datetime.strptime(output, format_str)
     # print('mysql_str is [{0}]'.format(mysql_str))
     return mysql_str
+
 
 output = subprocess.check_output('date').decode().strip()
 print('output is [{0}]'.format(output))

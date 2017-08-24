@@ -8,5 +8,6 @@ def right_align_to(lines, width):
         result.append(line.rjust(width))
     return result
 
+
 for line in right_align_to(['foo', 'x', '12345678'], 8):
     print(line)

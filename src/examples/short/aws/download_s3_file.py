@@ -5,7 +5,6 @@ This is an example of how to download a single file from s3
 """
 
 import boto3
-import codecs
 
 do_count_lines = True
 bucket_name = 'twiggle-click-streams'

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import xml.dom.minidom
 import re
+import xml.dom.minidom
 
 dom = xml.dom.minidom.parse('data.xml')  # parse an XML file by name
 

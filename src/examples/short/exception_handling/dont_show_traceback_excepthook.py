@@ -10,11 +10,13 @@ References:
 
 import sys
 
+
 def do_error():
     try:
         raise ValueError('core')
     except Exception as e:
         raise ValueError('outer') from e
+
 
 def excepthook(type, value, traceback):
     # this loop will drill to the core of the problem
@@ -23,6 +25,7 @@ def excepthook(type, value, traceback):
         value = value.__cause__
     print(value)
 
+
 sys.excepthook = excepthook
-    
+
 do_error()

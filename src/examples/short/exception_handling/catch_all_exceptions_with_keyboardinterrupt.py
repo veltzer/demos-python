@@ -13,8 +13,6 @@ If you want to catch all exceptions then use:
     except (Exception, KeyboardInterrupt) as exc:
 """
 
-import time
-
 try:
     raise KeyboardInterrupt()
 # this next line catches all exceptions, logs and throws them back...

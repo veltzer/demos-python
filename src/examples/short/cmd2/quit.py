@@ -14,6 +14,7 @@ References:
 
 from cmd2 import Cmd
 
+
 class CmdLineApp(Cmd):
     def __init__(self):
         Cmd.__init__(self, use_ipython=False)
@@ -21,6 +22,7 @@ class CmdLineApp(Cmd):
     def do_quit(self, arg):
         """ quit the app """
         return True
+
 
 if __name__ == '__main__':
     c = CmdLineApp()

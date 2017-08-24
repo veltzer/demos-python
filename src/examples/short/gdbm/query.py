@@ -21,7 +21,6 @@ d.close()
 # the 'r' in the next line means open for read only
 d = dbm.gnu.open(filename, 'r')
 
-
 print('ehad in db', 'ehad' in d)
 print('one in db', 'one' in d)
 

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import unittest
+
 import Book
 
 
@@ -29,5 +30,6 @@ class BookTest(unittest.TestCase):
         p = Book.Book(50)
         p._Book__price = 60
         self.assertTrue(60 == p.get_price())
+
 
 unittest.main()

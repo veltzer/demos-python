@@ -36,6 +36,7 @@ def apply_funcs2(funcs, x):
     """
     return [f(x) for f in funcs]
 
+
 """
 Using map()
 """
@@ -66,5 +67,6 @@ def apply_funcs4(funcs, *args, **kw):
     [7, 12]
     """
     return [f(*args, **kw) for f in funcs]
+
 
 doctest.testmod()

@@ -6,7 +6,6 @@ This example of how to wrap a dictionary to look like a namespace
 
 
 class D(dict):
-
     def __init__(self):
         super(D, self).__init__()
 
@@ -15,6 +14,7 @@ class D(dict):
 
     def __setattr__(self, name, val):
         self[name] = val
+
 
 a = D()
 a['one'] = 'one_value'

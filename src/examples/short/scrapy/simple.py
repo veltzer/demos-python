@@ -41,6 +41,7 @@ class SearchSpider(scrapy.Spider):
         """
         self.logger.info('in closed')
 
+
 if __name__ == '__main__':
     process = scrapy.crawler.CrawlerProcess()
     process.crawl(SearchSpider)

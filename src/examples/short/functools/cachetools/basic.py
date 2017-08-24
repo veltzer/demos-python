@@ -7,13 +7,15 @@ References:
 - https://docs.python.org/3/library/functools.html#functools.lru_cache
 """
 
-from functools import lru_cache
 import time
+from functools import lru_cache
+
 
 @lru_cache(maxsize=1000)
 def function(a, b):
     time.sleep(2)
-    return a+b
+    return a + b
 
-print(function(2,3))
-print(function(2,3))
+
+print(function(2, 3))
+print(function(2, 3))

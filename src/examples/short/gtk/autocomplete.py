@@ -9,6 +9,7 @@ How to write a custom pygtk widget:
 """
 
 import signal
+
 import gi
 
 gi.require_version('Gtk', '3.0')

@@ -11,12 +11,12 @@ As soon as any data is received,write it back.'''
 
 
 class Echo(protocol.Protocol):
-
     def __init__(self):
         super(Echo, self).__init__()
 
     def dataReceived(self, data):
         self.transport.write(data)
+
 
 factory = protocol.ServerFactory()
 factory.protocol = Echo

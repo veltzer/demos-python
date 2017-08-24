@@ -9,8 +9,6 @@ Conclusions:
 iteration.
 """
 
-import types
-
 d = {}
 for i in range(10):
     d[i] = i

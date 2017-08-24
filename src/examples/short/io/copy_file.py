@@ -7,14 +7,11 @@ This example is based on shutil.copyfileobj which shuffles
 data from one file handle to another.
 """
 
-import os.path
 import os
 import shutil
 
-
 source_file = '/etc/passwd'
 target_file = '/tmp/passwd'
-
 
 if os.path.isfile(target_file):
     os.unlink(target_file)

@@ -11,6 +11,7 @@ References:
 """
 
 import locale
-locale.setlocale( locale.LC_ALL, 'en_US.UTF-8' ) 
+
+locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 print(locale.atoi('1,000,000'))
 print(locale.atof('1,000,000.53'))

@@ -15,9 +15,9 @@ import time
 
 
 class A:
-
     def __init__(self):
         pass
+
 
 a_instance = None
 
@@ -30,8 +30,10 @@ def get_a_instance():
 
     def getAInstanceFast():
         return a_instance
+
     get_a_instance = getAInstanceFast
     return a_instance
+
 
 A1 = get_a_instance()
 A2 = get_a_instance()
@@ -44,9 +46,9 @@ if A1 is A2:
 
 
 class B:
-
     def __init__(self):
         pass
+
 
 b_instance = None
 
@@ -56,6 +58,7 @@ def getBInstance():
     if b_instance is None:
         b_instance = B()
     return b_instance
+
 
 B1 = getBInstance()
 B2 = getBInstance()

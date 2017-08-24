@@ -15,7 +15,7 @@ g = (x ** 2 for x in range(5))
 
 while True:
     try:
-        x=next(g)
+        x = next(g)
         print(x)
     except StopIteration:
         g.close()

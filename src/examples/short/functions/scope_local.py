@@ -28,6 +28,7 @@ def func(x):
     print('y is ', y)
     print('z is ', z)
 
+
 x = 10
 y = 20
 z = 30

@@ -16,4 +16,6 @@ def my_gen():
 def plus1(x):
     print('plus1')
     return x + 1
+
+
 map(plus1, my_gen())

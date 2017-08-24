@@ -10,6 +10,7 @@ def myfunc():
     x = 5
     print(x)
 
+
 x = 7
 myfunc()
 print(x)

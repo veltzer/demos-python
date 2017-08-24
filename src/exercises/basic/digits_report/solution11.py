@@ -14,7 +14,7 @@ print('starting real work on', input_string)
 # this is the easy solution...
 if False:
     for digit in range(10):
-        print('digit',digit,' appears',input_string.count(str(digit)),' times')
+        print('digit', digit, ' appears', input_string.count(str(digit)), ' times')
 # this is the right one...
 counters = [0] * 10
 for digit in input_string:

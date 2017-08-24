@@ -17,12 +17,15 @@ from the import 'apply_async' call.
 import multiprocessing
 import time
 
+
 def sleep_a_little(num):
     time.sleep(1)
-    raise ValueError('this is bad '+str(num))
+    raise ValueError('this is bad ' + str(num))
+
 
 def print_exception(e):
     print('exception happened', e)
+
 
 pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())
 for i in range(10):

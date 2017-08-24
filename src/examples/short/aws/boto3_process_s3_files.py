@@ -12,9 +12,9 @@ References:
 - http://stackoverflow.com/questions/36205481/read-file-content-from-s3-bucket-with-boto3
 """
 
-import boto3
 import codecs
-import io
+
+import boto3
 import tqdm
 
 do_count_lines = True

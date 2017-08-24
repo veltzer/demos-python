@@ -4,7 +4,6 @@ from threading import *
 
 
 class Stack:
-
     def __init__(self):
         self.lock = RLock()
         self.numbers = []
@@ -27,7 +26,6 @@ class Stack:
 
 
 class Producer(Thread):
-
     def __init__(self, stack):
         Thread.__init__(self)
         self.stack = stack
@@ -38,7 +36,6 @@ class Producer(Thread):
 
 
 class Consumer(Thread):
-
     def __init__(self, stack):
         Thread.__init__(self)
         self.stack = stack
@@ -48,6 +45,8 @@ class Consumer(Thread):
             number = self.stack.pop()
             while number is None:
                 number = self.stack.pop()
+
+
 stack = Stack()
 threads = [None] * 6
 for i in range(3):

@@ -17,4 +17,5 @@ class PluginOne(yapsy.IPlugin.IPlugin):
     def do_something(self):
         print('do_something for {0}'.format(__name__, self))
 
+
 var = 'my variable value is [{0}]'.format(__name__)

@@ -14,6 +14,7 @@ def compare(a, b):
     if a[1] > b[1]:
         return 1
 
+
 m = {'mark': 10, 'yossi': 3, 'doron': 67}
 arr = m.items()
 arr.sort(cmp=compare)

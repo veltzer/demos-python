@@ -6,7 +6,6 @@ This example shows how to store method pointers and call them
 
 
 class MyObj:
-
     def __init__(self):
         self.curFunc = self.handle_hello
         self.a = 5

@@ -20,17 +20,21 @@ class DataToPack:
         self.v2 = v2
         self.l = l
         self.s = s
+
     def pack(self):
         return struct.pack(
-                "iis",
-                self.v1,
-                self.v2,
-                self.s,
-                )
+            "iis",
+            self.v1,
+            self.v2,
+            self.s,
+        )
+
     def unpack(self, b):
         """ unpack into self """
+
     def __str__(self):
         return "DataToPack: {}, {}, {}".format(self.v1, self.v2, self.s)
+
 
 d = DataToPack(2, 3, "hello", "string")
 print(d)

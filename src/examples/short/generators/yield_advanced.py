@@ -26,6 +26,7 @@ def odds():
         print('odds say ', x)
         yield
 
+
 c1 = evens()
 c1.__next__()
 c2 = odds()

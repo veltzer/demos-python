@@ -7,12 +7,12 @@ and the list of stuff you can request of it.
 
 
 class A:
-
     def __init__(self):
         self.myfield = 7
 
     def my_method(self):
         print('Hello')
+
 
 a = A()
 print(a.__dict__)

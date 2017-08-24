@@ -5,12 +5,8 @@ A basic demo of pandas
 """
 
 from pandas import DataFrame
-import numpy
-import random
-import string
 
-
-df = DataFrame(["a", "b", "c"], index=[0,1,2])
+df = DataFrame(["a", "b", "c"], index=[0, 1, 2])
 print(df.get_values())
 print(df.loc[0])
 print(df.loc[1])

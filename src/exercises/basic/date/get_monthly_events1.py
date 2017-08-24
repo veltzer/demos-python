@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import sys
-import date
 import time
 
 filename = sys.argv[0]

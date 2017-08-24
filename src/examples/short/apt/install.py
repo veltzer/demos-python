@@ -15,8 +15,9 @@ References:
 http://stackoverflow.com/questions/17537390/how-to-install-a-package-using-the-python-apt-api
 """
 
-import apt.cache
 import os
+
+import apt.cache
 
 pkg_names = [
     'templar',

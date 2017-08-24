@@ -8,9 +8,8 @@ References:
 """
 
 from fastparquet import ParquetFile
-import pandas
 
-#pf = ParquetFile('/tmp/file.parq')
+# pf = ParquetFile('/tmp/file.parq')
 pf = ParquetFile('/tmp/file_compressed.parq')
 df = pf.to_pandas()
 print(df)

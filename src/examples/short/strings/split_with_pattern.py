@@ -18,5 +18,5 @@ re_space = r'\s'
 re_full = '|'.join([re_comma, re_dots, re_space])
 
 l = re.split(re_full, s)
-l = [ x for x in l if x]
+l = [x for x in l if x]
 print(l)

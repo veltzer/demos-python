@@ -39,6 +39,7 @@ def getInstance() -> A:
         A.instance = A()
     return A.instance
 
+
 myA1 = getInstance()
 myA2 = getInstance()
 if myA1 is myA2:

@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
-import simpleparse.dispatchprocessor
 import pprint
 import sys
+
+import simpleparse.dispatchprocessor
 
 declaration = r'''# note use of raw string when embedding in python code...
 full        := ws,expr,ws
@@ -32,9 +33,9 @@ class MyProcessorClass(simpleparse.dispatchprocessor.DispatchProcessor):
 
 
 class MyParser(simpleparse.parser.Parser):
-
     def buildProcessor(self):
         return MyProcessorClass()
+
 
 parser = MyParser(declaration, 'full')
 pprint.pprint(parser.parse(sys.argv[1]))

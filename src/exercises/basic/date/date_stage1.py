@@ -29,7 +29,6 @@ def is_leap_year(year):
 
 
 class Date:
-
     def __init__(self, day, month, year):
         if not isinstance(day, int) or not isinstance(month, int) or not isinstance(year, int):
             print('Date must be initialized with numbers')

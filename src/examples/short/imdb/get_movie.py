@@ -13,9 +13,10 @@ NOTES:
 - this script is python2 on purpose because the imdb module is currently only available for python2 in ubuntu.
 """
 
-import sys
-import imdb
 import random
+import sys
+
+import imdb
 
 if len(sys.argv) != 2:
     print('{0}: usage: {0} [moviedID]'.format(sys.argv[0]))

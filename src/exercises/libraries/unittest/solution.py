@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 import glob
-import unittest
 import os
-import tempfile
 import shutil
+import tempfile
+import unittest
 
 
 class TestGlob(unittest.TestCase):
@@ -35,5 +35,6 @@ class TestGlob(unittest.TestCase):
         """Test globbing with full path."""
         self.assertGlob(self.absolute('*xt'), map(
             self.absolute, ['foo.txt', 'bar.txt']))
+
 
 unittest.main()

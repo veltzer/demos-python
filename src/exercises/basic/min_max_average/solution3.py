@@ -13,4 +13,5 @@ def min_max_avg(list):
         sum += x
     return min, max, sum / len(list)
 
+
 print(min_max_avg(range(0, 100000)))

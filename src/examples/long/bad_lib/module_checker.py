@@ -4,6 +4,7 @@ This is a module that checks if a library given to it is loadable
 """
 
 import ctypes
+
 import ctypes.cdll
 
 libdl = ctypes.CDLL('libdl.so')

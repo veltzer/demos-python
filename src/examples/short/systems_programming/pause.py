@@ -20,11 +20,13 @@ import os
 import signal
 import threading
 
+
 # a small debugging function that prints the thread doing the printing...
 
 
 def debug(msg):
     print(threading.currentThread().name, msg)
+
 
 # a wrapper function to call an old signal handler
 
@@ -32,6 +34,7 @@ def debug(msg):
 def call_old(old_val, signum, frame):
     if old_val is not None and old_val != signal.SIG_IGN and old_val != signal.SIG_DFL:
         old_val(signum, frame)
+
 
 # this is my signal handler
 
@@ -54,6 +57,7 @@ def myhandler(signum, frame):
     if signum == signal.SIGINT:
         # here we do not call the old function
         debug('signalhandler: dont press CTRL+C. Kill me using SIGUSR2')
+
 
 oldsigusr1 = signal.getsignal(signal.SIGUSR1)
 oldsigusr2 = signal.getsignal(signal.SIGUSR2)

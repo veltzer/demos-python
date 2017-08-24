@@ -12,7 +12,6 @@ the magical 'x.price' property.
 
 
 class Book:
-
     def __init__(self, price):
         self.__price = price
 
@@ -21,6 +20,7 @@ class Book:
 
     def setPrice(self, val):
         self.__price = val
+
     price = property(getPrice, setPrice)
 
     def printViaprop(self):
@@ -31,6 +31,7 @@ class Book:
 
     def printViaget(self):
         print('printMe: price is', self.getPrice())
+
 
 print('this is the type(Book.price)', type(Book.price))
 b = Book(50)

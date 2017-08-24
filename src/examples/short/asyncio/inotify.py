@@ -10,8 +10,9 @@ References:
 http://stackoverflow.com/questions/26414052/watch-for-a-file-with-asyncio
 """
 
-import pyinotify
 import asyncio
+
+import pyinotify
 
 
 class AsyncioNotifier(pyinotify.Notifier):

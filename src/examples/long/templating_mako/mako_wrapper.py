@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 
-import sys
-import mako.template
-import mako.lookup
-import os
 import datetime
+import sys
+
+import mako.lookup
 
 
 def years(x):

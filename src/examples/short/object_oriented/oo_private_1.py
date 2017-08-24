@@ -9,7 +9,6 @@ python.
 
 
 class MyClass:
-
     def __init__(self):
         self.pubvar = 5
         self.__privar = 5
@@ -18,6 +17,7 @@ class MyClass:
         print('printing')
         print('pubvar is ' + str(self.pubvar))
         print('privar is ' + str(self.__privar))
+
     # this demonstrates that you dont have to call 'self' as 'self',its just
     # a convention
 
@@ -26,6 +26,7 @@ class MyClass:
 
     def setPublic(self, val):
         self.pubvar = val
+
 
 print('constructing')
 b = MyClass()

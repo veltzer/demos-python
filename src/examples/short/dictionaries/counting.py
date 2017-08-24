@@ -6,7 +6,6 @@ This example shows how to count using a dictionary
 
 import collections
 
-
 colors = [
     'red',
     'green',

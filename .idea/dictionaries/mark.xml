@@ -5,6 +5,7 @@
       <w>asyncio</w>
       <w>autopep</w>
       <w>boto</w>
+      <w>cachetool</w>
       <w>dbus</w>
       <w>defaultdict</w>
       <w>intersetellar</w>

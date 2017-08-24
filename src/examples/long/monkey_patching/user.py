@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import modb1
 import moda1
+import modb1
 
 # lets call the regular version of the function
 print('before hacking')

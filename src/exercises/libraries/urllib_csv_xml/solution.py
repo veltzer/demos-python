@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
+import csv
 import urllib.request
 import xml.etree.cElementTree as ElementTree
-import csv
 
 
 def parse_feed(feed_string):
@@ -18,6 +18,7 @@ def write_csv(filename, parsed_feed_string):
     with open(filename, 'wb') as f:
         writer = csv.writer(f)
         writer.writerows(parsed_feed_string)
+
 
 output = '/tmp/pypi.csv'
 feed = urllib.request.urlopen('http://pypi.python.org/pypi?:action=rss').read()

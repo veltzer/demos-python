@@ -8,7 +8,6 @@ This is a nicer design.
 
 
 class RevIter:
-
     def __init__(self, data):
         self.data = data
         self.index = len(data)
@@ -19,18 +18,19 @@ class RevIter:
         self.index -= 1
         return self.data[self.index]
 
+
 '''
 Iterator for looping over a sequence backwards
 '''
 
 
 class Reverse:
-
     def __init__(self, data):
         self.data = data
 
     def __iter__(self):
         return RevIter(self.data)
+
 
 '''
 And now lets use the iterator...

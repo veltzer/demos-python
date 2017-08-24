@@ -39,6 +39,7 @@ def Person(name, age):
     def printMe():
         print('name', data['name'])
         print('age', data['age'])
+
     methods = {
         'setName': setName,
         'getName': getName,
@@ -47,6 +48,7 @@ def Person(name, age):
         'printMe': printMe,
     }
     return methods
+
 
 p1 = Person('Bilbo', 111)
 p1['setName']('Sam')

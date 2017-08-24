@@ -1,7 +1,7 @@
-import pkg_resources
-
 import os.path
 import pkgutil
+
+import pkg_resources
 
 static_file_content = pkg_resources.resource_string(
     'mypack', 'static_file.html').decode()
@@ -14,6 +14,8 @@ def get_real_filename(filename):
 
 def get_data(filename):
     return open(get_real_filename(filename), 'rb').read()
+
+
 static_file_content2 = get_data('static_file.html').decode()
 print('static_file_content2 is [{0}]'.format(static_file_content2))
 

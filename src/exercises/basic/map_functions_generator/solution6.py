@@ -6,4 +6,5 @@ def apply_funcs(funcs, x):
     Return the result"""
     return map(lambda f: f(x), funcs)
 
-print(apply_funcs([lambda x:x ** 2, lambda x:x + 1], 5))
+
+print(apply_funcs([lambda x: x ** 2, lambda x: x + 1], 5))

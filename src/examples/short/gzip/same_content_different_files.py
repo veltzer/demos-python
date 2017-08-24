@@ -12,11 +12,12 @@ References:
 - http://stackoverflow.com/questions/28213912/python-md5-hashes-of-same-gzipped-file-are-inconsistent
 """
 
-import hashlib
 import gzip
+import hashlib
 
 f_name = '/etc/passwd'
 output_template = '/tmp/test{}.gz'
+
 
 def digest(filename: str) -> str:
     md5 = hashlib.md5()
@@ -25,8 +26,9 @@ def digest(filename: str) -> str:
             md5.update(chunk)
     return md5.hexdigest()
 
+
 print("The default way - non identical outputs")
-for x in range(0,3):
+for x in range(0, 3):
     input_handle = open(f_name, 'rb')
     output_filename = output_template.format(x)
     myzip = gzip.open(output_filename, 'wb')
@@ -40,14 +42,14 @@ for x in range(0,3):
     print(digest(output_filename))
 
 print("The right way to get identical outputs")
-for x in range(3,6):
+for x in range(3, 6):
     input_handle = open(f_name, 'rb')
     output_filename = output_template.format(x)
     myzip = gzip.GzipFile(
-            filename='',  # do not emit filename into the output gzip file
-            mode='wb',
-            fileobj=open(output_filename, 'wb'),
-            mtime=0,  # do not emit modification time information into the output gzip file 
+        filename='',  # do not emit filename into the output gzip file
+        mode='wb',
+        fileobj=open(output_filename, 'wb'),
+        mtime=0,  # do not emit modification time information into the output gzip file
     )
     block_size = 4096
     try:

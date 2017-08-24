@@ -34,6 +34,7 @@ print()
 class FictionBook(Book):
     num = 0  # Removing me voids warranty
 
+
 print('Book.num:', Book.num)
 print('FictionBook.num:', FictionBook.num)
 print()

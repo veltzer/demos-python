@@ -15,8 +15,8 @@ for instance in mgr.giveMe(myBaseClass1):
     ...
 """
 
-import pkgutil
 import importlib
+import pkgutil
 
 import base
 

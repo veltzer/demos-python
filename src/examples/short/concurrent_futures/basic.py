@@ -24,7 +24,7 @@ def work(n):
 
 def main():
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        for r in executor.map(work, [100000000]*8):
+        for r in executor.map(work, [100000000] * 8):
             print(r)
 
 

@@ -6,7 +6,6 @@ A simple example of how to write a TSV file using the 'tsv' module
 
 import tsv
 
-
 writer = tsv.TsvWriter(open("/tmp/file.tsv", "w"))
 
 writer.comment("This is a comment")

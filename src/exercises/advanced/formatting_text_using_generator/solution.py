@@ -28,4 +28,5 @@ def reformat(lines):
             yield line
         yield ''
 
+
 print(list(reformat(['foo', 'bar', 'baz', '', 'quux', 'quuux'])))

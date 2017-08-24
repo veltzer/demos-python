@@ -4,8 +4,8 @@
 A script to separate the john bryce pdf to separate slides...
 """
 
-import subprocess
 import os.path
+import subprocess
 
 subprocess.check_output([
     'pdfseparate',

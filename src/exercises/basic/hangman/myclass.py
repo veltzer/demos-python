@@ -38,7 +38,6 @@ banana: YOU WON!
 
 
 class SimpleHangman:
-
     """
     Simple hangman game playable from the interpreter.
 
@@ -93,7 +92,6 @@ class SimpleHangman:
 
 
 class Hangman(SimpleHangman):
-
     """
     Hangman game playable from the interpreter.
 
@@ -154,4 +152,5 @@ class Hangman(SimpleHangman):
 # test if run directly, do nothing if imported
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

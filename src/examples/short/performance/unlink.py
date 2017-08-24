@@ -7,9 +7,8 @@ paradigm or rather via the os.path.isfile paradigm.
 it proves that maintaining a cache in user space is the best approach.
 """
 
-import time
-import os
 import os.path
+import time
 
 count = 1000000
 time_before = time.time()

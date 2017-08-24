@@ -6,7 +6,6 @@ from twisted.protocols.basic import LineReceiver
 
 
 class MyProtocol(LineReceiver):
-
     def rawDataReceived(self, data):
         pass
 
@@ -80,6 +79,7 @@ class MyFactory(Factory):
     def __init__(self):
         self.num_users = 0
         self.port = 8007
+
 
 myFactory = MyFactory()
 reactor.listenTCP(myFactory.port, myFactory)

@@ -16,12 +16,14 @@ See below.
 import multiprocessing
 import time
 
+
 def sleep_a_little(num):
     time.sleep(1)
     if num % 2 == 1:
-        raise ValueError('this is bad '+str(num))
+        raise ValueError('this is bad ' + str(num))
     else:
         return num
+
 
 pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())
 results = []

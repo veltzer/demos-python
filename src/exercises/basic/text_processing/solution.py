@@ -21,5 +21,6 @@ def right_align_to_longest(lines):
     """Right-align all lines to the longest."""
     return right_align_to(lines, max_len(lines))
 
+
 for line in right_align_to_longest(['foo', 'x', '12345678']):
     print(line)

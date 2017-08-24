@@ -17,6 +17,8 @@ def mul(a, b):
 
 def div(a, b):
     return a / b
+
+
 # (BTW, the `operator` module is packed with function like these.)
 
 # Functions are objects like anything else, we can stick them in a dict!
@@ -37,5 +39,6 @@ def rpn_calc(expression):
             # whatever function the dict gave us.
             stack.append(operators[word](a, b))
         print(stack)
+
 
 rpn_calc(' '.join(['2', '2', '+', '5', '*']))

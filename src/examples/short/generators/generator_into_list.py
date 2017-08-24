@@ -10,9 +10,11 @@ It also shows that the () comprehension will leave a generator
 as a generator and the wrong ways of doing it...
 """
 
+
 def generate_items():
     for i in range(10):
         yield i
+
 
 y = list(generate_items())
 print(y)

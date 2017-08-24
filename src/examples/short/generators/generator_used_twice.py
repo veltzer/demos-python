@@ -6,6 +6,7 @@ def give_me_some_data():
     yield -14
     yield True
 
+
 for x in give_me_some_data():
     print('outer loop', x)
     for y in give_me_some_data():

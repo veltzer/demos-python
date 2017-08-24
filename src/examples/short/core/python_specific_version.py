@@ -20,6 +20,7 @@ absolute path on the command line.
 """
 
 import sys
+
 print('python version is', sys.version)
 if sys.version_info[0:2] == (2, 7):
     print('version==2,7')

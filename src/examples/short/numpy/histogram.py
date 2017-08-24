@@ -16,7 +16,6 @@ References:
 
 import numpy
 
-a = [ 1, 2, 3, 4, 11, 16, 17, 18, 20.5 ]
-
+a = [1, 2, 3, 4, 11, 16, 17, 18, 20.5]
 
 print(numpy.histogram(a, bins=3))

@@ -18,13 +18,16 @@ def max(*args):
     # now call the builtin 'max' function
     return builtins.max(args)
 
-print(max(1,2))
+
+print(max(1, 2))
 
 original_min = min
+
 
 def min(*args):
     print("hey, I am here...")
     # now call the builtin 'min' function
     return original_min(args)
 
-print(min(1,2))
+
+print(min(1, 2))

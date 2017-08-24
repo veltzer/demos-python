@@ -18,11 +18,14 @@ class A:
 class B(A):
     pass
 
+
 class C:
     pass
 
-class D(B,C):
+
+class D(B, C):
     pass
+
 
 print(A.__base__, A.__bases__)
 print(B.__base__, B.__bases__)

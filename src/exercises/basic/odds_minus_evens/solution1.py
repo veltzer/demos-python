@@ -16,4 +16,5 @@ def odds_minus_evens(l):
         result -= 2 * l[0]
     return result
 
+
 print(odds_minus_evens(range(2, 6)))
