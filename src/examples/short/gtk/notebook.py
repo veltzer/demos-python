@@ -7,6 +7,7 @@ A notebook pygtk application
 import signal
 
 import gi
+# noinspection PyUnresolvedReferences
 from gi.repository import Gtk as gtk
 
 gi.require_version('Gtk', '3.0')
@@ -17,32 +18,37 @@ class NotebookExample:
     This method rotates the position of the tabs
     """
 
-    def rotate_book(self, button, notebook):
+    # noinspection PyMethodMayBeStatic
+    def rotate_book(self, _button, notebook):
         notebook.set_tab_pos((notebook.get_tab_pos() + 1) % 4)
 
     # Add/Remove the page tabs and the borders
-    def tabsborder_book(self, button, notebook):
-        tval = False
-        bval = False
+    def tabs_border_book(self, _button, notebook):
+        tab_val = False
+        button_val = False
         if not self.show_tabs:
-            tval = True
+            tab_val = True
         if not self.show_border:
-            bval = True
+            button_val = True
 
-        notebook.set_show_tabs(tval)
-        self.show_tabs = tval
-        notebook.set_show_border(bval)
-        self.show_border = bval
+        notebook.set_show_tabs(tab_val)
+        self.show_tabs = tab_val
+        notebook.set_show_border(button_val)
+        self.show_border = button_val
 
-    # Remove a page from the notebook
-    def remove_book(self, button, notebook):
+    # noinspection PyMethodMayBeStatic
+    def remove_book(self, _button, notebook):
+        """
+        Remove a page from the notebook
+        """
         page = notebook.get_current_page()
         notebook.remove_page(page)
         # Need to refresh the widget --
         # This forces the widget to redraw itself.
         notebook.queue_draw_area(0, 0, -1, -1)
 
-    def delete(self, widget, event=None):
+    # noinspection PyMethodMayBeStatic
+    def delete(self, _widget, _event=None):
         gtk.main_quit()
         return False
 
@@ -64,19 +70,19 @@ class NotebookExample:
 
         # Let's append a bunch of pages to the notebook
         for i in range(5):
-            bufferf = 'Append Frame {0}'.format(i + 1)
-            bufferl = 'Page {0}'.format(i + 1)
+            buffer_frame = 'Append Frame {0}'.format(i + 1)
+            buffer_label = 'Page {0}'.format(i + 1)
 
             frame = gtk.Frame()
             frame.set_border_width(10)
             frame.set_size_request(100, 75)
             frame.show()
 
-            label = gtk.Label(bufferf)
+            label = gtk.Label(buffer_frame)
             frame.add(label)
             label.show()
 
-            label = gtk.Label(bufferl)
+            label = gtk.Label(buffer_label)
             notebook.append_page(frame, label)
 
         # Now let's add a page to a specific spot
@@ -89,19 +95,19 @@ class NotebookExample:
 
         # Now finally let's prepend pages to the notebook
         for i in range(5):
-            bufferf = 'Prepend Frame {0}'.format(i + 1)
-            bufferl = 'PPage {0}'.format(i + 1)
+            buffer_frame = 'Prepend Frame {0}'.format(i + 1)
+            buffer_label = 'PPage {0}'.format(i + 1)
 
             frame = gtk.Frame()
             frame.set_border_width(10)
             frame.set_size_request(100, 75)
             frame.show()
 
-            label = gtk.Label(bufferf)
+            label = gtk.Label(buffer_frame)
             frame.add(label)
             label.show()
 
-            label = gtk.Label(bufferl)
+            label = gtk.Label(buffer_label)
             notebook.prepend_page(frame, label)
 
         # Set what page to start at (page 4)
@@ -129,7 +135,7 @@ class NotebookExample:
         button.show()
 
         button = gtk.Button('tabs/border on/off')
-        button.connect('clicked', self.tabsborder_book, notebook)
+        button.connect('clicked', self.tabs_border_book, notebook)
         table.attach(button, 4, 5, 1, 2)
         button.show()
 

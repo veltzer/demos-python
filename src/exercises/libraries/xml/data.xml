@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TASEImport xmlns="http://www.w3.org/1999/TASEImport" import_date="20091201">
+<!--suppress XmlUnboundNsPrefix -->
+<TASEImport import_date="20091201">
     <ImportTicket external_system="TASE" external_system_reference="0000000020143172">
         <ExternalFields>
             <ExternalParameter name="TASEInstrumentID">08101214</ExternalParameter>
