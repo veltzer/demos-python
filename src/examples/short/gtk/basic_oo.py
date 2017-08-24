@@ -7,20 +7,23 @@ A pygtk hello world application
 import signal
 
 import gi
+# noinspection PyUnresolvedReferences
 from gi.repository import Gtk as gtk
 
 gi.require_version('Gtk', '3.0')
 
 
 class HelloWorld:
-    def hello(self, widget, data=None):
+    # noinspection PyMethodMayBeStatic
+    def hello(self, _widget, _data=None):
         """
         This is a callback function. The data arguments are ignored
         in this example. More on callbacks below.
         """
         print('Hello World')
 
-    def delete_event(self, widget, event, data=None):
+    # noinspection PyMethodMayBeStatic
+    def delete_event(self, _widget, _event, _data=None):
         """
         If you return FALSE in the 'delete_event' signal handler,
         GTK will emit the 'destroy' signal. Returning TRUE means
@@ -36,7 +39,8 @@ class HelloWorld:
         '''
         return False
 
-    def destroy(self, widget, data=None):
+    # noinspection PyMethodMayBeStatic
+    def destroy(self, _widget, _data=None):
         print('destroy signal occurred')
         gtk.main_quit()
 
@@ -99,6 +103,7 @@ class HelloWorld:
         '''
         self.window.show()
 
+    # noinspection PyMethodMayBeStatic
     def main(self):
         """
         All PyGTK applications must have a gtk.main(). Control ends here
