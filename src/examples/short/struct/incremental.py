@@ -27,7 +27,7 @@ class Encoder:
 
     def get_bytes(self):
         """ return all the bytes collected """
-        return self.b[:self.pos]
+        return self.buffer[:self.pos]
 
 
 # pack two numbers

@@ -34,10 +34,10 @@ def by_y_x(t):
 my_list = [(1, 7), (2, 5), (0, 0), (3, 8), (1, 8), (2, 8)]
 # lets see how regular sort works...
 print(sorted(my_list))
-# lets see how reverse works...
-print(sorted(my_list, cmp=my_reverse))
-# lets see how second tuple co-ordinate sort works...
-print(sorted(my_list, cmp=my_tup_reverse))
+# lets see how reverse works... (no longer works)
+# print(sorted(my_list, cmp=my_reverse))
+# lets see how second tuple co-ordinate sort works... (no longer works)
+# print(sorted(my_list, cmp=my_tup_reverse))
 # lets see how use the key function
 print(sorted(my_list, key=my_first_cor_key))
 # lets see how use the key function

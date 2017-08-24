@@ -5,14 +5,14 @@ import gtk
 w = gtk.Window()
 w.connect('delete_event', lambda *ignored: gtk.main_quit())
 
-hbox = gtk.HBox()
-w.add(hbox)
+horizontal_box = gtk.HBox()
+w.add(horizontal_box)
 
 entry1 = gtk.Entry()
 entry2 = gtk.Entry()
 result = gtk.Label()
 for widget in [entry1, gtk.Label('+'), entry2, gtk.Label('='), result]:
-    hbox.pack_start(widget)
+    horizontal_box.pack_start(widget)
 
 
 def compute(*ignored):

@@ -12,10 +12,10 @@ from functools import lru_cache
 
 
 @lru_cache(maxsize=1000)
-def function(a, b):
+def my_function(a, b):
     time.sleep(2)
     return a + b
 
 
-print(function(2, 3))
-print(function(2, 3))
+print(my_function(2, 3))
+print(my_function(2, 3))

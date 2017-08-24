@@ -9,6 +9,7 @@ the imp module.
 # noinspection PyDeprecation
 import imp
 
+# noinspection PyDeprecation
 imp.load_source('__main__', 'using_imp_one.py')
 print('add(2,2) is', add(2, 2))
 imp.load_source('__main__', 'using_imp_two.py')
