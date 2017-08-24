@@ -13,6 +13,7 @@ class FileExists(luigi.Task):
         pass
 
 
+# noinspection PyMethodMayBeStatic
 class CountLines(luigi.Task):
     def requires(self):
         """

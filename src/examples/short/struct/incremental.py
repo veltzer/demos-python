@@ -14,11 +14,12 @@ References:
 import struct
 import ctypes
 
+
 class Encoder:
     def __init__(self, size):
-        super().__init__(self)
+        super().__init__()
         self.dict = {
-                "i": struct.Struct("i").size,
+            "i": struct.Struct("i").size,
         }
         self.size = size
         self = ctypes.create_string_buffer(size)
@@ -27,6 +28,7 @@ class Encoder:
     def get_bytes(self):
         """ return all the bytes collected """
         return self.b[:self.pos]
+
 
 # pack two numbers
 v1_in = 2

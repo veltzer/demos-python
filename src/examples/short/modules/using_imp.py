@@ -6,6 +6,7 @@ This clearly shows that you can reload any module into any name space using
 the imp module.
 """
 
+# noinspection PyDeprecation
 import imp
 
 imp.load_source('__main__', 'using_imp_one.py')

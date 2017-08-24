@@ -32,5 +32,5 @@ class DataToPack:
     def __str__(self):
         return "DataToPack: {}, {}, {}".format(self.v1, self.v2, self.s)
 
-d = DataToPack(2, 3, "hello")
+d = DataToPack(2, 3, "hello", "string")
 print(d)

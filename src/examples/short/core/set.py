@@ -8,7 +8,7 @@ A demo of sets
 a = set()
 # add elements
 a.add('mark')
-a.add('doron')
+a.add('john')
 print(a)
 # check whether an element is in the set
 print('mark' in a)
@@ -21,5 +21,5 @@ a.remove('mark')
 print(a)
 try:
     a.remove('shay')
-except:
+except KeyError:
     print('yes, getting exceptions for removing elements not from the set')

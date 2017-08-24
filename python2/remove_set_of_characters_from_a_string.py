@@ -16,20 +16,23 @@ import timeit
 # remove_re = re.compile("[0-9]")
 # translate_map = {ord(x): None for x in "0123456789"}
 remove_re = re.compile("[a-z]")
-translate_map = {x: None for x in range(ord('a'),ord('z')+1)}
+translate_map = {x: None for x in range(ord('a'), ord('z') + 1)}
 
 line = "this 2342 is56 is the 2line"
+
 
 def using_re():
     return remove_re.sub('', line)
 
+
 using_re.name = 'using_re'
+
 
 def using_translate():
     return line.translate(None, "abcdefghijklmnopqrstuvwzyz")
 
-using_translate.name = 'using_translate'
 
+using_translate.name = 'using_translate'
 
 functions = [
     using_re,

@@ -23,10 +23,10 @@ class ThreadedServer(SocketServer.ThreadingMixIn, BaseHTTPServer.HTTPServer):
 class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     def __init__(self):
         super(MyHandler).__init__()
-        slef.readlpath = None
+        self.real_path = None
 
     def handle_static(self, mimetype):
-        f = open(self.realpath)
+        f = open(self.real_path)
         # note that this potentially makes every file on your computer
         # readable by the internet. A real web server also checks that
         # the file that it is serving is inside into service 'realm'.
@@ -50,7 +50,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html')
         self.end_headers()
         self.wfile.write('<html><body>')
-        for x in os.listdir(self.realpath):
+        for x in os.listdir(self.real_path):
             ref = 'http://localhost:8001' + self.path + x
             self.wfile.write('<a href=\'' + ref + '\'>' + x + '</a><br/>')
         self.wfile.write('</body></html>')
@@ -63,8 +63,8 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         # add a '.' to path to make it a local file path
         # /->./
         # /index.html -> ./index.html
-        self.realpath = '.' + self.path
-        if os.path.isfile(self.realpath):
+        self.real_path = '.' + self.path
+        if os.path.isfile(self.real_path):
             # our static HTML content
             if self.path.endswith('.html'):
                 self.handle_static('text/html')
@@ -77,7 +77,7 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             self.send_error(
                 500, 'Unrecognized file type: {0}'.format(self.path))
             return
-        if os.path.isdir(self.realpath):
+        if os.path.isdir(self.real_path):
             self.handle_dir()
 
     def do_GET(self):

@@ -1,8 +1,10 @@
+# noinspection PyDeprecation
 import imp
 import os
 import os.path
 
 
+# noinspection PyDeprecation
 def load_module(module_ns, name, folder):
     info = imp.find_module(name, [folder])
     return imp.load_module(module_ns, *info)

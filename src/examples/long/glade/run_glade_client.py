@@ -12,9 +12,9 @@ class HellowWorldGTK:
     """This is a Hello World GTK/Glade application"""
 
     def __init__(self):
-        self.gladefile = 'project.glade'
+        self.glade_file = 'project.glade'
         self.glade = gtk.Builder()
-        self.glade.add_from_file(self.gladefile)
+        self.glade.add_from_file(self.glade_file)
         self.glade.connect_signals(self)
         '''
         the name 'MainWindow' matches the name of the main window widget
@@ -24,6 +24,7 @@ class HellowWorldGTK:
 
     ''' the name of this method matches the event handler in the glade xml file '''
 
+    # noinspection PyMethodMayBeStatic
     def delete_event(self, *args):
         gtk.main_quit(*args)
 

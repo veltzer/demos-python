@@ -11,14 +11,14 @@ import os
 import cmd
 import readline
 
-class Console(cmd.Cmd):
 
+class Console(cmd.Cmd):
     def __init__(self):
         cmd.Cmd.__init__(self)
         self.prompt = "=>> "
-        self.intro  = "Welcome to console!"  ## defaults to None
+        self.intro = "Welcome to console!"  ## defaults to None
 
-    ## Command definitions ##
+    # Command definitions
     def do_hist(self, args):
         """Print a list of commands that have been entered"""
         print(self._hist)
@@ -27,7 +27,7 @@ class Console(cmd.Cmd):
         """Exits from the console"""
         return -1
 
-    ## Command definitions to support Cmd object functionality ##
+    # Command definitions to support Cmd object functionality
     def do_EOF(self, args):
         """Exit on system end of file character"""
         return self.do_exit(args)
@@ -41,24 +41,24 @@ class Console(cmd.Cmd):
            'help' or '?' with no arguments prints a list of commands for which help is available
            'help <command>' or '? <command>' gives help on <command>
         """
-        ## The only reason to define this method is for the help text in the doc string
+        # The only reason to define this method is for the help text in the doc string
         cmd.Cmd.do_help(self, args)
 
-    ## Override methods in Cmd object ##
+    # Override methods in Cmd object
     def preloop(self):
         """Initialization before prompting user for commands.
            Despite the claims in the Cmd documentaion, Cmd.preloop() is not a stub.
         """
-        cmd.Cmd.preloop(self)   ## sets up command completion
-        self._hist    = []      ## No history yet
-        self._locals  = {}      ## Initialize execution namespace for user
+        cmd.Cmd.preloop(self)  # sets up command completion
+        self._hist = []  # No history yet
+        self._locals = {}  # Initialize execution namespace for user
         self._globals = {}
 
     def postloop(self):
         """Take care of any unfinished business.
            Despite the claims in the Cmd documentaion, Cmd.postloop() is not a stub.
         """
-        cmd.Cmd.postloop(self)   ## Clean up command completion
+        cmd.Cmd.postloop(self)  # Clean up command completion
         print("Exiting...")
 
     def precmd(self, line):
@@ -66,7 +66,7 @@ class Console(cmd.Cmd):
             it has been interpreted. If you want to modifdy the input line
             before execution (for example, variable substitution) do it here.
         """
-        self._hist += [ line.strip() ]
+        self._hist += [line.strip()]
         return line
 
     def postcmd(self, stop, line):
@@ -75,11 +75,11 @@ class Console(cmd.Cmd):
         """
         return stop
 
-    def emptyline(self):    
+    def emptyline(self):
         """Do nothing on empty input line"""
         pass
 
-    def default(self, line):       
+    def default(self, line):
         """Called on an input line when the command prefix is not recognized.
            In that case we execute the line as Python code.
         """
@@ -88,6 +88,7 @@ class Console(cmd.Cmd):
         except Exception as e:
             print(e.__class__, ":", e)
 
+
 if __name__ == '__main__':
     console = Console()
-    console . cmdloop() 
+    console.cmdloop()

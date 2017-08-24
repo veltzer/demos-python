@@ -8,6 +8,7 @@ into the same namespace
 # noinspection PyDeprecation
 import imp
 
+# noinspection PyDeprecation
 imp.load_source('config', 'myfolder/mymod.py')
 imp.load_source('config', 'myotherfolder/mymod2.py')
 import config

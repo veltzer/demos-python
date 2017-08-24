@@ -12,6 +12,7 @@ http://stackoverflow.com/questions/5466451/how-can-i-print-a-literal-characters-
 """
 
 try:
+    # noinspection PyStringFormat
     s = '''{this will not work} {0}'''.format('mark')
     print(s)
 except Exception as e:
