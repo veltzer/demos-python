@@ -22,7 +22,7 @@ class Encoder:
             "i": struct.Struct("i").size,
         }
         self.size = size
-        self = ctypes.create_string_buffer(size)
+        self.buffer = ctypes.create_string_buffer(size)
         self.pos = 0
 
     def get_bytes(self):

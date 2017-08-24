@@ -7,7 +7,7 @@ A basic glade based python project.
 import gtk
 
 
-class HellowWorldGTK:
+class HelloWorldGTK:
     """This is a Hello World GTK/Glade application"""
 
     def __init__(self):
@@ -33,7 +33,7 @@ The try/except is needed so that if you CTRL+C the application you will not get 
 with stack trace
 """
 try:
-    app = HellowWorldGTK()
+    app = HelloWorldGTK()
     gtk.main()
 except KeyboardInterrupt:
     pass

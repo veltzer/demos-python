@@ -21,41 +21,41 @@ output_template = '/tmp/test{}.gz'
 
 def digest(filename: str) -> str:
     md5 = hashlib.md5()
-    with open(output_filename, 'rb') as f:
+    with open(filename, 'rb') as f:
         for chunk in iter(lambda: f.read(block_size), b''):
             md5.update(chunk)
     return md5.hexdigest()
 
 
+block_size = 4096
 print("The default way - non identical outputs")
 for x in range(0, 3):
     input_handle = open(f_name, 'rb')
     output_filename = output_template.format(x)
-    myzip = gzip.open(output_filename, 'wb')
-    block_size = 4096
+    my_zip = gzip.open(output_filename, 'wb')
     try:
         for chunk in iter(lambda: input_handle.read(block_size), b''):
-            myzip.write(chunk)
+            my_zip.write(chunk)
     finally:
         input_handle.close()
-        myzip.close()
+        my_zip.close()
     print(digest(output_filename))
 
 print("The right way to get identical outputs")
 for x in range(3, 6):
     input_handle = open(f_name, 'rb')
     output_filename = output_template.format(x)
-    myzip = gzip.GzipFile(
+    my_zip = gzip.GzipFile(
         filename='',  # do not emit filename into the output gzip file
         mode='wb',
         fileobj=open(output_filename, 'wb'),
         mtime=0,  # do not emit modification time information into the output gzip file
     )
-    block_size = 4096
+
     try:
         for chunk in iter(lambda: input_handle.read(block_size), b''):
-            myzip.write(chunk)
+            my_zip.write(chunk)
     finally:
         input_handle.close()
-        myzip.close()
+        my_zip.close()
     print(digest(output_filename))

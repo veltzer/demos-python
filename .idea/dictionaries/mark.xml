@@ -6,6 +6,7 @@
       <w>autopep</w>
       <w>boto</w>
       <w>cachetool</w>
+      <w>centos</w>
       <w>dbus</w>
       <w>defaultdict</w>
       <w>intersetellar</w>
@@ -25,12 +26,14 @@
       <w>pygraph</w>
       <w>pygtk</w>
       <w>pyinotify</w>
+      <w>pylint</w>
       <w>pypdf</w>
       <w>pypi</w>
       <w>pyqt</w>
       <w>pythonhashseed</w>
       <w>pyyaml</w>
       <w>reachability</w>
+      <w>redhat</w>
       <w>reformatter</w>
       <w>rivendell</w>
       <w>scrapy</w>

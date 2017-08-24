@@ -18,8 +18,10 @@ References:
 
 
 def chomp(x):
-    if x.endswith("\r\n"): return x[:-2]
-    if x.endswith("\n"): return x[:-1]
+    if x.endswith("\r\n"):
+        return x[:-2]
+    if x.endswith("\n"):
+        return x[:-1]
     return x
 
 

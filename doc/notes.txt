@@ -3,7 +3,7 @@
 	Try the following command line to see them:
 		find /usr/lib/python3.5 -name "*.pyc" -or -name "*.pyo" -or -name "__pycache__"
 
-- how do you know the vesion of the python package you have?
+- how do you know the version of the python package you have?
 	On an rpm based system (fedora, centos, redhat)
 	rpm -q -i python
 

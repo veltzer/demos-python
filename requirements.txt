@@ -9,3 +9,5 @@ cachetools
 pandas
 dispy
 mako
+gi
+# gtk

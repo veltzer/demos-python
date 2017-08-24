@@ -10,6 +10,7 @@ import sys
 
 sys.path.append('build/lib.linux-i686-2.7')
 
+# noinspection PyPep8
 import atoi
 
 print(atoi.atoi('-7.6'))

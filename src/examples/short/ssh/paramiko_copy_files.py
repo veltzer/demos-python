@@ -31,7 +31,7 @@ for x in stderr.readlines():
     print(x, end="")
 print(stdout.channel.recv_exit_status())
 
-stdin, stdout, stderr = sshcon.exec_command('ls -la /non')
+_stdin, stdout, stderr = sshcon.exec_command('ls -la /non')
 for x in stdout.readlines():
     print(x, end="")
 for x in stderr.readlines():

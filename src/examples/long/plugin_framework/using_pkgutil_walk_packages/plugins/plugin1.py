@@ -11,8 +11,6 @@ def do_something():
     print('[{0}] running'.format(__file__))
 
 
-
-
 class Plugin1(base.BaseClass):
     def __init__(self):
         print('in init of Plugin1')

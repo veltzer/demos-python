@@ -2,26 +2,26 @@ list comprehensions:
 ====================
 	[expr code]
 is the same as:
-	newlist=[]
+	new_list=[]
 	code:
-		newlist.append(expr)
-	return newlist
+		new_list.append(expr)
+	return new_list
 example:
 	[x*x for x in range(5)]
 is the same as:
-	newlist=[]
+	new_list=[]
 	for x in range(5):
-		newlist.append(x*x)
-	return newlist
+		new_list.append(x*x)
+	return new_list
 
 dictionary comprehension:
 =========================
 	{ expr1:expr2 code }
 is the same as:
-	newdict={}
+	new_dict={}
 	code:
-		newdict[expr1]=expr2
-	return newdict
+		new_dict[expr1]=expr2
+	return new_dict
 
 set comprehension:
 ==================
