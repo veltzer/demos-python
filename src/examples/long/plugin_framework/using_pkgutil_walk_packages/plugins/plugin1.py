@@ -1,3 +1,5 @@
+import base
+
 print('[{0}] loading'.format(__file__))
 
 var = 'plugin1_value'
@@ -9,7 +11,6 @@ def do_something():
     print('[{0}] running'.format(__file__))
 
 
-import base
 
 
 class Plugin1(base.BaseClass):

@@ -5,6 +5,7 @@ tqdm
 cmd2
 pythondialog
 lmdb
-cachetool
+cachetools
 pandas
-# snack (having problems with it and python3)
+dispy
+mako

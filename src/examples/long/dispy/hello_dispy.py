@@ -1,13 +1,15 @@
 # 'compute' is distributed to each node running 'dispynode'
 def compute(n):
-    import time, socket
+    import time
+    import socket
     time.sleep(n)
     host = socket.gethostname()
     return (host, n)
 
 
 if __name__ == '__main__':
-    import dispy, random
+    import dispy
+    import random
 
     cluster = dispy.JobCluster(compute)
     jobs = []

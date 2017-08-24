@@ -3,7 +3,7 @@
 from snack import *
 
 
-def help(screen, text):
+def show_help(screen, text):
     ButtonChoiceWindow(screen, 'Help', text, help='Help on help')
 
 
@@ -52,7 +52,7 @@ def something():
 
 screen = SnackScreen()
 
-screen.helpCallback(help)
+screen.helpCallback(show_help)
 
 foo = EntryWindow(screen, 'Title', 'This is some text for the entry window',
                   ['prompt', 'more', 'info'])

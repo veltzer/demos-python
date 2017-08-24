@@ -10,8 +10,9 @@ import imp
 
 # noinspection PyDeprecation
 imp.load_source('config', 'myfolder/mymod.py')
+# noinspection PyDeprecation
 imp.load_source('config', 'myotherfolder/mymod2.py')
-import config
+# import config
 
 ''' another version
 config=imp.load_source('config','myfolder/mymod.py')
