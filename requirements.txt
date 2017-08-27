@@ -14,5 +14,5 @@ luigi
 pyinotify
 twisted
 yapsy
-yaml
+sqlalchemy
 # gtk
