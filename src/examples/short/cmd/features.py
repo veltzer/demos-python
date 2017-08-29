@@ -8,6 +8,9 @@ Notes:
 - these methods *must* received both self and args.
 You may choose to not use the args but they must be received.
 - an empty line method must really be called 'emptyline'
+- return True when you want to quit. Returning nothing is OK and so is returning
+False or None. Returning -1 is exiting.
+- so: returning anything which evaluates to True is exiting.
 
 References:
 http://code.activestate.com/recipes/280500-console-built-with-cmd-object/
@@ -46,6 +49,33 @@ class Console(cmd.Cmd):
     def do_shell(self, args):
         """Pass command to a system shell when line begins with '!'"""
         os.system(args)
+
+    # noinspection PyMethodMayBeStatic
+    def do_a_plus_b(self, args):
+        """ add two numbers """
+        args = args.split(" ")
+        print(int(args[0])+int(args[1]))
+        return True
+
+    def do_return_true(self, args):
+        """ return True """
+        return True
+
+    def do_return_false(self, args):
+        """ return False """
+        return False
+
+    def do_return(self, args):
+        """ return """
+        return
+
+    def do_return_m1(self, args):
+        """ return -1 """
+        return -1
+ 
+    def do_return_none(self, args):
+        """ return None """
+        return None
 
     def do_help(self, args):
         """Get help on commands
