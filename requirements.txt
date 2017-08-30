@@ -16,4 +16,5 @@ twisted
 yapsy
 pymysql
 sqlalchemy
+plotly
 # gtk
