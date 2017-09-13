@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 """
-Example using MySQL Connector/Python. This is python3 mysql work.
-* that show engines works..
+This is an example showing how to use the mysql.connector
+module to connect and interact with the mysql database.
 """
 
 import configparser
@@ -48,7 +48,7 @@ cursor.execute('SHOW TABLES')
 for row in cursor:
     print(row[0])
 # demo with place holders
-cursor.execute('SELECT * FROM TbWkWork WHERE id=%(id)s', {'id': 1000})
+cursor.execute('SELECT * FROM user WHERE host=%(host)s', {'host': 'localhost'})
 for row in cursor:
     print(row)
 db.close()
