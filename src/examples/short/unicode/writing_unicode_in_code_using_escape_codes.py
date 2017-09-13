@@ -7,3 +7,7 @@ out of the code and put it in some external source (database,config file,...).
 """
 
 print(u'\u05d4\u05d9')
+# This is a snake (http://www.fileformat.info/info/unicode/char/1f40d/index.htm)
+print(u'\U0001F40D')
+# This is a cloud (http://www.fileformat.info/info/unicode/char/2601/index.htm)
+print(u'\u2601')
