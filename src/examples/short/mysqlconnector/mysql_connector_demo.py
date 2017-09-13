@@ -3,6 +3,8 @@
 """
 This is an example showing how to use the mysql.connector
 module to connect and interact with the mysql database.
+
+This module comes from the mysql-connection.
 """
 
 import configparser
