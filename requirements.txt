@@ -18,3 +18,4 @@ pymysql
 sqlalchemy
 plotly
 # gtk
+gcloud
