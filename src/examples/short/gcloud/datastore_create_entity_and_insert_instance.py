@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 
+"""
+This is a simple example of how to enter data into a google
+cloud store
+
+References:
+- https://cloud.google.com/datastore/docs/datastore-api-tutorial
+"""
+
 from google.cloud import datastore
 
 datastore_client = datastore.Client()
