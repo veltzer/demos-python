@@ -19,6 +19,9 @@ import abc
 class A(metaclass=abc.ABCMeta):
     pass
 
+a = A()
+assert isinstance(a, A)
+
 
 class B(metaclass=abc.ABCMeta):
     __metaclass__ = abc.ABCMeta
@@ -32,13 +35,10 @@ class C(B):
     def foo(self):
         pass
 
-
-a = A()
-assert isinstance(a, A)
 try:
     b = B()
-except Exception as e:
+except TypeError as e:
     print('yes, got exception [{0}]...'.format(str(e)))
 c = C()
-assert isinstance(c, C)
 assert issubclass(C, B)
+assert isinstance(c, C)
