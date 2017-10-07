@@ -11,6 +11,9 @@ it cannot be instantiated (second example).
 - in python2 the syntax for this was different:
     class A:
         __metaclass__ = abc.ABCMeta
+
+References:
+- https://stackoverflow.com/questions/372042/difference-between-abstract-class-and-interface-in-python
 """
 
 import abc
