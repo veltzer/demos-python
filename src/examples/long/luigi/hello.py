@@ -42,5 +42,8 @@ class CountLines(luigi.Task):
             f_out.write(str(count))
 
 
+# This does not run if you are not running a scheduler
+# luigi.run(['CountLines'])
+# This does not run because luigi does not know which task you want to run
 # luigi.run()
 luigi.run(['--local-scheduler', 'CountLines'])
