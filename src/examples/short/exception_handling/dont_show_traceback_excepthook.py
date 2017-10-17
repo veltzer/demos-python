@@ -4,6 +4,8 @@
 This example explores how to inhibit python from printing the stack trace when
 exiting from an exception.
 
+Note that the exception is still throw and the program stopped.
+
 References:
 - http://stackoverflow.com/questions/17784849/in-python-how-do-i-print-an-error-message-without-printing-a-traceback-and-clos
 """
@@ -29,3 +31,4 @@ def excepthook(_type, value, _traceback):
 sys.excepthook = excepthook
 
 do_error()
+print("after")
