@@ -6,7 +6,7 @@ for calculating hash functions of file content.
 This could be used to produce md5, sha1, sha2 and more.
 
 References:
-http://pythoncentral.io/hashing-files-with-python/
+- http://pythoncentral.io/hashing-files-with-python/
 """
 
 import hashlib
