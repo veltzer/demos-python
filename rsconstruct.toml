@@ -70,7 +70,7 @@ src_files = ["README.md"]
 [processor.checker.zspell]
 src_dirs = ["src"]
 
-[processor.checker.shellcheck]
+[processor.checker.ishellcheck]
 src_dirs = ["scripts", "src", "misc"]
 
 [processor.generator.tera]
