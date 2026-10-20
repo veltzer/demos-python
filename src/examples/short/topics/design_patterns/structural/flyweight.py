@@ -26,6 +26,7 @@ Minimizes memory usage by sharing data with other similar objects.
 """
 
 import weakref
+from typing import ClassVar
 
 
 class Card:
@@ -34,7 +35,7 @@ class Card:
     # Could be a simple dict.
     # With WeakValueDictionary garbage collection can reclaim the object
     # when there are no other references to it.
-    pool: weakref.WeakValueDictionary = weakref.WeakValueDictionary()
+    pool: ClassVar[weakref.WeakValueDictionary] = weakref.WeakValueDictionary()
 
     def __new__(cls, value, suit):
         # If the object exists in the pool - just return it

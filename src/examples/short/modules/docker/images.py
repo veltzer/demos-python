@@ -15,7 +15,7 @@ def format_size(size_bytes):
 
 def format_created(timestamp):
     """Convert unix timestamp to relative time"""
-    dt = datetime.fromtimestamp(timestamp)  # noqa: DTZ006
+    dt = datetime.fromtimestamp(timestamp)
     return humanize.naturaltime(dt)
 
 
